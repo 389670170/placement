@@ -1,0 +1,14 @@
+编号	操作	描述	描述1	类型图标	前往类型
+id	event	name	desc	icon	key
+Int	String	String	String	String	String
+1	tavern_free	酒馆招募	元宝、装备、道具	daily_task3.png	pub
+2	shipper	押镖	天命石	daily_task4.png	shipper
+3	patrol	巡逻	武将碎片、稀有道具	daily_task12.png	patrol
+4	goldmine	金矿	金币	daily_task5.png	goldmine
+5	tribute	百姓进贡	宝石	daily_task2.png	tribute
+6	lord	征战太守	金币	daily_task16.png	lord
+7	countryJade	合璧	突破石	daily_task19.png	countryJade
+8	legionwar	军团争霸	天命石	daily_task20.png	legionWarMinJoinLevel
+9	worldwar	群雄争霸	经验丹	daily_task18.png	worldwar
+10	territoryboss	领地boss	元宝、道具	daily_task21.png	legionDfOpenLevel
+11	hook	搜索-加速	装备、经验	daily_task12.png	hook

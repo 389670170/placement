@@ -1,0 +1,13 @@
+奖励id	奖励	2倍暴击概率	3倍暴击概率	4倍暴击概率
+id	award	prob2	prob3	prob4
+Int	Award	Int	Int	Int
+1	material.1:1	30	20	10
+2	material.1:2	30	20	10
+3	material.1:3	30	20	10
+4	material.1:4	30	20	10
+5	material.1:5	30	20	10
+6	material.1:6	30	20	10
+7	material.1:7	15	10	5
+8	material.1:8	12	6	3
+9	material.1:9	10	5	2
+10	material.1:10	6	4	2

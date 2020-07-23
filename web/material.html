@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curIndex = -1;
+
+    var allItems = [];
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p + '=' + request[p]);
+        }
+        return '.?'+gridParams.join('&');
+    }
+
+    $(document).ready(function() {
+        $('#items').edatagrid({
+            remoteSort: false,
+            updateUrl: getGridUrl('update_item'),
+            onBeforeEdit : function(index, row) {
+                curIndex = index;
+            },
+            onAfterEdit: function(index, row) {
+                if(row) {
+                    user.bag[row.category][row.id] = row.num;
+                }
+            }
+        });
+
+        loadConf(['item'], function() {
+            for (var id in gConf.item) {
+                var item = gConf.item[id];
+
+                if (item.category == 'limitmat') {
+                    continue;
+                }
+
+                var quality = '';
+                if (item.quality) {
+                    quality = gQuality[item.quality];
+                }
+                var num = 0;
+                if (user.bag[item.category] && user.bag[item.category][id]) {
+                    num = user.bag[item.category][id];
+                }
+
+                allItems.push({
+                    'id' : id,
+                    'name' : item.name,
+                    'category' : item.category,
+                    'quality' : quality,
+                    'num' : num,
+                });
+            }
+
+            $('#items').edatagrid('loadData', allItems);
+        });
+        setKeyboardEvent(function() {
+            if(curIndex != -1) {
+                $('#items').edatagrid('cancelRow');
+                curIndex = -1;
+            }
+        },
+        function() {
+            if(curIndex != -1) {
+                $('#items').edatagrid('endEdit', curIndex);
+                curIndex = -1;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <table id="items" title="" style="width:50%;height:750px"
+            toolbar="#toolbar" pagination="true" idField="id"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <th field="id" width="30" sortable=true>材料ID</th>
+                <th field="name" width="30" sortable=true>名称</th>
+                <th field="category" width="30" sortable=true>类别</th>
+                <th field="quality" width="30" sortable=true>品质</th>
+                <th field="num" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">数量</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#items').edatagrid('cancelRow')">取消</a>
+    </div>
+</body>
+</html>

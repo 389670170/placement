@@ -1,0 +1,51 @@
+活动编号	排序	活动名称	活动图标	其他条件(0:开服活动，1:限时活动,2:等级活动,3:首登活动,4:特殊活动)	所在页签(0-无,1-限时页签,2-活动页签)	活动开放等级	活动开放距离首次登录天数	活动开放距离开服天数	活动开始时间	活动结束时间	活动天数	活动结束延迟天数	是否显示转圈特效	是否显示倒计时
+key	order	name	url	type	tab	openLevel	openLoginDay	openDay	startTime	endTime	duration	delayDays	isGuangEffect	isRemainTime
+String	Int	String	String	Int	Int	Int	Int	Int	Time	Time	Int	Int	Int	Int
+lucky_dragon	1	text_av_activittes_lucky_dragon	icon_lucky_dragon	2	0	1	0	0			2	0	1	1
+sign	2	text_av_activittes_sign	sign	0	1	1	0	9999			9999	0	0	0
+vip_gift	3	text_av_activittes_vip_gift	vip_gift	0	1	1	0	0			9999	0	0	0
+lucky_rotate	4	text_av_activittes_lucky_rotate	lucky_rotate	1	1	1	0	0	2019:7:26:5:0:0	2024:6:14:5:0:0	0	0	0	0
+investment	5	text_av_activittes_investment	investment	2	1	1	0	0			9999	0	0	0
+level	6	text_av_activittes_level	level	0	1	1	0	0			9999	0	0	0
+sign_high	7	text_av_activittes_sign_high	sign_high	0	1	1	0	0			9999	0	0	0
+open_rank_level	8	text_av_activittes_open_rank_level	open_rank_level	0	1	14	0	9999			5	1	0	0
+open_rank_ff	9	text_av_activittes_open_rank_ff	open_rank_ff	0	1	5	0	0			5	1	0	0
+open_rank_ff_10	10	text_av_activittes_open_rank_ff_10	open_rank_ff_10	0	1	5	0	5			5	1	0	0
+open_rank_ff_15	11	text_av_activittes_open_rank_ff_15	open_rank_ff_15	0	1	5	0	10			5	1	0	0
+open_seven	12	text_av_activittes_open_seven	icon_open_seven	2	0	1	0	0			7	3	1	1
+first_pay	13	text_av_activittes_first_pay	icon_first_pay	0	0	1	0	0			9999	0	1	0
+grow_fund	14	text_av_activittes_grow_fund	grow_fund	0	0	1	0	0			9999	0	0	0
+war_college	15	text_av_activittes_war_college	icon_war_college	0	0	1	0	0			9999	0	1	0
+gift_bag	16	text_av_activittes_gift_bag	icon_gift_bag	0	0	1	0	0			9999	0	1	0
+assets_feed	17	text_av_activittes_assets_feed	icon_assets_feed	0	0	1	0	0			9999	0	1	0
+perks	18	text_av_activittes_perks	icon_perks	0	0	1	0	0			9999	0	1	0
+todaydouble	19	text_av_activittes_todaydouble	todaydouble	1	1	1	0	999	2018:9:27:5:0:0	2018:10:4:4:59:59	0	0	0	0
+open_holiday	20	text_av_activittes_open_holiday	icon_open_holiday	1	0	1	0	20	2019:10:1:5:0:0	2019:10:8:5:0:0	0	0	1	1
+open_rank_recharge	21	text_av_activittes_open_rank_recharge	icon_open_rank_recharge	1	1	1	0	0	2020:03:17:5:0:0	2020:03:18:5:0:0	0	1	0	0
+open_rank_expense	22	text_av_activittes_open_rank_expense	icon_open_rank_expense	1	1	1	0	0	2020:03:17:5:0:0	2020:03:18:5:0:0	0	1	0	0
+pray	23	text_av_activittes_alasd_pray	pray	1	1	1	0	14	2019:1:7:5:0:0	2019:1:9:4:59:59	0	1	0	0
+human_arms	24	text_av_activittes_human_arms	human_arms	1	1	1	0	15	2020:01:25:5:0:0	2020:01:27:4:59:59	0	0	0	0
+human_wing	25	text_av_activittes_human_wing	human_wing	1	1	1	0	15	2020:02:01:5:0:0	2020:02:03:4:59:59	0	0	0	0
+human_mount	26	text_av_activittes_human_mount	human_mount	1	1	1	0	15	2020:02:08:5:0:0	2020:02:10:4:59:59	0	0	0	0
+tavern_recruit	27	text_av_activittes_tavern_recruit	tavern_recruit	1	1	1	0	999	2018:10:17:5:0:0	2018:10:25:4:59:59	0	0	0	0
+buy_award	28	text_av_activittes_buy_award	buy_award	1	1	1	0	999	2019:5:11:5:0:0	2019:5:15:5:0:0	0	0	0	0
+day_recharge	29	text_av_activittes_day_recharge	day_recharge	1	1	1	0	999	2019:4:11:5:0:0	2019:4:15:4:59:59	0	0	0	0
+accumulate_recharge	30	text_av_activittes_accumulate_recharge	accumulate_recharge	1	1	1	0	999	2019:4:11:5:0:0	2019:4:15:4:59:59	0	0	0	0
+limit_exchange	31	text_av_activittes_limit_exchange	limit_exchange	1	1	1	0	999	2018:12:18:5:0:0	2018:12:19:4:59:59	0	0	0	0
+login_goodgift	32	text_av_activittes_login_goodgift		1	1	1	0	999	2018:9:27:5:0:0	2018:10:4:4:59:59	0	0	0	0
+expend_gift	33	text_av_activittes_expend_gift	expend_gift	1	1	1	0	999	2018:10:19:5:0:0	2018:10:25:4:59:59	0	0	0	0
+tavern_normal	34	text_av_activittes_ordinary_recruit	ordinary_recruit	1	1	1	0	999	2018:9:27:5:0:0	2018:10:4:4:59:59	0	0	0	0
+tavern_high	35	text_av_activittes_senior_recruit	senior_recruit	1	1	1	0	999	2018:9:27:5:0:0	2018:10:4:4:59:59	0	0	0	0
+day_exchange	36	text_av_activittes_day_exchange	limit_exchange	1	1	1	0	999	2018:12:18:5:0:0	2018:12:19:4:59:59	0	0	0	0
+manually	37	text_av_activittes_manually	icon_dragon_manual	1	0	1	0	0	2020:03:01:5:0:0	2020:03:5:5:0:0	0	0	1	1
+doappraise	38	text_av_activittes_doappraise	icon_doappraise	2	0	1	0	0			9999	0	1	0
+head_reset	39	text_av_activittes_manually	icon_dragon_manual	1	0	1	0	0	2020:04:01:5:0:0	2020:04:08:5:0:0	0	0	0	0
+single_recharge	40	text_av_activittes_single_recharge	icon_single_recharge	1	1	1	0	999	2020:03:18:5:0:0	2020:03:20:5:0:0	0	0	0	0
+exchange_item	41	text_av_activittes_exchange_item	icon_exchange_item	1	1	1	0	999	2020:03:18:5:0:0	2020:03:20:5:0:0	0	0	0	0
+accumulate_daily	42	text_av_activittes_accumulate_daily	icon_accumulate_daily	1	1	1	0	999	2020:03:18:5:0:0	2020:03:20:5:0:0	0	0	0	0
+accumulate_pay	43	text_av_activittes_accumulate_recharge	accumulate_recharge	1	1	1	0	999	2020:03:28:5:0:0	2020:03:30:5:0:0	0	0	0	0
+level_up	44	text_av_activittes_level_up	icon_level_up	2	0	1	0	0			9999	0	1	0
+sign_new	45	text_av_activittes_sign	icon_sign_new.png	2	2	1	0	0			9999	0	0	0
+octopus	46	text_av_activittes_help_octopus	icon_treasure_octopus.png	1	2	1	0	9999	2019:7:26:5:0:0	2020:1:14:5:0:0	0	0	0	0
+help_equip	47	text_av_activittes_help_equip	icon_help_equip.png	1	2	1	0	0	2020:03:28:5:0:0	2020:03:30:5:0:0	0	0	0	0
+destiny_rotate	48	text_av_activittes_destiny_rotate	icon_destiny_rotate.png	1	2	1	0	0	2020:4:16:5:0:0	2020:4:20:5:0:0	0	0	0	0

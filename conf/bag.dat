@@ -1,0 +1,6 @@
+背包类型	类型索引	背包筛选字段	背包展示类型	筛选字段对应图片前缀	页签标题
+type	key	filtrate	showtype	icon	titleName
+Int	String	Strings	Int	Strings	Strings
+1	item	normal|box|fragment|dress	1	tab_material|tab_bag|tab_fragment|tab_dress	text_bag_titleName1_0|text_bag_titleName1_1|text_bag_titleName1_2|text_bag_titleName1_3|text_bag_titleName1_4
+2	gem	0	1	0	text_bag_titleName2_0
+3	equip	1|2|3|4|5|6	2	tab_hat|tab_weapon|tab_scapula|tab_equip|tab_cape|tab_necklace	text_bag_titleName3_0|text_bag_titleName3_1|text_bag_titleName3_2|text_bag_titleName3_3|text_bag_titleName3_4|text_bag_titleName3_5|text_bag_titleName3_6

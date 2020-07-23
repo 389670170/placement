@@ -1,0 +1,6 @@
+建设类型	建设名字	建设经验	建设军团币	建设进度	建设消耗
+id	name	xp	legionCoin	progress	cost
+Int	String	Int	Int	Int	Award
+1	初级建设	40	300	1	user.gold:-15000
+2	中级建设	80	600	2	user.cash:-30
+3	高级建设	200	2000	5	user.cash:-150

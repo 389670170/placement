@@ -1,0 +1,9 @@
+关键字	名称	描述	出现位置Id	出现数量	格子底板路径	格子奖励路径
+key	name	desc	posId	num	gridBgUrl	gridAwardUrl
+String	String	String	Ints	Ints	String	String
+material1	0	0	3|7|10|13|17|21|25	5|6	uires/ui_new/cave_new/grid_1.png	0
+material2	0	0	2|6|12|15|19|22|26	5|5	uires/ui_new/cave_new/grid_1.png	0
+randombox	0	0	27	1|1	uires/ui_new/cave_new/grid_3.png	0
+chip	text_customCave_1	text_customCave_4	16|20|25	1|1	uires/ui_new/cave_new/grid_3.png	uires/ui_new/cave_new/chip.png
+dice	text_customCave_2	text_customCave_5	5|18|24	1|1	uires/ui_new/cave_new/grid_3.png	uires/ui_new/cave_new/dice.png
+gold	text_customCave_3	text_customCave_6	9|14|23	2|2	uires/ui_new/cave_new/grid_3.png	uires/ui_new/cave_new/gold.png

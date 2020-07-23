@@ -1,0 +1,6 @@
+页签ID	额外图片	额外描述
+id	picture	desc
+Int	String	String
+1	scj.png	text_av_openholiday_notice_1
+2	scj.png	text_av_openholiday_notice_2
+3	scj.png	text_av_openholiday_notice_3

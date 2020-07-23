@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curIndex = -1;
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p + '=' + request[p]);
+        }
+        return '.?'+gridParams.join('&');
+    }
+
+    function passProgress(id) {
+        $.messager.confirm('确认','确定要通关到此关卡?',function(r){
+            if (r){
+                request.method = 'pass_progress';
+                var param = [];
+                for (var key in request) {
+                    param.push(key + '=' +request[key]);
+                }
+                param.push('id' + '=' +id);
+
+                var url =  '.?' + param.join('&');
+                $.get(url, function(data) {
+                    try {
+                        var resp = JSON.parse(data);
+                        if (resp.code != 0) {
+                            $.messager.alert("错误", resp.desc, 'error');
+                            return;
+                        }
+
+                        user.battle = resp.data.battle;
+                        loadProgress();
+                    } catch (e) {
+                        $.messager.alert("信息", data, 'info');
+                    }
+                });
+            }else {
+                return;
+            }
+        });
+    }
+
+    function backProgress(id) {
+        $.messager.confirm('确认','确定要回滚到此关卡?',function(r){
+            if (r){
+                request.method = 'back_progress';
+                var param = [];
+                for (var key in request) {
+                    param.push(key + '=' +request[key]);
+                }
+                param.push('id' + '=' +id);
+
+                var url =  '.?' + param.join('&');
+                $.get(url, function(data) {
+                    try {
+                        var resp = JSON.parse(data);
+                        if (resp.code != 0) {
+                            $.messager.alert("错误", resp.desc, 'error');
+                            return;
+                        }
+
+                        user.battle = resp.data.battle;
+                        loadProgress();
+                    } catch (e) {
+                        $.messager.alert("信息", data, 'info');
+                    }
+                });
+            }else {
+                return;
+            }
+        });
+    }
+
+    function loadProgress() {
+        loadConf(['custom','generaltext'], function() {
+            var allCitys = [];
+            var userCity = user.battle.city;
+            for(var id in gConf.custom) {
+                var city = userCity[id];
+                var text = '<a href="javascript:void(0);" onclick="passProgress(' + id + ')">通关至此</a>';
+                if(id < user.battle.progress) {
+                    text = '已通关<a href="javascript:void(0);" onclick="backProgress(' + id + ')">回滚至此</a>';
+                }else if(id == user.battle.progress) {
+                    text = '当前关卡';
+                }
+                if (city) {
+                    allCitys.push({
+                        'id': id,
+                        'name': gConf.generaltext[gConf.custom[id].name].text,
+                        'normal': city[1].star,
+                        'normal_time': city[1].time,
+                        'elite': city[2].star,
+                        'elite_time' :city[2].time,
+                        'combat': city[3].star,
+                        'combat_time': city[3].time,
+                        'pass': text,
+                    });
+                } else {
+                    allCitys.push({
+                        'id': id,
+                        'name': gConf.generaltext[gConf.custom[id].name].text,
+                        'normal': 0,
+                        'normal_time': 0,
+                        'elite': 0,
+                        'elite_time': 0,
+                        'combat': 0,
+                        'combat_time': 0,
+                        'pass': text,
+                    });
+                }
+            }
+
+            $('#progress').datagrid('loadData', allCitys);
+            $('#progress').datagrid('selectRow', user.battle.progress-1);
+            $('#progress').datagrid('scrollTo', user.battle.progress-1);
+        });
+
+    }
+
+    function passToMaxProgress() {
+        loadConf(['customset'], function() {
+            passProgress(Object.keys(gConf.customset).length);
+        });
+    }
+
+    function resetProgress() {
+        $.messager.confirm('确认','确定要重置当天所有城池的攻打次数?',function(r){
+            if (r){
+                request.method = 'reset_progress';
+                var param = [];
+                for (var key in request) {
+                    param.push(key + '=' +request[key]);
+                }
+
+                var url =  '.?' + param.join('&');
+                $.get(url, function(data) {
+                    try {
+                        var resp = JSON.parse(data);
+                        if (resp.code != 0) {
+                            $.messager.alert("错误", resp.desc, 'error');
+                            return;
+                        }
+
+                        user.battle = resp.data.battle;
+                        loadProgress();
+                    } catch (e) {
+                        $.messager.alert("信息", data, 'info');
+                    }
+                });
+            }else {
+                return;
+            }
+        });
+    }
+
+    function zeroProgressTribute() {
+        $.messager.confirm('确认','确定要重新设置成刚通关状态?',function(r){
+            if (r){
+                request.method = 'zero_progress_tribute';
+                var param = [];
+                for (var key in request) {
+                    param.push(key + '=' +request[key]);
+                }
+
+                var url =  '.?' + param.join('&');
+                $.get(url, function(data) {
+                    try {
+                        var resp = JSON.parse(data);
+                        if (resp.code != 0) {
+                            $.messager.alert("错误", resp.desc, 'error');
+                            return;
+                        }
+                    } catch (e) {
+                        $.messager.alert("信息", data, 'info');
+                    }
+                });
+            }else {
+                return;
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $('#progress').edatagrid({
+            updateUrl: getGridUrl('update_progress'),
+            onBeforeEdit : function(index, row) {
+                curIndex = index;
+            },
+
+            onAfterEdit: function(index, row) {
+                if(row) {
+                    user.battle.city[row.id][1].star = row.normal;
+                    user.battle.city[row.id][1].time = row.normal_time;
+                    user.battle.city[row.id][2].star = row.elite;
+                    user.battle.city[row.id][2].time = row.elite_time;
+                }
+            },
+        });
+        loadProgress();
+        setKeyboardEvent(function() {
+            if(curIndex != -1) {
+                $('#progress').edatagrid('cancelRow');
+                curIndex = -1;
+            }
+        },
+        function() {
+            if(curIndex != -1) {
+                $('#progress').edatagrid('endEdit', curIndex);
+                curIndex = -1;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<div id="equip-panel" class="easyui-panel" style="width:100%; height: 100%;" data-options="maximized:true">
+    <div class="easyui-layout" style="width:100%;height:100%;padding:5px;">
+        <div region="west" title="副本信息" style="width: 70%; padding:10px;" data-options="">
+            <table id="progress" title="" style="width:100%;height:750px"
+                    toolbar="#toolbar" pagination="true" idField="id"
+                    rownumbers="true" fitColumns="true" singleSelect="true">
+                <thead>
+                    <tr>
+                        <th field="id" width="30">ID</th>
+                        <th field="name" width="30">城池</th>
+                        <th field="normal" width="30" editor="{type:'validatebox',options:{required:true}}">普通星级</th>
+                        <th field="normal_time" width="30" editor="{type:'validatebox',options:{required:true}}">普通今日已打</th>
+                        <th field="elite" width="30" editor="{type:'validatebox',options:{required:true}}">精英星级</th>
+                        <th field="elite_time" width="30" editor="{type:'validatebox',options:{required:true}}">精英今日已打</th>
+                        <th field="combat" width="30" editor="{type:'validatebox',options:{required:true}}">切磋</th>
+                        <th field="combat_time" width="30" editor="{type:'validatebox',options:{required:true}}">切磋今日已打</th>
+                        <th field="pass" width="30">通关设置</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="toolbar">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="passToMaxProgress()">通关至最大关卡</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="resetProgress()">重置副本次数</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="zeroProgressTribute()">设置刚通关状态</a>
+            </div>
+        </div>
+
+        <div region="center" title="副本说明" style="padding:10px;" data-options="">
+        </div>
+    </div>
+</div>
+</body>
+</html>

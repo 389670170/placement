@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GM管理工具</title>
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="jquery.edatagrid.js"></script>
+    <script type="text/javascript" src="global.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        var user = parent.user;
+        var request = parent.request;
+
+        var allMails = [];
+        var awardCount = 0;
+        var delAwardCount = 0;
+        var currency = [];
+
+        function beforeSubmit(param) {
+            param.act = request.act;
+            param.method = request.method;
+            param.openid = request.openid;
+            param.uid = request.uid;
+
+            var title = $('#title')[0].value;
+            var content = $('#content')[0].value;
+            var expire = $('#expire')[0].value;
+            var awards = [];
+            for (var i = 1; i <= awardCount; i++) {
+                var row = $('#award' + i);
+                if (row.length) {
+                    var award;
+                    var type = $('#award-type' + i).combobox('getValue');
+                    var id = $('#award-id' + i).combobox('getValue');
+                    var num = $('#award-num' + i).textbox('getText');
+                    num = Math.floor(+num);
+
+                    if (type == 'giftmail') {
+                        id = id - 0;
+                        var tGiftInfo = gConf.giftmail[id];
+                        var rewards = tGiftInfo.rewards || [];
+
+                        for (var j = 0; j < rewards.length; j++) {
+                            award = [];
+                            var tRewardInfo = rewards[j];
+                            var item_type = tRewardInfo[0];
+                            var item_id = tRewardInfo[1];
+                            var item_num = tRewardInfo[2] * num;
+
+                            award.push(item_type);
+                            award.push(item_id);
+                            award.push(item_num);
+                            awards.push(award);
+                        }
+                        continue;
+                    }
+
+                    award = [];
+
+                    if (type == 'dragon') {
+                        type = 'wake_dragon';
+                    }
+                    award.push(type);
+
+                    if (type == 'user') {
+                        award.push(id);
+                    } else {
+                        award.push(+id);
+                    }
+
+                    if (type == 'equip') {
+                        award.push(0);
+                    } else if (type == 'skyweapon') {
+                        if (gConf.skychange[1][id].kind == 1) {
+                            award.push(2);
+                        } else {
+                            award.push(1);
+                        }
+                    } else if (type == 'skywing') {
+                        if (gConf.skychange[2][id].kind == 1) {
+                            award.push(2);
+                        } else {
+                            award.push(1);
+                        }
+                    }
+
+                    if (!num || isNaN(num)) {
+                        $.messager.alert('错误', '添加失败 desc:number error', 'error');
+                        return false;
+                    }
+                    award.push(num);
+                    awards.push(award);
+                }
+            }
+
+            expire = Date.parse(expire) / 1000;
+            param.title = escape(title);
+            param.content = escape(content);
+            param.awards = base64encode(JSON.stringify(awards));
+            param.expire = expire;
+
+            //param = JSON.stringify(param);
+            return true;
+        }
+
+        function addMail() {
+            request.method = 'add_mail';
+            $('#add-mail').submit();
+        }
+
+        function getAwardIds(type) {
+            if (type == 'user') {
+                return currency;
+            } else if (type == 'equip') {
+                var data = [];
+
+                if (gConf.equipconf) {
+                    for (var id in gConf.equipconf) {
+                        var equip = gConf.equipconf[id];
+                        var text = gQuality[equip.quality] + '色 ' + gConf.generaltext[equip.name].text;
+                        data.push({ id: +id, text: text });
+                    }
+                }
+
+                data[0].selected = true;
+                return data;
+            } else if (type == 'gem') {
+                var data = [];
+                for (var id in gConf.gem) {
+                    var gem = gConf.gem[id];
+                    var text = gQuality[gem.quality] + '色 ' + gConf.generaltext[gem.name].text;
+                    data.push({ id: +id, text: text });
+                }
+                data[0].selected = true;
+                return data;
+            } else if (type == 'fragment') {
+                var data = [];
+                for (var id in gConf.item) {
+                    var item = gConf.item[id];
+                    if (item.category != 'fragment') {
+                        continue;
+                    }
+                    var text = gQuality[item.quality] + '色 ' + gConf.generaltext[item.name].text;
+                    data.push({ id: +id, text: text });
+                }
+                data[0].selected = true;
+                return data;
+            } else if (type == 'material') {
+                var data = [];
+                for (var id in gConf.item) {
+                    var item = gConf.item[id];
+                    if (item.category != 'material') {
+                        continue;
+                    }
+                    var text = gConf.generaltext[item.name] ? gConf.generaltext[item.name].text : item.name;
+                    data.push({ id: +id, text: text });
+                }
+                data[0].selected = true;
+                return data;
+            } else if (type == 'card') {
+                var data = [];
+                for (var id in gConf.hero) {
+                    var card = gConf.hero[id];
+                    var hero = gConf.combatherotemplate[id];
+                    if (hero) {
+                        if (!gConf.generaltext[card.heroName]) {
+                            console.log('==no text=====' + card.heroName);
+                            continue;
+                        }
+                        var text = hero.quality + 'star ' + gConf.generaltext[card.heroName].text;
+                        data.push({ id: +id, text: text });
+                    }
+                }
+                data[0].selected = true;
+                return data;
+            } else if (type == 'dress') {
+                var data = [];
+                for (var id in gConf.dress) {
+                    data.push({ id: +id, text: gConf.generaltext[gConf.dress[id].name].text });
+                }
+
+                data[0].selected = true;
+                return data;
+            } else if (type == 'skyweapon') {
+                var data = [];
+                var weaponConf = gConf.skychange[1];
+                for (var id in weaponConf) {
+                    if (id == 0) continue;
+                    data.push({ id: +id, text: gConf.generaltext[weaponConf[id].name].text });
+                }
+
+                data[0].selected = true;
+                return data;
+            } else if (type == 'skywing') {
+                var data = [];
+                var wingConf = gConf.skychange[2];
+                for (var id in wingConf) {
+                    if (id == 0) continue;
+                    data.push({ id: +id, text: gConf.generaltext[wingConf[id].name].text });
+                }
+
+                data[0].selected = true;
+                return data;
+            } else if (type == 'rune') {
+                var data = [];
+                var runeConf = gConf.runeconf;
+                for (var id in runeConf) {
+                    if (id == 0) continue;
+                    data.push({ id: +id, text: runeConf[id].id })
+                }
+                data[0].selected = true;
+                return data;
+            } else if (type == 'dragon') {
+                var data = [];
+                var dragon = gConf.dragon;
+                for (var id in dragon) {
+                    var text = dragon[id].id + ':  ' + gConf.generaltext[dragon[id].name].text;
+                    data.push({ id: +id, text: text })
+                }
+                data[0].selected = true;
+                return data;
+            } else if (type == 'giftmail') {
+                var data = [];
+                var giftmail = gConf.giftmail;
+                for (var pid in giftmail) {
+                    var tGiftMailInfo = giftmail[pid];
+                    var text = pid;
+
+                    data.push({ id: pid, text: text })
+                }
+                data[0].selected = true;
+                return data;
+            }
+        }
+
+        function delAward(id) {
+            var row = $("#" + id)[0];
+            $('#add-mail-table')[0].deleteRow(row.rowIndex);
+            delAwardCount++;
+        }
+
+        $(document).ready(function () {
+            $('#title').textbox();
+            $('#content').textbox({
+                width: 156,
+                height: 80,
+                multiline: true,
+            });
+
+            var now = getTime();
+            var expire = formatTime(now + 3600 * 24 * 7);
+            $('#expire').textbox({ 'value': expire });
+
+            $('#add-mail').form({
+                url: '.',
+                onSubmit: function (param) {
+                    return beforeSubmit(param);
+                },
+                success: function (data) {
+                    var resp = JSON.parse(data);
+                    if (resp.code == 0) {
+                        $.messager.alert('信息', '添加成功', 'info');
+                        var mail = resp.data.mail;
+                        allMails.push({
+                            time: formatTime(mail.time),
+                            from: mail.from == 0 ? '系统' : mail.from,
+                            title: mail.title,
+                            content: mail.content,
+                            awards: hawards(mail.awards, true),
+                            expire: formatTime(mail.expire),
+                        });
+                        $('#mails').edatagrid('loadData', allMails);
+                    } else {
+                        $.messager.alert('错误', '添加失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+
+            $('#mails').edatagrid({
+                remoteSort: false,
+            });
+
+            loadConf(['mail', 'localtext', 'gem', 'hero', 'item', 'equipconf', 'equipbase', 'user', 'skychange', 'runeconf', 'combatherotemplate', 'dress', 'generaltext', 'dragon', 'giftmail'], function () {
+                for (var id in gConf.user) {
+                    if (!gConf.generaltext[gConf.user[id].name]) {
+                        console.log('======eror:' + gConf.user[id].name);
+                        continue;
+                    }
+                    currency.push({ id: id, text: gConf.generaltext[gConf.user[id].name].text });
+                    if (id == 'gold') {
+                        currency[currency.length - 1].selected = true;
+                    }
+                }
+
+                for (var id in user.mails) {
+                    var mail = user.mails[id];
+                    var content = mail.content;
+                    var title = mail.title;
+                    var from = mail.from;
+                    if (typeof (title) == 'number') {
+                        if (gConf.localtext[title]) {
+                            title = gConf.localtext[title].text;
+                        } else {
+                            title = title;
+                        }
+                    }
+                    if (typeof (from) == 'number') {
+                        if (gConf.mail[1]) {
+                            from = gConf.mail[1].addresser;
+                        } else {
+                            from = from;
+                        }
+
+                    }
+                    if (typeof (content) == 'object') {
+                        var str = content[0] + "";
+                        if (gConf.mail[content[0]]) {
+                            str = gConf.mail[content[0]].text;
+                        }
+                        for (var i = 1; i < content.length; i++) {
+                            str = str.replace(/%s/, content[i]);
+                        }
+                        content = str;
+                    }
+                    allMails.push({
+                        time: formatTime(mail.time),
+                        from: from,
+                        title: title,
+                        content: content,
+                        awards: hawards(mail.awards, true),
+                        expire: formatTime(mail.expire),
+                    });
+                }
+                $('#mails').edatagrid('loadData', allMails);
+
+                // 添加奖励
+                $('#add-award').bind('click', function () {
+                    awardCount++;
+                    var awardRow = $('#add-mail-table')[0].insertRow(2 + awardCount - delAwardCount);
+                    awardRow.id = 'award' + awardCount;
+                    var awardType = awardRow.insertCell(0);
+                    awardType.innerHTML = "<input style='width:60px' id='award-type" + awardCount + "'/>";
+                    var awardId = awardRow.insertCell(1);
+                    awardId.innerHTML = "<input id='award-id" + awardCount + "'/>";
+                    var awardNum = awardRow.insertCell(2);
+                    awardNum.innerHTML = "<input style='width:50px' id='award-num" + awardCount + "'/>";
+                    var unit = awardRow.insertCell(3);
+                    unit.innerHTML = "个&nbsp;&nbsp;&nbsp;";
+                    var delBtn = awardRow.insertCell(4);
+                    delBtn.innerHTML = "<a href='#' onclick='delAward(" + "\"award" + awardCount + "\")'>删除</a>";
+
+                    $('#award-id' + awardCount).combobox({
+                        data: currency,
+                        valueField: 'id',
+                        textField: 'text',
+                        editable: false,
+                    });
+
+                    $('#award-type' + awardCount).combobox({
+                        data: [
+                            { id: 'user', text: '货币', selected: true },
+                            { id: 'material', text: '材料' },
+                            { id: 'equip', text: '装备' },
+                            { id: 'gem', text: '宝石' },
+                            { id: 'fragment', text: '碎片' },
+                            { id: 'card', text: '卡牌' },
+                            { id: 'dress', text: '兵装' },
+                            { id: 'skyweapon', text: '武器' },
+                            { id: 'skywing', text: '翅膀' },
+                            { id: 'rune', 'text': '符文' },
+                            { id: 'dragon', 'text': '巨龙' },
+                            { id: 'giftmail', 'text': '礼包' },
+                        ],
+                        valueField: 'id',
+                        textField: 'text',
+                        editable: false,
+                        onSelect: function (param) {
+                            $('#award-id' + this).combobox('loadData', getAwardIds(param.id));
+                        }.bind(awardCount),
+
+                    });
+
+                    $('#award-num' + awardCount).textbox({ 'value': 1 });
+                });
+
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="mail-panel" class="easyui-panel" style="width:100%; height: 100%;" data-options="maximized:true">
+        <div class="easyui-layout" style="width:100%;height:100%;padding:5px;">
+            <div region="center" title="邮件显示" style="width: 75%; padding:10px;" data-options="">
+                <table id="mails" title="" style="width:100%;height:750px" toolbar="#toolbar" pagination="true"
+                    idField="id" rownumbers="true" fitColumns="true" singleSelect="true">
+                    <thead>
+                        <tr>
+                            <th field="time" width="36" sortable=true>发出时间</th>
+                            <th field="from" width="13" sortable=true>发件人</th>
+                            <th field="title" width="36" sortable=true>标题</th>
+                            <th field="content" width="100" sortable=true>内容</th>
+                            <th field="awards" width="35" sortable=true>奖励</th>
+                            <th field="expire" width="36" sortable=true>过期时间</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div region="east" title="添加邮件" style="padding:10px;width:25%;" data-options="">
+                <form id="add-mail">
+                    <table id='add-mail-table'>
+                        <tr>
+                            <td style='width:70px'>标 题 : </td>
+                            <td><input id="title" type="text"></input></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td valign='top'>内 容 : </td>
+                            <td><input id="content" type="text"></input></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>奖 励 : </td>
+                            <td><a id="add-award" href="#" class="easyui-linkbutton"
+                                    data-options="iconCls:'icon-add'">添加</a></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>过期时间 :</td>
+                            <td><input id="expire" type="text"></input></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a id="tavern" href="javascript:void(0);" class="easyui-linkbutton"
+                                    data-options="width:50" onclick="addMail()">发送</a></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

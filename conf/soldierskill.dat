@@ -1,0 +1,15 @@
+技能ID	名称	基础属性	基础属性值	属性成长系数1	属性成长系数2	属性成长系数3	图片
+id	name	att	value	attBase1	attBase2	attBase3	icon
+Int	String	Ints	Int	Int	Int	Int	String
+101	坚盾	2|3	0	0.0095749	0.0026343	10.987791	soldier1_1.png
+102	警觉	6	0	0	0	42	soldier1_2.png
+103	坚韧	8	0	0	0	42	soldier1_3.png
+104	强体	4	0	0.1918013	0.0432691	219.76493	soldier1_4.png
+201	硬弓	1	0	0.0165647	0.0037369	18.979698	soldier2_1.png
+202	精准	5	0	0	0	42	soldier2_2.png
+203	灵巧	7	0	0	0	42	soldier2_3.png
+204	铁甲	2|3	0	0.0095749	0.0026343	10.987791	soldier2_4.png
+301	驯化	4	0	0.1918013	0.0432691	219.76493	soldier3_1.png
+302	铁蹄	7	0	0	0	42	soldier3_2.png
+303	骑术	6	0	0	0	42	soldier3_3.png
+304	利矛	1	0	0.0165647	0.0037369	18.979698	soldier3_4.png

@@ -1,0 +1,11 @@
+编号	轮数	消耗幸运币数量
+confId	id	awards
+Int	Int2	Award
+1	1	user.fate_coin:-2
+1	2	user.fate_coin:-4
+1	3	user.fate_coin:-6
+1	4	user.fate_coin:-8
+2	1	user.fate_coin:-2
+2	2	user.fate_coin:-4
+2	3	user.fate_coin:-6
+2	4	user.fate_coin:-8

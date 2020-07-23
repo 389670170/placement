@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+
+    function beforeSelfSubmit(param) {
+        if (param.method == 'legion_promote') {
+            return;
+        }
+
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+
+        for (var id in user.new_legion) {
+            if ($('#'+id)[0]) {
+                var value = $('#'+id)[0].value;
+                if (id == 'join_time' || id == 'shake_time') {
+                    value = Date.parse(value)/1000;
+                }
+                param[id] = value;
+            }
+        }
+    }
+
+    function beforeWorldSubmit(param) {
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+
+        param.level = $('#legion_level')[0].value;
+        param.name = $('#legion_name')[0].value;
+        param.type = $('#legion_type')[0].value;
+        param.limit = $('#legion_limit')[0].value;
+        param.notice = $('#legion_notice')[0].value;
+        param.construct = $('#legion_construct')[0].value;
+    }
+
+    function changeSelfLegion() {
+        request.method = 'change_self_legion';
+        $('#info').submit();
+    }
+
+    function promote() {
+        request.method = 'legion_promote';
+        $('#info').submit();
+    }
+
+    function changeWorldLegion() {
+        request.method = 'change_world_legion';
+        $('#legion').submit();
+    }
+
+    $(document).ready(function() {
+        for(var id in user.new_legion) {
+            var value = user.new_legion[id];
+
+            if(id == 'join_time' || id == 'shake_time') {
+                value = formatTime(value);
+            }
+            $('#'+id).textbox({'value': value});
+        }
+
+        if (user.world_legion) {
+            $('#legion_level').textbox({'value': user.world_legion.level});
+            $('#legion_name').textbox({'value': user.world_legion.name});
+            $('#legion_type').textbox({'value': user.world_legion.join_way});
+            $('#legion_limit').textbox({'value': user.world_legion.join_term.level});
+            $('#legion_notice').textbox({'value': user.world_legion.notice});
+            $('#legion_construct').textbox({'value': user.world_legion.build});
+        }
+
+        $('#info').form({
+            url: '.',
+            onSubmit: function(param) {beforeSelfSubmit(param); return true; },
+            success: function(data) {
+                resp = JSON.parse(data);
+                if (resp.code == 0) {
+                    $.messager.alert('信息', '成功', 'info');
+                } else {
+                    $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                }
+            }
+        });
+
+        $('#legion').form({
+            url: '.',
+            onSubmit: function(param) {beforeWorldSubmit(param); return true; },
+            success: function(data) {
+                resp = JSON.parse(data);
+                if (resp.code == 0) {
+                    $.messager.alert('信息', '成功', 'info');
+                } else {
+                    $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                }
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<div id="equip-panel" class="easyui-panel" style="width:100%; height: 100%;" data-options="maximized:true">
+    <div class="easyui-layout" style="width:100%;height:100%;padding:5px;">
+        <div region="center" title="个人相关" data-options="">
+            <form id="info">
+                <table style="width: 600px">
+                    <tr>
+                        <td>上次加入军团时间</td>
+                        <td><input id="join_time" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>当日已经摇过摇钱树的次数</td>
+                        <td><input id="shake_tree" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>上次摇钱时间</td>
+                        <td><input id="shake_time" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>当日试炼次数</td>
+                        <td><input id="trial_count" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>当日试炼星星数</td>
+                        <td><input id="trial_stars" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a id="change-legion-btn1" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="changeSelfLegion()">更改</a></td>
+                    </tr>
+                    <!--<tr>-->
+                        <!--<td colspan="2"><a id="promote-btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="promote()">提升军团长</a></td>-->
+                    <!--</tr>-->
+                </table>
+            </form>
+        </div>
+        <div region="east" title="军团相关" style="width: 50%; padding:10px;" data-options="">
+            <form id="legion">
+                <table style="width: 600px">
+                    <tr>
+                        <td>军团等级</td>
+                        <td><input id="legion_level" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>军团名</td>
+                        <td><input id="legion_name" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>军团类型</td>
+                        <td><input id="legion_type" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>加入等级限制</td>
+                        <td><input id="legion_limit" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>军团建设进度</td>
+                        <td><input id="legion_construct" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td>公告</td>
+                        <td><input id="legion_notice" type="text"></input></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a id="change-legion-btn2" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="changeWorldLegion()">更改</a></td>
+                    </tr>
+                </table>
+            </form>
+            <p style="font-size: 20px; line-height: 25px;">
+                <br>
+                提醒:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;军团类型: 0：不可加入   1：直接加入    2：申请加入<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;军团经验会被强制清成当前等级的领经验<br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

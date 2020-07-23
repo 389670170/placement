@@ -1,0 +1,50 @@
+类型	组内序号	文本标题1	文本内容1
+type	id	title	content
+Int	Int2	String	String
+1	1	Overview	The Adventure Map is split into three difficulties: normal, elite and nightmare. Each difficulty contains multiple stages and drops different loot.
+1	2	Unlock Zones	When all of the stages in a zone have been cleared, the next zone will unlock for you to explore.
+1	3	Stage Events	After clearing certain stages in Adventure, surprise events will be triggered.
+1	4	Stage Loot	You can view the possible loot for each stage in Stage Details. Clear a stage for a chance to earn its loot.
+2	1	Formation Deployment	Typically, heroes in the front row will be attacked more than those in the back row. Carefully consider each hero\'s unit type and place them in the position most suited to them.
+2	2	Determine Winner	The attacker must kill all enemy units before time runs out in order to win. If the time runs out, the attacker will lose the battle.
+2	3	Attack	Attack increases damage dealt to enemies.
+2	4	Armor	Armor reduces damage from enemy normal attacks.
+2	5	Skill DEF	Skill Defense reduces damage from enemy skill attacks.
+2	6	HP	HP increases your battle survivability.
+2	7	Hit Rate	Increases the chance for normal attacks to hit the enemy.
+2	8	Dodge Rate	Increases the chance to dodge enemy normal attacks.
+2	9	Crit Rate	Increases the chance for normal attacks to deal crit damage.
+2	10	Anti-Crit Rate	Reduces the chance for enemy normal attacks to crit.
+2	11	Crit Damage	Increases damage dealt to the target on a critical hit.
+2	12	Crit DMG Mitigation	Reduces damage from enemy critical hits.
+2	13	Armor Piercing	Increases Armor Piercing to ignore a portion of the enemy\'s armor.
+2	14	Skill DEF Piercing	Increases Skill DEF Piercing to ignore a portion of the enemy\'s Skill DEF.
+2	15	Anti-Debuff	Reduces the chance of being hit by a debuff and debuff duration.
+2	16	Healing Bonus	Increases healing received.
+2	17	Initial Rage	Increases the amount of rage your hero starts with.
+2	18	MOV SPD	Increases a unit\'s mobility.
+2	19	Attack Speed	Increases the time between normal attacks.
+2	20	Skill Crit Rate	Increases the chance for skills to crit.
+2	21	Rage Regen Speed	Increases hero rage regen speed.
+2	22	Damage Bonus	Increases the amount of damage dealt to the enemy.
+2	23	Damage Mitigation	Reduces the amount of damage from the enemy.
+2	24	Skill Damage Bonus	Increases the amount of damage that skills deal to the enemy.
+2	25	Skill Damage Mitigation	Reduces the amount of damage from enemy skills.
+2	26	PvP Damage Bonus	Increases the amount of damage dealt to enemy players in PvP combat.
+2	27	PvP Damage Mitigation	Reduces the amount of damage from enemy players in PvP combat.
+3	1	Battle Loot	Adventure stages, Village Raid and certain events have a chance to grant Hero Shards.
+3	2	Store Purchases	Spend resources in the Hero Store to buy Hero Shards or Whole Cards.
+3	3	Tavern Recruit	Use hearts, bugles, gold, diamonds or rum to recruit in Tavern and quickly get Heroes and Hero Shards.
+4	1	Hero Level Up	Use EXP Potions to increase hero level.
+4	2	Transcend Hero	When heroes reach a certain level you can use Transcend Stones or Whole Cards to increase their Transcend Level.
+4	3	Hero Troops	After unlocking elite stages, you can upgrade Hero Troops to conquer the world.
+4	4	Hero Fate	When heroes reach a certain level, you can use Fate Stones to increase their Fate and skill levels.
+4	5	Equip Gear	Equip heroes with gear to increase the power. Gear of higher level and quality grants provides more power for your heroes.
+4	6	Slot Awakening	Awaken hero slots to gain special powers.
+4	7	Inlay and Upgrade Gems	Inlay gems to increase hero power. Upgrading gems increases their stats, making your heroes stronger.
+5	1	Gear Quality	There are six different gear qualities: uncommon, rare, epic, mythic, ancient and genesis. Better quality gear provides better bonuses for your heroes.
+5	2	Enhance Gear	The level limit for enhancing gear increases with lord level. Enhancing gear costs gold, and the cost increases with each enhance level.
+5	3	Refine Gear	The level limit for refining gear enhances with gear quality. Refining gear consumes Refine Stones.
+6	1	Getting Dragons	Dragons will join you when you clear certain stages. They can be decisive factors in winning battles.
+6	2	Acquiring and Inlaying Dragonite	You can get Dragonite everyday by playing in Dragonite Mine. Low-level Dragonite can be crafted into high-level Dragonite. You can inlay Dragonite onto dragons to increase their power.
+6	3	Dragon Level Up	When the Dragonite on a dragon reaches a certain combined level, the dragon can be upgraded. Upgrading dragons greatly increases their power.

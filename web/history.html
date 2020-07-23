@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var page = 0;
+
+    function loadHistory(data) {
+        var records = [];
+        for(var i = 0; i < data.length; i++) {
+            var rd = data[i];
+            rd.time = formatTime(rd.time);
+            if(!gConf.log[rd.mod] || !gConf.log[rd.mod][rd.act]) {
+                rd.oprt = rd.mod+":"+rd.act;
+            }else {
+                rd.oprt = gConf.log[rd.mod][rd.act].name;
+            }
+            var costs = JSON.parse(rd.costs);
+            if(!costs) {
+                costs = rd.costs;
+            }
+            var awards = JSON.parse(rd.awards);
+            if(!awards) {
+                awards = rd.awards;
+            }
+            rd.costs = hawards(costs);
+            rd.awards = hawards(awards);
+            records.push(rd);
+        }
+        $('#history').edatagrid('loadData', records);
+    }
+
+    function getHistory() {
+        var url = "http://"+phpHost+"/msanguo/history.php?uid="+user.info.uid+"&page="+page+"&cb=loadHistory";
+        $.get(url, {}, null, 'jsonp');
+    }
+
+    $(document).ready(function() {
+        $('#history').edatagrid({remoteSort: false,});
+        loadConf(['log'], function() {
+            // getHistory();
+        });
+    });
+</script>
+</head>
+<body>
+    <table id="history" title="" style="width:94%;height:750px"
+            toolbar="#toolbar" pagination="true" idField="id"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <th field="time" width="80" sortable=true order='asc'>时间</th>
+                <th field="oprt" width="80" sortable=true>操作</th>
+                <th field="costs" width="100" sortable=true>消耗</th>
+                <th field="awards" width="100" sortable=true>奖励</th>
+                <th field="args" width="280" sortable=true>参数</th>
+                <th field="run" width="20" sortable=true>耗时</th>
+                <th field="code" width="20" sortable=true>返回码</th>
+                <th field="desc" width="80" sortable=true>描述</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:page--;if(page < 0)page = 0;getHistory()">向前</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true" onclick="javascript:page++;getHistory()">向后</a>
+    </div>
+</body>
+</html>

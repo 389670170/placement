@@ -1,0 +1,6 @@
+索引ID	图片1	描述1	图片2	描述2	图片3	描述3
+key	icon1	desc1	icon2	desc2	icon3	desc3
+String	String	String	String	String	String	String
+create	0	text_teamhint_create1	0	text_teamhint_create2	0	text_teamhint_create3
+break	0	text_teamhint_leave1	0	text_teamhint_leave2	0	text_teamhint_leave3
+leave	0	text_teamhint_leave1	0	text_teamhint_leave2	0	text_teamhint_leave3

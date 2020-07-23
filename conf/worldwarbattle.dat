@@ -1,0 +1,5 @@
+编号	战斗奖励1	描述
+id	dropId	desc
+Int	Int	String
+1	5022	失败的奖励
+2	5023	胜利的奖励

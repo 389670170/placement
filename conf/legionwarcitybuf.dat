@@ -1,0 +1,5 @@
+类型	描述	花费	个人贡献	军团战勋	增驻进度
+bufType	desc	cost	persionCoin	legionCoin	buffAdd
+Int	String	Award	Int	Int	Int
+1	普通增驻	user.gold:-20000	10	0	1
+2	高级增驻	user.cash:-100	25	0	2

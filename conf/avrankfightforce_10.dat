@@ -1,0 +1,10 @@
+排序	排名（10日战力）	奖励内容
+sort	rank	award
+Int	Int	Award
+1	1	skywing.5.2:1,fragment.5026:60,user.bindcash:1000
+2	2	skywing.11.1:60,material.950:40,user.bindcash:800
+3	3	skywing.11.1:30,material.950:30,user.bindcash:600
+4	4	skywing.11.1:15,material.950:25,user.bindcash:500
+5	21	skywing.11.1:8,material.950:20,user.bindcash:400
+6	51	skywing.11.1:4,material.950:15,user.bindcash:300
+7	101	skywing.11.1:2,material.950:10,user.bindcash:200

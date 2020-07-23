@@ -1,0 +1,9 @@
+场景ID	场景名称	地图信息	传送中显示描述	开启条件	开启参数	移动消耗	额外同步人数	同步特定玩家	阵营关系
+id	name	sign	isShowDesc	condition	cVal	moveCost	showOthers	showPlayers	camp
+Int	String	String	Int	Int	Int	Int	Int	Ints	Int
+1	text_worldMap_areaName1	macrocosmmapconf2	1	level	1	2	20	1|2|3	0
+2	text_worldMap_areaName2	macrocosmmapconf3	0	level	30	2	20	1|2|3	0
+3	text_worldMap_areaName3	macrocosmmapconf4	0	level	40	2	20	1|2|3	0
+4	text_worldMap_areaName4	macrocosmmapconf5	0	level	50	2	20	1|2|3	0
+5	text_worldMap_areaName5	macrocosmmapconf6	0	level	60	2	20	1|2|3	0
+6	text_worldMap_areaName6	macrocosmmapconf7	0	level	70	2	20	1|2|3	0

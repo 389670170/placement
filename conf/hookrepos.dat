@@ -1,0 +1,10 @@
+事件ID	物品	权重	说明
+id	award	weight	desc
+Int	Award	Int	String
+1	user.gold:680	150	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>
+2	user.gold:880	100	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>
+3	user.cash:1060	100	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>
+4	user.food:700	15	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>
+5	fragment.4202:1	17	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>
+6	fragment.3106:1	17	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>
+7	user.gold:860	100	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">%s</font>

@@ -1,0 +1,15 @@
+编号	登陆天数	美术资源	奖励内容
+conf	login	picture	award1
+Int	Int	String	Award
+1	1		material.1:150
+2	2		dragon.1001:5
+3	3		user.bindcash:100
+4	4		user.wand:5
+5	5		material.940:40
+6	6		material.32:1
+7	7		user.htoken:10
+8	10		rune.1004:1
+9	15		user.rotate_ncoin:10
+10	20		material.101704:1
+11	25		material.34:1
+12	30	avintw.png	user.bindcash:998

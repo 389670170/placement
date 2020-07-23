@@ -1,0 +1,6 @@
+序号	星星数	奖励
+id	num	awards
+Int	Int	Award
+1	2	material.200088:1
+2	4	material.200089:1
+3	6	material.200090:1

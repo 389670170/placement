@@ -1,0 +1,86 @@
+城市ID	事件ID	事件类型	编号	物品	权重	说明	是否显示
+city	event	type	id	award	weight	desc	show
+Int1	Int2	String	Int	Award	Int	String	Int
+1	1	produce	1	fragment.4203:2	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇赵云在河边洗衣，上前相谈甚欢，获得<font color="#ffff00ff">赵云碎片x2</font>	1
+1	2	produce	2	fragment.4202:2	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇张飞正在喝酒吃肉，上前相谈甚欢，获得<font color="#ffff00ff">张飞碎片x2</font>	1
+1	3	produce	3	material.300001:30	15	<font color="#ffff00ff"></font>小偷作祟被【%s】抓住，收刮后获得<font color="#ffff00ff">天命石x30</font>	1
+1	4	produce	4	material.1:30	15	<font color="#ffff00ff"></font>野猪在居民家作祟，【%s】将其击败后获得<font color="#ffff00ff">突破石x30</font>	1
+1	5	produce	5	material.200027:5	10	<font color="#ffff00ff">【%s】</font>发现贵族珠宝，充为军用，获得<font color="#ffff00ff">神器碎片x5</font>	1
+1	6	produce	6	gem.101:2	11	<font color="#ffff00ff"></font>一只西域商队路过，【%s】收缴过路费，获得<font color="#ffff00ff">1级攻击石x2</font>	1
+1	7	produce	7	gem.201:2	11	<font color="#ffff00ff"></font>百姓和睦，士兵训练认真，【%s】获得奖励<font color="#ffff00ff">1级物防石x2</font>	1
+1	8	produce	8	gem.301:2	11	<font color="#ffff00ff"></font>江洋大盗四处作乱，【%s】将其抓捕后，获得<font color="#ffff00ff">1级法防石x2</font>	1
+1	9	produce	9	gem.401:2	11	<font color="#ffff00ff">【%s】</font>帮助了商人渡船，获得<font color="#ffff00ff">1级生命石x2</font>	1
+1	10	produce	10	user.gold:1167	0	<font color="#ffff00ff">【%s】</font>截获敌军重要情报，上报之后收到嘉奖，获得<font color="#ffff00ff">金币x1167</font>	1
+1	11	mess	11	0	0	<font color="#ff0000ff">发生暴动！</font>敌军残党冲入城内烧杀抢掠，百姓惊恐万分，四散奔逃！</font>	1
+1	12	repression	12	user.gold:150	0	<font color="#ffff00ff">【%s】</font>危乱之中您的好友挺身而出，帮您镇压了暴乱，获得<font color="#ffff00ff">金币x150</font>	1
+2	1	produce	13	fragment.4407:2	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇董卓，相谈甚欢，获得<font color="#ffff00ff">董卓碎片x2</font>	1
+2	2	produce	14	fragment.4208:2	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇刘备，相谈甚欢，获得<font color="#ffff00ff">刘备碎片x2</font>	1
+2	3	produce	15	material.300001:35	15	<font color="#ffff00ff"></font>小偷作祟被【%s】抓住，收刮后获得<font color="#ffff00ff">天命石x35</font>	1
+2	4	produce	16	material.1:35	15	<font color="#ffff00ff"></font>野猪在居民家作祟，【%s】将其击败后获得<font color="#ffff00ff">突破石x35</font>	1
+2	5	produce	17	material.200027:6	10	<font color="#ffff00ff">【%s】</font>发现贵族珠宝，充为军用，获得<font color="#ffff00ff">神器碎片x6</font>	1
+2	6	produce	18	gem.102:3	11	<font color="#ffff00ff"></font>一只西域商队路过，【%s】收缴过路费，获得<font color="#ffff00ff">2级攻击石x3</font>	1
+2	7	produce	19	gem.202:3	11	<font color="#ffff00ff"></font>百姓和睦，士兵训练认真，【%s】获得奖励<font color="#ffff00ff">2级物防石x3</font>	1
+2	8	produce	20	gem.302:3	11	<font color="#ffff00ff"></font>江洋大盗四处作乱，【%s】将其抓捕后，获得<font color="#ffff00ff">2级法防石x3</font>	1
+2	9	produce	21	gem.402:3	11	<font color="#ffff00ff">【%s】</font>帮助了商人渡船，获得<font color="#ffff00ff">2级生命石x3</font>	1
+2	10	produce	22	user.gold:1167	0	<font color="#ffff00ff">【%s】</font>截获敌军重要情报，上报之后收到嘉奖，获得<font color="#ffff00ff">金币x1167</font>	1
+2	11	mess	23	0	0	<font color="#ff0000ff">发生暴动！</font>敌军残党冲入城内烧杀抢掠，百姓惊恐万分，四散奔逃！</font>	1
+2	12	repression	24	user.gold:880	0	<font color="#ffff00ff">【%s】</font>危乱之中您的好友挺身而出，帮您镇压了暴乱，获得<font color="#ffff00ff">金币x880</font>	1
+3	1	produce	25	fragment.4103:2	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇张辽，相谈甚欢，获得<font color="#ffff00ff">张辽碎片x2</font>	1
+3	2	produce	26	fragment.4307:2	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇孙权，相谈甚欢，获得<font color="#ffff00ff">孙权碎片x2</font>	1
+3	3	produce	27	material.300001:45	15	<font color="#ffff00ff"></font>小偷作祟被【%s】抓住，收刮后获得<font color="#ffff00ff">天命石x45</font>	1
+3	4	produce	28	material.1:45	15	<font color="#ffff00ff"></font>野猪在居民家作祟，【%s】将其击败后获得<font color="#ffff00ff">突破石x45</font>	1
+3	5	produce	29	material.200027:8	10	<font color="#ffff00ff">【%s】</font>发现贵族珠宝，充为军用，获得<font color="#ffff00ff">神器碎片x8</font>	1
+3	6	produce	30	gem.103:4	11	<font color="#ffff00ff"></font>一只西域商队路过，【%s】收缴过路费，获得<font color="#ffff00ff">3级攻击石x4</font>	1
+3	7	produce	31	gem.203:4	11	<font color="#ffff00ff"></font>百姓和睦，士兵训练认真，【%s】获得奖励<font color="#ffff00ff">3级物防石x4</font>	1
+3	8	produce	32	gem.303:4	11	<font color="#ffff00ff"></font>江洋大盗四处作乱，【%s】将其抓捕后，获得<font color="#ffff00ff">3级法防石x4</font>	1
+3	9	produce	33	gem.403:4	11	<font color="#ffff00ff">【%s】</font>帮助了商人渡船，获得<font color="#ffff00ff">3级生命石x4</font>	1
+3	10	produce	34	user.gold:1167	0	<font color="#ffff00ff">【%s】</font>截获敌军重要情报，上报之后收到嘉奖，获得<font color="#ffff00ff">金币x1167</font>	1
+3	11	produce	35	user.gold:120	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x120</font>	1
+3	12	mess	36	0	0	<font color="#ff0000ff">发生暴动！</font>敌军残党冲入城内烧杀抢掠，百姓惊恐万分，四散奔逃！</font>	1
+3	13	repression	37	user.gold:960	0	<font color="#ffff00ff">【%s】</font>危乱之中您的好友挺身而出，帮您镇压了暴乱，获得<font color="#ffff00ff">金币x960</font>	1
+4	1	produce	38	fragment.4302:1	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇吕蒙，相谈甚欢，获得<font color="#ffff00ff">吕蒙碎片x1</font>	1
+4	2	produce	39	fragment.4306:1	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇陆逊，相谈甚欢，获得<font color="#ffff00ff">陆逊碎片x1</font>	1
+4	3	produce	40	material.300001:55	15	<font color="#ffff00ff"></font>小偷作祟被【%s】抓住，收刮后获得<font color="#ffff00ff">天命石x55</font>	1
+4	4	produce	41	material.1:55	15	<font color="#ffff00ff"></font>野猪在居民家作祟，【%s】将其击败后获得<font color="#ffff00ff">突破石x55</font>	1
+4	5	produce	42	material.200027:10	10	<font color="#ffff00ff">【%s】</font>发现贵族珠宝，充为军用，获得<font color="#ffff00ff">神器碎片x10</font>	1
+4	6	produce	43	gem.104:2	11	<font color="#ffff00ff"></font>一只西域商队路过，【%s】收缴过路费，获得<font color="#ffff00ff">4级攻击石x2</font>	1
+4	7	produce	44	gem.204:2	11	<font color="#ffff00ff"></font>百姓和睦，士兵训练认真，【%s】获得奖励<font color="#ffff00ff">4级物防石x2</font>	1
+4	8	produce	45	gem.304:2	11	<font color="#ffff00ff"></font>江洋大盗四处作乱，【%s】将其抓捕后，获得<font color="#ffff00ff">4级法防石x2</font>	1
+4	9	produce	46	gem.404:2	11	<font color="#ffff00ff">【%s】</font>帮助了商人渡船，获得<font color="#ffff00ff">4级生命石x2</font>	1
+4	10	produce	47	user.gold:1167	0	<font color="#ffff00ff">【%s】</font>截获敌军重要情报，上报之后收到嘉奖，获得<font color="#ffff00ff">金币x1167</font>	1
+4	11	produce	48	user.gold:180	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+4	12	produce	49	user.gold:180	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+4	13	mess	50	0	0	<font color="#ff0000ff">发生暴动！</font>敌军残党冲入城内烧杀抢掠，百姓惊恐万分，四散奔逃！</font>	1
+4	14	repression	51	user.gold:1360	0	<font color="#ffff00ff">【%s】</font>危乱之中您的好友挺身而出，帮您镇压了暴乱，获得<font color="#ffff00ff">金币x1360</font>	1
+5	1	produce	52	fragment.4110:1	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇典韦，相谈甚欢，获得<font color="#ffff00ff">典韦碎片x1</font>	1
+5	2	produce	53	fragment.4109:1	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇贾诩，相谈甚欢，获得<font color="#ffff00ff">贾诩碎片x1</font>	1
+5	3	produce	54	material.300001:70	15	<font color="#ffff00ff"></font>小偷作祟被【%s】抓住，收刮后获得<font color="#ffff00ff">天命石x70</font>	1
+5	4	produce	55	material.1:70	15	<font color="#ffff00ff"></font>野猪在居民家作祟，【%s】将其击败后获得<font color="#ffff00ff">突破石x70</font>	1
+5	5	produce	56	material.200027:14	10	<font color="#ffff00ff">【%s】</font>发现贵族珠宝，充为军用，获得<font color="#ffff00ff">神器碎片x14</font>	1
+5	6	produce	57	gem.105:3	11	<font color="#ffff00ff"></font>一只西域商队路过，【%s】收缴过路费，获得<font color="#ffff00ff">5级攻击石x3</font>	1
+5	7	produce	58	gem.205:3	11	<font color="#ffff00ff"></font>百姓和睦，士兵训练认真，【%s】获得奖励<font color="#ffff00ff">5级物防石x3</font>	1
+5	8	produce	59	gem.305:3	11	<font color="#ffff00ff"></font>江洋大盗四处作乱，【%s】将其抓捕后，获得<font color="#ffff00ff">5级法防石x3</font>	1
+5	9	produce	60	gem.405:3	11	<font color="#ffff00ff">【%s】</font>帮助了商人渡船，获得<font color="#ffff00ff">5级生命石x3</font>	1
+5	10	produce	61	user.gold:1167	0	<font color="#ffff00ff">【%s】</font>截获敌军重要情报，上报之后收到嘉奖，获得<font color="#ffff00ff">金币x1167</font>	1
+5	11	produce	62	user.gold:250	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+5	12	produce	63	user.gold:230	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+5	13	produce	64	user.gold:220	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+5	14	produce	65	user.gold:210	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+5	15	mess	66	0	0	<font color="#ff0000ff">发生暴动！</font>敌军残党冲入城内烧杀抢掠，百姓惊恐万分，四散奔逃！</font>	1
+5	16	repression	67	user.gold:2440	0	<font color="#ffff00ff">【%s】</font>危乱之中您的好友挺身而出，帮您镇压了暴乱，获得<font color="#ffff00ff">金币x2440</font>	1
+6	1	produce	68	fragment.4309:1	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇大乔，相谈甚欢，获得<font color="#ffff00ff">大乔碎片x1</font>	1
+6	2	produce	69	fragment.4308:1	8	<font color="#ffff00ff">【%s】</font>巡逻之时偶遇巡逻之时偶遇小乔，相谈甚欢，获得<font color="#ffff00ff">小乔碎片x1</font>	1
+6	3	produce	70	material.300001:85	15	<font color="#ffff00ff"></font>小偷作祟被【%s】抓住，收刮后获得<font color="#ffff00ff">天命石x85</font>	1
+6	4	produce	71	material.1:85	15	<font color="#ffff00ff"></font>野猪在居民家作祟，【%s】将其击败后获得<font color="#ffff00ff">突破石x85</font>	1
+6	5	produce	72	material.200027:18	10	<font color="#ffff00ff">【%s】</font>发现贵族珠宝，充为军用，获得<font color="#ffff00ff">神器碎片x18</font>	1
+6	6	produce	73	gem.106:4	11	<font color="#ffff00ff"></font>一只西域商队路过，【%s】收缴过路费，获得<font color="#ffff00ff">6级攻击石x4</font>	1
+6	7	produce	74	gem.206:4	11	<font color="#ffff00ff"></font>百姓和睦，士兵训练认真，【%s】获得奖励<font color="#ffff00ff">6级物防石x4</font>	1
+6	8	produce	75	gem.306:4	11	<font color="#ffff00ff"></font>江洋大盗四处作乱，【%s】将其抓捕后，获得<font color="#ffff00ff">6级法防石x4</font>	1
+6	9	produce	76	gem.406:4	11	<font color="#ffff00ff">【%s】</font>帮助了商人渡船，获得<font color="#ffff00ff">6级生命石x4</font>	1
+6	10	produce	77	user.gold:1167	0	<font color="#ffff00ff">【%s】</font>截获敌军重要情报，上报之后收到嘉奖，获得<font color="#ffff00ff">金币x1167</font>	1
+6	11	produce	78	user.gold:400	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+6	12	produce	79	user.gold:350	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+6	13	produce	80	user.gold:300	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+6	14	produce	81	user.gold:250	0	<font color="#ffff00ff">【%s】</font>巡逻时发现无主财宝，充为军用，获得<font color="#ffff00ff">金币x1060</font>	1
+6	15	mess	82	0	0	<font color="#ff0000ff">发生暴动！</font>敌军残党冲入城内烧杀抢掠，百姓惊恐万分，四散奔逃！</font>	1
+6	16	repression	83	user.gold:3440	0	<font color="#ffff00ff">【%s】</font>危乱之中您的好友挺身而出，帮您镇压了暴乱，获得<font color="#ffff00ff">金币x3440</font>	1

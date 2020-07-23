@@ -1,0 +1,6 @@
+重置次数	重置消耗
+times	cost
+Int	Award
+1	user.mixcash:0
+2	user.mixcash:-50
+3	user.mixcash:-150

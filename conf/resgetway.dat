@@ -1,0 +1,65 @@
+类型	名称	资源	前往	参数	参数2(目前只针对商店)
+id	name	icon	goto	args	args2
+Int	String	String	String	Int	Ints
+101	擂台	daily_task3.png	arena	0	
+201	群雄	daily_task29.png	worldwar	0	
+301	金币祭祀	daily_task23.png	altar	1	
+302	粮草祭祀	daily_task27.png	altar	2	
+303	宝石祭祀	daily_task22.png	altar	3	
+304	天命祭祀	daily_task32.png	altar	4	
+401	金币副本	daily_task16.png	goldRescopy	0	
+402	突破副本	daily_task19.png	rebornRescopy	0	
+403	经验副本	daily_task18.png	xpRescopy	0	
+404	天命副本	daily_task20.png	destinyRescopy	0	
+501	太守	daily_task31.png	lord	0	
+601	军团远征	daily_task26.png	legionCopyOpenLevel	0	
+602	军团商店	daily_task25.png	legion	51	51|54
+603	军团建设	daily_task49.png	legionBuild	0	
+604	军团许愿	daily_task49.png	leigionWishOpenLevel	0	
+605	秘境探险	daily_task52.png	legionTrial	0	
+606	军团争霸	daily_task50.png	legionWarMinJoinLevel	0	
+701	征战	daily_task10.png	battle	0	
+702	精英征战	daily_task24.png	elite	0	
+703	征战切磋	daily_task24.png	combat	1	
+801	黑市	daily_task30.png	shop	13	11|13
+802	神将商店	daily_task30.png	shop	12	11|13
+803	擂台商店	daily_task3.png	arena	31	31|32
+804	爬塔商店	daily_task2.png	tower	21	21|22
+805	秘境商店	daily_task52.png	legion	54	51|54
+901	武将分解	daily_task35.png	heroList	3	
+902	铁匠铺	daily_task8.png	blacksmith	0	
+1001	千层塔	daily_task2.png	tower	0	
+1101	巡逻	daily_task12.png	patrol	0	
+1102	战役	daily_task10.png	infinite	0	
+1201	押镖	daily_task4.png	shipper	0	
+1301	金矿	daily_task5.png	goldmine	0	
+1302	龙晶矿	daily_task33.png	digging	0	
+1401	皇城	daily_task21.png	citycraft	0	
+1501	军团试练	daily_task21.png	legion	0	
+1601	月卡	daily_task17.png	monthCard	0	
+1602	终身卡	daily_task15.png	longCard	0	
+1603	酒馆招募	daily_task14.png	pub	0	
+1604	午餐晚餐	daily_task11.png	task	0	
+1605	好友礼物	daily_task46.png	friend	0	
+1606	赶跑山贼	daily_task1.png	thief	0	
+1607	搜索	daily_task12.png	hook	0	
+1608	经验副本	daily_task59.png	xpRescopy	0	
+1609	突破副本	daily_task61.png	rebornRescopy	0	
+1610	龙晶矿	daily_task58.png	digging	0	
+1611	天命祭祀	daily_task57.png	altar	4	
+1612	天命副本	daily_task57.png	destinyRescopy	0	
+1613	押镖	daily_task57.png	shipper	0	
+1614	皇城	daily_task36.png	citycraft	0	
+1615	秘境商店	daily_task60.png	legion	54	51|54
+1616	巡逻	daily_task12.png	patrol	0	
+1617	军团远征	daily_task62.png	legionCopyOpenLevel	0	
+1618	军团建设	daily_task62.png	legionBuild	0	
+1619	军团许愿	daily_task62.png	leigionWishOpenLevel	0	
+1620	武将分解	daily_task64.png	heroList	3	
+1621	战役	daily_task64.png	infinite	0	
+1622	太守	daily_task64.png	lord	0	
+1623	擂台	daily_task68.png	arena	0	
+1624	千层塔	daily_task66.png	tower	0	
+1625	秘境探险	daily_task67.png	legionTrial	0	
+1626	群雄	daily_task65.png	worldwar	0	
+1627	军团争霸	daily_task63.png	legionWarMinJoinLevel	0	

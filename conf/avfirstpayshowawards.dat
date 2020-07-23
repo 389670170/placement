@@ -1,0 +1,4 @@
+编号	奖励	描述	描述
+id	awards	desc1	desc2
+Int	Award	String	String
+1	material.1:1	夏侯渊、赵云、甘宁、公孙瓒	四选一

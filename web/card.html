@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curIndex = -1;
+
+    var allHeros = [];
+
+    function sorter(a, b) {return a>b?1:-1;}
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p + '=' + request[p]);
+        }
+        return '.?'+gridParams.join('&');
+    }
+
+    $(document).ready(function() {
+        $('#cards').edatagrid({
+            remoteSort: false,
+            updateUrl: getGridUrl('update_hero'),
+            onBeforeEdit : function(index, row) {
+                curIndex = index;
+            },
+            onAfterEdit: function(index, row) {
+                if(row) {
+                    user.bag.card[row.id] = row.num;
+                }
+            }
+        });
+
+        loadConf(['hero', 'generaltext'], function() {
+            for (var id in gConf.hero) {
+                var hero = gConf.hero[id];
+
+                var quality = '';
+                if (hero.quality) {
+                    quality = gQuality[+hero.quality];
+                }
+                var num = 0;
+                if (user.bag.card[id]) {
+                    num = user.bag.card[id];
+                }
+
+                var camp = '';
+                if (hero.camp) {
+                    camp = gCamp[hero.camp];
+                }
+
+                var ability = '';
+                if (hero.ability) {
+                    ability = gAbility[hero.ability];
+                }
+
+                allHeros.push({
+                    'id' : id,
+                    'name' : gConf.generaltext[hero.heroName].text,
+                    'type' : hero.professionType,
+                    'quality' : quality,
+                    'camp' : camp,
+                    'ability' : ability,
+                    'num' : num,
+                });
+            }
+
+            $('#cards').edatagrid('loadData', allHeros);
+        });
+        setKeyboardEvent(function() {
+            if(curIndex != -1) {
+                $('#cards').edatagrid('cancelRow');
+                curIndex = -1;
+            }
+        },
+        function() {
+            if(curIndex != -1) {
+                $('#cards').edatagrid('endEdit', curIndex);
+                curIndex = -1;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <table id="cards" title="" style="width:50%;height:750px"
+            toolbar="#toolbar" pagination="true" idField="id"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <th field="id" width="30" sortable=true order='asc'>材料ID</th>
+                <th field="name" width="30" sortable=true order='asc'>名称</th>
+                <th field="type" width="30" sortable=true order='asc'>类别</th>
+                <th field="quality" width="30" sortable=true>品质</th>
+                <th field="camp" width="30" sortable=true>阵营</th>
+                <th field="ability" width="30" sortable=true>定位</th>
+                <th field="num" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">数量</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#cards').edatagrid('cancelRow')">取消</a>
+    </div>
+</body>
+</html>

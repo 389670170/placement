@@ -1,0 +1,5 @@
+礼包ID	充值金钻	描述	奖励道具
+id	pay	desc	rewards
+Int	Int	String	Award
+1	10	text_av_firstPay_desc_1	card.5031:1,user.gold:300000,user.hero_exp:600000,material.1:50
+2	1000	text_av_firstPay_desc_1	wake_dragon.9:1,dragon.1001:5,user.gold:1000000,user.hero_exp:2000000

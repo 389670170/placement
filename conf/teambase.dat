@@ -1,0 +1,13 @@
+战队等级	升下级所需经验	战队人数上限	每日奖励	战队任务奖励	战队任务宝箱奖励掉落
+level	exp	maxMember	award	teamTaskAward	teamTaskBoxAward
+Int	Int	Int	Award	Award	Award
+1	1200	5	user.gold:6900,material.1:20	material.930:4,user.team_exp:50	material.940:3
+2	2600	5	user.gold:7900,material.1:24,material.930:5	material.930:4,user.team_exp:50	material.940:3
+3	6200	5	user.gold:10500,material.1:28,material.940:2	material.930:4,user.team_exp:50	material.940:3
+4	12600	5	user.gold:16800,material.1:32,material.940:3	material.930:4,user.team_exp:50	material.940:3
+5	18800	5	user.gold:22500,material.1:36,material.940:4	material.930:4,user.team_exp:50	material.940:3
+6	25000	5	user.gold:27700,material.1:40,material.940:5	material.930:4,user.team_exp:50	material.940:3
+7	37600	5	user.gold:29200,material.1:44,material.950:1	material.930:4,user.team_exp:50	material.940:3
+8	75000	5	user.gold:31700,material.1:48,material.950:2	material.930:4,user.team_exp:50	material.940:3
+9	112600	5	user.gold:36700,material.1:52,material.950:3	material.930:4,user.team_exp:50	material.940:3
+10	150000	5	user.gold:41500,material.1:56,material.950:4	material.930:4,user.team_exp:50	material.940:3

@@ -1,0 +1,19 @@
+功能名称	功能描述	数值描述	补充表述	备注
+key	desc1	desc2	desc3	remark
+String	Strings	Strings	String	String
+relicBaseAward	遗迹基础奖励	+%s	%	百分比
+relicExploreTime	遗迹探索时间	%s	%	百分比
+relicAccelerateCost	遗迹加速消耗	%s	%	百分比
+defendLose	关隘伤害减免	+%s	%	百分比
+mineAward	矿点产出收益	+%s	%	百分比
+minePillageAward	矿点掠夺收益	+%s	%	百分比
+actionMax	行动力上限	+%s		固定值
+actionRecoverRate	行动力恢复速度	+%s	%	百分比
+actionRecover	水井行动力恢复	+%s	%	百分比
+enduranceLoseDamping	获胜耐力损耗	%s	%	百分比
+enduranceRecoverRate	耐力恢复速度	+%s	%	百分比
+enduranceRecover	水井耐力回复	+%s	%	百分比
+redGeneralTrain1	碎片产出速度|碎片存储上限	%sh/个|%s个		固定值|固定值
+redGeneralTrain2	碎片产出速度|碎片存储上限	%sh/个|%s个		固定值|固定值
+redGeneralTrain3	碎片产出速度|碎片存储上限	%sh/个|%s个		固定值|固定值
+redGeneralTrain4	碎片产出速度|碎片存储上限	%sh/个|%s个		固定值|固定值

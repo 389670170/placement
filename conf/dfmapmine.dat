@@ -1,0 +1,7 @@
+索引ID	元素名称	缩放系数	锚点偏移_x	锚点偏移_y	模型	图片	基础奖励	掠夺奖励	描述
+id	name	scale	offset_x	offset_y	url	icon	award1	award2	desc
+Int	String	Int	Int	Int	String	String	Award	Award	String
+1	text_territorialwars_mineName1	0.9	0.5	0.4	mine_1	daily_task15.png	material.1:50,user.gold:25000	material.1:100,user.bindcash:10	text_territorialwars_mineDesc1
+2	text_territorialwars_mineName2	0.9	0.5	0.4	mine_2	daily_task16.png	material.100001:5,user.gold:25000	material.100001:10,user.bindcash:10	text_territorialwars_mineDesc2
+3	text_territorialwars_mineName3	0.9	0.5	0.4	mine_3	daily_task17.png	user.smelt:500,user.gold:25000	user.smelt:1000,user.bindcash:10	text_territorialwars_mineDesc3
+5	text_territorialwars_mineName4	0.9	0.5	0.4	mine_5	daily_task19.png	user.bindcash:20,user.gold:25000	user.bindcash:50	text_territorialwars_mineDesc4

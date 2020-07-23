@@ -1,0 +1,427 @@
+#!/bin/bash
+#
+# manage a group of: gateway + n*game + world
+
+prog="node"
+server=""
+
+RETVAL=0
+_start() {
+    # gateway gateway.js gateway.log
+    # game1 game.js 1 game.log
+    # world game.js world game.log
+
+    name=$1
+    args=$2
+    pidfile="$1.pid"
+
+    echo -n $"Starting $name .............."
+    if [ -f $pidfile ]; then
+        echo -e "\t\E[31;40m[FAIL]\033[0m"
+        echo "$name is Running"
+    else
+        nohup $prog $args 1>/dev/null 2>&1 &
+        for i in {1..60}; do
+            if [ -f $pidfile ]; then
+                echo -e "\t\E[32;40m[OK]\033[0m"
+                break
+            else
+                if [ $i -eq 60 ]; then
+                    echo -e "\t\E[31;40m[FAIL]\033[0m"
+                fi
+            fi
+            sleep 1
+        done
+    fi
+    RETVAL=$?
+}
+
+_start_gm() {
+    # gateway gateway.js gateway.log
+    # game1 game.js 1 game.log
+    # world game.js world game.log
+
+    name=$1
+    args=$2
+    pidfile="$1.pid"
+
+    echo -n $"Starting $name .............."
+    if [ -f $pidfile ]; then
+        echo -e "\t[FAIL]"
+        echo "$name is Running"
+    else
+        $prog $args 1>/dev/null &
+        for i in {1..5}; do
+            if [ -f $pidfile ]; then
+                echo -e "\t[OK]"
+                break
+            else
+                if [ $i -eq 5 ]; then
+                    echo -e "\t[FAIL]"
+                fi
+            fi
+            sleep 1
+        done
+    fi
+    RETVAL=$?
+}
+
+_stop() {
+    name=$1
+    pidfile="$1.pid"
+
+    echo -n $"Stopping $name .............."
+    if [ -f ${pidfile} ]; then
+        pid=`cat ${pidfile}`
+        if [ -d "/proc/${pid}" ]; then
+            while [ -d "/proc/${pid}" ]; do
+                kill  ${pid}
+                sleep 1
+            done
+        fi
+        rm -f ${pidfile}
+    fi
+    echo -e "\t\E[32;40m[OK]\033[0m"
+    RETVAL=$?
+}
+
+_stop_gm() {
+    name=$1
+    pidfile="$1.pid"
+
+    echo -n $"Stopping $name .............."
+    if [ -f ${pidfile} ]; then
+        pid=`cat ${pidfile}`
+        if [ -d "/proc/${pid}" ]; then
+            while [ -d "/proc/${pid}" ]; do
+                kill  ${pid}
+                sleep 1
+            done
+        fi
+        rm -f ${pidfile}
+    fi
+    echo -e "\t[OK]"
+    RETVAL=$?
+}
+
+_status() {
+    name=$1
+    pidfile="$1.pid"
+
+    echo -n -e "$name\t\t"
+    if [ -f ${pidfile} ]; then
+        pid=`cat ${pidfile}`
+        echo -n -e "$pid\t\t"
+        if [ -d "/proc/${pid}" ]; then
+            echo -n -e "\E[32;40m[Running]\033[0m\t"
+        else
+            echo -n -e "\E[31;40m[Lost]\033[0m\t\t"
+        fi
+
+        echo `ps -p $pid -o rss | tail -n 1 | awk '{printf("%.2fM", $1/1024)}'`
+    else
+        echo -e "-\t\t\E[31;40m[Stoped]\033[0m\t-"
+    fi
+
+    RETVAL=$?
+}
+
+_status_gm() {
+    name=$1
+    pidfile="$1.pid"
+
+    echo -n -e "$name\t"
+    if [ -f ${pidfile} ]; then
+        pid=`cat ${pidfile}`
+        echo -n -e "$pid\t"
+        if [ -d "/proc/${pid}" ]; then
+            echo -n -e "[Running]\t"
+        else
+            echo -n -e "[Lost]\t"
+        fi
+
+        echo `ps -p $pid -o rss | tail -n 1 | awk '{printf("%.2fM", $1/1024)}'`
+    else
+        echo -e "-\t[Stoped]\t-"
+    fi
+
+    RETVAL=$?
+}
+
+start() {
+    config='config.js'
+    if [ -f '../config.js' ]; then
+        config='../config.js'
+    fi
+
+    serverId=`grep exports.ServerId $config| awk '{print $3}' | awk -F';' '{print $1}'`
+    gameIdBegin=`grep exports.GameIdBegin $config| awk -F'[ ;]' '{print $3}'`
+    gameCount=`grep exports.GameCount $config| awk -F'[ ;]' '{print $3}'`
+    phpHost=`grep "exports.PHPHost" $config | awk '{print $3}'`
+
+    # 分服的配置
+    if [ -d "servers/s$serverId" ]; then
+        cp servers/s$serverId/*.dat conf/
+    fi
+
+    clean
+
+    if [ "$server" =  "gateway" ] || [ "$server" = "" ]; then
+        _start gateway 'gateway.js'
+        #配置gm中用到的phphost
+        sed -i "/phpHost/c var phpHost = $phpHost" web/global.js
+    fi
+
+    if [ "$server" =  "game" ] || [ "$server" = "" ]; then
+        for ((c=0; c<$gameCount; c++))
+        do
+            ((d=gameIdBegin+c))
+
+            _start "game$d" "game.js $d"
+        done
+    fi
+
+    if [ "$server" =  "world" ] || [ "$server" = "" ]; then
+        _start world 'world.js'
+    fi
+
+    if [ "$server" =  "wss" ] || [ "$server" = "" ]; then
+        _start wss 'wss.js'
+    fi
+	
+	if [ "$server" =  "logserver" ] || [ "$server" = "" ]; then
+        _start logserver 'logserver.js'
+    fi
+
+}
+
+start_gm() {
+    config='config.js'
+    if [ -f '../config.js' ]; then
+        config='../config.js'
+    fi
+
+    serverId=`grep exports.ServerId $config| awk '{print $3}' | awk -F';' '{print $1}'`
+    gameIdBegin=`grep exports.GameIdBegin $config| awk -F'[ ;]' '{print $3}'`
+    gameCount=`grep exports.GameCount $config| awk -F'[ ;]' '{print $3}'`
+
+    if [ -d "servers/s$serverId" ]; then
+        cp servers/s$serverId/*.dat conf/
+    fi
+
+    if [ "$server" =  "gateway" ] || [ "$server" = "" ]; then
+        _start_gm gateway 'gateway.js'
+    fi
+
+    if [ "$server" =  "game" ] || [ "$server" = "" ]; then
+        for ((c=0; c<$gameCount; c++))
+        do
+            ((d=gameIdBegin+c))
+
+            _start_gm "game$d" "game.js $d"
+        done
+    fi
+
+    if [ "$server" =  "world" ] || [ "$server" = "" ]; then
+        _start_gm world 'world.js'
+    fi
+
+    if [ "$server" =  "wss" ] || [ "$server" = "" ]; then
+        _start_gm wss 'wss.js'
+    fi
+
+	if [ "$server" =  "logserver" ] || [ "$server" = "" ]; then
+        _start_gm logserver 'logserver.js'
+    fi
+}
+
+stop() {
+    if [ "$server" =  "gateway" ] || [ -z "$server" ]; then
+        _stop gateway
+    fi
+
+    if [ "$server" =  "game" ] || [ "$server" = "" ]; then
+        config='config.js'
+        if [ -f '../config.js' ]; then
+            config='../config.js'
+        fi
+
+        gameIdBegin=`grep exports.GameIdBegin $config| awk -F'[ ;]' '{print $3}'`
+        gameCount=`grep exports.GameCount $config| awk -F'[ ;]' '{print $3}'`
+        for ((c=0; c<$gameCount; c++))
+        do
+            ((d=gameIdBegin+c))
+            _stop "game$d"
+        done
+    fi
+
+    if [ "$server" =  "world" ] || [ "$server" = "" ]; then
+        _stop world
+    fi
+    if [ "$server" =  "wss" ] || [ "$server" = "" ]; then
+        _stop wss
+    fi
+	
+	if [ "$server" =  "logserver" ] || [ "$server" = "" ]; then
+        _stop logserver
+    fi
+}
+
+stop_gm() {
+    if [ "$server" =  "gateway" ] || [ -z "$server" ]; then
+        _stop_gm gateway
+    fi
+
+    if [ "$server" =  "game" ] || [ "$server" = "" ]; then
+        config='config.js'
+        if [ -f '../config.js' ]; then
+            config='../config.js'
+        fi
+
+        gameIdBegin=`grep exports.GameIdBegin $config| awk -F'[ ;]' '{print $3}'`
+        gameCount=`grep exports.GameCount $config| awk -F'[ ;]' '{print $3}'`
+        for ((c=0; c<$gameCount; c++))
+        do
+            ((d=gameIdBegin+c))
+            _stop_gm "game$d"
+        done
+    fi
+
+    if [ "$server" =  "world" ] || [ "$server" = "" ]; then
+        _stop_gm world
+    fi
+    if [ "$server" =  "wss" ] || [ "$server" = "" ]; then
+        _stop_gm wss
+    fi
+	
+	if [ "$server" =  "logserver" ] || [ "$server" = "" ]; then
+        _stop_gm logserver
+    fi
+}
+
+status() {
+    echo -e "Version: `git log | head -n 1 | awk '{print $2}'`"
+    echo "------------------------------------------------------"
+    echo -e "Process\t\tPID\\t\tStatus\t\tMem"
+
+    if [ "$server" =  "gateway" ] || [ "$server" = "" ]; then
+        _status gateway
+    fi
+
+    if [ "$server" =  "game" ] || [ "$server" = "" ]; then
+        config='config.js'
+        if [ -f '../config.js' ]; then
+            config='../config.js'
+        fi
+
+        gameIdBegin=`grep exports.GameIdBegin $config| awk -F'[ ;]' '{print $3}'`
+        gameCount=`grep exports.GameCount $config| awk -F'[ ;]' '{print $3}'`
+        for ((c=0; c<$gameCount; c++))
+        do
+            ((d=gameIdBegin+c))
+            _status "game$d"
+        done
+    fi
+
+    if [ "$server" =  "world" ] || [ "$server" = "" ]; then
+        _status world
+    fi
+    if [ "$server" =  "wss" ] || [ "$server" = "" ]; then
+        _status wss
+    fi
+	
+	if [ "$server" =  "logserver" ] || [ "$server" = "" ]; then
+        _status logserver
+    fi
+}
+
+status_gm() {
+    echo -e "Version: `git log | head -n 1 | awk '{print $2}'`"
+    echo "------------------------------------------------------"
+    echo -e "Process\tPID\tStatus\tMem"
+
+    if [ "$server" =  "gateway" ] || [ "$server" = "" ]; then
+        _status_gm gateway
+    fi
+
+    if [ "$server" =  "game" ] || [ "$server" = "" ]; then
+        config='config.js'
+        if [ -f '../config.js' ]; then
+            config='../config.js'
+        fi
+
+        gameIdBegin=`grep exports.GameIdBegin $config| awk -F'[ ;]' '{print $3}'`
+        gameCount=`grep exports.GameCount $config| awk -F'[ ;]' '{print $3}'`
+        for ((c=0; c<$gameCount; c++))
+        do
+            ((d=gameIdBegin+c))
+            _status_gm "game$d"
+        done
+    fi
+
+    if [ "$server" =  "world" ] || [ "$server" = "" ]; then
+        _status_gm world
+    fi
+    if [ "$server" =  "wss" ] || [ "$server" = "" ]; then
+        _status_gm wss
+    fi
+	
+	if [ "$server" =  "logserver" ] || [ "$server" = "" ]; then
+        _status_gm logserver
+    fi
+}
+
+reload() {
+    node reload
+}
+
+clean() {
+    # 清理3日前日志
+    find log -mtime +3 -name "*.*" -exec rm -rf {} \;
+}
+
+if [ $# -ge 2 ]; then
+    case "$2" in
+        gateway|game|world|wss)
+            server=$2
+            ;;
+        *)
+            echo "arg 2 should in [gateway|game|world|wss]"
+            exit 1
+    esac
+fi
+
+# See how we were called.
+case "$1" in
+  reload)
+        reload
+        ;;
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status
+        ;;
+  restart)
+        stop
+        start
+        ;;
+  status_gm)
+        status_gm
+        ;;
+  restart_gm)
+        stop_gm
+        start_gm
+        ;;
+  clean)
+        clean
+        ;;
+  *)
+        echo $"Usage: manage {start|stop|restart|status} [gateway|game|world|wss]"
+        exit 1
+esac
+
+exit $RETVAL

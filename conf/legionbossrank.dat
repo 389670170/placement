@@ -1,0 +1,8 @@
+排行级别	排名	奖励
+level	rank	award
+Int	Int	Award
+1	1	material.101501:1
+2	2	material.101502:1
+3	3	material.101503:1
+4	4	material.101504:1
+5	11	material.101505:1

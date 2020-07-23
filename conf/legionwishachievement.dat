@@ -1,0 +1,11 @@
+索引ID	奖励等级	目标条件	成就名称	操作(程序用)	描述	奖励
+id	level	target	name	key	desc	award
+Int1	Int2	Int	String	String	String	Award
+1	1	1	无	mail	本周愿望未实现补偿奖励	material.200025:3,user.legion:800
+2	1	1	美梦成真	wish	本周愿望实现	material.200025:5,user.legion:1200
+3	1	2	乐善好施	give	本周累计赠送2次	material.200024:2,user.legion:300
+3	2	4	乐善好施	give	本周累计赠送4次	material.200024:4,user.legion:500
+3	3	8	乐善好施	give	本周累计赠送8次	material.200025:3,user.legion:800
+3	4	10	乐善好施	give	本周累计赠送10次	material.200025:5,user.legion:1200
+3	5	15	乐善好施	give	本周累计赠送15次	material.200026:2,user.legion:2000
+3	6	25	乐善好施	give	本周累计赠送25次	material.200040:2,user.legion:3000

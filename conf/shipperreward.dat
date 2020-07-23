@@ -1,0 +1,12 @@
+等级	绿色镖车奖励	蓝色镖车奖励	紫色镖车奖励	橙色镖车奖励	红色镖车奖励
+level	award1	award2	award3	award4	award5
+Int	Award	Award	Award	Award	Award
+20	material.300001:80	material.300001:160	material.300001:240	material.300001:320	material.300001:398
+30	material.300001:86	material.300001:170	material.300001:256	material.300001:340	material.300001:426
+40	material.300001:90	material.300001:180	material.300001:272	material.300001:362	material.300001:452
+50	material.300001:98	material.300001:196	material.300001:296	material.300001:394	material.300001:492
+60	material.300001:102	material.300001:202	material.300001:304	material.300001:404	material.300001:506
+70	material.300001:104	material.300001:208	material.300001:312	material.300001:414	material.300001:518
+80	material.300001:106	material.300001:212	material.300001:320	material.300001:426	material.300001:532
+90	material.300001:110	material.300001:218	material.300001:328	material.300001:436	material.300001:546
+100	material.300001:112	material.300001:224	material.300001:336	material.300001:446	material.300001:558

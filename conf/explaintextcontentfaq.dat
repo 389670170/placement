@@ -1,0 +1,15 @@
+类型	组内序号	文本标题1	文本内容1
+type	id	title	content
+Int	Int2	String	String
+1	1	1. Question: How can I keep playing after switching to a new device?	Answer: After downloading and opening the game, enter your account and password to login. Please use a device with the same operating system.
+1	2	2. Question: What can I do if I forget my game account ?	Answer: Game accounts cannot be recovered. Please do your best to remember your login info.
+1	3	3. Question: My account was stolen and someone else changed my password. What can I do?	Answer: If your account password has been changed, please login to the Account Security Center to change it.
+1	4	4. Question: What can I do if the connection times out and I can\'t login?	Answer: Please keep trying to connect. If the connection still times out, check your internet connection or contact customer support.
+1	5	5. Question: If I login and discover that my game data was lost what can I do?	Answer: If you suspect your game data has been lost, please check to make sure that you log in the correct server, as data is not shared between servers. If the server is correct and the problem is not solved, please contact us and have your game ID and account info ready. We\'ll do our best to help you.
+1	6	6. Question: What should I do if the game crashes?	Answer: If the game crashes, please close all background processes and try again. If it still crashes, restart your device and try again or contact customer support to report the incident and provide your device ID.
+1	7	7. Question: What should I do if I discover another player is cheating?	Answer: We are dedicated to providing players with a fair gaming environment and preventing any player from taking advantage of game bugs to gain an unfair advantage. If you discover a cheating player, please contact us immediately so that we can take action to deal with the problem.
+2	1	1. Question: What should I do if I see another player sending ads or scam messages in the game chat?	Answer: You can contact customer support and leave us feedback. Please screenshot the player\'s ID and evidence when you make your report.
+3	1	1. Question: How can I become a VIP player?	Answer: You will become a VIP player when you purchase a certain amount of Golden Diamonds. The more you buy, the higher your VIP level will be, the more special perks you grant. You can also increase your VIP level by completing Daily Quests in-game.
+3	2	2. Question: Is there a reward for the first time players recharge?	Answer: After making your 1st Purchase, you will get a 1st Purchase Pack that greatly increases your power at a huge discount!
+3	3	3. Question: What should I do if I\'ve paid for a recharge but haven\'t received my items?	Answer: If the payment is successful but you still haven\'t received your items, try restarting the game. If there\'s no change, please contact customer support.
+3	4	4. Question: After completing a recharge, why is the amount of money I\'m charged different?	Answer: The amount of money for each recharge is based on the current exchange rate of the country you are in and changes as exchange rates fluctuate.

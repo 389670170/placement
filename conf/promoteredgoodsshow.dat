@@ -1,0 +1,9 @@
+展示级别	展示处	展示道具
+id	type	goods
+Int	Int2	Award
+1	1	material.15:1
+1	2	material.17:1
+1	3	user.soul:1
+2	1	material.16:1
+2	2	material.18:1
+2	3	material.19:1

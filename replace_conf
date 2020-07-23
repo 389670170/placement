@@ -1,0 +1,15 @@
+#!/bin/bash
+cd $1
+
+git reset --hard HEAD >/dev/null 2>&1
+git clean -fd >/dev/null 2>&1
+git pull >/dev/null 2>&1
+node initdb.js
+
+config='config.js'
+if [ -f '../config.js' ]; then
+    config='../config.js'
+fi
+
+cp -f /tmp/conf/$2/*.dat `grep exports.ConfDir $config | awk '{print $3}' | awk -F';' '{print $1}' | sed s/\'//g | sed s/\"//g`
+./manage restart

@@ -1,0 +1,753 @@
+关卡类型	关卡id	场景展示资源	经验展现	金币展现	英雄经验展现	挂机掉落经验	挂机掉落金币	挂机掉落英雄经验	挑战限制	限制参数	功能开启	功能开启界面是否显示	新手引导标示	是否可退出/暂停	是否展示BOSS信息	冒险送钻石	首通奖励	奖励展示	掉落解锁	战斗ID
+type	id	url	expShow	goldShow	heroExpShow	singleExp	singleGold	singleHeroExp	challengeLimit	target	moduleOpenId	moduleOpenShow	guideIndex	enableBreak	bossShow	customWeal	first	firstShow	lootUnlock	formation
+Int	Int2	String	Int	Int	Int	Int	Int	Int	String	Int	String	Int	Int	Int	Int	Int	Award	Award	Award	Int
+1	1	npc_explore_1	8	34	3	60	240	25	level	1	0	0	0	0	0	6	user.xp:100,user.gold:1000,user.hero_exp:300			1000001
+1	2	npc_explore_1	8	34	3	61	241	27	level	1	0	0	1	0	0	6	user.xp:100,user.gold:1000,user.hero_exp:300			1000002
+1	3	npc_explore_1	8	34	4	62	242	29	level	1	0	0	3	0	0	6	card.3001:1,equip.10101.0:1,user.xp:100,user.gold:1000,user.hero_exp:300	equip.10101.0:1	equip.10101.0:1	1000003
+1	4	npc_explore_1	9	34	4	63	243	31	level	1	0	0	2	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:400			1000004
+1	5	npc_explore_1	9	34	4	64	244	33	level	1	0	0	0	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:500			1000005
+1	6	npc_explore_1	9	34	5	64	244	35	level	1	0	0	0	1	0	6	wake_dragon.1:1,material.399999:1,dragon.1001:1,equip.20101.0:1,user.xp:100,user.gold:1000,user.hero_exp:700	equip.20101.0:1	equip.20101.0:1	1000006
+1	7	npc_explore_1	9	35	5	65	245	38	level	1	0	0	4	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:700			1000007
+1	8	npc_explore_1	9	35	5	66	246	40	level	1	0	0	0	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:800			1000008
+1	9	npc_explore_1	9	35	6	67	247	42	level	1	0	0	0	1	0	6	material.940:20,equip.30101.0:1,user.xp:100,user.gold:1000,user.hero_exp:900	equip.30101.0:1	equip.30101.0:1	1000009
+1	10	npc_explore_1	9	35	6	68	248	44	level	1	0	0	0	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:1000			1000010
+1	11	npc_explore_1	9	35	6	69	249	46	level	1	0	0	0	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:1200			1000011
+1	12	npc_explore_1	9	35	6	69	249	48	level	1	0	0	0	1	0	6	equip.40101.0:1,user.xp:100,user.gold:1000,user.hero_exp:1300	equip.40101.0:1	equip.40101.0:1	1000012
+1	13	npc_explore_1	10	35	7	70	250	50	level	1	territorywar	0	16	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:1300			1000013
+1	14	npc_explore_1	10	35	7	71	251	52	level	1	0	0	0	1	0	6	user.xp:100,user.gold:1000,user.hero_exp:1500			1000014
+1	15	npc_explore_1	10	36	7	72	252	54	level	1	0	0	0	1	0	6	equip.50101.0:1,user.xp:100,user.gold:1000,user.hero_exp:1600	equip.50101.0:1	equip.50101.0:1	1000015
+1	16	npc_explore_1	10	36	8	73	253	56	level	1	0	0	0	1	0	6	user.xp:100,user.gold:2000,user.hero_exp:1800			1000016
+1	17	npc_explore_1	10	36	8	74	254	58	level	1	0	0	0	1	0	6	user.xp:100,user.gold:2000,user.hero_exp:2000			1000017
+1	18	npc_explore_1	10	36	8	74	254	60	level	1	0	0	0	1	0	6	equip.60101.0:1,user.xp:200,user.gold:2000,user.hero_exp:2100	equip.60101.0:1	equip.60101.0:1	1000018
+1	19	npc_explore_1	10	36	9	75	255	63	level	1	0	0	0	1	0	6	user.xp:200,user.gold:2000,user.hero_exp:2100			1000019
+1	20	npc_explore_1	10	36	9	76	256	65	level	1	0	0	0	1	0	6	user.xp:200,user.gold:2000,user.hero_exp:2300			1000020
+1	21	npc_explore_1	11	36	9	77	257	67	level	1	0	0	0	1	0	6	material.940:2,user.xp:200,user.gold:2000,user.hero_exp:2500	material.940:2		1000021
+1	22	npc_explore_1	11	36	9	78	258	69	level	1	0	0	0	1	0	6	user.xp:200,user.gold:2000,user.hero_exp:2700			1000022
+1	23	npc_explore_1	11	37	10	79	259	71	level	1	0	0	0	1	0	6	user.xp:200,user.gold:2000,user.hero_exp:2900			1000023
+1	24	npc_explore_1	11	37	10	80	260	73	level	1	arena	0	0	1	0	6	material.940:2,user.atoken:10,user.xp:200,user.gold:2000,user.hero_exp:3100	material.940:2	material.940:1	1000024
+1	25	npc_explore_1	11	37	10	81	261	76	level	1	0	0	11	1	0	6	user.xp:200,user.gold:2000,user.hero_exp:3100			1000025
+1	26	npc_explore_1	11	37	11	82	262	78	level	1	0	0	0	1	0	6	user.xp:200,user.gold:2000,user.hero_exp:3300			1000026
+1	27	npc_explore_1	11	37	11	82	262	80	level	1	0	0	17	1	0	6	material.940:2,user.xp:200,user.gold:3000,user.hero_exp:3500	material.940:2		1000027
+1	28	npc_explore_1	11	37	11	83	263	82	level	1	0	0	0	1	0	6	user.xp:200,user.gold:3000,user.hero_exp:3700			1000028
+1	29	npc_explore_1	12	37	12	84	264	84	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:4000			1000029
+1	30	npc_explore_1	12	37	12	85	265	87	level	1	0	0	0	1	0	6	material.940:2,user.xp:300,user.gold:3000,user.hero_exp:4200	material.940:2	equip.10201.0:1	1000030
+1	31	npc_explore_1	12	38	12	86	266	89	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:4400			1000031
+1	32	npc_explore_1	12	38	13	87	267	91	level	1	exploreTask	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:4700			1000032
+1	33	npc_explore_1	12	38	13	88	268	93	level	1	0	0	26	1	0	6	material.940:2,user.xp:300,user.gold:3000,user.hero_exp:4900	material.940:2		1000033
+1	34	npc_explore_1	12	38	13	89	269	96	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000034
+1	35	npc_explore_1	12	38	14	90	270	98	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000035
+1	36	npc_explore_1	13	38	14	91	271	100	level	1	0	0	0	1	0	6	material.940:2,user.xp:300,user.gold:3000,user.hero_exp:5200	material.940:2		1000036
+1	37	npc_explore_1	13	38	14	92	272	103	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000037
+1	38	npc_explore_1	13	38	15	92	272	105	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000038
+1	39	npc_explore_1	13	39	15	93	273	107	level	1	0	0	18	1	0	6	material.940:2,user.xp:300,user.gold:3000,user.hero_exp:5200	material.940:2		1000039
+1	40	npc_explore_1	13	39	15	94	274	109	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200		equip.20201.0:1	1000040
+1	41	npc_explore_1	13	39	16	95	275	112	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000041
+1	42	npc_explore_1	13	39	16	96	276	114	level	1	0	0	0	1	0	6	material.940:2,user.xp:300,user.gold:3000,user.hero_exp:5200	material.940:2		1000042
+1	43	npc_explore_1	13	39	16	97	277	116	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000043
+1	44	npc_explore_1	14	39	17	98	278	119	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000044
+1	45	npc_explore_1	14	39	17	99	279	121	level	1	abyssTreasure	0	0	1	0	6	material.940:20,material.940:4,user.xp:300,user.gold:3000,user.hero_exp:5200	material.940:20		1000045
+1	46	npc_explore_1	14	40	17	100	280	124	level	35	0	0	25	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000046
+1	47	npc_explore_1	14	40	18	101	281	126	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000047
+1	48	npc_explore_1	14	40	18	102	282	128	level	1	0	0	0	1	0	6	material.1:20,user.xp:300,user.gold:3000,user.hero_exp:5200	material.1:20		1000048
+1	49	npc_explore_1	14	40	18	103	283	131	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000049
+1	50	npc_explore_1	14	40	19	104	284	133	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200		equip.30201.0:1	1000050
+1	51	npc_explore_1	15	40	19	105	285	136	level	1	0	0	0	1	0	6	equip.10101.0:1,equip.20101.0:1,user.xp:300,user.gold:3000,user.hero_exp:5200	equip.10101.0:1		1000051
+1	52	npc_explore_1	15	40	19	106	286	138	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000052
+1	53	npc_explore_1	15	41	20	107	287	140	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000053
+1	54	npc_explore_1	15	41	20	108	288	143	level	1	0	0	0	1	0	6	equip.30101.0:1,equip.40101.0:1,user.xp:300,user.gold:3000,user.hero_exp:5200	equip.30101.0:1		1000054
+1	55	npc_explore_1	15	41	20	109	289	145	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000055
+1	56	npc_explore_1	15	41	21	110	290	148	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000056
+1	57	npc_explore_1	15	41	21	111	291	150	level	1	0	0	0	1	0	6	equip.50101.0:1,equip.60101.0:1,user.xp:300,user.gold:3000,user.hero_exp:5200	equip.50101.0:1		1000057
+1	58	npc_explore_1	16	41	21	112	292	153	level	1	0	0	19	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000058
+1	59	npc_explore_1	16	41	22	113	293	155	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000059
+1	60	npc_explore_1	16	42	22	114	294	158	level	40	0	0	0	1	0	6	user.htoken:1,material.1:20,user.xp:300,user.gold:3000,user.hero_exp:5200	user.htoken:1	equip.40201.0:1	1000060
+1	61	npc_explore_1	16	42	22	115	295	160	level	1	0	0	0	1	0	6	user.xp:300,user.gold:3000,user.hero_exp:5200			1000061
+1	62	npc_explore_1	16	42	23	116	296	163	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000062
+1	63	npc_explore_1	16	42	23	117	297	165	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000063
+1	64	npc_explore_1	16	42	24	118	298	168	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000064
+1	65	npc_explore_1	17	42	24	119	299	170	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000065
+1	66	npc_explore_1	17	42	24	120	300	173	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000066
+1	67	npc_explore_1	17	43	25	121	301	175	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000067
+1	68	npc_explore_1	17	43	25	122	302	178	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000068
+1	69	npc_explore_1	17	43	25	123	303	181	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000069
+1	70	npc_explore_1	17	43	26	124	304	183	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300		equip.50201.0:1	1000070
+1	71	npc_explore_1	17	43	26	125	305	186	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000071
+1	72	npc_explore_1	18	43	26	126	306	188	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000072
+1	73	npc_explore_1	18	43	27	127	307	191	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000073
+1	74	npc_explore_1	18	44	27	128	308	194	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000074
+1	75	npc_explore_1	18	44	28	130	310	196	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000075
+1	76	npc_explore_1	18	44	28	131	311	199	level	45	0	0	20	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000076
+1	77	npc_explore_1	18	44	28	132	312	201	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000077
+1	78	npc_explore_1	19	44	29	133	313	204	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000078
+1	79	npc_explore_1	19	44	29	134	314	207	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000079
+1	80	npc_explore_1	19	45	29	135	315	209	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300		equip.60201.0:1	1000080
+1	81	npc_explore_1	19	45	30	136	316	212	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000081
+1	82	npc_explore_1	19	45	30	137	317	215	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000082
+1	83	npc_explore_1	19	45	31	138	318	217	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000083
+1	84	npc_explore_1	19	45	31	139	319	220	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000084
+1	85	npc_explore_1	20	45	31	140	320	223	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000085
+1	86	npc_explore_1	20	45	32	141	321	226	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000086
+1	87	npc_explore_1	20	46	32	143	323	228	level	1	0	0	0	1	0	6	material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.940:2		1000087
+1	88	npc_explore_1	20	46	33	144	324	231	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000088
+1	89	npc_explore_1	20	46	33	145	325	234	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000089
+1	90	npc_explore_1	20	46	33	146	326	237	level	1	0	0	0	1	0	6	material.950:10,material.940:2,user.xp:600,user.gold:6000,user.hero_exp:10300	material.950:10	material.950:1	1000090
+1	91	npc_explore_1	21	46	34	147	327	239	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000091
+1	92	npc_explore_1	21	46	34	148	328	242	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000092
+1	93	npc_explore_1	21	47	35	149	329	245	level	1	0	0	0	1	0	6	material.950:1,user.xp:600,user.gold:6000,user.hero_exp:10300	material.950:1		1000093
+1	94	npc_explore_1	21	47	35	150	330	248	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000094
+1	95	npc_explore_1	21	47	35	152	332	251	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000095
+1	96	npc_explore_1	21	47	36	153	333	253	level	1	0	0	0	1	0	6	material.950:1,user.xp:600,user.gold:6000,user.hero_exp:10300	material.950:1		1000096
+1	97	npc_explore_1	22	47	36	154	334	256	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000097
+1	98	npc_explore_1	22	47	37	155	335	259	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000098
+1	99	npc_explore_1	22	48	37	156	336	262	level	1	0	0	0	1	0	6	material.950:1,user.xp:600,user.gold:6000,user.hero_exp:10300	material.950:1		1000099
+1	100	npc_explore_1	22	48	37	157	337	265	level	50	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300		equip.10301.0:1	1000100
+1	101	npc_explore_1	22	48	38	158	338	268	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000101
+1	102	npc_explore_1	22	48	38	160	340	270	level	1	0	0	0	1	0	6	material.950:1,user.xp:600,user.gold:6000,user.hero_exp:10300	material.950:1		1000102
+1	103	npc_explore_1	23	48	39	161	341	273	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000103
+1	104	npc_explore_1	23	48	39	162	342	276	level	1	0	0	0	1	0	6	user.xp:600,user.gold:6000,user.hero_exp:10300			1000104
+1	105	npc_explore_1	23	49	39	163	343	279	level	1	0	0	0	1	0	6	fragment.4003:40,material.950:1,user.xp:600,user.gold:6000,user.hero_exp:10300	fragment.4003:40		1000105
+1	106	npc_explore_1	23	49	40	164	344	282	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000106
+1	107	npc_explore_1	23	49	40	165	345	285	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000107
+1	108	npc_explore_1	23	49	41	167	347	288	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000108
+1	109	npc_explore_1	24	49	41	168	348	291	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000109
+1	110	npc_explore_1	24	49	42	169	349	294	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400		equip.20301.0:1	1000110
+1	111	npc_explore_1	24	50	42	170	350	297	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000111
+1	112	npc_explore_1	24	50	42	171	351	300	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000112
+1	113	npc_explore_1	24	50	43	173	353	302	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000113
+1	114	npc_explore_1	24	50	43	174	354	305	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000114
+1	115	npc_explore_1	25	50	44	175	355	308	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000115
+1	116	npc_explore_1	25	50	44	176	356	311	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000116
+1	117	npc_explore_1	25	51	44	177	357	314	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000117
+1	118	npc_explore_1	25	51	45	179	359	317	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000118
+1	119	npc_explore_1	25	51	45	180	360	320	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000119
+1	120	npc_explore_1	25	51	46	181	361	323	level	1	0	0	0	1	0	6	user.bindcash:100,material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	user.bindcash:100	equip.30301.0:1	1000120
+1	121	npc_explore_1	26	51	46	182	362	326	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000121
+1	122	npc_explore_1	26	52	47	184	364	330	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000122
+1	123	npc_explore_1	26	52	47	185	365	333	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000123
+1	124	npc_explore_1	26	52	48	186	366	336	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000124
+1	125	npc_explore_1	26	52	48	187	367	339	level	52	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000125
+1	126	npc_explore_1	27	52	48	189	369	342	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000126
+1	127	npc_explore_1	27	52	49	190	370	345	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000127
+1	128	npc_explore_1	27	53	49	191	371	348	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000128
+1	129	npc_explore_1	27	53	50	192	372	351	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000129
+1	130	npc_explore_1	27	53	50	194	374	354	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400		equip.40301.0:1	1000130
+1	131	npc_explore_1	27	53	51	195	375	357	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000131
+1	132	npc_explore_1	28	53	51	196	376	360	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000132
+1	133	npc_explore_1	28	53	52	197	377	364	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000133
+1	134	npc_explore_1	28	54	52	199	379	367	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000134
+1	135	npc_explore_1	28	54	52	200	380	370	level	1	0	0	0	1	0	6	material.101702:1,material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.101702:1		1000135
+1	136	npc_explore_1	28	54	53	201	381	373	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000136
+1	137	npc_explore_1	28	54	53	202	382	376	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000137
+1	138	npc_explore_1	29	54	54	204	384	379	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000138
+1	139	npc_explore_1	29	55	54	205	385	383	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000139
+1	140	npc_explore_1	29	55	55	206	386	386	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400		equip.50301.0:1	1000140
+1	141	npc_explore_1	29	55	55	208	388	389	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000141
+1	142	npc_explore_1	29	55	56	209	389	392	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000142
+1	143	npc_explore_1	30	55	56	210	390	395	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000143
+1	144	npc_explore_1	30	56	57	212	392	399	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000144
+1	145	npc_explore_1	30	56	57	213	393	402	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000145
+1	146	npc_explore_1	30	56	57	214	394	405	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000146
+1	147	npc_explore_1	30	56	58	216	396	408	level	1	0	0	0	1	0	6	material.950:1,user.xp:800,user.gold:9000,user.hero_exp:15400	material.950:1		1000147
+1	148	npc_explore_1	31	56	58	217	397	412	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000148
+1	149	npc_explore_1	31	56	59	218	398	415	level	1	0	0	0	1	0	6	user.xp:800,user.gold:9000,user.hero_exp:15400			1000149
+1	150	npc_explore_1	31	57	59	220	400	418	level	55	0	0	0	1	0	6	material.950:1,user.xp:1100,user.gold:12000,user.hero_exp:20500	material.950:1	equip.60301.0:1	1000150
+2	1	npc_explore_2	31	57	60	221	401	421	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000151
+2	2	npc_explore_2	31	57	60	222	402	425	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000152
+2	3	npc_explore_2	32	57	61	224	404	428	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000153
+2	4	npc_explore_2	32	57	61	225	405	431	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000154
+2	5	npc_explore_2	32	58	62	226	406	435	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000155
+2	6	npc_explore_2	32	58	62	228	408	438	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000156
+2	7	npc_explore_2	32	58	63	229	409	441	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000157
+2	8	npc_explore_2	32	58	63	230	410	445	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000158
+2	9	npc_explore_2	33	58	64	232	412	448	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000159
+2	10	npc_explore_2	33	59	64	233	413	451	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000160
+2	11	npc_explore_2	33	59	65	234	414	455	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000161
+2	12	npc_explore_2	33	59	65	236	416	458	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000162
+2	13	npc_explore_2	33	59	66	237	417	462	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000163
+2	14	npc_explore_2	34	59	66	239	419	465	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000164
+2	15	npc_explore_2	34	60	66	240	420	468	level	1	0	0	0	1	0	6	material.101702:1,user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	material.101702:1		1000165
+2	16	npc_explore_2	34	60	67	241	421	472	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000166
+2	17	npc_explore_2	34	60	67	243	423	475	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000167
+2	18	npc_explore_2	34	60	68	244	424	479	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000168
+2	19	npc_explore_2	35	60	68	245	425	482	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000169
+2	20	npc_explore_2	35	61	69	247	427	486	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000170
+2	21	npc_explore_2	35	61	69	248	428	489	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000171
+2	22	npc_explore_2	35	61	70	250	430	493	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000172
+2	23	npc_explore_2	35	61	70	251	431	496	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000173
+2	24	npc_explore_2	36	61	71	253	433	500	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000174
+2	25	npc_explore_2	36	62	71	254	434	503	level	57	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500		equip.10401.0:1	1000175
+2	26	npc_explore_2	36	62	72	255	435	507	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000176
+2	27	npc_explore_2	36	62	72	257	437	510	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000177
+2	28	npc_explore_2	36	62	73	258	438	514	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000178
+2	29	npc_explore_2	37	62	73	260	440	517	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000179
+2	30	npc_explore_2	37	63	74	261	441	521	level	1	0	0	0	1	0	6	material.940:40,user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	material.940:40		1000180
+2	31	npc_explore_2	37	63	74	263	443	524	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000181
+2	32	npc_explore_2	37	63	75	264	444	528	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000182
+2	33	npc_explore_2	37	63	75	265	445	531	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000183
+2	34	npc_explore_2	38	63	76	267	447	535	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000184
+2	35	npc_explore_2	38	64	77	268	448	539	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000185
+2	36	npc_explore_2	38	64	77	270	450	542	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000186
+2	37	npc_explore_2	38	64	78	271	451	546	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000187
+2	38	npc_explore_2	39	64	78	273	453	549	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000188
+2	39	npc_explore_2	39	64	79	274	454	553	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000189
+2	40	npc_explore_2	39	65	79	276	456	557	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000190
+2	41	npc_explore_2	39	65	80	277	457	560	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000191
+2	42	npc_explore_2	39	65	80	279	459	564	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000192
+2	43	npc_explore_2	40	65	81	280	460	568	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000193
+2	44	npc_explore_2	40	66	81	282	462	571	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000194
+2	45	npc_explore_2	40	66	82	283	463	575	level	1	0	0	0	1	0	6	material.101702:1,user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	material.101702:1		1000195
+2	46	npc_explore_2	40	66	82	285	465	579	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000196
+2	47	npc_explore_2	40	66	83	286	466	582	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000197
+2	48	npc_explore_2	41	66	83	288	468	586	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000198
+2	49	npc_explore_2	41	67	84	289	469	590	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000199
+2	50	npc_explore_2	41	67	84	291	471	594	level	59	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500		equip.20401.0:1	1000200
+2	51	npc_explore_2	41	67	85	292	472	597	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000201
+2	52	npc_explore_2	42	67	85	294	474	601	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000202
+2	53	npc_explore_2	42	67	86	295	475	605	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000203
+2	54	npc_explore_2	42	68	87	297	477	609	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000204
+2	55	npc_explore_2	42	68	87	298	478	612	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000205
+2	56	npc_explore_2	42	68	88	300	480	616	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000206
+2	57	npc_explore_2	43	68	88	301	481	620	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000207
+2	58	npc_explore_2	43	69	89	303	483	624	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000208
+2	59	npc_explore_2	43	69	89	304	484	627	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000209
+2	60	npc_explore_2	43	69	90	306	486	631	level	1	0	0	0	1	0	6	user.bindcash:100,user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:100		1000210
+2	61	npc_explore_2	43	69	90	307	487	635	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000211
+2	62	npc_explore_2	44	69	91	309	489	639	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000212
+2	63	npc_explore_2	44	70	91	311	491	643	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000213
+2	64	npc_explore_2	44	70	92	312	492	647	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000214
+2	65	npc_explore_2	44	70	92	314	494	650	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000215
+2	66	npc_explore_2	45	70	93	315	495	654	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000216
+2	67	npc_explore_2	45	71	94	317	497	658	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000217
+2	68	npc_explore_2	45	71	94	318	498	662	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000218
+2	69	npc_explore_2	45	71	95	320	500	666	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000219
+2	70	npc_explore_2	46	71	95	322	502	670	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000220
+2	71	npc_explore_2	46	71	96	323	503	674	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000221
+2	72	npc_explore_2	46	72	96	325	505	678	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1100,user.gold:12000,user.hero_exp:20500	user.bindcash:10		1000222
+2	73	npc_explore_2	46	72	97	326	506	682	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000223
+2	74	npc_explore_2	46	72	98	328	508	686	level	1	0	0	0	1	0	6	user.xp:1100,user.gold:12000,user.hero_exp:20500			1000224
+2	75	npc_explore_2	47	72	98	330	510	690	level	61	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10	equip.30401.0:1	1000225
+2	76	npc_explore_2	47	73	99	331	511	693	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000226
+2	77	npc_explore_2	47	73	99	333	513	697	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000227
+2	78	npc_explore_2	47	73	100	334	514	701	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000228
+2	79	npc_explore_2	48	73	100	336	516	705	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000229
+2	80	npc_explore_2	48	74	101	338	518	709	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000230
+2	81	npc_explore_2	48	74	101	339	519	713	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000231
+2	82	npc_explore_2	48	74	102	341	521	717	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000232
+2	83	npc_explore_2	48	74	103	342	522	721	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000233
+2	84	npc_explore_2	49	74	103	344	524	725	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000234
+2	85	npc_explore_2	49	75	104	346	526	729	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000235
+2	86	npc_explore_2	49	75	104	347	527	733	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000236
+2	87	npc_explore_2	49	75	105	349	529	737	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000237
+2	88	npc_explore_2	50	75	106	351	531	742	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000238
+2	89	npc_explore_2	50	76	106	352	532	746	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000239
+2	90	npc_explore_2	50	76	107	354	534	750	level	1	0	0	0	1	0	6	material.101702:1,user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	material.101702:1		1000240
+2	91	npc_explore_2	50	76	107	356	536	754	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000241
+2	92	npc_explore_2	51	76	108	357	537	758	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000242
+2	93	npc_explore_2	51	77	108	359	539	762	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000243
+2	94	npc_explore_2	51	77	109	361	541	766	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000244
+2	95	npc_explore_2	51	77	110	362	542	770	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000245
+2	96	npc_explore_2	52	77	110	364	544	774	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000246
+2	97	npc_explore_2	52	78	111	366	546	778	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000247
+2	98	npc_explore_2	52	78	111	367	547	783	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000248
+2	99	npc_explore_2	52	78	112	369	549	787	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000249
+2	100	npc_explore_2	53	78	113	371	551	791	level	63	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700		equip.40401.0:1	1000250
+2	101	npc_explore_2	53	78	113	372	552	795	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000251
+2	102	npc_explore_2	53	79	114	374	554	799	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000252
+2	103	npc_explore_2	53	79	114	376	556	803	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000253
+2	104	npc_explore_2	53	79	115	377	557	808	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000254
+2	105	npc_explore_2	54	79	116	379	559	812	level	1	0	0	0	1	0	6	material.950:15,user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	material.950:15		1000255
+2	106	npc_explore_2	54	80	116	381	561	816	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000256
+2	107	npc_explore_2	54	80	117	383	563	820	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000257
+2	108	npc_explore_2	54	80	117	384	564	825	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000258
+2	109	npc_explore_2	55	80	118	386	566	829	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000259
+2	110	npc_explore_2	55	81	119	388	568	833	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000260
+2	111	npc_explore_2	55	81	119	389	569	837	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000261
+2	112	npc_explore_2	55	81	120	391	571	842	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000262
+2	113	npc_explore_2	56	81	120	393	573	846	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000263
+2	114	npc_explore_2	56	82	121	395	575	850	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000264
+2	115	npc_explore_2	56	82	122	396	576	854	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000265
+2	116	npc_explore_2	56	82	122	398	578	859	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000266
+2	117	npc_explore_2	57	82	123	400	580	863	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000267
+2	118	npc_explore_2	57	83	123	402	582	867	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000268
+2	119	npc_explore_2	57	83	124	403	583	872	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000269
+2	120	npc_explore_2	57	83	125	405	585	876	level	1	0	0	0	1	0	6	material.101702:1,user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	material.101702:1		1000270
+2	121	npc_explore_2	58	83	125	407	587	880	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000271
+2	122	npc_explore_2	58	84	126	409	589	885	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000272
+2	123	npc_explore_2	58	84	127	410	590	889	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000273
+2	124	npc_explore_2	58	84	127	412	592	893	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000274
+2	125	npc_explore_2	59	84	128	414	594	898	level	65	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700		equip.50401.0:1	1000275
+2	126	npc_explore_2	59	85	128	416	596	902	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000276
+2	127	npc_explore_2	59	85	129	418	598	907	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000277
+2	128	npc_explore_2	59	85	130	419	599	911	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000278
+2	129	npc_explore_2	60	85	130	421	601	915	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000279
+2	130	npc_explore_2	60	86	131	423	603	920	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000280
+2	131	npc_explore_2	60	86	132	425	605	924	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000281
+2	132	npc_explore_2	60	86	132	426	606	929	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000282
+2	133	npc_explore_2	61	86	133	428	608	933	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000283
+2	134	npc_explore_2	61	87	134	430	610	938	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000284
+2	135	npc_explore_2	61	87	134	432	612	942	level	1	0	0	0	1	0	6	user.bindcash:200,user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:200		1000285
+2	136	npc_explore_2	62	87	135	434	614	947	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000286
+2	137	npc_explore_2	62	88	135	436	616	951	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000287
+2	138	npc_explore_2	62	88	136	437	617	956	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000288
+2	139	npc_explore_2	62	88	137	439	619	960	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000289
+2	140	npc_explore_2	63	88	137	441	621	965	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000290
+2	141	npc_explore_2	63	89	138	443	623	969	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000291
+2	142	npc_explore_2	63	89	139	445	625	974	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000292
+2	143	npc_explore_2	63	89	139	447	627	978	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000293
+2	144	npc_explore_2	64	89	140	448	628	983	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000294
+2	145	npc_explore_2	64	90	141	450	630	987	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000295
+2	146	npc_explore_2	64	90	141	452	632	992	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000296
+2	147	npc_explore_2	64	90	142	454	634	996	level	1	0	0	0	1	0	6	user.bindcash:10,user.xp:1400,user.gold:15000,user.hero_exp:25700	user.bindcash:10		1000297
+2	148	npc_explore_2	65	90	143	456	636	1001	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000298
+2	149	npc_explore_2	65	91	143	458	638	1006	level	1	0	0	0	1	0	6	user.xp:1400,user.gold:15000,user.hero_exp:25700			1000299
+2	150	npc_explore_2	65	91	144	460	640	1010	level	67	0	0	0	1	0	6	user.bindcash:10,user.xp:1800,user.gold:21000,user.hero_exp:34600	user.bindcash:10	equip.60401.0:1	1000300
+3	1	npc_explore_3	65	91	145	461	641	1015	level	1	0	0	0	1	0	6	user.xp:1800,user.gold:21000,user.hero_exp:34600			1000301
+3	2	npc_explore_3	66	91	145	463	643	1019	level	1	0	0	0	1	0	6	user.xp:1800,user.gold:21000,user.hero_exp:34600			1000302
+3	3	npc_explore_3	66	92	146	465	645	1024	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:1800,user.gold:21000,user.hero_exp:34600	user.bindcash:15		1000303
+3	4	npc_explore_3	66	92	147	467	647	1029	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:21000,user.hero_exp:35100			1000304
+3	5	npc_explore_3	67	92	147	469	649	1033	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:21000,user.hero_exp:35100			1000305
+3	6	npc_explore_3	67	93	148	471	651	1038	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:1900,user.gold:21000,user.hero_exp:35100	user.bindcash:15		1000306
+3	7	npc_explore_3	67	93	149	473	653	1043	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:21000,user.hero_exp:35100			1000307
+3	8	npc_explore_3	67	93	149	475	655	1047	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:21000,user.hero_exp:35700			1000308
+3	9	npc_explore_3	68	93	150	476	656	1052	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:1900,user.gold:21000,user.hero_exp:35700	user.bindcash:15		1000309
+3	10	npc_explore_3	68	94	151	478	658	1057	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:21000,user.hero_exp:35700			1000310
+3	11	npc_explore_3	68	94	151	480	660	1061	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:21000,user.hero_exp:35700			1000311
+3	12	npc_explore_3	68	94	152	482	662	1066	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:1900,user.gold:22000,user.hero_exp:36200	user.bindcash:15		1000312
+3	13	npc_explore_3	69	94	153	484	664	1071	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:22000,user.hero_exp:36200			1000313
+3	14	npc_explore_3	69	95	153	486	666	1075	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:22000,user.hero_exp:36200			1000314
+3	15	npc_explore_3	69	95	154	488	668	1080	level	1	0	0	0	1	0	6	material.101703:1,user.bindcash:15,user.xp:1900,user.gold:22000,user.hero_exp:36900	material.101703:1		1000315
+3	16	npc_explore_3	70	95	155	490	670	1085	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:22000,user.hero_exp:36900			1000316
+3	17	npc_explore_3	70	96	155	492	672	1090	level	1	0	0	0	1	0	6	user.xp:1900,user.gold:22000,user.hero_exp:36900			1000317
+3	18	npc_explore_3	70	96	156	494	674	1094	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:1900,user.gold:22000,user.hero_exp:36900	user.bindcash:15		1000318
+3	19	npc_explore_3	70	96	157	496	676	1099	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:22000,user.hero_exp:37500			1000319
+3	20	npc_explore_3	71	96	157	498	678	1104	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:22000,user.hero_exp:37500			1000320
+3	21	npc_explore_3	71	97	158	499	679	1109	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2000,user.gold:22000,user.hero_exp:37500	user.bindcash:15		1000321
+3	22	npc_explore_3	71	97	159	501	681	1114	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:22000,user.hero_exp:37500			1000322
+3	23	npc_explore_3	71	97	159	503	683	1118	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:23000,user.hero_exp:38200			1000323
+3	24	npc_explore_3	72	97	160	505	685	1123	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2000,user.gold:23000,user.hero_exp:38200	user.bindcash:15		1000324
+3	25	npc_explore_3	72	98	161	507	687	1128	level	70	0	0	0	1	0	6	user.xp:2000,user.gold:23000,user.hero_exp:38200		equip.10501.0:1	1000325
+3	26	npc_explore_3	72	98	161	509	689	1133	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:23000,user.hero_exp:38200			1000326
+3	27	npc_explore_3	73	98	162	511	691	1138	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2000,user.gold:23000,user.hero_exp:39000	user.bindcash:15		1000327
+3	28	npc_explore_3	73	99	163	513	693	1143	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:23000,user.hero_exp:39000			1000328
+3	29	npc_explore_3	73	99	163	515	695	1147	level	1	0	0	0	1	0	6	user.xp:2000,user.gold:23000,user.hero_exp:39000			1000329
+3	30	npc_explore_3	73	99	164	517	697	1152	level	1	0	0	0	1	0	6	user.htoken:3,user.bindcash:15,user.xp:2100,user.gold:24000,user.hero_exp:39800	user.htoken:3		1000330
+3	31	npc_explore_3	74	99	165	519	699	1157	level	1	0	0	0	1	0	6	user.xp:2100,user.gold:24000,user.hero_exp:39800			1000331
+3	32	npc_explore_3	74	100	166	521	701	1162	level	1	0	0	0	1	0	6	user.xp:2100,user.gold:24000,user.hero_exp:39800			1000332
+3	33	npc_explore_3	74	100	166	523	703	1167	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2100,user.gold:24000,user.hero_exp:39800	user.bindcash:15		1000333
+3	34	npc_explore_3	75	100	167	525	705	1172	level	1	0	0	0	1	0	6	user.xp:2100,user.gold:24000,user.hero_exp:40600			1000334
+3	35	npc_explore_3	75	101	168	527	707	1177	level	1	0	0	0	1	0	6	user.xp:2100,user.gold:24000,user.hero_exp:40600			1000335
+3	36	npc_explore_3	75	101	168	529	709	1182	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2100,user.gold:24000,user.hero_exp:40600	user.bindcash:15		1000336
+3	37	npc_explore_3	75	101	169	531	711	1187	level	1	0	0	0	1	0	6	user.xp:2100,user.gold:24000,user.hero_exp:40600			1000337
+3	38	npc_explore_3	76	101	170	533	713	1191	level	1	0	0	0	1	0	6	user.xp:2200,user.gold:25000,user.hero_exp:41500			1000338
+3	39	npc_explore_3	76	102	170	535	715	1196	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2200,user.gold:25000,user.hero_exp:41500	user.bindcash:15		1000339
+3	40	npc_explore_3	76	102	171	537	717	1201	level	1	0	0	0	1	0	6	user.xp:2200,user.gold:25000,user.hero_exp:41500			1000340
+3	41	npc_explore_3	77	102	172	539	719	1206	level	1	0	0	0	1	0	6	user.xp:2200,user.gold:25000,user.hero_exp:41500			1000341
+3	42	npc_explore_3	77	103	173	541	721	1211	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2200,user.gold:25000,user.hero_exp:42400	user.bindcash:15		1000342
+3	43	npc_explore_3	77	103	173	543	723	1216	level	1	0	0	0	1	0	6	user.xp:2200,user.gold:25000,user.hero_exp:42400			1000343
+3	44	npc_explore_3	77	103	174	545	725	1221	level	1	0	0	0	1	0	6	user.xp:2200,user.gold:25000,user.hero_exp:42400			1000344
+3	45	npc_explore_3	78	103	175	547	727	1226	level	1	0	0	0	1	0	6	material.101703:1,user.bindcash:15,user.xp:2300,user.gold:26000,user.hero_exp:43400	material.101703:1		1000345
+3	46	npc_explore_3	78	104	175	549	729	1231	level	1	0	0	0	1	0	6	user.xp:2300,user.gold:26000,user.hero_exp:43400			1000346
+3	47	npc_explore_3	78	104	176	551	731	1236	level	1	0	0	0	1	0	6	user.xp:2300,user.gold:26000,user.hero_exp:43400			1000347
+3	48	npc_explore_3	79	104	177	553	733	1241	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2300,user.gold:26000,user.hero_exp:43400	user.bindcash:15		1000348
+3	49	npc_explore_3	79	105	178	555	735	1246	level	1	0	0	0	1	0	6	user.xp:2300,user.gold:26000,user.hero_exp:44400			1000349
+3	50	npc_explore_3	79	105	178	557	737	1251	level	72	0	0	0	1	0	6	user.xp:2300,user.gold:26000,user.hero_exp:44400		equip.20501.0:1	1000350
+3	51	npc_explore_3	79	105	179	559	739	1256	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2300,user.gold:26000,user.hero_exp:44400	user.bindcash:15		1000351
+3	52	npc_explore_3	80	105	180	561	741	1261	level	1	0	0	0	1	0	6	user.xp:2300,user.gold:26000,user.hero_exp:44400			1000352
+3	53	npc_explore_3	80	106	181	563	743	1267	level	1	0	0	0	1	0	6	user.xp:2400,user.gold:27000,user.hero_exp:45400			1000353
+3	54	npc_explore_3	80	106	181	565	745	1272	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2400,user.gold:27000,user.hero_exp:45400	user.bindcash:15		1000354
+3	55	npc_explore_3	81	106	182	568	748	1277	level	1	0	0	0	1	0	6	user.xp:2400,user.gold:27000,user.hero_exp:45400			1000355
+3	56	npc_explore_3	81	107	183	570	750	1282	level	1	0	0	0	1	0	6	user.xp:2400,user.gold:27000,user.hero_exp:45400			1000356
+3	57	npc_explore_3	81	107	183	572	752	1287	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2400,user.gold:27000,user.hero_exp:46500	user.bindcash:15		1000357
+3	58	npc_explore_3	82	107	184	574	754	1292	level	1	0	0	0	1	0	6	user.xp:2400,user.gold:27000,user.hero_exp:46500			1000358
+3	59	npc_explore_3	82	108	185	576	756	1297	level	1	0	0	0	1	0	6	user.xp:2400,user.gold:27000,user.hero_exp:46500			1000359
+3	60	npc_explore_3	82	108	186	578	758	1302	level	1	0	0	0	1	0	6	user.wand:10,user.bindcash:15,user.xp:2500,user.gold:28000,user.hero_exp:47600	user.wand:10		1000360
+3	61	npc_explore_3	82	108	186	580	760	1307	level	1	0	0	0	1	0	6	user.xp:2500,user.gold:28000,user.hero_exp:47600			1000361
+3	62	npc_explore_3	83	108	187	582	762	1312	level	1	0	0	0	1	0	6	user.xp:2500,user.gold:28000,user.hero_exp:47600			1000362
+3	63	npc_explore_3	83	109	188	584	764	1318	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2500,user.gold:28000,user.hero_exp:47600	user.bindcash:15		1000363
+3	64	npc_explore_3	83	109	189	586	766	1323	level	1	0	0	0	1	0	6	user.xp:2600,user.gold:29000,user.hero_exp:48800			1000364
+3	65	npc_explore_3	84	109	189	588	768	1328	level	1	0	0	0	1	0	6	user.xp:2600,user.gold:29000,user.hero_exp:48800			1000365
+3	66	npc_explore_3	84	110	190	590	770	1333	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2600,user.gold:29000,user.hero_exp:48800	user.bindcash:15		1000366
+3	67	npc_explore_3	84	110	191	593	773	1338	level	1	0	0	0	1	0	6	user.xp:2600,user.gold:29000,user.hero_exp:48800			1000367
+3	68	npc_explore_3	85	110	192	595	775	1344	level	1	0	0	0	1	0	6	user.xp:2600,user.gold:30000,user.hero_exp:50000			1000368
+3	69	npc_explore_3	85	111	192	597	777	1349	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2600,user.gold:30000,user.hero_exp:50000	user.bindcash:15		1000369
+3	70	npc_explore_3	85	111	193	599	779	1354	level	1	0	0	0	1	0	6	user.xp:2600,user.gold:30000,user.hero_exp:50000			1000370
+3	71	npc_explore_3	85	111	194	601	781	1359	level	1	0	0	0	1	0	6	user.xp:2600,user.gold:30000,user.hero_exp:50000			1000371
+3	72	npc_explore_3	86	111	194	603	783	1364	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2700,user.gold:30000,user.hero_exp:51300	user.bindcash:15		1000372
+3	73	npc_explore_3	86	112	195	605	785	1370	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:30000,user.hero_exp:51300			1000373
+3	74	npc_explore_3	86	112	196	607	787	1375	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:30000,user.hero_exp:51300			1000374
+3	75	npc_explore_3	87	112	197	610	790	1380	level	75	0	0	0	1	0	6	user.bindcash:15,user.xp:2700,user.gold:31000,user.hero_exp:51700	user.bindcash:15	equip.30501.0:1	1000375
+3	76	npc_explore_3	87	113	197	612	792	1385	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:31000,user.hero_exp:51700			1000376
+3	77	npc_explore_3	87	113	198	614	794	1391	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:31000,user.hero_exp:51700			1000377
+3	78	npc_explore_3	88	113	199	616	796	1396	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2700,user.gold:31000,user.hero_exp:51700	user.bindcash:15		1000378
+3	79	npc_explore_3	88	114	200	618	798	1401	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:31000,user.hero_exp:52200			1000379
+3	80	npc_explore_3	88	114	201	620	800	1407	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:31000,user.hero_exp:52200			1000380
+3	81	npc_explore_3	88	114	201	622	802	1412	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2700,user.gold:31000,user.hero_exp:52200	user.bindcash:15		1000381
+3	82	npc_explore_3	89	115	202	625	805	1417	level	1	0	0	0	1	0	6	user.xp:2700,user.gold:31000,user.hero_exp:52200			1000382
+3	83	npc_explore_3	89	115	203	627	807	1423	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:31000,user.hero_exp:52700			1000383
+3	84	npc_explore_3	89	115	204	629	809	1428	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2800,user.gold:31000,user.hero_exp:52700	user.bindcash:15		1000384
+3	85	npc_explore_3	90	115	204	631	811	1433	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:31000,user.hero_exp:52700			1000385
+3	86	npc_explore_3	90	116	205	633	813	1439	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:31000,user.hero_exp:52700			1000386
+3	87	npc_explore_3	90	116	206	635	815	1444	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2800,user.gold:31000,user.hero_exp:53300	user.bindcash:15		1000387
+3	88	npc_explore_3	91	116	207	638	818	1449	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:31000,user.hero_exp:53300			1000388
+3	89	npc_explore_3	91	117	207	640	820	1455	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:31000,user.hero_exp:53300			1000389
+3	90	npc_explore_3	91	117	208	642	822	1460	level	1	0	0	0	1	0	6	material.101703:1,user.bindcash:15,user.xp:2800,user.gold:32000,user.hero_exp:53900	material.101703:1		1000390
+3	91	npc_explore_3	92	117	209	644	824	1465	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:32000,user.hero_exp:53900			1000391
+3	92	npc_explore_3	92	118	210	646	826	1471	level	1	0	0	0	1	0	6	user.xp:2800,user.gold:32000,user.hero_exp:53900			1000392
+3	93	npc_explore_3	92	118	210	648	828	1476	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2800,user.gold:32000,user.hero_exp:53900	user.bindcash:15		1000393
+3	94	npc_explore_3	93	118	211	651	831	1482	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:32000,user.hero_exp:54600			1000394
+3	95	npc_explore_3	93	119	212	653	833	1487	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:32000,user.hero_exp:54600			1000395
+3	96	npc_explore_3	93	119	213	655	835	1493	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2900,user.gold:32000,user.hero_exp:54600	user.bindcash:15		1000396
+3	97	npc_explore_3	93	119	214	657	837	1498	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:32000,user.hero_exp:54600			1000397
+3	98	npc_explore_3	94	120	214	660	840	1504	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:33000,user.hero_exp:55300			1000398
+3	99	npc_explore_3	94	120	215	662	842	1509	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2900,user.gold:33000,user.hero_exp:55300	user.bindcash:15		1000399
+3	100	npc_explore_3	94	120	216	664	844	1514	level	80	0	0	0	1	0	6	user.xp:2900,user.gold:33000,user.hero_exp:55300		equip.40501.0:1	1000400
+3	101	npc_explore_3	95	120	217	666	846	1520	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:33000,user.hero_exp:55300			1000401
+3	102	npc_explore_3	95	121	217	668	848	1525	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:2900,user.gold:33000,user.hero_exp:56100	user.bindcash:15		1000402
+3	103	npc_explore_3	95	121	218	671	851	1531	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:33000,user.hero_exp:56100			1000403
+3	104	npc_explore_3	96	121	219	673	853	1536	level	1	0	0	0	1	0	6	user.xp:2900,user.gold:33000,user.hero_exp:56100			1000404
+3	105	npc_explore_3	96	122	220	675	855	1542	level	1	0	0	0	1	0	6	material.950:30,user.bindcash:15,user.xp:3000,user.gold:34000,user.hero_exp:56800	material.950:30		1000405
+3	106	npc_explore_3	96	122	221	677	857	1548	level	1	0	0	0	1	0	6	user.xp:3000,user.gold:34000,user.hero_exp:56800			1000406
+3	107	npc_explore_3	97	122	221	680	860	1553	level	1	0	0	0	1	0	6	user.xp:3000,user.gold:34000,user.hero_exp:56800			1000407
+3	108	npc_explore_3	97	123	222	682	862	1559	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3000,user.gold:34000,user.hero_exp:56800	user.bindcash:15		1000408
+3	109	npc_explore_3	97	123	223	684	864	1564	level	1	0	0	0	1	0	6	user.xp:3000,user.gold:34000,user.hero_exp:57700			1000409
+3	110	npc_explore_3	98	123	224	686	866	1570	level	1	0	0	0	1	0	6	user.xp:3000,user.gold:34000,user.hero_exp:57700			1000410
+3	111	npc_explore_3	98	124	225	689	869	1575	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3000,user.gold:34000,user.hero_exp:57700	user.bindcash:15		1000411
+3	112	npc_explore_3	98	124	225	691	871	1581	level	1	0	0	0	1	0	6	user.xp:3000,user.gold:34000,user.hero_exp:57700			1000412
+3	113	npc_explore_3	99	124	226	693	873	1586	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:34000,user.hero_exp:58500			1000413
+3	114	npc_explore_3	99	125	227	695	875	1592	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3100,user.gold:34000,user.hero_exp:58500	user.bindcash:15		1000414
+3	115	npc_explore_3	99	125	228	698	878	1598	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:34000,user.hero_exp:58500			1000415
+3	116	npc_explore_3	100	125	229	700	880	1603	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:34000,user.hero_exp:58500			1000416
+3	117	npc_explore_3	100	126	229	702	882	1609	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3100,user.gold:35000,user.hero_exp:59500	user.bindcash:15		1000417
+3	118	npc_explore_3	100	126	230	705	885	1615	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:35000,user.hero_exp:59500			1000418
+3	119	npc_explore_3	101	126	231	707	887	1620	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:35000,user.hero_exp:59500			1000419
+3	120	npc_explore_3	101	127	232	709	889	1626	level	1	0	0	0	1	0	6	material.101703:1,user.bindcash:15,user.xp:3100,user.gold:36000,user.hero_exp:60400	material.101703:1		1000420
+3	121	npc_explore_3	101	127	233	711	891	1632	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:36000,user.hero_exp:60400			1000421
+3	122	npc_explore_3	102	127	233	714	894	1637	level	1	0	0	0	1	0	6	user.xp:3100,user.gold:36000,user.hero_exp:60400			1000422
+3	123	npc_explore_3	102	128	234	716	896	1643	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3100,user.gold:36000,user.hero_exp:60400	user.bindcash:15		1000423
+3	124	npc_explore_3	102	128	235	718	898	1649	level	1	0	0	0	1	0	6	user.xp:3200,user.gold:36000,user.hero_exp:61400			1000424
+3	125	npc_explore_3	103	128	236	721	901	1654	level	85	0	0	0	1	0	6	user.xp:3200,user.gold:36000,user.hero_exp:61400		equip.50501.0:1	1000425
+3	126	npc_explore_3	103	129	237	723	903	1660	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3200,user.gold:36000,user.hero_exp:61400	user.bindcash:15		1000426
+3	127	npc_explore_3	103	129	238	725	905	1666	level	1	0	0	0	1	0	6	user.xp:3200,user.gold:36000,user.hero_exp:61400			1000427
+3	128	npc_explore_3	104	129	238	728	908	1671	level	1	0	0	0	1	0	6	user.xp:3300,user.gold:37000,user.hero_exp:62500			1000428
+3	129	npc_explore_3	104	130	239	730	910	1677	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3300,user.gold:37000,user.hero_exp:62500	user.bindcash:15		1000429
+3	130	npc_explore_3	104	130	240	732	912	1683	level	1	0	0	0	1	0	6	user.xp:3300,user.gold:37000,user.hero_exp:62500			1000430
+3	131	npc_explore_3	105	130	241	735	915	1689	level	1	0	0	0	1	0	6	user.xp:3300,user.gold:37000,user.hero_exp:62500			1000431
+3	132	npc_explore_3	105	131	242	737	917	1694	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3300,user.gold:37000,user.hero_exp:63600	user.bindcash:15		1000432
+3	133	npc_explore_3	105	131	242	739	919	1700	level	1	0	0	0	1	0	6	user.xp:3300,user.gold:37000,user.hero_exp:63600			1000433
+3	134	npc_explore_3	106	131	243	742	922	1706	level	1	0	0	0	1	0	6	user.xp:3300,user.gold:37000,user.hero_exp:63600			1000434
+3	135	npc_explore_3	106	132	244	744	924	1712	level	1	0	0	0	1	0	6	rune.1004:1,user.bindcash:15,user.xp:3400,user.gold:38000,user.hero_exp:64700	rune.1004:1		1000435
+3	136	npc_explore_3	106	132	245	746	926	1717	level	1	0	0	0	1	0	6	user.xp:3400,user.gold:38000,user.hero_exp:64700			1000436
+3	137	npc_explore_3	107	132	246	749	929	1723	level	1	0	0	0	1	0	6	user.xp:3400,user.gold:38000,user.hero_exp:64700			1000437
+3	138	npc_explore_3	107	133	247	751	931	1729	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3400,user.gold:38000,user.hero_exp:64700	user.bindcash:15		1000438
+3	139	npc_explore_3	107	133	247	753	933	1735	level	1	0	0	0	1	0	6	user.xp:3400,user.gold:39000,user.hero_exp:65900			1000439
+3	140	npc_explore_3	108	133	248	756	936	1741	level	1	0	0	0	1	0	6	user.xp:3400,user.gold:39000,user.hero_exp:65900			1000440
+3	141	npc_explore_3	108	134	249	758	938	1747	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3400,user.gold:39000,user.hero_exp:65900	user.bindcash:15		1000441
+3	142	npc_explore_3	108	134	250	760	940	1752	level	1	0	0	0	1	0	6	user.xp:3400,user.gold:39000,user.hero_exp:65900			1000442
+3	143	npc_explore_3	109	134	251	763	943	1758	level	1	0	0	0	1	0	6	user.xp:3500,user.gold:39000,user.hero_exp:67100			1000443
+3	144	npc_explore_3	109	135	252	765	945	1764	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3500,user.gold:39000,user.hero_exp:67100	user.bindcash:15		1000444
+3	145	npc_explore_3	109	135	252	768	948	1770	level	1	0	0	0	1	0	6	user.xp:3500,user.gold:39000,user.hero_exp:67100			1000445
+3	146	npc_explore_3	110	135	253	770	950	1776	level	1	0	0	0	1	0	6	user.xp:3500,user.gold:39000,user.hero_exp:67100			1000446
+3	147	npc_explore_3	110	136	254	772	952	1782	level	1	0	0	0	1	0	6	user.bindcash:15,user.xp:3600,user.gold:40000,user.hero_exp:68300	user.bindcash:15		1000447
+3	148	npc_explore_3	110	136	255	775	955	1788	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:40000,user.hero_exp:68300			1000448
+3	149	npc_explore_3	111	136	256	777	957	1794	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:40000,user.hero_exp:68300			1000449
+3	150	npc_explore_3	111	137	257	780	960	1800	level	90	0	0	0	1	0	6	user.bindcash:15,user.xp:3600,user.gold:40000,user.hero_exp:68800	user.bindcash:15	equip.60501.0:1	1000450
+4	1	npc_explore_4	111	137	257	780	960	1801	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:40000,user.hero_exp:68800			1000451
+4	2	npc_explore_4	111	137	257	781	961	1803	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:40000,user.hero_exp:68800			1000452
+4	3	npc_explore_4	111	137	257	782	962	1804	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3600,user.gold:41000,user.hero_exp:69300	user.bindcash:20		1000453
+4	4	npc_explore_4	111	137	258	782	963	1806	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:41000,user.hero_exp:69300			1000454
+4	5	npc_explore_4	111	137	258	783	964	1807	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:41000,user.hero_exp:69800			1000455
+4	6	npc_explore_4	112	137	258	784	964	1809	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3600,user.gold:41000,user.hero_exp:69800	user.bindcash:20		1000456
+4	7	npc_explore_4	112	137	258	785	965	1810	level	1	0	0	0	1	0	6	user.xp:3600,user.gold:41000,user.hero_exp:69800			1000457
+4	8	npc_explore_4	112	138	258	785	966	1812	level	1	0	0	0	1	0	6	user.xp:3700,user.gold:41000,user.hero_exp:70400			1000458
+4	9	npc_explore_4	112	138	259	786	967	1813	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3700,user.gold:41000,user.hero_exp:70400	user.bindcash:20		1000459
+4	10	npc_explore_4	112	138	259	787	968	1815	level	1	0	0	0	1	0	6	user.xp:3700,user.gold:42000,user.hero_exp:71000			1000460
+4	11	npc_explore_4	112	138	259	787	969	1817	level	1	0	0	0	1	0	6	user.xp:3700,user.gold:42000,user.hero_exp:71000			1000461
+4	12	npc_explore_4	112	138	259	788	969	1818	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3700,user.gold:42000,user.hero_exp:71000	user.bindcash:20		1000462
+4	13	npc_explore_4	112	138	260	789	970	1820	level	1	0	0	0	1	0	6	user.xp:3700,user.gold:42000,user.hero_exp:71700			1000463
+4	14	npc_explore_4	112	138	260	790	971	1821	level	1	0	0	0	1	0	6	user.xp:3700,user.gold:42000,user.hero_exp:71700			1000464
+4	15	npc_explore_4	113	138	260	791	972	1823	level	1	0	0	0	1	0	6	material.101704:1,user.bindcash:20,user.xp:3800,user.gold:43000,user.hero_exp:72400	material.101704:1		1000465
+4	16	npc_explore_4	113	139	260	791	973	1825	level	1	0	0	0	1	0	6	user.xp:3800,user.gold:43000,user.hero_exp:72400			1000466
+4	17	npc_explore_4	113	139	260	792	974	1826	level	1	0	0	0	1	0	6	user.xp:3800,user.gold:43000,user.hero_exp:72400			1000467
+4	18	npc_explore_4	113	139	261	793	975	1828	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3800,user.gold:43000,user.hero_exp:73100	user.bindcash:20		1000468
+4	19	npc_explore_4	113	139	261	794	976	1830	level	1	0	0	0	1	0	6	user.xp:3800,user.gold:43000,user.hero_exp:73100			1000469
+4	20	npc_explore_4	113	139	261	794	977	1832	level	1	0	0	0	1	0	6	user.xp:3800,user.gold:43000,user.hero_exp:73900			1000470
+4	21	npc_explore_4	113	139	261	795	977	1833	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3800,user.gold:43000,user.hero_exp:73900	user.bindcash:20		1000471
+4	22	npc_explore_4	113	139	262	796	978	1835	level	1	0	0	0	1	0	6	user.xp:3800,user.gold:43000,user.hero_exp:73900			1000472
+4	23	npc_explore_4	113	139	262	797	979	1837	level	1	0	0	0	1	0	6	user.xp:3900,user.gold:44000,user.hero_exp:74800			1000473
+4	24	npc_explore_4	114	140	262	798	980	1838	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3900,user.gold:44000,user.hero_exp:74800	user.bindcash:20		1000474
+4	25	npc_explore_4	114	140	262	798	981	1840	level	95	0	0	0	1	0	6	user.xp:3900,user.gold:44000,user.hero_exp:75600		equip.10601.0:1	1000475
+4	26	npc_explore_4	114	140	263	799	982	1842	level	1	0	0	0	1	0	6	user.xp:3900,user.gold:44000,user.hero_exp:75600			1000476
+4	27	npc_explore_4	114	140	263	800	983	1844	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:3900,user.gold:44000,user.hero_exp:75600	user.bindcash:20		1000477
+4	28	npc_explore_4	114	140	263	801	984	1845	level	1	0	0	0	1	0	6	user.xp:4000,user.gold:45000,user.hero_exp:76500			1000478
+4	29	npc_explore_4	114	140	263	802	985	1847	level	1	0	0	0	1	0	6	user.xp:4000,user.gold:45000,user.hero_exp:76500			1000479
+4	30	npc_explore_4	114	140	264	803	986	1849	level	1	0	0	0	1	0	6	user.htoken:6,user.bindcash:20,user.xp:4000,user.gold:46000,user.hero_exp:77500	user.htoken:6		1000480
+4	31	npc_explore_4	114	141	264	803	987	1851	level	1	0	0	0	1	0	6	user.xp:4000,user.gold:46000,user.hero_exp:77500			1000481
+4	32	npc_explore_4	114	141	264	804	988	1853	level	1	0	0	0	1	0	6	user.xp:4000,user.gold:46000,user.hero_exp:77500			1000482
+4	33	npc_explore_4	115	141	264	805	989	1854	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4100,user.gold:46000,user.hero_exp:78500	user.bindcash:20		1000483
+4	34	npc_explore_4	115	141	265	806	990	1856	level	1	0	0	0	1	0	6	user.xp:4100,user.gold:46000,user.hero_exp:78500			1000484
+4	35	npc_explore_4	115	141	265	807	991	1858	level	1	0	0	0	1	0	6	user.xp:4100,user.gold:47000,user.hero_exp:79500			1000485
+4	36	npc_explore_4	115	141	265	808	992	1860	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4100,user.gold:47000,user.hero_exp:79500	user.bindcash:20		1000486
+4	37	npc_explore_4	115	141	266	809	993	1862	level	1	0	0	0	1	0	6	user.xp:4100,user.gold:47000,user.hero_exp:79500			1000487
+4	38	npc_explore_4	115	142	266	809	994	1864	level	1	0	0	0	1	0	6	user.xp:4200,user.gold:47000,user.hero_exp:80600			1000488
+4	39	npc_explore_4	115	142	266	810	995	1866	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4200,user.gold:47000,user.hero_exp:80600	user.bindcash:20		1000489
+4	40	npc_explore_4	115	142	266	811	996	1868	level	1	0	0	0	1	0	6	user.xp:4200,user.gold:48000,user.hero_exp:81800			1000490
+4	41	npc_explore_4	116	142	267	812	997	1869	level	1	0	0	0	1	0	6	user.xp:4200,user.gold:48000,user.hero_exp:81800			1000491
+4	42	npc_explore_4	116	142	267	813	998	1871	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4200,user.gold:48000,user.hero_exp:81800	user.bindcash:20		1000492
+4	43	npc_explore_4	116	142	267	814	999	1873	level	1	0	0	0	1	0	6	user.xp:4300,user.gold:49000,user.hero_exp:82900			1000493
+4	44	npc_explore_4	116	142	267	815	1000	1875	level	1	0	0	0	1	0	6	user.xp:4300,user.gold:49000,user.hero_exp:82900			1000494
+4	45	npc_explore_4	116	143	268	816	1001	1877	level	1	0	0	0	1	0	6	material.101704:1,user.bindcash:20,user.xp:4400,user.gold:49000,user.hero_exp:84200	material.101704:1		1000495
+4	46	npc_explore_4	116	143	268	817	1002	1879	level	1	0	0	0	1	0	6	user.xp:4400,user.gold:49000,user.hero_exp:84200			1000496
+4	47	npc_explore_4	116	143	268	818	1003	1881	level	1	0	0	0	1	0	6	user.xp:4400,user.gold:49000,user.hero_exp:84200			1000497
+4	48	npc_explore_4	116	143	269	818	1004	1883	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4400,user.gold:50000,user.hero_exp:85400	user.bindcash:20		1000498
+4	49	npc_explore_4	117	143	269	819	1005	1885	level	1	0	0	0	1	0	6	user.xp:4400,user.gold:50000,user.hero_exp:85400			1000499
+4	50	npc_explore_4	117	143	269	820	1006	1887	level	100	0	0	0	1	0	6	user.xp:4500,user.gold:50000,user.hero_exp:85900		equip.20601.0:1	1000500
+4	51	npc_explore_4	117	143	269	821	1007	1889	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4500,user.gold:50000,user.hero_exp:85900	user.bindcash:20		1000501
+4	52	npc_explore_4	117	144	270	822	1008	1891	level	1	0	0	0	1	0	6	user.xp:4500,user.gold:50000,user.hero_exp:85900			1000502
+4	53	npc_explore_4	117	144	270	823	1009	1893	level	1	0	0	0	1	0	6	user.xp:4500,user.gold:51000,user.hero_exp:86400			1000503
+4	54	npc_explore_4	117	144	270	824	1010	1895	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4500,user.gold:51000,user.hero_exp:86400	user.bindcash:20		1000504
+4	55	npc_explore_4	117	144	271	825	1012	1897	level	1	0	0	0	1	0	6	user.xp:4500,user.gold:51000,user.hero_exp:86900			1000505
+4	56	npc_explore_4	118	144	271	826	1013	1899	level	1	0	0	0	1	0	6	user.xp:4500,user.gold:51000,user.hero_exp:86900			1000506
+4	57	npc_explore_4	118	144	271	827	1014	1901	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4500,user.gold:51000,user.hero_exp:86900	user.bindcash:20		1000507
+4	58	npc_explore_4	118	145	271	828	1015	1903	level	1	0	0	0	1	0	6	user.xp:4500,user.gold:51000,user.hero_exp:87500			1000508
+4	59	npc_explore_4	118	145	272	829	1016	1905	level	1	0	0	0	1	0	6	user.xp:4500,user.gold:51000,user.hero_exp:87500			1000509
+4	60	npc_explore_4	118	145	272	830	1017	1908	level	1	0	0	0	1	0	6	rune.1004:1,user.bindcash:20,user.xp:4600,user.gold:52000,user.hero_exp:88100	rune.1004:1		1000510
+4	61	npc_explore_4	118	145	272	831	1018	1910	level	1	0	0	0	1	0	6	user.xp:4600,user.gold:52000,user.hero_exp:88100			1000511
+4	62	npc_explore_4	118	145	273	832	1019	1912	level	1	0	0	0	1	0	6	user.xp:4600,user.gold:52000,user.hero_exp:88100			1000512
+4	63	npc_explore_4	119	145	273	833	1020	1914	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4600,user.gold:52000,user.hero_exp:88800	user.bindcash:20		1000513
+4	64	npc_explore_4	119	146	273	834	1022	1916	level	1	0	0	0	1	0	6	user.xp:4600,user.gold:52000,user.hero_exp:88800			1000514
+4	65	npc_explore_4	119	146	274	835	1023	1918	level	1	0	0	0	1	0	6	user.xp:4600,user.gold:52000,user.hero_exp:89500			1000515
+4	66	npc_explore_4	119	146	274	836	1024	1920	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4600,user.gold:52000,user.hero_exp:89500	user.bindcash:20		1000516
+4	67	npc_explore_4	119	146	274	837	1025	1922	level	1	0	0	0	1	0	6	user.xp:4600,user.gold:52000,user.hero_exp:89500			1000517
+4	68	npc_explore_4	119	146	275	838	1026	1925	level	1	0	0	0	1	0	6	user.xp:4700,user.gold:53000,user.hero_exp:90200			1000518
+4	69	npc_explore_4	119	146	275	839	1027	1927	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4700,user.gold:53000,user.hero_exp:90200	user.bindcash:20		1000519
+4	70	npc_explore_4	120	147	275	840	1029	1929	level	1	0	0	0	1	0	6	user.xp:4700,user.gold:53000,user.hero_exp:91000			1000520
+4	71	npc_explore_4	120	147	275	841	1030	1931	level	1	0	0	0	1	0	6	user.xp:4700,user.gold:53000,user.hero_exp:91000			1000521
+4	72	npc_explore_4	120	147	276	842	1031	1933	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4700,user.gold:53000,user.hero_exp:91000	user.bindcash:20		1000522
+4	73	npc_explore_4	120	147	276	843	1032	1936	level	1	0	0	0	1	0	6	user.xp:4800,user.gold:54000,user.hero_exp:91800			1000523
+4	74	npc_explore_4	120	147	276	844	1033	1938	level	1	0	0	0	1	0	6	user.xp:4800,user.gold:54000,user.hero_exp:91800			1000524
+4	75	npc_explore_4	120	147	277	845	1035	1940	level	105	0	0	0	1	0	6	user.bindcash:20,user.xp:4800,user.gold:54000,user.hero_exp:92700	user.bindcash:20	equip.30601.0:1	1000525
+4	76	npc_explore_4	120	148	277	846	1036	1942	level	1	0	0	0	1	0	6	user.xp:4800,user.gold:54000,user.hero_exp:92700			1000526
+4	77	npc_explore_4	121	148	277	847	1037	1945	level	1	0	0	0	1	0	6	user.xp:4800,user.gold:54000,user.hero_exp:92700			1000527
+4	78	npc_explore_4	121	148	278	848	1038	1947	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4900,user.gold:55000,user.hero_exp:93600	user.bindcash:20		1000528
+4	79	npc_explore_4	121	148	278	849	1039	1949	level	1	0	0	0	1	0	6	user.xp:4900,user.gold:55000,user.hero_exp:93600			1000529
+4	80	npc_explore_4	121	148	278	850	1041	1952	level	1	0	0	0	1	0	6	user.xp:4900,user.gold:55000,user.hero_exp:94600			1000530
+4	81	npc_explore_4	121	148	279	852	1042	1954	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:4900,user.gold:55000,user.hero_exp:94600	user.bindcash:20		1000531
+4	82	npc_explore_4	121	149	279	853	1043	1956	level	1	0	0	0	1	0	6	user.xp:4900,user.gold:55000,user.hero_exp:94600			1000532
+4	83	npc_explore_4	122	149	279	854	1044	1958	level	1	0	0	0	1	0	6	user.xp:5000,user.gold:56000,user.hero_exp:95600			1000533
+4	84	npc_explore_4	122	149	280	855	1046	1961	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5000,user.gold:56000,user.hero_exp:95600	user.bindcash:20		1000534
+4	85	npc_explore_4	122	149	280	856	1047	1963	level	1	0	0	0	1	0	6	user.xp:5000,user.gold:57000,user.hero_exp:96600			1000535
+4	86	npc_explore_4	122	149	280	857	1048	1965	level	1	0	0	0	1	0	6	user.xp:5000,user.gold:57000,user.hero_exp:96600			1000536
+4	87	npc_explore_4	122	149	281	858	1049	1968	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5000,user.gold:57000,user.hero_exp:96600	user.bindcash:20		1000537
+4	88	npc_explore_4	122	150	281	859	1051	1970	level	1	0	0	0	1	0	6	user.xp:5100,user.gold:57000,user.hero_exp:97700			1000538
+4	89	npc_explore_4	122	150	281	860	1052	1973	level	1	0	0	0	1	0	6	user.xp:5100,user.gold:57000,user.hero_exp:97700			1000539
+4	90	npc_explore_4	123	150	282	861	1053	1975	level	1	0	0	0	1	0	6	material.101704:1,user.bindcash:20,user.xp:5100,user.gold:58000,user.hero_exp:98800	material.101704:1		1000540
+4	91	npc_explore_4	123	150	282	863	1054	1977	level	1	0	0	0	1	0	6	user.xp:5100,user.gold:58000,user.hero_exp:98800			1000541
+4	92	npc_explore_4	123	150	282	864	1056	1980	level	1	0	0	0	1	0	6	user.xp:5100,user.gold:58000,user.hero_exp:98800			1000542
+4	93	npc_explore_4	123	151	283	865	1057	1982	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5200,user.gold:59000,user.hero_exp:100000	user.bindcash:20		1000543
+4	94	npc_explore_4	123	151	283	866	1058	1985	level	1	0	0	0	1	0	6	user.xp:5200,user.gold:59000,user.hero_exp:100000			1000544
+4	95	npc_explore_4	123	151	283	867	1060	1987	level	1	0	0	0	1	0	6	user.xp:5200,user.gold:59000,user.hero_exp:101200			1000545
+4	96	npc_explore_4	124	151	284	868	1061	1990	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5200,user.gold:59000,user.hero_exp:101200	user.bindcash:20		1000546
+4	97	npc_explore_4	124	151	284	869	1062	1992	level	1	0	0	0	1	0	6	user.xp:5200,user.gold:59000,user.hero_exp:101200			1000547
+4	98	npc_explore_4	124	152	285	871	1064	1995	level	1	0	0	0	1	0	6	user.xp:5300,user.gold:60000,user.hero_exp:102500			1000548
+4	99	npc_explore_4	124	152	285	872	1065	1997	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5300,user.gold:60000,user.hero_exp:102500	user.bindcash:20		1000549
+4	100	npc_explore_4	124	152	285	873	1066	2000	level	110	0	0	0	1	0	6	user.xp:5300,user.gold:60000,user.hero_exp:102900		equip.40601.0:1	1000550
+4	101	npc_explore_4	124	152	286	874	1068	2002	level	1	0	0	0	1	0	6	user.xp:5300,user.gold:60000,user.hero_exp:102900			1000551
+4	102	npc_explore_4	125	152	286	875	1069	2005	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5300,user.gold:60000,user.hero_exp:102900	user.bindcash:20		1000552
+4	103	npc_explore_4	125	152	286	876	1070	2007	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:61000,user.hero_exp:103400			1000553
+4	104	npc_explore_4	125	153	287	878	1072	2010	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:61000,user.hero_exp:103400			1000554
+4	105	npc_explore_4	125	153	287	879	1073	2012	level	1	0	0	0	1	0	6	material.950:45,user.bindcash:20,user.xp:5400,user.gold:61000,user.hero_exp:104000	material.950:45		1000555
+4	106	npc_explore_4	125	153	287	880	1074	2015	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:61000,user.hero_exp:104000			1000556
+4	107	npc_explore_4	125	153	288	881	1076	2017	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:61000,user.hero_exp:104000			1000557
+4	108	npc_explore_4	126	153	288	882	1077	2020	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5400,user.gold:61000,user.hero_exp:104500	user.bindcash:20		1000558
+4	109	npc_explore_4	126	154	288	884	1078	2022	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:61000,user.hero_exp:104500			1000559
+4	110	npc_explore_4	126	154	289	885	1080	2025	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:62000,user.hero_exp:105200			1000560
+4	111	npc_explore_4	126	154	289	886	1081	2028	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5400,user.gold:62000,user.hero_exp:105200	user.bindcash:20		1000561
+4	112	npc_explore_4	126	154	290	887	1083	2030	level	1	0	0	0	1	0	6	user.xp:5400,user.gold:62000,user.hero_exp:105200			1000562
+4	113	npc_explore_4	126	154	290	888	1084	2033	level	1	0	0	0	1	0	6	user.xp:5500,user.gold:62000,user.hero_exp:105800			1000563
+4	114	npc_explore_4	127	155	290	890	1085	2035	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5500,user.gold:62000,user.hero_exp:105800	user.bindcash:20		1000564
+4	115	npc_explore_4	127	155	291	891	1087	2038	level	1	0	0	0	1	0	6	user.xp:5500,user.gold:62000,user.hero_exp:106500			1000565
+4	116	npc_explore_4	127	155	291	892	1088	2041	level	1	0	0	0	1	0	6	user.xp:5500,user.gold:62000,user.hero_exp:106500			1000566
+4	117	npc_explore_4	127	155	291	893	1090	2043	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5500,user.gold:62000,user.hero_exp:106500	user.bindcash:20		1000567
+4	118	npc_explore_4	127	155	292	895	1091	2046	level	1	0	0	0	1	0	6	user.xp:5600,user.gold:63000,user.hero_exp:107300			1000568
+4	119	npc_explore_4	128	156	292	896	1092	2049	level	1	0	0	0	1	0	6	user.xp:5600,user.gold:63000,user.hero_exp:107300			1000569
+4	120	npc_explore_4	128	156	293	897	1094	2052	level	1	0	0	0	1	0	6	material.101704:1,user.bindcash:20,user.xp:5600,user.gold:63000,user.hero_exp:108100	material.101704:1		1000570
+4	121	npc_explore_4	128	156	293	898	1095	2054	level	1	0	0	0	1	0	6	user.xp:5600,user.gold:63000,user.hero_exp:108100			1000571
+4	122	npc_explore_4	128	156	293	900	1097	2057	level	1	0	0	0	1	0	6	user.xp:5600,user.gold:63000,user.hero_exp:108100			1000572
+4	123	npc_explore_4	128	156	294	901	1098	2060	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5600,user.gold:64000,user.hero_exp:108900	user.bindcash:20		1000573
+4	124	npc_explore_4	128	157	294	902	1100	2062	level	1	0	0	0	1	0	6	user.xp:5600,user.gold:64000,user.hero_exp:108900			1000574
+4	125	npc_explore_4	129	157	295	903	1101	2065	level	115	0	0	0	1	0	6	user.xp:5700,user.gold:64000,user.hero_exp:109800		equip.50601.0:1	1000575
+4	126	npc_explore_4	129	157	295	905	1103	2068	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5700,user.gold:64000,user.hero_exp:109800	user.bindcash:20		1000576
+4	127	npc_explore_4	129	157	295	906	1104	2071	level	1	0	0	0	1	0	6	user.xp:5700,user.gold:64000,user.hero_exp:109800			1000577
+4	128	npc_explore_4	129	158	296	907	1106	2073	level	1	0	0	0	1	0	6	user.xp:5700,user.gold:65000,user.hero_exp:110700			1000578
+4	129	npc_explore_4	129	158	296	909	1107	2076	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5700,user.gold:65000,user.hero_exp:110700	user.bindcash:20		1000579
+4	130	npc_explore_4	130	158	297	910	1109	2079	level	1	0	0	0	1	0	6	user.xp:5800,user.gold:65000,user.hero_exp:111600			1000580
+4	131	npc_explore_4	130	158	297	911	1110	2082	level	1	0	0	0	1	0	6	user.xp:5800,user.gold:65000,user.hero_exp:111600			1000581
+4	132	npc_explore_4	130	158	297	913	1112	2085	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5800,user.gold:65000,user.hero_exp:111600	user.bindcash:20		1000582
+4	133	npc_explore_4	130	159	298	914	1113	2087	level	1	0	0	0	1	0	6	user.xp:5800,user.gold:66000,user.hero_exp:112700			1000583
+4	134	npc_explore_4	130	159	298	915	1115	2090	level	1	0	0	0	1	0	6	user.xp:5800,user.gold:66000,user.hero_exp:112700			1000584
+4	135	npc_explore_4	131	159	299	917	1116	2093	level	1	0	0	0	1	0	6	rune.1005:1,user.bindcash:20,user.xp:5900,user.gold:67000,user.hero_exp:113700	rune.1005:1		1000585
+4	136	npc_explore_4	131	159	299	918	1118	2096	level	1	0	0	0	1	0	6	user.xp:5900,user.gold:67000,user.hero_exp:113700			1000586
+4	137	npc_explore_4	131	159	299	919	1119	2099	level	1	0	0	0	1	0	6	user.xp:5900,user.gold:67000,user.hero_exp:113700			1000587
+4	138	npc_explore_4	131	160	300	921	1121	2102	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:5900,user.gold:67000,user.hero_exp:114800	user.bindcash:20		1000588
+4	139	npc_explore_4	131	160	300	922	1122	2105	level	1	0	0	0	1	0	6	user.xp:5900,user.gold:67000,user.hero_exp:114800			1000589
+4	140	npc_explore_4	131	160	301	923	1124	2108	level	1	0	0	0	1	0	6	user.xp:6000,user.gold:68000,user.hero_exp:115900			1000590
+4	141	npc_explore_4	132	160	301	925	1125	2110	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:6000,user.gold:68000,user.hero_exp:115900	user.bindcash:20		1000591
+4	142	npc_explore_4	132	161	301	926	1127	2113	level	1	0	0	0	1	0	6	user.xp:6000,user.gold:68000,user.hero_exp:115900			1000592
+4	143	npc_explore_4	132	161	302	927	1128	2116	level	1	0	0	0	1	0	6	user.xp:6100,user.gold:69000,user.hero_exp:117100			1000593
+4	144	npc_explore_4	132	161	302	929	1130	2119	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:6100,user.gold:69000,user.hero_exp:117100	user.bindcash:20		1000594
+4	145	npc_explore_4	132	161	303	930	1132	2122	level	1	0	0	0	1	0	6	user.xp:6100,user.gold:69000,user.hero_exp:118300			1000595
+4	146	npc_explore_4	133	161	303	931	1133	2125	level	1	0	0	0	1	0	6	user.xp:6100,user.gold:69000,user.hero_exp:118300			1000596
+4	147	npc_explore_4	133	162	304	933	1135	2128	level	1	0	0	0	1	0	6	user.bindcash:20,user.xp:6100,user.gold:69000,user.hero_exp:118300	user.bindcash:20		1000597
+4	148	npc_explore_4	133	162	304	934	1136	2131	level	1	0	0	0	1	0	6	user.xp:6200,user.gold:70000,user.hero_exp:119600			1000598
+4	149	npc_explore_4	133	162	304	936	1138	2134	level	1	0	0	0	1	0	6	user.xp:6200,user.gold:70000,user.hero_exp:119600			1000599
+4	150	npc_explore_4	133	162	305	937	1140	2137	level	120	0	0	0	1	0	6	user.bindcash:20,user.xp:6200,user.gold:70000,user.hero_exp:120000	user.bindcash:20	equip.60601.0:1	1000600
+5	1	npc_explore_5	134	163	305	938	1141	2140	level	1	0	0	0	1	0	6	user.xp:6200,user.gold:70000,user.hero_exp:120000			1000601
+5	2	npc_explore_5	134	163	306	940	1143	2143	level	1	0	0	0	1	0	6	user.xp:6200,user.gold:70000,user.hero_exp:120000			1000602
+5	3	npc_explore_5	134	163	306	941	1144	2146	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6200,user.gold:71000,user.hero_exp:120500	user.bindcash:25		1000603
+5	4	npc_explore_5	134	163	307	943	1146	2149	level	1	0	0	0	1	0	6	user.xp:6200,user.gold:71000,user.hero_exp:120500			1000604
+5	5	npc_explore_5	134	164	307	944	1148	2152	level	1	0	0	0	1	0	6	user.xp:6300,user.gold:71000,user.hero_exp:121000			1000605
+5	6	npc_explore_5	135	164	307	945	1149	2155	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6300,user.gold:71000,user.hero_exp:121000	user.bindcash:25		1000606
+5	7	npc_explore_5	135	164	308	947	1151	2158	level	1	0	0	0	1	0	6	user.xp:6300,user.gold:71000,user.hero_exp:121000			1000607
+5	8	npc_explore_5	135	164	308	948	1152	2161	level	1	0	0	0	1	0	6	user.xp:6300,user.gold:71000,user.hero_exp:121600			1000608
+5	9	npc_explore_5	135	164	309	950	1154	2164	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6300,user.gold:71000,user.hero_exp:121600	user.bindcash:25		1000609
+5	10	npc_explore_5	135	165	309	951	1156	2168	level	1	0	0	0	1	0	6	user.xp:6300,user.gold:72000,user.hero_exp:122200			1000610
+5	11	npc_explore_5	136	165	310	953	1157	2171	level	1	0	0	0	1	0	6	user.xp:6300,user.gold:72000,user.hero_exp:122200			1000611
+5	12	npc_explore_5	136	165	310	954	1159	2174	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6300,user.gold:72000,user.hero_exp:122200	user.bindcash:25		1000612
+5	13	npc_explore_5	136	165	311	956	1161	2177	level	1	0	0	0	1	0	6	user.xp:6400,user.gold:72000,user.hero_exp:122900			1000613
+5	14	npc_explore_5	136	166	311	957	1162	2180	level	1	0	0	0	1	0	6	user.xp:6400,user.gold:72000,user.hero_exp:122900			1000614
+5	15	npc_explore_5	137	166	311	959	1164	2183	level	1	0	0	0	1	0	6	material.101705:1,user.bindcash:25,user.xp:6400,user.gold:72000,user.hero_exp:123600	material.101705:1		1000615
+5	16	npc_explore_5	137	166	312	960	1166	2186	level	1	0	0	0	1	0	6	user.xp:6400,user.gold:72000,user.hero_exp:123600			1000616
+5	17	npc_explore_5	137	166	312	961	1167	2189	level	1	0	0	0	1	0	6	user.xp:6400,user.gold:72000,user.hero_exp:123600			1000617
+5	18	npc_explore_5	137	167	313	963	1169	2193	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6400,user.gold:73000,user.hero_exp:124400	user.bindcash:25		1000618
+5	19	npc_explore_5	137	167	313	964	1171	2196	level	1	0	0	0	1	0	6	user.xp:6400,user.gold:73000,user.hero_exp:124400			1000619
+5	20	npc_explore_5	138	167	314	966	1173	2199	level	1	0	0	0	1	0	6	user.xp:6500,user.gold:73000,user.hero_exp:125100			1000620
+5	21	npc_explore_5	138	167	314	967	1174	2202	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6500,user.gold:73000,user.hero_exp:125100	user.bindcash:25		1000621
+5	22	npc_explore_5	138	168	315	969	1176	2205	level	1	0	0	0	1	0	6	user.xp:6500,user.gold:73000,user.hero_exp:125100			1000622
+5	23	npc_explore_5	138	168	315	970	1178	2209	level	1	0	0	0	1	0	6	user.xp:6500,user.gold:74000,user.hero_exp:126000			1000623
+5	24	npc_explore_5	138	168	316	972	1179	2212	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6500,user.gold:74000,user.hero_exp:126000	user.bindcash:25		1000624
+5	25	npc_explore_5	139	168	316	973	1181	2215	level	130	0	0	0	1	0	6	user.xp:6600,user.gold:74000,user.hero_exp:126800		equip.10701.0:1	1000625
+5	26	npc_explore_5	139	169	316	975	1183	2218	level	1	0	0	0	1	0	6	user.xp:6600,user.gold:74000,user.hero_exp:126800			1000626
+5	27	npc_explore_5	139	169	317	977	1185	2222	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6600,user.gold:74000,user.hero_exp:126800	user.bindcash:25		1000627
+5	28	npc_explore_5	139	169	317	978	1186	2225	level	1	0	0	0	1	0	6	user.xp:6600,user.gold:75000,user.hero_exp:127800			1000628
+5	29	npc_explore_5	140	169	318	980	1188	2228	level	1	0	0	0	1	0	6	user.xp:6600,user.gold:75000,user.hero_exp:127800			1000629
+5	30	npc_explore_5	140	170	318	981	1190	2232	level	1	0	0	0	1	0	6	user.htoken:10,user.bindcash:25,user.xp:6700,user.gold:75000,user.hero_exp:128700	user.htoken:10		1000630
+5	31	npc_explore_5	140	170	319	983	1192	2235	level	1	0	0	0	1	0	6	user.xp:6700,user.gold:75000,user.hero_exp:128700			1000631
+5	32	npc_explore_5	140	170	319	984	1193	2238	level	1	0	0	0	1	0	6	user.xp:6700,user.gold:75000,user.hero_exp:128700			1000632
+5	33	npc_explore_5	140	170	320	986	1195	2241	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6700,user.gold:76000,user.hero_exp:129700	user.bindcash:25		1000633
+5	34	npc_explore_5	141	171	320	987	1197	2245	level	1	0	0	0	1	0	6	user.xp:6700,user.gold:76000,user.hero_exp:129700			1000634
+5	35	npc_explore_5	141	171	321	989	1199	2248	level	1	0	0	0	1	0	6	user.xp:6800,user.gold:76000,user.hero_exp:130800			1000635
+5	36	npc_explore_5	141	171	321	990	1201	2251	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6800,user.gold:76000,user.hero_exp:130800	user.bindcash:25		1000636
+5	37	npc_explore_5	141	171	322	992	1202	2255	level	1	0	0	0	1	0	6	user.xp:6800,user.gold:76000,user.hero_exp:130800			1000637
+5	38	npc_explore_5	142	172	322	994	1204	2258	level	1	0	0	0	1	0	6	user.xp:6800,user.gold:77000,user.hero_exp:131900			1000638
+5	39	npc_explore_5	142	172	323	995	1206	2262	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6800,user.gold:77000,user.hero_exp:131900	user.bindcash:25		1000639
+5	40	npc_explore_5	142	172	323	997	1208	2265	level	1	0	0	0	1	0	6	user.xp:6900,user.gold:78000,user.hero_exp:133000			1000640
+5	41	npc_explore_5	142	172	324	998	1210	2268	level	1	0	0	0	1	0	6	user.xp:6900,user.gold:78000,user.hero_exp:133000			1000641
+5	42	npc_explore_5	142	173	324	1000	1211	2272	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:6900,user.gold:78000,user.hero_exp:133000	user.bindcash:25		1000642
+5	43	npc_explore_5	143	173	325	1002	1213	2275	level	1	0	0	0	1	0	6	user.xp:6900,user.gold:78000,user.hero_exp:134200			1000643
+5	44	npc_explore_5	143	173	325	1003	1215	2279	level	1	0	0	0	1	0	6	user.xp:6900,user.gold:78000,user.hero_exp:134200			1000644
+5	45	npc_explore_5	143	173	326	1005	1217	2282	level	1	0	0	0	1	0	6	material.101705:1,user.bindcash:25,user.xp:7000,user.gold:79000,user.hero_exp:135400	material.101705:1		1000645
+5	46	npc_explore_5	143	174	326	1006	1219	2286	level	1	0	0	0	1	0	6	user.xp:7000,user.gold:79000,user.hero_exp:135400			1000646
+5	47	npc_explore_5	144	174	327	1008	1221	2289	level	1	0	0	0	1	0	6	user.xp:7000,user.gold:79000,user.hero_exp:135400			1000647
+5	48	npc_explore_5	144	174	327	1010	1222	2293	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7100,user.gold:80000,user.hero_exp:136600	user.bindcash:25		1000648
+5	49	npc_explore_5	144	174	328	1011	1224	2296	level	1	0	0	0	1	0	6	user.xp:7100,user.gold:80000,user.hero_exp:136600			1000649
+5	50	npc_explore_5	144	175	328	1013	1226	2300	level	140	0	0	0	1	0	6	user.xp:7100,user.gold:80000,user.hero_exp:137100		equip.20701.0:1	1000650
+5	51	npc_explore_5	144	175	329	1014	1228	2303	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7100,user.gold:80000,user.hero_exp:137100	user.bindcash:25		1000651
+5	52	npc_explore_5	145	175	329	1016	1230	2307	level	1	0	0	0	1	0	6	user.xp:7100,user.gold:80000,user.hero_exp:137100			1000652
+5	53	npc_explore_5	145	176	330	1018	1232	2310	level	1	0	0	0	1	0	6	user.xp:7100,user.gold:80000,user.hero_exp:137600			1000653
+5	54	npc_explore_5	145	176	330	1019	1234	2314	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7100,user.gold:80000,user.hero_exp:137600	user.bindcash:25		1000654
+5	55	npc_explore_5	145	176	331	1021	1236	2317	level	1	0	0	0	1	0	6	user.xp:7100,user.gold:81000,user.hero_exp:138100			1000655
+5	56	npc_explore_5	146	176	331	1023	1237	2321	level	1	0	0	0	1	0	6	user.xp:7100,user.gold:81000,user.hero_exp:138100			1000656
+5	57	npc_explore_5	146	177	332	1024	1239	2324	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7100,user.gold:81000,user.hero_exp:138100	user.bindcash:25		1000657
+5	58	npc_explore_5	146	177	332	1026	1241	2328	level	1	0	0	0	1	0	6	user.xp:7200,user.gold:81000,user.hero_exp:138700			1000658
+5	59	npc_explore_5	146	177	333	1028	1243	2331	level	1	0	0	0	1	0	6	user.xp:7200,user.gold:81000,user.hero_exp:138700			1000659
+5	60	npc_explore_5	147	177	333	1029	1245	2335	level	1	0	0	0	1	0	6	rune.1005:1,user.bindcash:25,user.xp:7200,user.gold:81000,user.hero_exp:139300	rune.1005:1		1000660
+5	61	npc_explore_5	147	178	334	1031	1247	2339	level	1	0	0	0	1	0	6	user.xp:7200,user.gold:81000,user.hero_exp:139300			1000661
+5	62	npc_explore_5	147	178	334	1033	1249	2342	level	1	0	0	0	1	0	6	user.xp:7200,user.gold:81000,user.hero_exp:139300			1000662
+5	63	npc_explore_5	147	178	335	1034	1251	2346	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7200,user.gold:82000,user.hero_exp:140000	user.bindcash:25		1000663
+5	64	npc_explore_5	148	179	335	1036	1253	2349	level	1	0	0	0	1	0	6	user.xp:7200,user.gold:82000,user.hero_exp:140000			1000664
+5	65	npc_explore_5	148	179	336	1038	1255	2353	level	1	0	0	0	1	0	6	user.xp:7300,user.gold:82000,user.hero_exp:140700			1000665
+5	66	npc_explore_5	148	179	336	1040	1257	2357	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7300,user.gold:82000,user.hero_exp:140700	user.bindcash:25		1000666
+5	67	npc_explore_5	148	179	337	1041	1259	2360	level	1	0	0	0	1	0	6	user.xp:7300,user.gold:82000,user.hero_exp:140700			1000667
+5	68	npc_explore_5	149	180	337	1043	1261	2364	level	1	0	0	0	1	0	6	user.xp:7300,user.gold:83000,user.hero_exp:141400			1000668
+5	69	npc_explore_5	149	180	338	1045	1263	2368	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7300,user.gold:83000,user.hero_exp:141400	user.bindcash:25		1000669
+5	70	npc_explore_5	149	180	338	1046	1265	2372	level	1	0	0	0	1	0	6	user.xp:7300,user.gold:83000,user.hero_exp:142200			1000670
+5	71	npc_explore_5	149	181	339	1048	1267	2375	level	1	0	0	0	1	0	6	user.xp:7300,user.gold:83000,user.hero_exp:142200			1000671
+5	72	npc_explore_5	150	181	339	1050	1269	2379	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7300,user.gold:83000,user.hero_exp:142200	user.bindcash:25		1000672
+5	73	npc_explore_5	150	181	340	1052	1271	2383	level	1	0	0	0	1	0	6	user.xp:7400,user.gold:84000,user.hero_exp:143000			1000673
+5	74	npc_explore_5	150	181	340	1053	1273	2386	level	1	0	0	0	1	0	6	user.xp:7400,user.gold:84000,user.hero_exp:143000			1000674
+5	75	npc_explore_5	150	182	341	1055	1275	2390	level	150	0	0	0	1	0	6	fragment.5021:60,user.bindcash:25,user.xp:7400,user.gold:84000,user.hero_exp:143900	fragment.5021:60	equip.30701.0:1	1000675
+5	76	npc_explore_5	151	182	342	1057	1277	2394	level	1	0	0	0	1	0	6	user.xp:7400,user.gold:84000,user.hero_exp:143900			1000676
+5	77	npc_explore_5	151	182	342	1059	1279	2398	level	1	0	0	0	1	0	6	user.xp:7400,user.gold:84000,user.hero_exp:143900			1000677
+5	78	npc_explore_5	151	183	343	1060	1281	2401	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7500,user.gold:85000,user.hero_exp:144800	user.bindcash:25		1000678
+5	79	npc_explore_5	151	183	343	1062	1283	2405	level	1	0	0	0	1	0	6	user.xp:7500,user.gold:85000,user.hero_exp:144800			1000679
+5	80	npc_explore_5	152	183	344	1064	1285	2409	level	1	0	0	0	1	0	6	user.xp:7500,user.gold:85000,user.hero_exp:145800			1000680
+5	81	npc_explore_5	152	183	344	1066	1287	2413	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7500,user.gold:85000,user.hero_exp:145800	user.bindcash:25		1000681
+5	82	npc_explore_5	152	184	345	1067	1289	2417	level	1	0	0	0	1	0	6	user.xp:7500,user.gold:85000,user.hero_exp:145800			1000682
+5	83	npc_explore_5	152	184	345	1069	1291	2420	level	1	0	0	0	1	0	6	user.xp:7600,user.gold:86000,user.hero_exp:146800			1000683
+5	84	npc_explore_5	153	184	346	1071	1293	2424	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7600,user.gold:86000,user.hero_exp:146800	user.bindcash:25		1000684
+5	85	npc_explore_5	153	185	346	1073	1295	2428	level	1	0	0	0	1	0	6	user.xp:7600,user.gold:86000,user.hero_exp:147800			1000685
+5	86	npc_explore_5	153	185	347	1075	1297	2432	level	1	0	0	0	1	0	6	user.xp:7600,user.gold:86000,user.hero_exp:147800			1000686
+5	87	npc_explore_5	153	185	348	1076	1299	2436	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7600,user.gold:86000,user.hero_exp:147800	user.bindcash:25		1000687
+5	88	npc_explore_5	154	185	348	1078	1301	2440	level	1	0	0	0	1	0	6	user.xp:7700,user.gold:87000,user.hero_exp:148900			1000688
+5	89	npc_explore_5	154	186	349	1080	1303	2444	level	1	0	0	0	1	0	6	user.xp:7700,user.gold:87000,user.hero_exp:148900			1000689
+5	90	npc_explore_5	154	186	349	1082	1305	2448	level	1	0	0	0	1	0	6	material.101705:1,user.bindcash:25,user.xp:7700,user.gold:88000,user.hero_exp:150100	material.101705:1		1000690
+5	91	npc_explore_5	154	186	350	1084	1307	2451	level	1	0	0	0	1	0	6	user.xp:7700,user.gold:88000,user.hero_exp:150100			1000691
+5	92	npc_explore_5	155	187	350	1086	1309	2455	level	1	0	0	0	1	0	6	user.xp:7700,user.gold:88000,user.hero_exp:150100			1000692
+5	93	npc_explore_5	155	187	351	1087	1311	2459	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7800,user.gold:88000,user.hero_exp:151200	user.bindcash:25		1000693
+5	94	npc_explore_5	155	187	351	1089	1313	2463	level	1	0	0	0	1	0	6	user.xp:7800,user.gold:88000,user.hero_exp:151200			1000694
+5	95	npc_explore_5	155	188	352	1091	1316	2467	level	1	0	0	0	1	0	6	user.xp:7900,user.gold:89000,user.hero_exp:152500			1000695
+5	96	npc_explore_5	156	188	353	1093	1318	2471	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7900,user.gold:89000,user.hero_exp:152500	user.bindcash:25		1000696
+5	97	npc_explore_5	156	188	353	1095	1320	2475	level	1	0	0	0	1	0	6	user.xp:7900,user.gold:89000,user.hero_exp:152500			1000697
+5	98	npc_explore_5	156	188	354	1097	1322	2479	level	1	0	0	0	1	0	6	user.xp:7900,user.gold:90000,user.hero_exp:153700			1000698
+5	99	npc_explore_5	156	189	354	1098	1324	2483	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:7900,user.gold:90000,user.hero_exp:153700	user.bindcash:25		1000699
+5	100	npc_explore_5	157	189	355	1100	1326	2487	level	160	0	0	0	1	0	6	user.xp:8000,user.gold:90000,user.hero_exp:154200		equip.40701.0:1	1000700
+5	101	npc_explore_5	157	189	355	1102	1328	2491	level	1	0	0	0	1	0	6	user.xp:8000,user.gold:90000,user.hero_exp:154200			1000701
+5	102	npc_explore_5	157	190	356	1104	1330	2495	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8000,user.gold:90000,user.hero_exp:154200	user.bindcash:25		1000702
+5	103	npc_explore_5	158	190	357	1106	1333	2499	level	1	0	0	0	1	0	6	user.xp:8000,user.gold:90000,user.hero_exp:154700			1000703
+5	104	npc_explore_5	158	190	357	1108	1335	2503	level	1	0	0	0	1	0	6	user.xp:8000,user.gold:90000,user.hero_exp:154700			1000704
+5	105	npc_explore_5	158	191	358	1110	1337	2507	level	1	0	0	0	1	0	6	material.950:60,user.bindcash:25,user.xp:8000,user.gold:91000,user.hero_exp:155200	material.950:60		1000705
+5	106	npc_explore_5	158	191	358	1112	1339	2511	level	1	0	0	0	1	0	6	user.xp:8000,user.gold:91000,user.hero_exp:155200			1000706
+5	107	npc_explore_5	159	191	359	1114	1341	2515	level	1	0	0	0	1	0	6	user.xp:8000,user.gold:91000,user.hero_exp:155200			1000707
+5	108	npc_explore_5	159	191	359	1115	1343	2519	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8000,user.gold:91000,user.hero_exp:155800	user.bindcash:25		1000708
+5	109	npc_explore_5	159	192	360	1117	1346	2523	level	1	0	0	0	1	0	6	user.xp:8000,user.gold:91000,user.hero_exp:155800			1000709
+5	110	npc_explore_5	159	192	361	1119	1348	2528	level	1	0	0	0	1	0	6	user.xp:8100,user.gold:91000,user.hero_exp:156400			1000710
+5	111	npc_explore_5	160	192	361	1121	1350	2532	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8100,user.gold:91000,user.hero_exp:156400	user.bindcash:25		1000711
+5	112	npc_explore_5	160	193	362	1123	1352	2536	level	1	0	0	0	1	0	6	user.xp:8100,user.gold:91000,user.hero_exp:156400			1000712
+5	113	npc_explore_5	160	193	362	1125	1354	2540	level	1	0	0	0	1	0	6	user.xp:8100,user.gold:92000,user.hero_exp:157100			1000713
+5	114	npc_explore_5	161	193	363	1127	1357	2544	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8100,user.gold:92000,user.hero_exp:157100	user.bindcash:25		1000714
+5	115	npc_explore_5	161	194	364	1129	1359	2548	level	1	0	0	0	1	0	6	user.xp:8100,user.gold:92000,user.hero_exp:157800			1000715
+5	116	npc_explore_5	161	194	364	1131	1361	2552	level	1	0	0	0	1	0	6	user.xp:8100,user.gold:92000,user.hero_exp:157800			1000716
+5	117	npc_explore_5	161	194	365	1133	1363	2556	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8100,user.gold:92000,user.hero_exp:157800	user.bindcash:25		1000717
+5	118	npc_explore_5	162	195	365	1135	1365	2561	level	1	0	0	0	1	0	6	user.xp:8200,user.gold:93000,user.hero_exp:158500			1000718
+5	119	npc_explore_5	162	195	366	1137	1368	2565	level	1	0	0	0	1	0	6	user.xp:8200,user.gold:93000,user.hero_exp:158500			1000719
+5	120	npc_explore_5	162	195	367	1139	1370	2569	level	1	0	0	0	1	0	6	material.101705:1,user.bindcash:25,user.xp:8200,user.gold:93000,user.hero_exp:159300	material.101705:1		1000720
+5	121	npc_explore_5	163	196	367	1141	1372	2573	level	1	0	0	0	1	0	6	user.xp:8200,user.gold:93000,user.hero_exp:159300			1000721
+5	122	npc_explore_5	163	196	368	1143	1374	2577	level	1	0	0	0	1	0	6	user.xp:8200,user.gold:93000,user.hero_exp:159300			1000722
+5	123	npc_explore_5	163	196	368	1145	1377	2582	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8300,user.gold:94000,user.hero_exp:160100	user.bindcash:25		1000723
+5	124	npc_explore_5	163	197	369	1146	1379	2586	level	1	0	0	0	1	0	6	user.xp:8300,user.gold:94000,user.hero_exp:160100			1000724
+5	125	npc_explore_5	164	197	370	1148	1381	2590	level	170	0	0	0	1	0	6	user.xp:8300,user.gold:94000,user.hero_exp:161000		equip.50701.0:1	1000725
+5	126	npc_explore_5	164	197	370	1150	1383	2594	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8300,user.gold:94000,user.hero_exp:161000	user.bindcash:25		1000726
+5	127	npc_explore_5	164	198	371	1152	1386	2599	level	1	0	0	0	1	0	6	user.xp:8300,user.gold:94000,user.hero_exp:161000			1000727
+5	128	npc_explore_5	164	198	371	1154	1388	2603	level	1	0	0	0	1	0	6	user.xp:8400,user.gold:95000,user.hero_exp:161900			1000728
+5	129	npc_explore_5	165	198	372	1156	1390	2607	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8400,user.gold:95000,user.hero_exp:161900	user.bindcash:25		1000729
+5	130	npc_explore_5	165	199	373	1158	1393	2612	level	1	0	0	0	1	0	6	user.xp:8400,user.gold:95000,user.hero_exp:162900			1000730
+5	131	npc_explore_5	165	199	373	1160	1395	2616	level	1	0	0	0	1	0	6	user.xp:8400,user.gold:95000,user.hero_exp:162900			1000731
+5	132	npc_explore_5	166	199	374	1162	1397	2620	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8400,user.gold:95000,user.hero_exp:162900	user.bindcash:25		1000732
+5	133	npc_explore_5	166	199	374	1164	1399	2624	level	1	0	0	0	1	0	6	user.xp:8500,user.gold:96000,user.hero_exp:163900			1000733
+5	134	npc_explore_5	166	200	375	1166	1402	2629	level	1	0	0	0	1	0	6	user.xp:8500,user.gold:96000,user.hero_exp:163900			1000734
+5	135	npc_explore_5	167	200	376	1169	1404	2633	level	1	0	0	0	1	0	6	rune.1006:1,user.bindcash:25,user.xp:8500,user.gold:96000,user.hero_exp:164900	rune.1006:1		1000735
+5	136	npc_explore_5	167	200	376	1171	1406	2637	level	1	0	0	0	1	0	6	user.xp:8500,user.gold:96000,user.hero_exp:164900			1000736
+5	137	npc_explore_5	167	201	377	1173	1409	2642	level	1	0	0	0	1	0	6	user.xp:8500,user.gold:96000,user.hero_exp:164900			1000737
+5	138	npc_explore_5	167	201	378	1175	1411	2646	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8600,user.gold:97000,user.hero_exp:166000	user.bindcash:25		1000738
+5	139	npc_explore_5	168	201	378	1177	1413	2651	level	1	0	0	0	1	0	6	user.xp:8600,user.gold:97000,user.hero_exp:166000			1000739
+5	140	npc_explore_5	168	202	379	1179	1416	2655	level	1	0	0	0	1	0	6	user.xp:8600,user.gold:98000,user.hero_exp:167100			1000740
+5	141	npc_explore_5	168	202	379	1181	1418	2659	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8600,user.gold:98000,user.hero_exp:167100	user.bindcash:25		1000741
+5	142	npc_explore_5	169	202	380	1183	1420	2664	level	1	0	0	0	1	0	6	user.xp:8600,user.gold:98000,user.hero_exp:167100			1000742
+5	143	npc_explore_5	169	203	381	1185	1423	2668	level	1	0	0	0	1	0	6	user.xp:8700,user.gold:98000,user.hero_exp:168300			1000743
+5	144	npc_explore_5	169	203	381	1187	1425	2673	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8700,user.gold:98000,user.hero_exp:168300	user.bindcash:25		1000744
+5	145	npc_explore_5	169	204	382	1189	1428	2677	level	1	0	0	0	1	0	6	user.xp:8700,user.gold:99000,user.hero_exp:169500			1000745
+5	146	npc_explore_5	170	204	383	1191	1430	2682	level	1	0	0	0	1	0	6	user.xp:8700,user.gold:99000,user.hero_exp:169500			1000746
+5	147	npc_explore_5	170	204	383	1193	1432	2686	level	1	0	0	0	1	0	6	user.bindcash:25,user.xp:8700,user.gold:99000,user.hero_exp:169500	user.bindcash:25		1000747
+5	148	npc_explore_5	170	205	384	1195	1435	2691	level	1	0	0	0	1	0	6	user.xp:8800,user.gold:100000,user.hero_exp:170800			1000748
+5	149	npc_explore_5	171	205	385	1197	1437	2695	level	1	0	0	0	1	0	6	user.xp:8800,user.gold:100000,user.hero_exp:170800			1000749
+5	150	npc_explore_5	171	205	385	1200	1440	2700	level	180	abyss	0	0	1	0	6	material.399998:1,user.bindcash:25,user.xp:8800,user.gold:100000,user.hero_exp:171200	material.399998:1	equip.60701.0:1	1000750

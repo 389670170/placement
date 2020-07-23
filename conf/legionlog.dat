@@ -1,0 +1,16 @@
+事件id	事件	消息
+id	event	msg
+Int	String	String
+1	create	text_legionLog_create
+2	upgrade	text_legionLog_upgrade
+3	newMember	text_legionLog_newMember
+4	newDeputy	text_legionLog_newDeputy
+5	newMaster	text_legionLog_newMaster
+6	copyFinish	text_nil
+7	leaveMember	text_legionLog_leaveMember
+8	kickMember	text_legionLog_kickMember
+9	setNotice	text_legionLog_setNotice
+10	appoint	text_legionLog_appoint
+11	liftDuty	text_legionLog_liftDuty
+12	construct	text_legionLog_construct
+13	impeachmentsuccess	text_legionLog_impeachmentsuccess

@@ -1,0 +1,5 @@
+类型ID	英雄集合	兑换消耗	循环内出现次数
+id	heroGroup	exchangeCost	cycleManner
+Int	Award	Award	Int
+1	group.10000012.0:1	user.wine:-200	9
+2	group.10000013.0:1	user.wine:-1800	1

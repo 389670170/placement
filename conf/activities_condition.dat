@@ -1,0 +1,3 @@
+排序	活动编号	配置文件编号Id	限时活动开始距离开服天数	限时活动开始距离开服天数1
+id	key	confId	startServerTime	endServerTime
+Int	String	Int	Int	Int

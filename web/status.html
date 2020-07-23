@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <meta charset="UTF-8">
+    <title>GM管理工具</title>
+    <script type="text/javascript" charset="utf-8">
+        var user = parent.user;
+        var request = parent.request;
+
+        var curCmd = null;
+        var addType = null;
+
+        function beforeSubmit(param) {
+            param.act = request.act;
+            param.method = request.method;
+            param.openid = request.openid;
+            param.uid = request.uid;
+
+            if(curCmd == 'status') {
+                for(var id in user.info) {
+                    if($('#'+id)[0]) {
+                        param[id] = $('#'+id)[0].value;
+                    }
+                }
+
+                for(var id in user.status) {
+                    if ($('#'+id)[0]) {
+                        param[id] = $('#'+id)[0].value;
+                    }
+                }
+                param.guide = $('#guide')[0].value;
+                if($('#paid')[0].value - 0){
+                    param.paid = $('#paid')[0].value;
+                }
+            }else if(curCmd == 'add') {
+                param['type'] = addType;
+                param['value'] = $('#add'+addType)[0].value;
+            }
+        }
+
+        function add(type) {
+            curCmd = 'add';
+            addType = type;
+            if(!$('#add'+type)[0].value || isNaN($('#add'+type)[0].value)) {
+                $.messager.alert('错误', '请输入数字', 'error');
+                return;
+            }
+            request.method = 'add';
+            $('#info').submit();
+        }
+
+        function status() {
+            curCmd = 'status';
+            request.method = 'status';
+            $('#info').submit();
+        }
+
+        $(document).ready(function() {
+            for(var id in user.status) {
+                $('#'+id).textbox({
+                    value: user.status[id],
+                });
+            }
+            $('#countryCurrency').textbox({
+                value : user.status.country,
+            });
+
+            for(var id in user.info) {
+                $('#'+id).textbox({
+                    value: user.info[id],
+                });
+            }
+
+            $('#guide').textbox({
+                value : user.mark.guide,
+            });
+
+            $('#info').form({
+                url: '.',
+                onSubmit: function(param) {beforeSubmit(param); return true; },
+                success: function(data) {
+                    resp = JSON.parse(data);
+                    if(resp.code == 0) {
+                        $.messager.alert('信息', '成功', 'info');
+                        if(curCmd == 'add') {
+                            var value = +resp.data.value;
+                            if (addType == 'country') {
+                                $('#countryCurrency').textbox('setText', value);
+                            } else {
+                                $('#'+addType).textbox('setText', value);
+                            }
+                            if(resp.data.vip) {
+                                $('#vip').textbox('setText', resp.data.vip);
+                            }
+                            if(resp.data.level) {
+                                $('#level').textbox('setText', resp.data.level);
+                            }
+                        }
+                    }else {
+                        $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <form id="info">
+        <table style="width:700px">
+            <tr>
+                <td>角色名</td>
+                <td><input id="un" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>国号</td>
+                <td><input id="country" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>账号</td>
+                <td><input id="account" type="text" disabled=true></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>头像</td>
+                <td><input id="headpic" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>UID</td>
+                <td><input id="uid" type="text" disabled=true></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>经验</td>
+                <td><input id="xp" type="text"></input></td>
+                <td><input id="addxp" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('xp')">发放</a></td>
+            </tr>
+             <tr>
+                <td>hero_exp</td>
+                <td><input id="hero_exp" type="text"></input></td>
+                <td><input id="addhero_exp" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('hero_exp')">发放</a></td>
+            </tr>
+            <tr>
+                <td>等级</td>
+                <td><input id="level" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>金币</td>
+                <td><input id="gold" type="text"></input></td>
+                <td><input id="addgold" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('gold')">发放</a></td>
+            </tr>
+            <tr>
+                <td>元宝</td>
+                <td><input id="cash" type="text"></input></td>
+                <td><input id="addcash" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('cash')">发放</a></td>
+            </tr>
+            <tr>
+                <td>绑定元宝</td>
+                <td><input id="bindcash" type="text"></input></td>
+                <td><input id="addbindcash" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('bindcash')">发放</a></td>
+            </tr>
+            <tr>
+                <td>爱心值</td>
+                <td><input id="love" type="text"></input></td>
+                <td><input id="addlove" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('love')">发放</a></td>
+            </tr>
+            <tr>
+                <td>VIP</td>
+                <td><input id="vip" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>VIP经验<br/>(会自动修改vip等级)</td>
+                <td><input id="vip_xp" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>充值元宝数量<br/>(不修改留空)</td>
+                <td><input id="paid" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>关卡</td>
+                <td><input id="food" type="text"></input></td>
+                <td><input id="addfood" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('food')">发放</a></td>
+            </tr>
+            <tr>
+                <td>幸运值</td>
+                <td><input id="luck" type="text"></input></td>
+                <td><input id="addluck" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('luck')">发放</a></td>
+            </tr>
+            <tr>
+                <td>爬塔币</td>
+                <td><input id="tower" type="text"></input></td>
+                <td><input id="addtower" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('tower')">发放</a></td>
+            </tr>
+            <tr>
+                <td>竞技场币</td>
+                <td><input id="arena" type="text"></input></td>
+                <td><input id="addarena" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('arena')">发放</a></td>
+            </tr>
+            <tr>
+                <td>军团币</td>
+                <td><input id="legion" type="text"></input></td>
+                <td><input id="addlegion" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('legion')">发放</a></td>
+            </tr>
+            <tr>
+                <td>军团战币</td>
+                <td><input id="legionwar" type="text"></input></td>
+                <td><input id="addlegion" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('legionwar')">发放</a></td>
+            </tr>
+            <tr>
+                <td>将魂数</td>
+                <td><input id="soul" type="text"></input></td>
+                <td><input id="addsoul" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('soul')">发放</a></td>
+            </tr>
+            <tr>
+                <td>荣誉令牌</td>
+                <td><input id="token" type="text"></input></td>
+                <td><input id="addtoken" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('token')">发放</a></td>
+            </tr>
+            <tr>
+                <td>普通招募令</td>
+                <td><input id="ntoken" type="text"></input></td>
+                <td><input id="addntoken" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('ntoken')">发放</a></td>
+            </tr>
+            <tr>
+                <td>高级招募令</td>
+                <td><input id="htoken" type="text"></input></td>
+                <td><input id="addhtoken" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('htoken')">发放</a></td>
+            </tr>
+            <tr>
+                <td>神将商店刷新令</td>
+                <td><input id="gtoken" type="text"></input></td>
+                <td><input id="addgtoken" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('gtoken')">发放</a></td>
+            </tr>
+            <tr>
+                <td>神秘商店刷新令</td>
+                <td><input id="mtoken" type="text"></input></td>
+                <td><input id="addmtoken" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('mtoken')">发放</a></td>
+            </tr>
+            <tr>
+                <td>军团红包</td>
+                <td><input id="boon" type="text"></input></td>
+                <td><input id="addboon" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('boon')">发放</a></td>
+            </tr>
+            <tr>
+                <td>竞技场经验</td>
+                <td><input id="arena_xp" type="text"></input></td>
+            </tr>
+            <tr>
+                <td>竞技场等级</td>
+                <td><input id="arena_level" type="text"></input></td>
+            </tr>
+            <tr>
+                <td>木材</td>
+                <td><input id="wood" type="text"></input></td>
+            </tr>
+            <tr>
+            <tr>
+                <td>冒险币</td>
+                <td><input id="trial_coin" type="text"></input></td>
+                <td><input id="addtrial_coin" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('trial_coin')">发放</a></td>
+            </tr>
+            <tr>
+                <td>耐力</td>
+                <td><input id="staying_power" type="text"></input></td>
+                <td><input id="addstaying_power" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('staying_power')">发放</a></td>
+            </tr>
+            <tr>
+                <td>行动力</td>
+                <td><input id="action_point" type="text"></input></td>
+                <td><input id="addaction_point" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('action_point')">发放</a></td>
+            </tr>
+            <tr>
+                <td>龙晶石</td>
+                <td><input id="mine_1" type="text"></input></td>
+                <td><input id="addmine_1" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('mine_1')">发放</a></td>
+            </tr>
+            <tr>
+                <td>龙栖木</td>
+                <td><input id="mine_2" type="text"></input></td>
+                <td><input id="addmine_2" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('mine_2')">发放</a></td>
+            </tr>
+            <tr>
+                <td>龙玄锭</td>
+                <td><input id="mine_3" type="text"></input></td>
+                <td><input id="addmine_3" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('mine_3')">发放</a></td>
+            </tr>
+            <tr>
+                <td>龙岗岩</td>
+                <td><input id="mine_4" type="text"></input></td>
+                <td><input id="addmine_4" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('mine_4')">发放</a></td>
+            </tr>
+            <tr>
+                <td>龙泉泪</td>
+                <td><input id="mine_5" type="text"></input></td>
+                <td><input id="addmine_5" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('mine_5')">发放</a></td>
+            </tr>
+            <tr>
+                <td>新手引导</td>
+                <td><input id="guide" type="text"></input></td>
+            </tr>
+            <tr>
+                <td>国家币</td>
+                <td><input id="countryCurrency" type="text"></input></td>
+                <td><input id="addcountry" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('country')">发放</a></td>
+            </tr>
+
+            <tr>
+                <td>行军令</td>
+                <td><input id="shas" type="text"></input></td>
+                <td><input id="addshas" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('shas')">发放</a></td>
+            </tr>
+
+            <tr>
+                <td>封神珠</td>
+                <td><input id="promoted" type="text"></input></td>
+                <td><input id="addpromoted" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('promoted')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>技能书</td>
+                <td><input id="sky_book" type="text"></input></td>
+                <td><input id="addsky_book" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('sky_book')">发放</a></td>
+
+            <tr>
+                <td>军资</td>
+                <td><input id="goods" type="text"></input></td>
+                <td><input id="addgoods" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('goods')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>物资</td>
+                <td><input id="countrywar" type="text"></input></td>
+                <td><input id="addcountrywar" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('countrywar')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>荣誉</td>
+                <td><input id="country_score" type="text"></input></td>
+                <td><input id="addcountry_score" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('country_score')">发放</a></td>
+            <tr>
+                <td>技能书</td>
+                <td><input id="sky_book" type="text"></input></td>
+                <td><input id="addsky_book" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('sky_book')">发放</a></td>
+            <tr>
+
+			<tr>
+                <td>俸禄</td>
+                <td><input id="salary" type="text"></input></td>
+                <td><input id="addsalary" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('salary')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>符文经验</td>
+                <td><input id="rune_exp" type="text"></input></td>
+                <td><input id="addrune_exp" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('rune_exp')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>符文结晶</td>
+                <td><input id="rune_crystal" type="text"></input></td>
+                <td><input id="addrune_crystal" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('rune_crystal')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>神之魂晶</td>
+                <td><input id="godsoul" type="text"></input></td>
+                <td><input id="addgodsoul" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('godsoul')">发放</a></td>
+            <tr>
+
+            <tr>
+                <td>朗姆酒</td>
+                <td><input id="wine" type="text"></input></td>
+                <td><input id="addwine" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('wine')">发放</a></td>
+            <tr>
+            <tr>
+                <td>陨铁</td>
+                <td><input id="smelt" type="text"></input></td>
+                <td><input id="addsmelt" type="text" maxlength="15" class="easyui-textbox" style="width:150px"></input><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="add('smelt')">发放</a></td>
+            <tr>
+            <tr>
+                <td></td>
+                <td><a id="status" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="status()">更改</a></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

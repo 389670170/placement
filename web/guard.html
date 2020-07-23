@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+
+    function beforeSubmit(param) {
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+    }
+
+    function beforeGuardSubmit(param) {
+        beforeSubmit(param);
+        param.accumulate = $('#accumulate')[0].value;
+        param.repress = $('#repress')[0].value;
+        param.free_hour = $('#free_hour')[0].value;
+
+        user.guard.accumulate = param.accumulate;
+        user.guard.repress = param.repress;
+        user.guard.free_hour = param.free_hour;
+    }
+
+    function beforeFieldSubmit(param) {
+        beforeSubmit(param);
+        if (param.method == 'open_field') {
+            return; // 开启领地消息
+        }
+
+        param.type = $('#type' + param.id)[0].value;
+        param.status = $('#status' + param.id)[0].value;
+        param.time = $('#time' + param.id)[0].value;
+        param.hid = $('#hid' + param.id)[0].value;
+        param.skill = $('#skill' + param.id)[0].value;
+
+        user.guard.field_sync[param.id].type = param.type;
+        user.guard.field_sync[param.id].status = param.status;
+        user.guard.field_sync[param.id].time = param.time;
+        user.guard.field[param.id].hid = param.hid;
+        user.guard.field[param.id].skill = param.skill;
+    }
+
+    function changeGuard() {
+        request.method = 'change_guard';
+        $('#guard').submit();
+    }
+
+    function changeField(fid) {
+        request.method = 'change_field';
+        $('#field' + fid).submit();
+    }
+
+    function closeField(fid) {
+        request.method = 'close_field';
+        $('#field' + fid).submit();
+    }
+
+    function openField(fid) {
+        user.guard.field[fid] = {
+            'hid': 0,
+            'events': [],
+            'fragment': 0,
+            'skill': 0,
+        };
+        user.guard.field_sync[fid] = {
+            'type': 0,
+            'status': 0,
+            'time': 0,
+        };
+
+        request.method = 'open_field';
+        $('#field' + fid).submit();
+    }
+
+        $(document).ready(function() {
+        $('#accumulate').textbox({value: user.guard.accumulate});
+        $('#repress').textbox({value: user.guard.repress});
+        $('#free_hour').textbox({value: user.guard.free_hour});
+
+        var fids = Object.keys(user.guard.field);
+        for (var i = 1; i <= fids.length; i++) {
+            $('#field' + i)[0].innerHTML = '\
+                <table style="width: 100%;">\
+                    <thead><tr>\
+                            <td>领地' + i + '数据</td>\
+                            <td>修改值</td>\
+                    </tr></thead>\
+                    <tr>\
+                        <td>驻守类型</td>\
+                        <td>\
+                            <input id="type' + i + '" type="text">\
+                        </td>\
+                    </tr>\
+                    <tr>\
+                        <td>当前状态</td>\
+                        <td>\
+                            <input id="status' + i + '" type="text">\
+                        </td>\
+                    </tr>\
+                    <tr>\
+                        <td>巡逻开始时间</td>\
+                        <td>\
+                            <input id="time' + i + '" type="text">\
+                        </td>\
+                    </tr>\
+                    <tr>\
+                        <td>驻守武将</td>\
+                        <td>\
+                            <input id="hid' + i + '" type="text">\
+                        </td>\
+                    </tr>\
+                    <tr>\
+                        <td>领地技能等级</td>\
+                        <td>\
+                            <input id="skill' + i + '" type="text">\
+                            </td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">\
+                            <a id="change_field' + i + '" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="changeField(' + i +')">更改领地</a>\
+                            <a id="close_field' + i + '" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="closeField(' + i +')">关闭领地</a>\
+                        </td>\
+                    </tr>\
+                </table>\
+            ';
+            $('#change_field' + i).linkbutton({});
+            $('#close_field' + i).linkbutton({});
+
+            $('#type' + i).textbox({value: user.guard.field_sync[i].type});
+            $('#status' + i).textbox({value: user.guard.field_sync[i].status});
+            $('#time' + i).textbox({value: user.guard.field_sync[i].time});
+            $('#hid' + i).textbox({value: user.guard.field[i].hid});
+            $('#skill' + i).textbox({value: user.guard.field[i].skill});
+        }
+        for (var i = fids.length + 1; i <= 6; i++) {
+            $('#field' + i)[0].innerHTML = '\
+            <a id="open_field' + i + '" data-options="width:80" onclick="openField(' + i + ')">开启领地' + i + '</a>\
+            ';
+
+            $('#open_field' + i).linkbutton({});
+        }
+
+        $('#guard').form({
+            url: '.',
+            onSubmit: function(param) {
+                beforeGuardSubmit(param);
+                return true;
+            },
+            success: function(data) {
+                resp = JSON.parse(data);
+                if (resp.code == 0) {
+                    $.messager.alert('信息', '成功, 请重新打开此标签页', 'info');
+                } else {
+                    $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                }
+            },
+        });
+        for (var i = 1; i <= 6; i++) {
+            $('#field' + i).form({
+                url: '.',
+                queryParams: {
+                    id: i,
+                },
+                onSubmit: function(param) {
+                    beforeFieldSubmit(param);
+                    return true;
+                },
+                success: function(data) {
+                    resp = JSON.parse(data);
+                    if (resp.code == 0) {
+                        $.messager.alert('信息', '成功', 'info');
+                         if (resp.args.method == 'open_field') {
+                            window.location.reload();
+                        }
+                    } else {
+                        $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                    }
+                },
+            });
+        }
+    });
+</script>
+</head>
+
+<body>
+    <form id="guard">
+        <table>
+            <thead><tr>
+                    <td>巡逻通用数据</td>
+                    <td>修改值</td>
+            </tr></thead>
+            <tr>
+                <td>累计巡逻小时数</td>
+                <td>
+                    <input id="accumulate" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>今日镇压次数</td>
+                <td>
+                    <input id="repress" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>今日使用的免费巡逻时间</td>
+                <td>
+                    <input id="free_hour" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><a id="change_guard" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="changeGuard()">更改</a></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <table id="field" style="width: 100%;">
+        <tr>
+            <td><form id="field1"></form></td>
+            <td><form id="field2"></form></td>
+        </tr>
+        <tr>
+            <td><form id="field3"></form></td>
+            <td><form id="field4"></form></td>
+        </tr>
+        <tr>
+            <td><form id="field5"></form></td>
+            <td><form id="field6"></form></td>
+        </tr>
+    </table>
+</body>
+</html>

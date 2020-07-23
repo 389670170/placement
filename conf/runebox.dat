@@ -1,0 +1,10 @@
+类型ID	奖励	解锁后替换符文奖励	解锁需求爬塔层数	循环内出现次数
+id	award	replaceAward	limit	cycleManner
+Int	Award	Award	Int	Int
+1	user.rune_exp:20	user.rune_exp:20	0	1187
+2	group.20000001.0:1	group.20000001.0:1	0	200
+3	group.20000001.0:1	group.20000002.0:1	50	50
+4	group.20000001.0:1	group.20000003.0:1	100	20
+5	group.20000001.0:1	group.20000004.0:1	200	10
+6	group.20000001.0:1	group.20000005.0:1	300	2
+7	group.20000001.0:1	group.20000006.0:1	350	1

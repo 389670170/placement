@@ -1,0 +1,8 @@
+索引	key	功能名
+id	key	name
+Int	String	String
+1	cityMain	主城等级
+2	cityBuild	建设进度
+3	killCount	累计击杀
+4	robCount	累计掠夺
+5	exploreCount	累计探索

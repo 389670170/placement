@@ -1,0 +1,5 @@
+索引Id	进度	展示奖励	文字描述
+id	progress	award	desc
+Int	Int	Award	String
+1	2	user.bindcash:50	text_popwindowopenseven_desc_1
+2	3	user.bindcash:50	text_popwindowopenseven_desc_2

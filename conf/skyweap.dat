@@ -1,0 +1,14 @@
+圣武阶数	名字	单次消耗1	单次消耗2	失败增加祝福值	祝福值上限	进阶范围最小	进阶范围最大	攻击	护甲	技防	生命	是否清零	清零倒计时
+level	name	cost1	cost2	getEnergy	maxEnergy	energyMin	energyMax	atk	def	mdef	hp	clean	cleanTime
+Int	String	Award	Award	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+0	text_skyWeapName_0	material.100:-3	0	6	210	150	165	0	0	0	0	0	0
+1	text_skyWeapName_1	material.100:-6	limitmat.101:-6	12	2500	1843	2017	1690	940	940	19600	0	0
+2	text_skyWeapName_1	material.100:-9	limitmat.102:-9	18	5200	3889	4213	3820	2130	2130	44200	0	0
+3	text_skyWeapName_1	material.100:-12	limitmat.103:-12	24	6100	4654	4992	6850	3820	3820	79200	0	0
+4	text_skyWeapName_1	material.100:-15	limitmat.104:-15	30	8600	6653	7064	9700	5410	5410	112000	0	0
+5	text_skyWeapName_1	material.100:-18	limitmat.105:-18	36	11900	9411	9894	13100	7280	7280	151000	0	0
+6	text_skyWeapName_1	material.100:-21	limitmat.106:-21	42	16700	13448	13997	16900	9440	9440	196000	0	0
+7	text_skyWeapName_1	material.100:-24	limitmat.107:-24	48	24500	19994	20603	21300	11900	11900	246000	0	0
+8	text_skyWeapName_1	material.100:-27	limitmat.108:-27	54	39000	32447	33102	26200	14600	14600	303000	0	0
+9	text_skyWeapName_1	material.100:-30	limitmat.109:-30	60	78600	66490	67159	31600	17600	17600	365000	0	0
+10	text_skyWeapName_1	material.100:-33	limitmat.110:-33	66	0	0	0	37400	20900	20900	433000	0	0

@@ -1,0 +1,8 @@
+搜寻任务类型	任务名称	开启等级	是否高级任务	1-4星英雄巡逻	5星英雄巡逻	6星英雄巡逻	英雄碎片产出数量(1-5星)	任务随机权重	星级随机权重(1-5星)	升星单次消耗	任务进行时长(1-5星)(Min)
+type	name	openLevel	isAdvanced	award1	award2	award3	normalAward	taskWeight	starWeight	starAddCost	needTime
+Int	String	Int	Int	Award	Award	Award	Ints	Int	Ints	Award	Ints
+1	text_exploreTask_1	1	0	material.930:1	material.940:1	material.950:1	2|3|4|5|6	332	40|30|20|6|4	user.mixcash:-30	120|180|240|300|360
+2	text_exploreTask_2	1	0	material.930:1	material.940:1	material.950:1	2|3|4|5|6	332	40|30|20|6|4	user.mixcash:-30	120|180|240|300|360
+3	text_exploreTask_4	1	0	material.930:1	material.940:1	material.950:1	2|3|4|5|6	332	40|30|20|6|4	user.mixcash:-30	120|180|240|300|360
+4	text_exploreTask_6	80	1	material.930:1	material.940:1	material.950:1	6|7|8|9|10	4	80|20|0|0|0	user.mixcash:-60	360|420|480|540|600
+5	text_exploreTask_7	70	1	material.930:1	material.940:1	material.950:1	6|7|8|9|10	0	80|20|0|0|0	user.mixcash:-60	360|420|480|540|600

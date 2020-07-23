@@ -1,0 +1,37 @@
+邮件ID	邮件存在天数（0-永久，非0-指定天数），均为领取后消失	发件人1	邮件名称1	邮件内容1
+id	time	addresser	name	text
+Int	Int	String	String	String
+4	7	Arena Manager	Daily Rank Reward	Your outstanding performance in the Arena was beheld. As of today at 21:00, you ranked No.{2} in the {1} Arena. Please accept your reward.
+12	7	Battle of Kings Manager	Points Match Reward	You ranked No.{1} in the Battle of Kings Points Match. Please accept your reward.
+13	7	Battle of Kings Manager	Finals Reward	You ranked No.{1} in the Battle of Kings Finals. Please accept your reward.
+15	7	Royal City Manager	Nobility Reward	You ranked No.{1} in Royal Clash. Please accept your reward.
+19	7	Legion Manager	Kicked out of the legion	You have been kicked out of the {1} legion.
+20	7	Legion Manager	Legion Campfire	Today\'s Legion Campfire has ended. Here are the rewards that you earned in the event.
+22	7	Legion Leader	A letter from the Legion Leader	Welcome to the Lv.{1} legion {2}. Let\'s work together to build a great legion!
+26	7	Legion Manager	Territory Mine Production	Thank you for your valiant efforts in the face of our powerful enemies. Here are today\'s earnings from the Legion Territory Mine.
+29	7	Legion Manager	Territory Boss Owner Reward	Your legion won ownership over the Territory Boss, here is your reward.
+30	7	Legion Manager	Territory Boss Rank Reward	You demonstrated your strength in the battle, earning the following Territory Boss Damage Rank Reward.
+32	7	Legion Manager	Legion War Victory Notice	The current round of Legion War has ended. Your Legion won absolute victory, here is your reward.
+33	7	Legion Manager	Legion War Defeat Notice	The current round of Legion War has ended. Unfortunately your Legion was unable to achieve victory. Here is your reward.
+34	7	Legion Manager	Legion War Build Reward	The current round of Legion War has ended. Thank you for your contributions to your legion. Here are your forgotten rewards.
+40	7	Village Manager	Village Land Reward	Your {1} land occupation time has expired. Here is your reward.
+41	7	Village Manager	Village Land Lost	Your land {1} has been occupied by {2}. You occupied for a total of {3}, earning the following rewards.
+42	7	Village Manager	Village Lord Reward	Esteemed lord, the {1} village resources are now exhausted. Here are your earnings.
+43	7	Village Manager	Village Lord Reward	Esteemed lord, here are your {1} village earnings from yesterday.
+44	7	Village Manager	Village Lord Reward	Esteemed lord, you withdrew from {3} village at {1}:{2}. Here are your earnings.
+45	7	Village Manager	Village Lost	Esteemed lord, you lost control over {3} village at {1}:{2}. Here are your earnings.
+46	7	Team Manager	Team Disbanded	I\'m sorry to inform you that Team Leader {1} has disbanded the {2} team.
+47	7	Team Manager	Team Disbanded	I\'m sorry to inform you that all team members have been offline for more than {1} days and your team {2} has automatically disbanded.
+51	7	Legion Manager	Legion Boss Participation Reward	It was great to fight with everyone to kill the boss. Here is your reward.
+52	7	Legion Manager	Legion Boss First Kill Reward	With the combined efforts of all members, your legion scored its first Lv.{1} Legion Boss kill. Here is your reward.
+53	7	Legion Manager	Legion Boss Rank Reward	Your legion earned rank No.{1} across all servers in today\'s Legion Boss Challenge. Here is your reward.
+1006	7	Event Manager	New Server Level Rankings	Congrats, you earned rank No.{1} in the New Server Level Rankings. Here is your reward.
+1007	7	Event Manager	5Days Winner Ranking Notice	Congratulations to you for ranking no. {1} in the 5Days Winner Ranking event and get the following rewards.
+1008	7	Event Manager	10Days Winner Ranking Notice	Congratulations to you for ranking no. {1} in the 10Days Winner Ranking event and get the following rewards.
+1009	7	Event Manager	15Days Winner Ranking Notice	Congratulations to you for ranking no. {1} in the 15Days Winner Ranking event and get the following rewards.
+1010	7	Prophet	A letter from the Prophet	Hello, young adventurer, and welcome to the world! You must be the one in prophecy who will conquer the realm. Please accept my blessings.
+1012	30	System Manager	Closed Test Recharge Returns	You recharged a total of ${1} during the closed test. Thank you for your support! Here are the refunds on your purchases.
+1013	7	System Manager	Perk Card Compensation	Your Perk Card accumulated too many days to allow you to refill, this is your compensation.
+1014	7	System Manager	Recharge Ranking Notice	Congratulations! You have ranked {1} in recharge ranking event and get the following rewards. 
+1015	7	System Manager	Consume Ranking Notice	Congratulations! You have ranked {1} in consume ranking event and get the following rewards.
+1016	360	System Manager	Top-Up Successful	Your Top-up is successful processed. Enjoy your game. 

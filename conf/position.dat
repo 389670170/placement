@@ -1,0 +1,35 @@
+官阶id	官阶	官职	封号	人数	俸禄	结算奖励显示	每日结算奖励	对应的颜色	机器人等级	机器人战力MIN	机器人战力MAX	官职对应荣荣誉系数
+id	position	posName	title	count	salary	rewardShow	reward	quality	robotLv	powerMin	powerMax	gloryRatio
+Int	Int	String	String	Int	Int	Int	Award	Int	Int	Int	Int	Int
+1	0	text_kingWar_name1		1	600	1	user.salary:1200,user.sky_book:500,fragment.5028:5	5	130	5097532	5175390	100
+2	1	text_kingWar_name2		3	500	1	user.salary:1000,user.sky_book:500,fragment.5028:3	4	120	4200415	4325210	50
+3	2	text_kingWar_name3		6	420	1	user.salary:840,user.sky_book:500,fragment.5028:1	4	110	3542025	3598916	50
+4	3	text_kingWar_name4	text_general_level1	9	372	0	user.salary:720,user.sky_book:450	4	105	3220442	3276093	30
+5	3	text_kingWar_name4	text_general_level2	9	368	0	user.salary:720,user.sky_book:450	4	100	2394757	2976026	30
+6	3	text_kingWar_name4	text_general_level3	9	364	0	user.salary:720,user.sky_book:450	4	95	2174738	2209084	30
+7	3	text_kingWar_name4	text_general_level4	9	360	1	user.salary:720,user.sky_book:450	4	90	1943825	2017311	30
+8	4	text_kingWar_name5	text_general_level1	12	352	0	user.salary:680,user.sky_book:400	3	86	1708299	1742290	25
+9	4	text_kingWar_name5	text_general_level2	12	348	0	user.salary:680,user.sky_book:400	3	84	1641537	1674934	25
+10	4	text_kingWar_name5	text_general_level3	12	344	0	user.salary:680,user.sky_book:400	3	82	1576230	1608738	25
+11	4	text_kingWar_name5	text_general_level4	12	340	1	user.salary:680,user.sky_book:400	3	80	1496972	1532355	25
+12	5	text_kingWar_name6	text_general_level1	15	332	0	user.salary:640,user.sky_book:350	3	78	1238962	1441629	20
+13	5	text_kingWar_name6	text_general_level2	15	328	0	user.salary:640,user.sky_book:350	3	76	1177667	1208050	20
+14	5	text_kingWar_name6	text_general_level3	15	324	0	user.salary:640,user.sky_book:350	3	74	1116863	1147163	20
+15	5	text_kingWar_name6	text_general_level4	15	320	1	user.salary:640,user.sky_book:350	3	72	1057205	1087094	20
+16	6	text_kingWar_name7	text_general_level1	18	304	0	user.salary:560,user.sky_book:300	2	70	842111	1021559	18
+17	6	text_kingWar_name7	text_general_level2	18	296	0	user.salary:560,user.sky_book:300	2	69	816401	842111	18
+18	6	text_kingWar_name7	text_general_level3	18	288	0	user.salary:560,user.sky_book:300	2	68	790381	816401	18
+19	6	text_kingWar_name7	text_general_level4	18	280	1	user.salary:560,user.sky_book:300	2	67	764263	790381	18
+20	7	text_kingWar_name8	text_general_level1	21	264	0	user.salary:480,user.sky_book:250	2	66	738684	764263	16
+21	7	text_kingWar_name8	text_general_level2	21	256	0	user.salary:480,user.sky_book:250	2	65	713523	738684	16
+22	7	text_kingWar_name8	text_general_level3	21	248	0	user.salary:480,user.sky_book:250	2	64	688578	713523	16
+23	7	text_kingWar_name8	text_general_level4	21	240	1	user.salary:480,user.sky_book:250	2	63	663519	688578	16
+24	8	text_kingWar_name9	text_general_level1	25	224	0	user.salary:400,user.sky_book:200	2	62	639119	663519	14
+25	8	text_kingWar_name9	text_general_level2	25	216	0	user.salary:400,user.sky_book:200	2	61	610636	639119	14
+26	8	text_kingWar_name9	text_general_level3	25	208	0	user.salary:400,user.sky_book:200	2	60	582136	610636	14
+27	8	text_kingWar_name9	text_general_level4	25	200	1	user.salary:400,user.sky_book:200	2	59	558983	582136	14
+28	9	text_kingWar_name10	text_general_level1	30	192	0	user.salary:360,user.sky_book:150	2	58	541778	558983	12
+29	9	text_kingWar_name10	text_general_level2	30	188	0	user.salary:360,user.sky_book:150	2	57	525485	541778	12
+30	9	text_kingWar_name10	text_general_level3	30	184	0	user.salary:360,user.sky_book:150	2	56	509370	525485	12
+31	9	text_kingWar_name10	text_general_level4	30	180	1	user.salary:360,user.sky_book:150	2	55	493430	509370	12
+32	10	text_kingWar_name11		40	160	1	user.salary:320,user.sky_book:100	2	54	179496	477342	10

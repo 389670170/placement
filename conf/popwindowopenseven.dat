@@ -1,0 +1,9 @@
+索引Id	展示奖励	位置	图片尺寸	模型	特效
+id	award	photo_y	scale	name	effect
+Int	Award	Int	Int	String	String
+1	card.5013:1	56	0.6	falao	idle
+2	equip.30401.0:1	106	0.8	ui_firstshow_7	effect
+3	wake_dragon.3:1	56	0.45	playerskill_dianlong	idle
+4	equip.50401.0:1	106	0.8	ui_firstshow_8	effect
+5	material.109911:1	106	0.9	ui_firstshow_3	effect
+6	card.6007:1	56	0.6	siwangdadi	idle

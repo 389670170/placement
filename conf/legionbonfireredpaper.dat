@@ -1,0 +1,10 @@
+关键字	名称	显示优先级	ICON	每日限抢	品质
+key	name	priority	icon	limit	quality
+String	String	Int	String	Int	Int
+operate1	text_legionBonFireRedPaperName_operate1	1	redbag_1.png	3	2
+operate2	text_legionBonFireRedPaperName_operate2	2	redbag_1.png	2	3
+level1	text_legionBonFireRedPaperName_level1	3	redbag_2.png	1	3
+level2	text_legionBonFireRedPaperName_level2	4	redbag_3.png	1	4
+level3	text_legionBonFireRedPaperName_level3	5	redbag_4.png	1	5
+level4	text_legionBonFireRedPaperName_level4	6	redbag_5.png	1	6
+level5	text_legionBonFireRedPaperName_level5	7	redbag_6.png	1	7

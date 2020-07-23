@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ $1 ]; then
+    if [ "$1"x = "sx" ]; then
+        node debug game.js debugger 1
+    else
+        node --debug-brk=$1 game.js debugger debug 1
+    fi
+else
+    node game.js debugger 1
+fi

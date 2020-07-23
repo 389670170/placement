@@ -1,0 +1,11 @@
+徽章ID	徽章ICON	激活条件	激活条件参数	条件描述	加成属性ID	属性值	加成类型2	加成值2
+id	icon	condition	conditionValue	conditionDesc	attType1	attValue1	attType2	attValue2
+Int	String	String	Ints	String	Int	Int	Int	Int
+1	badge_1.png	create	0	text_teamemblem1	1	100	4	1200
+2	badge_2.png	weekCard	0	text_teamemblem2	1	200	11	200
+3	badge_3.png	monthCard	0	text_teamemblem3	1	100	11	300
+4	badge_4.png	vip	4	text_teamemblem4	1	100	11	50
+5	badge_5.png	vip	6	text_teamemblem5	1	200	11	100
+6	badge_6.png	vip	8	text_teamemblem6	1	500	11	250
+7	badge_7.png	vip	10	text_teamemblem7	1	1000	11	500
+8	badge_8.png	vip	12	text_teamemblem8	1	2000	11	1000

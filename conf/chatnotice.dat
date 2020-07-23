@@ -1,0 +1,16 @@
+编号	类型	操作	描述	描述1
+id	type	key	str	htmlstr
+Int	String	String	String	String
+1	招募到红色英雄	buyHot	text_rollNoticeStr_1	text_rollNoticeHtmStr_1
+2	碎片合成红色英雄	mergeHero	text_rollNoticeStr_2	text_rollNoticeHtmStr_2
+3	国家国王变更	updateKing	text_rollNoticeStr_3	text_rollNoticeHtmStr_3
+4	竞技场前一名变更	updateFirstRank	text_rollNoticeStr_4	text_rollNoticeHtmStr_4
+5	竞技场第二名和第三名变更	updateRank	text_rollNoticeStr_5	text_rollNoticeHtmStr_5
+6	群雄争霸前三名变更（名字前面需要标注服务器序号）		text_rollNoticeStr_6	text_rollNoticeHtmStr_6
+7	将星值兑换出红色英雄	exchangeHot	text_rollNoticeStr_7	text_rollNoticeHtmStr_7
+8	玩家等级达到60、70、80、90、100级	updateLevel	text_rollNoticeStr_8	text_rollNoticeHtmStr_8
+9	天命等级达到5级以上	updateDestiny	text_rollNoticeStr_9	text_rollNoticeHtmStr_9
+10	部队进阶到6阶以上	updateSoldier	text_rollNoticeStr_10	text_rollNoticeHtmStr_10
+11	英雄提升至红色品质	updatePromoteRed	text_rollNoticeStr_11	text_rollNoticeHtmStr_11
+12	英雄提升至金色品质	updatePromoteGold	text_rollNoticeStr_12	text_rollNoticeHtmStr_12
+13	运营后台推送占位用		text_rollNoticeStr_13	text_rollNoticeHtmStr_13

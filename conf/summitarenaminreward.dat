@@ -1,0 +1,14 @@
+排行级别	排名	奖励
+level	rank	award
+Int	Int	Award
+1	1	user.arena:10
+2	2	user.arena:11
+3	3	user.arena:12
+4	4	user.arena:13
+5	11	user.arena:14
+6	21	user.arena:15
+7	51	user.arena:16
+8	101	user.arena:17
+9	201	user.arena:18
+10	501	user.arena:19
+11	1001	user.arena:20

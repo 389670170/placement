@@ -1,0 +1,126 @@
+索引	音效	内容1
+id	soundRes	text
+String	String	String
+GUIDE_STR_1	0	Let\'s defeat the raiders!
+GUIDE_STR_2	0	Ah, I told you bringing a woman on board would bring bad luck.
+GUIDE_STR_3	0	We\'re at the sacred land and the prophet told us about it.
+GUIDE_STR_4	0	Please take command of the warship, your highness. We\'ll go and look around.
+GUIDE_STR_5	0	Tap to open the Heroes interface.
+GUIDE_STR_6	0	Deploy a hero to fight alongside you.
+GUIDE_STR_7	0	Ew! These tentacles are gross!
+GUIDE_STR_8	0	Equip gear on your hero.
+GUIDE_STR_9	0	Recommended gear is the best gear you have!
+GUIDE_STR_10	0	Tap here to view unit strengths and weaknesses!
+GUIDE_STR_11	0	Swipe left or right to view other unit types.
+GUIDE_STR_12	0	Make use of each unit type\'s strengths to win more easily!
+GUIDE_STR_13	0	Riders will circle around and attack rear enemy heroes.
+GUIDE_STR_14	0	Tap the exclamation mark to view enemy commander info.
+GUIDE_STR_15	0	Tap to view hero rating.
+GUIDE_STR_16	0	Tap the button to increase lord quality.
+GUIDE_STR_17	0	Use EXP Potions to level up your heroes.
+GUIDE_STR_18	0	Tap to level up your heroes.
+GUIDE_STR_19	0	Have a drink in Tavern and see if you can meet any new friends.
+GUIDE_STR_20	0	Tap Single Recruit to draw a hero for free.
+GUIDE_STR_21	0	Your highness, hope lies ahead. Let\'s give it all we\'ve got!
+GUIDE_STR_22	0	Get Star Marks to greatly increase your power!
+GUIDE_STR_23	0	Let\'s keep looking for more Star Marks!
+GUIDE_STR_24	0	2x Speedup unlocked, battle time reduced!
+GUIDE_STR_25	0	3x Speedup unlocked, battle time reduced!
+GUIDE_STR_26	0	Wow, it feels like I\'m on fire!
+GUIDE_STR_27	0	Legendary heroes all like the wine here.
+GUIDE_STR_28	0	This hot guy is mine, nobody can touch him!
+GUIDE_STR_29	0	Tap here to view Hero Bonds.
+GUIDE_STR_30	0	Collect heroes to activate Gallery Destiny.
+GUIDE_STR_31	0	Let\'s check out Main City Quests.
+GUIDE_STR_32	0	Tap to claim the quest reward.
+GUIDE_STR_33	0	Complete quests daily to earn Nobility EXP and great rewards.
+GUIDE_STR_34	0	Let\'s see what the stone tablet says.
+GUIDE_STR_35	0	Let\'s look at Dragons.
+GUIDE_STR_36	0	Hey, the Fire Dragon is close up ahead!
+GUIDE_STR_37	0	Dragons can make a huge difference in battle.
+GUIDE_STR_38	0	Challenge monsters to increase the Idle Reward.
+GUIDE_STR_39	0	Tap to claim your idle rewards
+GUIDE_STR_40	0	Remember to come back often and claim your rewards.
+GUIDE_STR_41	0	Dragons can grant stat bonuses to all of your heroes.
+GUIDE_STR_42	0	You can manually cast dragon skills in battle.
+GUIDE_STR_43	0	Tap to deploy the dragon.
+GUIDE_STR_44	0	You earn 2 points of energy per second in battle.
+GUIDE_STR_45	0	Once you have enough energy, you can summon the dragon!
+GUIDE_STR_46	0	Drag to cast manually.
+GUIDE_STR_47	0	Rescue ancient villages to earn Divine Books.
+GUIDE_STR_48	0	Each book contains shocking power.
+GUIDE_STR_49	0	Treasures grant stat bonuses to all of your heroes.
+GUIDE_STR_50	0	Collect multiple treasures to activate Character Destiny.
+GUIDE_STR_51	0	Meet the required conditions to challenge the Octopus and take its treasures.
+GUIDE_STR_52	0	You can sacrifice for free every day.
+GUIDE_STR_53	0	You need keys to open chests.
+GUIDE_STR_54	0	Opening the Majesty Chest requires the legendary Majesty Key.
+GUIDE_STR_55	0	Explore to find more chests and keys.
+GUIDE_STR_56	0	Tap and hold on the dice to move.
+GUIDE_STR_57	0	Collect 4 shards to get a Majesty Chest.
+GUIDE_STR_58	0	We started a grand adventure,
+GUIDE_STR_59	0	a journey to find a magical land.
+GUIDE_STR_60	0	A terrible storm befell us.
+GUIDE_STR_61	0	Separated from the fleet, we sailed into mysterious waters.
+GUIDE_STR_62	0	In the strange waters, we encountered a giant octopus.
+GUIDE_STR_63	0	Just when we thought we had nothing, 
+GUIDE_STR_64	0	we arrived at a magical land.
+GUIDE_STR_65	0	The appearance of the dragons gave rise to new religions.
+GUIDE_STR_66	0	People fought each other endlessly to prove that their faith was right.
+GUIDE_STR_67	0	Legend says that if someone can collect the power of all the divine dragons,
+GUIDE_STR_68	0	the fighting will stop and the world will be theirs.
+GUIDE_STR_69	0	Tap to view unlocked details.
+GUIDE_STR_71	0	Let\'s check out hero talents.
+GUIDE_STR_72	0	Transcending heroes will greatly increase their power.
+GUIDE_STR_73	0	You can tap the Enhance button to enhance gear.
+GUIDE_STR_74	0	Spend gold to enhance the current gear.
+GUIDE_STR_75	0	Dragonite Mines contain tons of Dragonite. We can start digging here.
+GUIDE_STR_76	0	Glowing mine spaces can be excavated. Each time you dig 1 Mining Pick is consumed.
+GUIDE_STR_77	0	This is a treasure that can contain Dragonite and other great rewards.
+GUIDE_STR_78	0	Save it, he\'ll help you.
+GUIDE_STR_79	0	Dig up all the treasure to win an Ultimate Chest. Let\'s check it out.
+GUIDE_STR_80	0	Tap to enter the Hero Level interface.
+GUIDE_STR_81	0	Dragonite can increase skill strength and unlock skill talents.
+GUIDE_STR_82	0	Let\'s look at how we can get Dragonite.
+GUIDE_STR_83	0	Let\'s inlay Dragonite to upgrade the dragon\'s skills.
+GUIDE_STR_84	0	Select the Dragonite to inlay.
+GUIDE_STR_85	0	Tap the Evolve button to upgrade the dragon\'s skill.
+GUIDE_STR_86	0	You can see all of your Dragonite here.
+GUIDE_STR_87	0	You can select low-level Dragonite to craft into high-level Dragonite.
+GUIDE_STR_88	0	You can also select Dragonite to convert.
+GUIDE_STR_89	0	Converting Dragonite has a chance to produce glowing Dragonite of the same level.
+GUIDE_STR_90	0	Your current position and salary are displayed here.
+GUIDE_STR_91	0	Tap to challenge higher positions.
+GUIDE_STR_92	0	Get this position to earn higher tax income and salary.
+GUIDE_STR_93	0	Each time you unlock a village you also unlock their Land Raid.
+GUIDE_STR_94	0	Team Leaders can raid for village rewards.
+GUIDE_STR_95	0	You can also go to Land Raid yourself and earn hero shards.
+GUIDE_STR_96	0	Let\'s raid their land to earn some great rewards!
+GUIDE_STR_97	0	 A new challenge awaits you here.
+GUIDE_STR_98	0	Divine Soul Crystals drop here.
+GUIDE_STR_99	0	Challenging nightmare stages consumes Advanced Stamina.
+GUIDE_STR_100	0	Gear Refine is unlocked, tap to enter the Refine interface.
+GUIDE_STR_101	0	Refining gear increases its base stats and adds an additional special stat.
+GUIDE_STR_102	0	Let\'s give it a try.
+GUIDE_STR_103	0	Increase Fate to greatly increase your hero\'s stats and skill strength.
+GUIDE_STR_104	0	Each time you tap there\'s a chance to upgrade Fate level. Give it a try.
+GUIDE_STR_105	0	Gear Slots are unlocked, tap to check it out.
+GUIDE_STR_106	0	Awaken slots to increase power.
+GUIDE_STR_107	0	Awaken slots to two stars to inlay gems.
+GUIDE_STR_108	0	Base Camp can store up to 12 hours of rewards at once, so remember to come back and claim them regularly.
+GUIDE_STR_109	0	Let\'s see what gear shards we got.
+GUIDE_STR_110	0	Tap the Craft button and see what kind of gear you get.
+GUIDE_STR_111	0	Tap here to auto cast.
+GUIDE_STR_112	0	When you have enough hero shards you can craft a new hero!
+GUIDE_STR_113	0	Tap the Craft button, let\'s check out this new hero!
+GUIDE_STR_114	0	Now keep adventuring!
+GUIDE_STR_115	0	Ah, a new journey...
+GUIDE_TIPS_19	0	Swipe left and right to view other unit types.
+GUIDE_STR_116	0	Reports of a situation ahead!
+GUIDE_STR_117	0	Thank you for your help, sir. I will make sure my father repays you!
+GUIDE_STR_118	0	It was nothing!
+GUIDE_STR_119	0	Don\'t run, little dragon!
+GUIDE_STR_120	0	Princess, look out!
+GUIDE_STR_121	0	Clear the adventure stage to unlock idle drops
+GUIDE_STR_122	0	Recruit partners to take risks together.
+GUIDE_STR_123	0	Let us conquer this area.

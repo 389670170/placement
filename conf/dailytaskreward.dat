@@ -1,0 +1,8 @@
+分数	奖励1
+active	award
+Int	Award
+50	user.boon:1
+90	user.boon:1,material.200027:2
+130	user.boon:1,material.200027:3
+170	user.boon:1,material.200027:4,material.300002:1
+210	user.boon:2,material.200027:5,user.cash:50

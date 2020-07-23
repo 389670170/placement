@@ -1,0 +1,9 @@
+技能ID	技能ICON	需求战队等级	技能效果	效果描述
+id	icon	limit	effect	desc
+Int	String	Int	String	String
+1	1.png	1	wing.10	text_teamskilldesc1
+2	2.png	2	wing.11	text_teamskilldesc2
+3	3.png	4	wing.12	text_teamskilldesc3
+4	4.png	6	wing.13	text_teamskilldesc4
+5	5.png	8	wing.14	text_teamskilldesc5
+6	6.png	10	wing.15	text_teamskilldesc6

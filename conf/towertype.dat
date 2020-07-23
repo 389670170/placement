@@ -1,0 +1,5 @@
+类型	1星条件	2星条件	3星条件	掉落包
+type	condLevel1	condLevel2	condLevel3	dropId
+Int	Int	Int	Int	Int
+1	120	90	60	10000
+2	7	3	1	10000

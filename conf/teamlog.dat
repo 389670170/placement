@@ -1,0 +1,11 @@
+事件id	事件	消息
+id	event	msg
+Int	String	String
+1	playerJoin	text_team_playerJoin
+2	playerExit	text_team_playerExit
+3	playerRemove	text_team_playerRemove
+4	teamLevelUp	text_team_teamLevelUp
+5	teamLevelDown	text_team_teamLevelDown
+6	performTask	text_team_performTask
+7	captainChange	text_team_captainChange
+8	establishTeam	text_team_establishTeam

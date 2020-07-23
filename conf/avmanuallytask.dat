@@ -1,0 +1,11 @@
+编号	编号1	任务获得经验	事件	事件参数	文字描述1
+confId	id	manualTaskexp	event	eventVal	desc
+Int	Int2	Int	String	String	String
+1	1	2	player_recruit	1	text_avmanually_recruit1
+1	2	10	player_recruit	2	text_avmanually_recruit2
+1	3	20	digging_box	3	text_avmanually_diggingBox
+1	4	50	make_hero_up	6	text_avmanually_hero
+1	5	5	speed_up	0	text_avmanually_speedUp
+1	6	5	get_goblin	0	text_avmanually_goblin
+1	7	50	arena_top_12	11	text_avmanually_arena5
+1	8	20	king	1	text_avmanually_king

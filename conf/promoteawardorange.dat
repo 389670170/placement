@@ -1,0 +1,14 @@
+抽卡次数	奖励
+number	award
+Int	Award
+1	material.15:400
+5	user.soul:300
+10	material.17:20
+20	material.15:1000
+30	user.soul:500
+50	material.15:2000
+100	user.soul:1000
+150	material.17:50
+200	user.soul:1500
+250	material.15:4000
+300	material.17:100

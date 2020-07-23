@@ -1,0 +1,13 @@
+礼包ID	模块开启	充值ID	显示图片	礼包名	购买奖励1	显示钻石数1	领取天数	奖励配置	充值ID1
+id	module	recharge	photo	name	buyaward	showcash	day	award	rechargeid
+Int	String	Int	String	String	Award	Int	Int	String	String
+101	0	13	av_assets_feed_1	text_av_giftbag_name_101	user.vip_xp:250	250	7	award1	avfeed_101
+102	0	13	av_assets_feed_2	text_av_giftbag_name_102	user.vip_xp:250	250	7	award2	avfeed_102
+103	0	13	av_assets_feed_3	text_av_giftbag_name_103	user.vip_xp:250	250	7	award3	avfeed_103
+104	0	13	av_assets_feed_4	text_av_giftbag_name_104	user.vip_xp:250	250	7	award4	avfeed_104
+105	0	13	av_assets_feed_5	text_av_giftbag_name_105	user.vip_xp:250	250	7	award5	avfeed_105
+106	0	13	av_assets_feed_6	text_av_giftbag_name_106	user.vip_xp:250	250	7	award6	avfeed_106
+107	0	13	av_assets_feed_7	text_av_giftbag_name_107	user.vip_xp:250	250	7	award7	avfeed_107
+108	0	13	av_assets_feed_8	text_av_giftbag_name_108	user.vip_xp:250	250	7	award8	avfeed_108
+109	part	13	av_assets_feed_9	text_av_giftbag_name_109	user.vip_xp:250	250	7	award9	avfeed_109
+110	skyweapon	13	av_assets_feed_10	text_av_giftbag_name_110	user.vip_xp:250	250	7	award10	avfeed_110

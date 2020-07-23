@@ -1,0 +1,8 @@
+签到天数	奖励
+day	awards
+Int	Award
+1	user.gold:1000,user.boon:1
+2	user.gold:2000,user.boon:2
+3	user.gold:5000,user.boon:2
+4	user.gold:8000,user.boon:3
+5	user.gold:12000,user.boon:3

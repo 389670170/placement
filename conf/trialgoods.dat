@@ -1,0 +1,9 @@
+商品组Id	商品编号	商人名称	商人形象	商品权重	商品	虚假商品原价	实际卖价
+id	number	name	picture	weight	award	shamCost	cost
+Int1	Int2	String	String	Int	Award	Award	Award
+1	1	text_trial_merchantName1	1.png	120	material.940:10	user.mixcash:-50	user.mixcash:-25
+1	2	text_trial_merchantName1	1.png	90	material.940:5	user.mixcash:-25	user.mixcash:-10
+1	3	text_trial_merchantName1	1.png	20	material.940:20	user.mixcash:-100	user.mixcash:-70
+1	4	text_trial_merchantName1	1.png	30	material.940:15	user.mixcash:-75	user.mixcash:-45
+1	5	text_trial_merchantName2	1.png	30	material.950:2	user.mixcash:-60	user.mixcash:-48
+1	6	text_trial_merchantName2	1.png	10	material.950:5	user.mixcash:-150	user.mixcash:-105

@@ -1,0 +1,8 @@
+玉璧颜色	DropId
+color	dropId
+String	Int
+green	0
+blue	0
+purple	0
+orange	0
+red	0

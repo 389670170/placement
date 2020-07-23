@@ -1,0 +1,13 @@
+遗迹ID	遗迹名称	龙名称	关联ID	探索耗时（小时）	基础奖励	额外奖励1阶	额外奖励2阶	额外奖励3阶	额外奖励4阶	额外奖励5阶
+id	name	dName	correlationId	time	baseAward	advancedAward1	advancedAward2	advancedAward3	advancedAward4	advancedAward5
+Int	String	String	Int	Int	Award	Award	Award	Award	Award	Award
+1	火龙遗迹	火龙	2	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+2	祖龙遗迹	祖龙	3	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+3	冰龙遗迹	冰龙	4	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+4	电龙遗迹	电龙	5	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+5	岚龙遗迹	岚龙	6	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+6	崩龙遗迹	崩龙	7	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+7	迅龙遗迹	迅龙	8	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+8	沧龙遗迹	沧龙	9	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+9	轰龙遗迹	轰龙	10	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300
+10	暴龙遗迹	暴龙	11	20	user.mine_2:36,user.mine_3:36,user.mine_4:36	user.mine_5:36	user.soul:35	user.legion:450	user.gold:40000	material.1:300

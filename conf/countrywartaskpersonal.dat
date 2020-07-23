@@ -1,0 +1,11 @@
+编号	操作	类型	任务名称	文字描述	类型图标	目标国家类型	条件限制	奖励
+id	event	type	name	desc	icon	countryType	condition	award
+Int	String	Int	String	String	String	Int	Int	Award
+1	killCount	1	破阵杀敌	击败1名蓝方阵营玩家	daily_task1.png	1	1	user.goods:50,user.countrywar:80
+2	killCount	1	破阵杀敌	击败1名绿方阵营玩家	daily_task1.png	2	1	user.goods:50,user.countrywar:80
+3	killCount	1	破阵杀敌	击败1名红方阵营玩家	daily_task1.png	3	1	user.goods:50,user.countrywar:80
+4	replyCallCount	3	响应号召	响应5次号令	daily_task8.png	0	5	user.goods:50,user.countrywar:110
+5	conqueredCityCount	4	开疆扩土	夺下蓝方阵营城池数量达到3座	daily_task10.png	1	3	user.goods:50,user.countrywar:80
+6	conqueredCityCount	4	开疆扩土	夺下绿方阵营池数量达到3座	daily_task10.png	2	3	user.goods:50,user.countrywar:80
+7	conqueredCityCount	4	开疆扩土	夺下红方阵营城池数量达到3座	daily_task10.png	3	3	user.goods:50,user.countrywar:80
+8	fastReliveCount	5	重返战场	立即复活2次	daily_task8.png	0	2	user.goods:50,user.countrywar:110

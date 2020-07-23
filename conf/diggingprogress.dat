@@ -1,0 +1,6 @@
+产出ID	所需数量	恢复体力	宝箱奖励
+id	progress	tool	boxId
+Int	Int	Int	Int
+1	3	3	300101
+2	6	5	300102
+3	10	0	0

@@ -1,0 +1,54 @@
+索引id	子弹描述	子弹类型（1-直线，2-抛物线，3-连线型，4-光环型）	子弹延迟消失（直线、抛物线）	目标偏移	矩形范围X1	矩形范围X2	矩形范围Y1	矩形范围Y2	速度(像素/秒)	子弹缩放	是否自动旋转	子弹发射偏移X	子弹发射偏移Y	子弹命中偏移X	子弹命中偏移Y	资源类型(1-静态图片，2-动画)	资源
+id	bulletName	bulletType	delayTime	targetOffset	rangeX1	rangeX2	rangeY1	rangeY2	speed	scale	autoRotation	fireOffsetX	fireOffsetY	hitOffsetX	hitOffsetY	resType	res
+Int	String	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	String
+101	通用远程法师士兵子弹	2	0	0	0	0	0	0	500	25	0	0	20	0	0	1	bullet_soldier4
+102	通用远程法师英雄子弹	1	0	0	0	0	0	0	750	50	1	0	20	0	40	1	bullet_soldier
+103	通用远程法师士兵子弹2	2	0	0	0	0	0	0	500	25	0	0	10	0	0	1	bullet_soldier4
+104	君主技能-冰龙子弹	4	0	0	-50	50	-100	100	400	100	0	0	0	0	0	1	bullet_alpha
+600	君主技能-轰龙子弹	4	0	0	-50	50	-100	100	500	100	0	0	0	0	0	1	bullet_alpha
+201	通用弓兵子弹	2	0	0	0	0	0	0	500	50	0	0	10	0	0	1	bullet_soldier
+202	通用弓兵子弹	2	0	0	0	0	0	0	500	50	0	0	10	0	0	1	bullet_soldier
+203	通用弓兵子弹	2	0	0	0	0	0	0	500	50	0	0	10	0	0	1	bullet_soldier
+204	通用弓兵子弹	2	0	0	0	0	0	0	500	50	0	0	10	0	0	1	bullet_soldier
+205	通用弓兵子弹	2	0	0	0	0	0	0	500	50	0	0	10	0	0	1	bullet_soldier
+888	军团BOSS火球	1	0	0	0	0	0	0	400	100	1	100	120	0	0	2	bullet_hlboss_00
+999	开场大章鱼- 普攻	1	0	0	0	0	0	0	300	100	1	100	120	0	0	2	bullet_dazhangyu00
+100000101	主角-圣愈术	2	0	0	0	0	0	0	500	100	1	56	28	0	0	2	bullet_nan_01
+40020000	驯龙女巫- 普攻	1	0	0	0	0	0	0	500	100	1	29	35	0	0	2	bullet_luolifashi00
+40020200	驯龙女巫- 弹跳火球	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_luolifashi02
+40040000	小萝莉-普攻	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_xiaoluoli_00
+40040100	小萝莉-寒冰打击	1	0	0	0	0	0	0	400	100	1	40	30	0	0	2	bullet_xiaoluoli_01
+40060000	风语者- 普攻	1	0	0	0	0	0	0	500	80	1	24	35	0	0	2	bullet_fengyuzhe00
+40060200	风语者- 蓄力箭	4	0	1140	-120	150	-75	75	2000	100	1	24	55	0	35	2	bullet_jinglingyouxia01
+50020000	森语魔女- 普攻	1	0	0	0	0	0	0	500	100	1	63	42	0	0	2	bullet_senyumonv00
+50040000	火炮大师-普通攻击	1	0	0	0	0	0	0	500	80	1	63	35	0	0	2	bullet_huopaodashi01
+50040101	火炮大师-暗杀	1	0	0	0	0	0	0	800	80	1	87	31	0	0	2	bullet_huopaodashi
+50050000	美杜莎-普攻	1	0	0	0	0	0	0	500	60	1	40	30	0	0	2	bullet_shefanvyao00
+50050100	美杜莎-秘术异蛇	1	0	0	0	0	0	0	500	70	1	40	30	0	0	2	bullet_shefanvyao01
+50070100	圣光骑士-圣光十字	4	0	1140	-50	70	-75	75	300	200	1	42	42	0	42	2	bullet_shengguangqishi01
+50080000	光明圣女-普攻	1	0	0	0	0	0	0	500	100	1	63	32	0	0	2	bullet_guangmingshengnv00
+50100000	黑暗圣女- 普攻	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_heianshengnv00
+50100100	黑暗圣女- 黑暗之箭	1	0	0	0	0	0	0	500	70	1	40	30	0	0	2	bullet_heianshengnv03
+50130000	法老-普攻子弹	1	0	0	0	0	0	0	500	100	1	52	46	0	0	2	bullet_falao00
+51130100	蛇棒- 普攻	1	0	0	0	0	0	0	500	100	1	52	46	0	0	2	bullet_shebang00
+51131100	蛇棒- 毒普攻	1	0	0	0	0	0	0	500	100	1	52	46	0	0	2	bullet_shebang01
+50140000	艳后- 普攻	1	0	0	0	0	0	0	500	100	1	52	46	0	0	2	bullet_yanhou00
+50160000	大法师-普通攻击	1	0	0	0	0	0	0	500	100	1	56	28	0	0	2	bullet_dafashi00
+50160201	大法师-神灭斩	3	0	0	0	0	0	0	500	100	1	52	35	0	0	2	bullet_dafashi02
+50180000	银月射手 - 普攻	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_yinyuesheshou01
+50180200	银月射手 - 银月之箭	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_yinyuesheshou02
+50200000	守墓人 - 普攻	1	0	0	0	0	0	0	500	100	1	56	28	0	0	2	bullet_shoumuren00
+50200100	守墓人 - 暗影波	3	0	0	0	0	0	0	130	120	1	40	30	0	0	2	bullet_shoumuren01
+60020000	古怪巫师-普通攻击	1	0	0	0	0	0	0	500	100	1	87	28	0	0	2	bullet_guguaiwushi00
+61020100	熔岩精灵-普通攻击	1	0	0	0	0	0	0	500	100	1	56	28	0	0	2	bullet_rongyanguai00
+60030000	末法骑士-普攻	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_mofaqishi00
+60030100	末法骑士-平静之刃	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_mofaqishi01
+60040000	精灵游侠- 普攻	1	0	0	0	0	0	0	500	100	1	38	24	0	0	2	bullet_jinglingyouxia00
+60040100	精灵游侠- 蓄力箭	4	0	1140	-120	150	-75	75	2000	100	1	38	24	0	24	2	bullet_jinglingyouxia01
+60040200	精灵游侠- 疾风骤雨	1	0	0	0	0	0	0	1000	60	1	38	24	0	0	2	bullet_jinglingyouxia02
+60060000	海洋之灵- 普攻	1	0	0	0	0	0	0	500	100	1	56	28	0	0	2	bullet_haiyangzhiling00
+60080000	驯龙女巫- 普攻	1	0	0	0	0	0	0	500	100	1	56	28	0	0	2	bullet_xunlongnvwu00
+60080200	驯龙女巫- 弹跳火球	1	0	0	0	0	0	0	500	100	1	40	30	0	0	2	bullet_xunlongnvwu02
+100005	测试魔兽特效(闪电链)	3	0	0	0	0	0	0	500	150	1	0	40	50	0	2	bullet_zhugeliang_00
+100006	测试技能(闪电链)	3	0	0	0	0	0	0	350	100	1	0	40	0	40	2	bullet_huatuo_2
+200001	测试攻击特效	1	0	0	0	0	0	0	500	40	1	0	40	0	40	2	bullet_zhugeliang_00

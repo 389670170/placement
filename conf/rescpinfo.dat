@@ -1,0 +1,15 @@
+副本ID	难度	开启条件	开启提示	固定怪物	基础奖励	伤害金币万一系数	战斗力	战斗力增长系数	期望掉落概率	掉落单位时间秒	掉落道具组ID	BOSS出现的轮数	BOSS掉落元宝	BOSS随机模型
+id	difficulty	condition	tips	formation	baseReward	goldFactor	fightForce	addFactor	dropExpect	dropTimeDuration	drop	bossRound	bossCash	bossIds
+Int1	Int2	Int	Chinese	Int	Award	Int	Int	Int	Int	Int	Int	Int	Int	Ints
+1	1	0	无	0		0	20820365	399	100	1	3201	0	0	0
+1	2	120	单次坚持120秒解锁	0	material.1:120	0	179094661	2180	66	1	3202	0	0	0
+1	3	240	单次坚持240秒解锁	0	material.1:200	0	1217517575	6786	66	1	3203	0	0	0
+2	1	0	无	0		0	64984	55	8.104181609	0	3101	0	0	0
+2	2	400	单次消灭400个敌军解锁	0	material.200001:42	0	478237	46	15.55649187	0	3102	0	0	0
+2	3	800	单次消灭800个敌军解锁	0	material.200002:21	0	2672758	51	12.81050997	0	3103	0	0	0
+3	1	0	无	30001	user.gold:1000	35	0	0	0	0	0	0	0	0
+3	2	1889084	消灭简单难度boss解锁	30002	user.gold:7000	18	0	0	0	0	0	0	0	0
+3	3	14743979	消灭普通难度boss解锁	30003	user.gold:24000	14	0	0	0	0	0	0	0	0
+4	1	0	无	0	material.300001:7	0	19500	46	700	0	3301	0	0	0
+4	2	10	单次坚持10波解锁	0	material.300001:74	0	495179	20	400	0	3302	0	0	0
+4	3	21	单次坚持21波解锁	0	material.300001:121	0	3372620	20	289	0	3303	0	0	0

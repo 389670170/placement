@@ -1,0 +1,5 @@
+﻿编号	兑换前物品id	兑换后物品id	兑换比例	单次消耗元宝	最大次数
+id	lostId	getId	scales	cash	num
+Int	Int	Int	Ints	Int	Int
+1	1	2	300|600	0	80
+2	1	2	10|30	0	30

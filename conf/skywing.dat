@@ -1,0 +1,14 @@
+圣翼阶数	名字	单次消耗1	单次消耗2	失败增加祝福值	祝福值上限	进阶范围最小	进阶范围最大	攻击	护甲	技防	生命	是否清零	清零倒计时
+level	name	cost1	cost2	getEnergy	maxEnergy	energyMin	energyMax	atk	def	mdef	hp	clean	cleanTime
+Int	String	Award	Award	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+0	text_skyWingName_0	material.200:-3	0	6	210	150	165	0	0	0	0	0	0
+1	text_skyWingName_1	material.200:-6	limitmat.201:-6	12	2500	1843	2017	1570	1020	1020	20800	0	0
+2	text_skyWingName_1	material.200:-9	limitmat.202:-9	18	5200	3889	4213	3550	2300	2300	47000	0	0
+3	text_skyWingName_1	material.200:-12	limitmat.203:-12	24	6100	4654	4992	6350	4130	4130	84200	0	0
+4	text_skyWingName_1	material.200:-15	limitmat.204:-15	30	8600	6653	7064	9000	5850	5850	119000	0	0
+5	text_skyWingName_1	material.200:-18	limitmat.205:-18	36	11900	9411	9894	12100	7870	7870	161000	0	0
+6	text_skyWingName_1	material.200:-21	limitmat.206:-21	42	16700	13448	13997	15700	10200	10200	208000	0	0
+7	text_skyWingName_1	material.200:-24	limitmat.207:-24	48	24500	19994	20603	19800	12800	12800	262000	0	0
+8	text_skyWingName_1	material.200:-27	limitmat.208:-27	54	39000	32447	33102	24300	15800	15800	322000	0	0
+9	text_skyWingName_1	material.200:-30	limitmat.209:-30	60	78600	66490	67159	29300	19000	19000	388000	0	0
+10	text_skyWingName_1	material.200:-33	limitmat.210:-33	66	0	0	0	34700	22600	22600	460000	0	0

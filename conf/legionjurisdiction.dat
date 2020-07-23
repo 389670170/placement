@@ -1,0 +1,7 @@
+成员	操作下级	操作下级1	聊天招募	管理申请	设置申请	离开军团	解散军团	更换名称	更换旗帜	更换公告	篝火设置	弹劾团长	转让团长
+member	controlduty	operate	recruit	manageApply	setApply	leaveLegion	breakLegion	changeName	changeFlag	changeNotice	setBonfire	impeachment	transfer
+String	Strings	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+leader	deputy|elite|normal	1	1	1	1	0	1	1	1	1	1	0	1
+deputy	elite|normal	1	1	1	1	1	0	0	0	1	1	1	0
+elite	0	0	0	0	0	1	0	0	0	0	0	1	0
+normal	0	0	0	0	0	1	0	0	0	0	0	1	0

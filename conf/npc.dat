@@ -1,0 +1,6 @@
+城池ID	NPC名称	资源路径	NPC位置
+id	name	url	pos
+Int	String	String	Int
+1	NPC1	npc_jingjichang	1
+2	神秘商人	npc_shenmishangren	2
+3	训练馆	npc_jingjichang	3

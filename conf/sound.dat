@@ -1,0 +1,16 @@
+ID	音乐类型(1:音乐 0:音效)	播放模式(1:循环 0:一遍)	资源路径1	描述
+id	audioType	isLoop	resPath	desc
+Int	Int	Int	String	String
+1	1	1	media/music/snow.mp3	登录BGM
+2	1	1	media/music/home.mp3	主城BGM
+3	1	1	media/music/battle_before.mp3	征战BGM(战前)
+4	1	0	media/music/firstani_none.mp3	开场动画BGM
+5	1	1	media/music/arena.mp3	竞技场BGM
+6	1	1	media/music/map.mp3	大地图BGM
+7	1	0	media/music/dragonegg_none.mp3	介绍龙蛋动画
+8	1	1	media/music/traven.mp3	酒馆BGM
+9	1	1	media/music/tower.mp3	爬塔BGM
+10	1	1	media/music/battle_fighting.mp3	征战BGM(战中)
+11	0	0	media/effect/1000.mp3	按钮点击音效1
+12	0	0	media/effect/1001.mp3	按钮点击音效2
+13	0	0	media/hero/prologue_zhaoyun.mp3	首充武将配音

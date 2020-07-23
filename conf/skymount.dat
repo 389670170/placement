@@ -1,0 +1,14 @@
+圣翼阶数	名字	单次消耗1	单次消耗2	失败增加祝福值	祝福值上限	进阶范围最小	进阶范围最大	攻击	护甲	技防	生命	是否清零	清零倒计时
+level	name	cost1	cost2	getEnergy	maxEnergy	energyMin	energyMax	atk	mdef	def	hp	clean	cleanTime
+Int	String	Award	Award	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+0	text_skyMountName_0	material.300:-3	0	6	210	150	165	0	0	0	0	0	0
+1	text_skyMountName_1	material.300:-6	limitmat.301:-6	12	2500	1843	2017	1630	1100	1100	18400	0	0
+2	text_skyMountName_1	material.300:-9	limitmat.302:-9	18	5200	3889	4213	3680	2480	2480	41400	0	0
+3	text_skyMountName_1	material.300:-12	limitmat.303:-12	24	6100	4654	4992	6600	4430	4430	74300	0	0
+4	text_skyMountName_1	material.300:-15	limitmat.304:-15	30	8600	6653	7064	9350	6280	6280	105000	0	0
+5	text_skyMountName_1	material.300:-18	limitmat.305:-18	36	11900	9411	9894	12600	8460	8460	142000	0	0
+6	text_skyMountName_1	material.300:-21	limitmat.306:-21	42	16700	13448	13997	16300	11000	11000	184000	0	0
+7	text_skyMountName_1	material.300:-24	limitmat.307:-24	48	24500	19994	20603	20500	13800	13800	231000	0	0
+8	text_skyMountName_1	material.300:-27	limitmat.308:-27	54	39000	32447	33102	25200	17000	17000	284000	0	0
+9	text_skyMountName_1	material.300:-30	limitmat.309:-30	60	78600	66490	67159	30400	20400	20400	342000	0	0
+10	text_skyMountName_1	material.300:-33	limitmat.310:-33	66	0	0	0	36100	24200	24200	406000	0	0

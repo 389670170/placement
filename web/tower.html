@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curMethod = '';
+
+    function beforeSubmit(param) {
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+
+        if (curMethod == 'change') {
+            for (var id in user.tower) {
+                if ($('#'+id)[0]) {
+                    var value = $('#'+id)[0].value;
+                    param[id] = value;
+                }
+            }
+        }
+    }
+
+    function tower() {
+        curMethod = 'change';
+        request.method = 'change_tower';
+        $('#info').submit();
+    }
+
+    function reset() {
+        curMethod = 'reset';
+        request.method = 'reset_tower';
+        $('#info').submit();
+    }
+
+    $(document).ready(function() {
+        for(var id in user.tower) {
+            if($('#'+id)[0]) {
+                var value = user.tower[id];
+                $('#'+id).textbox({'value': value});
+            }
+        }
+
+        $('#info').form({
+            url: '.',
+            onSubmit: function(param) {beforeSubmit(param); return true; },
+            success: function(data) {
+                resp = JSON.parse(data);
+                if(resp.code == 0) {
+                    $.messager.alert('信息', '成功', 'info');
+                }else {
+                    $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                }
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <form id="info">
+        <table>
+            <tr>
+                <td>当前可打的层</td>
+                <td><input id="cur_floor" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>当前可打的房间</td>
+                <td><input id="cur_room" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>重置次数</td>
+                <td><input id="reset" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>当前可用星星数</td>
+                <td><input id="stars" type="text"></input></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a id="tower" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="tower()">更改</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a id="tower" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:150" onclick="reset()">重置为未打过状态</a></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

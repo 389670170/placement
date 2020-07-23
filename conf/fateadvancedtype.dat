@@ -1,0 +1,5 @@
+缘分类型	缘分名称	ICON框品质	缘分ICON1	缘分ICON2	属性生效范围描述	属性提升描述	属性生效阵营	特殊属性ID	基础属性Id1	基础属性Id2	基础属性Id3	基础属性Id4	缘分武将ID	描述
+fateType	fateName	fateIconQuality	fateIcon1	fateIcon2	attEffDesc	attAddDesc	attEffCamp	attSpecialId	attId1	attId2	attId3	attId4	fateHeroId	desc
+Int	String	String	String	String	String	String	Ints	Int	Int	Int	Int	Int	Ints	String
+1	武	6	mou.png	1.png	全体上阵武将属性提升	全体上阵武将	1|2|3|4|5	26	1	4	2	3	5101|5201|5301|5401	红色“武将”卡牌
+2	谋	6	mou.png	2.png	全体上阵武将属性提升	全体上阵武将	1|2|3|4|5	27	1	4	2	3	5102|5202|5302|5402	红色“谋将”卡牌

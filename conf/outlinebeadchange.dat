@@ -1,0 +1,9 @@
+类型ID	奖励	循环内出现次数
+id	award	cycleManner
+Int	Award	Int
+1	user.rotate_ncoin:10	1
+2	user.ntoken:25	1
+3	material.100402:5	1
+4	user.htoken:2	1
+5	group.2005.0:1	1
+6	user.rotate_hcoin:1	1

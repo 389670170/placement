@@ -1,0 +1,55 @@
+索引ID	类型(1限时武将, 2热点武将, 3其他)	是否随机为热点	热点随机权重(组内匹配)	奖励1	权重1	奖励2	权重2	图片
+id	type	hotRound	hotWeight	award1	weight1	award2	weight2	icon
+Int	Int	Int	Int	Award	Int	Award	Int	String
+1	1	0	90	card.5302:1	37	fragment.5302:3	16615	zhouyu
+2	1	1	100	card.5401:1	37	fragment.5401:3	16615	lvbu
+3	1	1	100	card.5101:1	37	fragment.5101:3	16615	caocao
+4	1	0	90	card.5202:1	37	fragment.5202:3	16615	zhugel
+5	1	1	100	card.5301:1	37	fragment.5301:3	16615	sunjian
+6	1	0	90	card.5402:1	37	fragment.5402:3	16615	zuoci
+7	1	0	90	card.5102:1	37	fragment.5102:3	16615	xunyu
+8	1	1	100	card.5201:1	37	fragment.5201:3	16615	guanyu
+9	2	1	10	card.4102:1	160	fragment.4102:2	9579	0
+10	2	1	10	card.4103:1	160	fragment.4103:2	9579	0
+11	2	1	10	card.4104:1	160	fragment.4104:2	9579	0
+12	2	1	10	card.4105:1	160	fragment.4105:2	9579	0
+13	2	1	10	card.4106:1	160	fragment.4106:2	9579	0
+14	2	1	10	card.4107:1	160	fragment.4107:2	9579	0
+15	2	1	10	card.4108:1	160	fragment.4108:2	9579	0
+16	2	1	10	card.4109:1	160	fragment.4109:2	9579	0
+17	2	1	10	card.4110:1	160	fragment.4110:2	9579	0
+18	2	1	10	card.4201:1	160	fragment.4201:2	9579	0
+19	2	1	10	card.4202:1	160	fragment.4202:2	9579	0
+20	2	1	10	card.4203:1	160	fragment.4203:2	9579	0
+21	2	1	10	card.4204:1	160	fragment.4204:2	9579	0
+22	2	1	10	card.4205:1	160	fragment.4205:2	9579	0
+23	2	1	10	card.4206:1	160	fragment.4206:2	9579	0
+24	2	1	10	card.4207:1	160	fragment.4207:2	9579	0
+25	2	1	10	card.4208:1	160	fragment.4208:2	9579	0
+26	2	1	10	card.4209:1	160	fragment.4209:2	9579	0
+27	2	1	10	card.4301:1	160	fragment.4301:2	9579	0
+28	2	1	10	card.4302:1	160	fragment.4302:2	9579	0
+29	2	1	10	card.4303:1	160	fragment.4303:2	9579	0
+30	2	1	10	card.4304:1	160	fragment.4304:2	9579	0
+31	2	1	10	card.4305:1	160	fragment.4305:2	9579	0
+32	2	1	10	card.4306:1	160	fragment.4306:2	9579	0
+33	2	1	10	card.4307:1	160	fragment.4307:2	9579	0
+34	2	1	10	card.4308:1	160	fragment.4308:2	9579	0
+35	2	1	10	card.4309:1	160	fragment.4309:2	9579	0
+36	2	1	10	card.4401:1	160	fragment.4401:2	9579	0
+37	2	1	10	card.4402:1	160	fragment.4402:2	9579	0
+38	2	1	10	card.4403:1	160	fragment.4403:2	9579	0
+39	2	1	10	card.4404:1	160	fragment.4404:2	9579	0
+40	2	1	10	card.4405:1	160	fragment.4405:2	9579	0
+41	2	1	10	card.4406:1	160	fragment.4406:2	9579	0
+42	2	1	10	card.4407:1	160	fragment.4407:2	9579	0
+43	2	1	10	card.4408:1	160	fragment.4408:2	9579	0
+44	2	1	10	card.4409:1	160	fragment.4409:2	9579	0
+45	3	1	0	material.200027:10	9506		0	0
+46	3	1	0	material.200010:1	660		0	0
+47	3	1	0	user.soul:20	23765		0	0
+48	3	1	0	user.soul:40	4951		0	0
+49	3	1	0	material.200003:1	2971		0	0
+50	3	1	0	material.12:10	3960		0	0
+51	3	1	0	material.300001:30	2377		0	0
+52	3	1	0	material.1:10	5941		0	0

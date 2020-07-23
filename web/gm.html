@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<style>
+    .nav-option { display: block; margin:10px; cursor: pointer; }
+    .nav-option:hover { color: LightSeaGreen; }
+</style>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var request = {
+        act: 'gm',
+        method: '',
+        openid: '',
+        uid: '',
+    };
+
+    var titleMap = {
+        'status': '玩家基础数据',
+        'history': '玩家历史操作',
+        'payment': '充值与月卡',
+
+        'hero': '武将',
+        'treasure': '龙蛋信息',
+
+        'equip': '装备信息',
+        'gem': '宝石信息',
+        'material': '材料信息',
+        'card': '卡牌信息',
+        'dress': '小兵装备',
+        'dragongem': '龙晶信息',
+
+        'progress': '地图进度',
+
+        'bug': '数据修复',
+        'tavern': '招募',
+        'mine': '金矿',
+        'mail': '邮件',
+        'shop': '商店',
+        'legion': '军团',
+        'arena': '竞技场',
+        'tower': '爬塔',
+
+        'overvalued_gift': '超值礼包',
+        'pay_only': '充值专享',
+        'login_goodgift': '登录好礼',
+
+        'city_id': '当前关卡',
+        'chapter_id': '当前章节',
+        'friend':'好友系统',
+        'task':'任务系统',
+        'sky': '人皇套装',
+    };
+
+    var allTabs = [];
+
+    var user = null;
+    var world = {};
+
+    var curCmd = null;
+
+    function beforeSubmit(param) {
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+
+        if (curCmd == 'export') {
+            param.download = request.download;
+        }
+        if(curCmd == 'settime')
+            param.time = request.time;
+    }
+
+    function queryByUid() {
+        if (!request.uid) {
+            $.messager.alert('信息', '请填写用户ID或者角色ID', 'info');
+            return;
+        }
+
+        for (var title in titleMap) {
+            if ($('#tabs').tabs('exists', titleMap[title])) {
+                allTabs.push(title);
+                $('#tabs').tabs('close', titleMap[title]);
+            }
+        }
+        curCmd = 'query';
+        request.method = 'get';
+        $('#select-uid').dialog('close');
+        $('#get-form').submit();
+    }
+
+    function query() {
+        if (!request.openid) {
+            $.messager.alert('信息', '请填写用户ID或者角色名', 'info');
+            return;
+        }
+        for (var title in titleMap) {
+            if ($('#tabs').tabs('exists', titleMap[title])) {
+                allTabs.push(title);
+                $('#tabs').tabs('close', titleMap[title]);
+            }
+        }
+        curCmd = 'query';
+        request.uid = '',
+        request.method = 'get';
+        $('#get-form').submit();
+    }
+
+    function export_json() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        curCmd = 'export';
+        request.download = user.info.uid + '.json';
+        request.uid = user.info.uid,
+        request.method = 'get';
+        $('#get-form').submit();
+    }
+
+    function clear_equip() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要清空装备?',function(r){
+            if (r){
+                for (var title in titleMap) {
+                    if (title == 'status') continue;
+                    if ($('#tabs').tabs('exists', titleMap[title])) {
+                        $('#tabs').tabs('close', titleMap[title]);
+                    }
+                }
+                curCmd = 'clear';
+                request.method = 'clear_equip';
+                $('#get-form').submit();
+            } else {
+                return;
+            }
+        });
+    }
+
+    function clear_dress() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要清空小兵装备?',function(r){
+            if (r){
+                for (var title in titleMap) {
+                    if (title == 'status') continue;
+                    if ($('#tabs').tabs('exists', titleMap[title])) {
+                        $('#tabs').tabs('close', titleMap[title]);
+                    }
+                }
+                curCmd = 'clear';
+                request.method = 'clear_dress';
+                $('#get-form').submit();
+            } else {
+                return;
+            }
+        });
+    }
+
+    function clear_dragongem() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要清空龙晶?',function(r){
+            if (r) {
+                for (var title in titleMap) {
+                    if (title == 'status') continue;
+                    if ($('#tabs').tabs('exists', titleMap[title])) {
+                       $('#tabs').tabs('close', titleMap[title]);
+                    }
+                }
+                curCmd = 'clear';
+                request.method = 'clear_dragongem';
+                $('#get-form').submit();
+            } else {
+                return;
+            }
+        });
+    }
+
+    function kick() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要从内存踢掉此玩家?',function(r){
+            if (r){
+                curCmd = 'kick';
+                request.method = 'kick';
+                $('#get-form').submit();
+            } else {
+                return;
+            }
+        });
+
+    }
+
+    function clear_bag() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要清空背包?',function(r){
+            if (r){
+                for(var title in titleMap) {
+                    if(title == 'status') continue;
+                    if ($('#tabs').tabs('exists', titleMap[title])) {
+                        $('#tabs').tabs('close', titleMap[title]);
+                    }
+                }
+                curCmd = 'clear';
+                request.method = 'clear_bag';
+                $('#get-form').submit();
+            }else {
+                return;
+            }
+        });
+
+    }
+
+    function god() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+        $.messager.confirm('确认','确定要一键高富帅?',function(r){
+            if (r){
+                for(var title in titleMap) {
+                    if(title == 'status') continue;
+                    if ($('#tabs').tabs('exists', titleMap[title])) {
+                        $('#tabs').tabs('close', titleMap[title]);
+                    }
+                }
+                curCmd = 'god';
+                request.method = 'god';
+                $('#get-form').submit();
+            }else {
+                return;
+            }
+        });
+    }
+
+    function passAll() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        curCmd = 'pass_all';
+        request.method = 'pass_all';
+        $('#get-form').submit();
+    }
+
+    function resetDay() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        curCmd = 'reset_day';
+        request.method = 'reset_day';
+        $('#get-form').submit();
+    }
+
+    function resetWeek() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        curCmd = 'reset_week';
+        request.method = 'reset_week';
+        $('#get-form').submit();
+    }
+
+    function banChat() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+        $.messager.confirm('确认','确定要禁言?',function(r){
+            if (r){
+                curCmd = 'banChat';
+                request.method = 'ban_chat';
+                $('#get-form').submit();
+            }else {
+                return;
+            }
+        });
+    }
+
+    function block() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要对此玩家进行封号?',function(r){
+            if (r){
+                curCmd = 'block';
+                request.method = 'block';
+                $('#get-form').submit();
+            } else {
+                return;
+            }
+        });
+
+    }
+
+    function unblock() {
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        $.messager.confirm('确认','确定要对此玩家进行解封?',function(r){
+            if (r){
+                curCmd = 'unblock';
+                request.method = 'unblock';
+                $('#get-form').submit();
+            } else {
+                return;
+            }
+        });
+
+    }
+
+    function invalid() {
+        $('#dialog').dialog('options', {content: '<p>未实现</p>'})
+        $('#dialog').dialog('open');
+    }
+
+    function addTab(name) {
+        var title = titleMap[name];
+        if ($('#tabs').tabs('exists', title)) {
+            $('#tabs').tabs('select', title);
+            return;
+        }
+
+        if (!user) {
+            $.messager.alert('信息', '请先查询', 'info');
+            return;
+        }
+
+        var url = name + '.html';
+        var content = '<iframe src="' + url + '" frameborder="0" scrolling="yes" style="width: 100%; height: 100%;"></iframe>';
+        $('#tabs').tabs('add', {
+            title: title,
+            content: content,
+            closable: true,
+        });
+    }
+
+    function openVerify() {
+        curCmd = 'open_verify';
+        request.method = 'open_verify';
+        $('#get-form').submit();
+    }
+
+    function closeVerify() {
+        curCmd = 'close_verify';
+        request.method = 'close_verify';
+        $('#get-form').submit();
+    }
+
+    function openCDKey() {
+        curCmd = 'open_cdkey';
+        request.method = 'open_cdkey';
+        $('#get-form').submit();
+    }
+
+    function closeCDKey() {
+        curCmd = 'close_cdkey';
+        request.method = 'close_cdkey';
+        $('#get-form').submit();
+    }
+
+    function refresh() {
+        curCmd = 'refresh';
+        request.method = 'get_server_time';
+        $('#get-form').submit();
+    }
+
+    function settime() {
+        curCmd = 'settime'
+        request.method = 'set_server_time';
+        $('#get-form').submit();
+    }
+
+    $(document).ready(function() {
+        $('#openid').textbox({
+            onChange: function(newValue, oldValue) {
+                request.openid = newValue;
+                localStorage.setItem('openid', newValue);
+            }
+        });
+
+        $('#server-time').textbox({
+            onChange: function(newValue, oldValue) {
+                request.time = Math.floor((new Date(newValue))/1000);
+                localStorage.setItem('server-time', newValue);
+            }
+        });
+
+        $('#dialog').dialog({
+            title: '提示信息',
+            iconCls: 'icon-tip',
+            width: 150,
+            height: 100,
+            closable: true,
+            modal: true,
+        });
+        $('#dialog').dialog('close');
+
+        $('#select-uid').dialog('close');
+
+        $('#uids-cc').combobox({
+            valueField: 'id',
+            textField: 'text',
+            width: 200,
+        });
+
+        $('#get-form').form({
+            url: '.',
+            onSubmit: function(param) { beforeSubmit(param); return true; },
+            success: function(data) {
+                try {
+                    data = JSON.parse(data);
+                } catch (e) {
+                    user = null;
+                    $.messager.alert('错误', data, 'error');
+                    return;
+                }
+
+                if (data.uids) {
+                    var ccData = [];
+                    for (var i = 0, len = data.uids.length; i < len; i++) {
+                        ccData.push({
+                            id: data.uids[i],
+                            text: '' + data.uids[i],
+                        });
+                    }
+
+                    $('#uids-cc').combobox('loadData', ccData);
+                    $('#uids-cc').combobox({
+                        onChange: function(newValue, oldValue) {
+                            request.uid = newValue;
+                        }
+                    });
+                    $('#uids-cc').combobox('select', ccData[0].id);
+
+                    $('#select-uid').dialog('open');
+                    return;
+                }
+
+                data = data.data;
+                user = data.user;
+                if (curCmd == 'query') {
+                    if (allTabs.length == 0) {
+                        allTabs.push('status');
+                    }
+                    for (var i = 0; i < allTabs.length; i++) {
+                        addTab(allTabs[i]);
+                    }
+                    allTabs = [];
+                    $('#server-time').textbox({value:formatTime(data.time)});
+                } else if (curCmd == 'clear') {
+                    query();
+                } else if (curCmd == 'refresh') {
+                    $('#server-time').textbox({value:formatTime(data.time)});
+                }
+
+                if (curCmd != 'query' && curCmd != 'refresh') {
+                    $.messager.alert('信息', '成功', 'info');
+                }
+            }
+        });
+
+        var openid = localStorage.getItem('openid');
+        if(openid) {
+            $('#openid').textbox({value:openid});
+            request.openid = openid;
+        }
+
+        refresh();
+    });
+
+</script>
+</head>
+<body>
+<div class="easyui-panel" style="width:100%;" data-options="maximized:true">
+    <header style="width:100%;height:40px;font-size:20px">
+        GM管理工具
+        <div style="color: RED; font-weight: bold;">如果功能异常请换用Chrome, Firefox, IE9+, 国产浏览器请启用极速模式</div>
+    </header>
+
+    <div id="dialog"></div>
+    <div id="select-uid" class="easyui-dialog" title="选择角色ID" style="width:300px;height:150px;padding: 20px">
+        <input id="uids-cc" />
+        <a id="query-uid" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="queryByUid()">确认</a>
+    </div>
+
+    <div class="easyui-panel" title="账号查询" style="padding:5px;width:100%;height:auto;">
+        <form id="get-form">
+            <table>
+                <tr>
+                    <td>用户平台ID: <input id="openid" class="easyui-textbox" style="width:150px"></td>
+                    <td>
+                        <a id="query" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="query()">查询</a>
+                        <a id="export" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="export_json()">导出</a>
+                        <a id="block" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="block()">封号</a>
+                        <a id="unblock" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="unblock()">解封</a>
+                        <a id="kick" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="kick()">踢人</a>
+                        <a id="clear_equip" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="clear_equip()">清空装备</a>
+                        <a id="clear_dress" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="clear_dress()">清空小兵装备</a>
+                        <a id="clear_bag" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="clear_bag()">清空背包</a>
+                        <a id="clear_dragongem" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="clear_dragongem()">清空龙晶</a>
+                        <a id="god" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="god()">一键高富帅</a>
+                        <a id="pass_all" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="passAll()">一键通关</a>
+                        <a id="reset_day" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="resetDay()">每日重置</a>
+                        <a id="reset_week" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="resetWeek()">每周重置</a>
+                        <a id="banchat" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="banChat()">禁言</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        服务器当前时间: <input id="server-time" class="easyui-textbox" style="width:150px">
+                    </td>
+                    <td>
+                        <a id="refresh" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="refresh()">刷新时间</a>
+                        <a id="settime" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="settime()">设置时间</a>
+                        <a id="open_verify" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="openVerify()">打开战斗校验</a>
+                        <a id="close_verify" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="closeVerify()">关闭战斗校验</a>
+                        <a id="open_cdkey" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="openCDKey()">打开兑换码</a>
+                        <a id="close_cdkey" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="closeCDKey()">关闭兑换码</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="easyui-layout" style="width:100%;height:1000px;">
+        <div region="west" title="查看选项" style="width:300px;padding:10px;" data-options="noheader:true">
+            <div class="easyui-panel" title="玩家信息" collapsible="true" style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="">玩家平台数据</a>
+                <a class="nav-option" onclick="addTab('status')">玩家基础数据</a>
+                <a class="nav-option" onclick="addTab('history')">玩家历史操作</a>
+                <a class="nav-option" onclick="addTab('payment')">充值, 月卡</a>
+            </div>
+
+            <div class="easyui-panel" title="战斗信息" collapsible="true" style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="addTab('hero')">武将</a>
+                <a class="nav-option" onclick="addTab('treasure')">龙蛋</a>
+            </div>
+
+            <div class="easyui-panel" title="背包信息" collapsible="true" style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="addTab('equip')">装备</a>
+                <a class="nav-option" onclick="addTab('gem')">宝石</a>
+                <a class="nav-option" onclick="addTab('material')">材料</a>
+                <a class="nav-option" onclick="addTab('card')">卡牌</a>
+                <a class="nav-option" onclick="addTab('dress')">小兵装备</a>
+                <a class="nav-option" onclick="addTab('dragongem')">龙晶</a>
+            </div>
+
+            <div class="easyui-panel" title="征战副本" collapsible="true" style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="addTab('progress')">征战进度</a>
+            </div>
+            <div class="easyui-panel" title="功能参数" collapsible="true" style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="addTab('bug')">bug数据修复</a>
+                <a class="nav-option" onclick="addTab('tavern')">招募</a>
+                <a class="nav-option" onclick="addTab('mine')">金矿</a>
+                <a class="nav-option" onclick="addTab('mail')">邮件</a>
+                <a class="nav-option" onclick="addTab('shop')">商店</a>
+                <a class="nav-option" onclick="addTab('legion')">军团</a>
+                <a class="nav-option" onclick="addTab('arena')">竞技场</a>
+                <a class="nav-option" onclick="addTab('tower')">爬塔</a>
+                <a class="nav-option" onclick="addTab('friend')">好友</a>
+                <a class="nav-option" onclick="addTab('task')">任务</a>
+                <a class="nav-option" onclick="addTab('sky')">人皇</a>
+            </div>
+            <div class ="easyui-panel" title="限时活动" collapsible='true' style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="addTab('overvalued_gift')">超值礼包</a>
+                <a class="nav-option" onclick="addTab('pay_only')">充值专享</a>
+                <a class="nav-option" onclick="addTab('login_goodgift')">登录好礼</a>
+            </div>
+
+            <div class ="easyui-panel" title="无限关卡" collapsible='true' style="width:100%;height:auto;margin:5px;">
+                <a class="nav-option" onclick="addTab('city_id')">关卡数</a>
+                <a class="nav-option" onclick="addTab('chapter_id')">章节数</a>
+            </div>
+        </div>
+
+        <div region="center" id="tabs" class="easyui-tabs" title="标签页" data-options="noheader:true">
+            <div title="主页">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;先查询玩家, 否则不能进行操作</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点不开的是因为对应功能还未实现</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

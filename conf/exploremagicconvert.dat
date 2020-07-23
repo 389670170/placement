@@ -1,0 +1,8 @@
+序号	激活条件	条件参数	条件描述	转化率提升
+id	condition	value	desc	ConvertRatio
+Int	String	Int	String	Int
+1	weekCard	0	text_magicConvertName1	0.05
+2	monthCard	0	text_magicConvertName2	0.05
+3	vip	3	text_magicConvertName3	0.04
+4	vip	5	text_magicConvertName3	0.06
+5	vip	9	text_magicConvertName3	0.1

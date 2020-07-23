@@ -1,0 +1,6 @@
+成就ID	奖励等级段	成就图标	描述
+id	level	icon	desc
+Int	Ints	String	String
+101	1	shibei.png	text_territorialwars_goalDesc1
+102	1	find_yinji.png	text_territorialwars_goalDesc2
+301	1	heart.png	text_territorialwars_goalDesc3

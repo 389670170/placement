@@ -1,0 +1,14 @@
+编号	名字	描述	图标	推荐星级	解锁关联	前往	预览功能
+id	name	desc	icon	star	moduleopen	goto	isPreview
+Int	String	String	String	Int	String	String	Int
+1	text_growhelp_play_name_100	text_growhelp_play_desc_100	task_17.png	3	hero	battle	1
+2	text_growhelp_play_name_200	text_growhelp_play_desc_200	task_54.png	5	task	task	1
+3	text_growhelp_play_name_300	text_growhelp_play_desc_300	task_55.png	4	exploreMonster	exploreMonster	1
+4	text_growhelp_play_name_400	text_growhelp_play_desc_400	task_22.png	5	arena	arena	1
+5	text_growhelp_play_name_500	text_growhelp_play_desc_500	task_27.png	4	territorywar	territorywar	1
+6	text_growhelp_play_name_600	text_growhelp_play_desc_600	task_19.png	7	treasureHunt	legionTerritorywar	1
+7	text_growhelp_play_name_700	text_growhelp_play_desc_700	task_56.png	7	legionWar	legionWar	1
+8	text_growhelp_play_name_800	text_growhelp_play_desc_800	task_53.png	6	legion	legionBoss	1
+9	text_growhelp_play_name_900	text_growhelp_play_desc_900	task_2.png	4	legion	legion	1
+10	text_growhelp_play_name_1000	text_growhelp_play_desc_1000	task_14.png	5	kingMe	kingMe	1
+11	text_growhelp_play_name_1100	text_growhelp_play_desc_1100	task_57.png	6	worldwar	worldwar	1

@@ -1,0 +1,6 @@
+BOSS类型	BOSS名称	BOSS品质	受击次数	缩放	BOSS出现频率(成功刷新计数)	模型资源	必定掉落ID	特殊掉落ID	特殊掉落执行频率	兑换需求击杀	宝箱兑换掉落ID
+type	name	quality	maxClickCount	scale	bossFrequency	url	lootId	specialLootId	specialLootFrequency	awardNeed	awardId
+Int	String	Int	Int	Int	Int	String	Int	Int	Ints	Int	Int
+1	text_exploreBoss_1	4	1	1.2	6	gebulin	1001	1011	1|2	30	1021
+2	text_exploreBoss_2	5	6	1.2	3	gebulin2	1002	1012	3|4	30	1022
+3	text_exploreBoss_3	6	12	1.2	1	gebulin3	1003	1013	5|10	30	1023

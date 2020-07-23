@@ -1,0 +1,8 @@
+护送类型	颜色	图片	模型	名称	周期内出现次数	完成时间_分钟	协助重置类型	协助次数	完成积分基数	协助积分基数	可抢夺最大次数	每次被抢夺损失积分	每次被抢夺损失奖励百分比
+type	color	picture	url	name	cycleManner	time	helpReset	helpTimes	competeScore	helpScore	maxTime	loseScore	loseAwardPer
+Int	Int	String	String	String	Int	Int	Int	Int	Int	Int	Int	Int	Int
+1	2	picture1.png	spine1	text_convoyName_1	6	20	day	3	100	20	1	10	50
+2	3	picture2.png	spine2	text_convoyName_2	6	20	day	3	200	40	1	20	50
+3	4	picture3.png	spine3	text_convoyName_3	4	20	day	2	300	60	1	30	50
+4	5	picture4.png	spine4	text_convoyName_4	3	20	week	7	500	100	1	40	50
+5	6	picture5.png	spine5	text_convoyName_5	1	20	week	3	1000	200	2	50	25

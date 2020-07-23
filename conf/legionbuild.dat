@@ -1,0 +1,6 @@
+建设类型	建设名字	建设奖励	建设消耗
+id	name	award	cost
+Int	String	Award	Award
+1	text_legion_buildName1	user.legion_exp:50,user.legion_build:1,user.legion:100	user.mixcash:-10
+2	text_legion_buildName2	user.legion_exp:100,user.legion_build:2,user.legion:500	user.mixcash:-50
+3	text_legion_buildName3	user.legion_exp:200,user.legion_build:5,user.legion:3000	user.mixcash:-298

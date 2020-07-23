@@ -1,0 +1,6 @@
+武将类型	武将品质	操作(程序用)
+id	quality	key
+Int	Int	String
+1	5	orange
+2	6	red
+3	7	gold

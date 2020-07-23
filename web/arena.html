@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <meta charset="UTF-8">
+    <title>GM管理工具</title>
+	<script type="text/javascript" charset="utf-8">
+        var user = parent.user;
+        var request = parent.request;
+
+        method = '';
+
+        function beforeSubmit(param) {
+            param.act = request.act;
+            param.method = request.method;
+            param.openid = request.openid;
+            param.uid = request.uid;
+
+            for(var id in user.arena) {
+                if($('#'+id)[0]) {
+                    var value = $('#'+id)[0].value;
+                    param[id] = value;
+                }
+            }
+        }
+
+        function arena() {
+            method = 'arena';
+            request.method = 'change_arena';
+            $('#info').submit();
+        }
+
+        $(document).ready(function() {
+            for(var id in user.arena) {
+                var value = user.arena[id];
+
+                $('#'+id).textbox({'value': value});
+            }
+
+            $('#info').form({
+                url: '.',
+                onSubmit: function(param) {
+                    beforeSubmit(param);
+                    return true;
+                },
+                success: function(data) {
+                    resp = JSON.parse(data);
+                    if(resp.code == 0) {
+                        $.messager.alert('信息', '成功', 'info');
+                    }else {
+                        $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+        });
+
+	</script>
+
+</head>
+<body>
+    <form id="info">
+        <table>
+            <tr>
+                <td>历史最大排名</td>
+                <td><input id="max_rank" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>当日已经挑战次数</td>
+                <td><input id="count" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>已买挑战次数</td>
+                <td><input id="buy_count" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>当日已买次数</td>
+                <td><input id="buy_num" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>成功挑战次数</td>
+                <td><input id="succ" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a id="arena" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:120" onclick="arena()">更改</a></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

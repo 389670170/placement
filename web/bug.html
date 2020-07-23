@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <meta charset="UTF-8">
+    <title>GM管理工具</title>
+    <script type="text/javascript" charset="utf-8">
+        var user = parent.user;
+        var world = parent.world;
+        var request = parent.request;
+
+        function beforeSubmit(param) {
+            param.act = request.act;
+            param.method = request.method;
+            param.openid = request.openid;
+            param.uid = request.uid;
+        }
+
+        function resetWorld() {
+            request.method = 'reset_world';
+            var param = [];
+            for (var key in request) {
+                param.push(key + '=' +request[key]);
+            }
+
+            var url =  '.?' + param.join('&');
+            $.get(url, function(data) {
+                try {
+                    var resp = JSON.parse(data);
+                    if (resp.code != 0) {
+                        $.messager.alert("错误", resp.desc, 'error');
+                    } else {
+                        $.messager.info("成功", resp.desc, 'error');
+                    }
+                } catch (e) {
+                    $.messager.alert("信息", data, 'info');
+                }
+            });
+        }
+
+        function fixOpenSeven() {
+            request.method = 'fix_open_seven';
+            var param = [];
+            for (var key in request) {
+                param.push(key + '=' +request[key]);
+            }
+
+            var url =  '.?' + param.join('&');
+            $.get(url, function(data) {
+                try {
+                    var resp = JSON.parse(data);
+                    if (resp.code != 0) {
+                        $.messager.alert("错误", resp.desc, 'error');
+                    } else {
+                        $.messager.alert("成功", resp.desc, 'error');
+                    }
+                } catch (e) {
+                    $.messager.alert("信息", data, 'info');
+                }
+            });
+        }
+
+        function fixPosition() {
+            request.method = 'fix_position';
+            var param = [];
+            for (var key in request) {
+                param.push(key + '=' +request[key]);
+            }
+
+            var url =  '.?' + param.join('&');
+            $.get(url, function(data) {
+                try {
+                    var resp = JSON.parse(data);
+                    if (resp.code != 0) {
+                        $.messager.alert("错误", resp.desc, 'error');
+                    } else {
+                        $.messager.alert("成功", resp.desc, 'error');
+                    }
+                } catch (e) {
+                    $.messager.alert("信息", data, 'info');
+                }
+            });
+        }
+
+        function getWorldData(type) {
+            request.method = 'world_get';
+            request.type = type;
+            var param = [];
+            for (var key in request) {
+                param.push(key + '=' +request[key]);
+            }
+
+            var url =  '.?' + param.join('&');
+            $.get(url, function(data) {
+                try {
+                    var resp = JSON.parse(data);
+                    if (resp.code != 0) {
+                        $.messager.alert("错误", resp.desc, 'error');
+                    } else {
+                        world[type] = resp.data;
+                        $.messager.alert("成功, 请在Console中查看", resp.desc, 'info');
+                    }
+                } catch (e) {
+                    console.log(e);
+                    $.messager.alert("信息", data, 'info');
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            for(var id in user.status) {
+                $('#'+id).textbox({
+                    value: user.status[id],
+                });
+            }
+
+            for(var id in user.info) {
+                $('#'+id).textbox({
+                    value: user.info[id],
+                });
+            }
+
+            $('#guide').textbox({
+                value : user.mark.guide,
+            });
+
+            $('#info').form({
+                url: '.',
+                onSubmit: function(param) {beforeSubmit(param); return true; },
+                success: function(data) {
+                    resp = JSON.parse(data);
+                    if(resp.code == 0) {
+                        $.messager.alert('信息', '成功', 'info');
+                        if(curCmd == 'add') {
+                            var value = +resp.data.value;
+                            $('#'+addType).textbox('setText', value);
+                            if(resp.data.vip) {
+                                $('#vip').textbox('setText', resp.data.vip);
+                            }
+                            if(resp.data.level) {
+                                $('#level').textbox('setText', resp.data.level);
+                            }
+                        }
+                    }else {
+                        $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <form id="info">
+        <table>
+            <tr>
+                <td><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width: 100" onclick="resetWorld()">重置金矿/合璧/好友</a></td>
+            </tr>
+            <tr>
+                <td><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width: 100" onclick="fixOpenSeven()">修复七日活动</a></td>
+            </tr>
+            <tr>
+                <td><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width: 100" onclick="fixPosition()">修复皇城数据</a></td>
+            </tr>
+            <tr>
+                <td><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width: 100" onclick="getWorldData('mail')">获取World Mail数据</a></td>
+                <td><a id="add" href="javascript:void(0);" class="easyui-linkbutton" data-options="width: 100" onclick="getWorldData('sys_mail')">获取World SysMail数据</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

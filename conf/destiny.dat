@@ -1,0 +1,8 @@
+天命等级	攻击百分比	物防百分比	法防百分比	生命百分比	技能等级	等级上限改变	消耗	升至下阶消耗英雄1	升至下阶消耗英雄2	升至下阶消耗英雄3	君主升至下阶消耗英雄1	君主升至下阶消耗英雄2	君主升至下阶消耗英雄3	分解返还	白将虚拟技能战力基数	红将虚拟技能战力基数	金将虚拟技能战力基数
+level	atk	def	mdef	hp	skillLeve	roleLevelMax	cost	costHero1	costHero2	costHero3	nanCostHero1	nanCostHero2	nanCostHero3	return	virtualPower1	virtualPower6	virtualPower10
+Int	Int	Int	Int	Int	Int	Int	Award	Ints	Ints	Ints	Ints	Ints	Ints	Award	Int	Int	Int
+1	0	0	0	0	1	0	material.1:-2300	4|5|4	0	0	4|5|4	0	0	material.1:0,user.soul:0	15.5	19.22	31
+2	24	24	24	24	2	200	material.1:-2700	4|5|3	4|6|1	0	4|5|3	4|6|1	0	material.1:2300,user.soul:36000	16.178571429	20.061428571	32.357142857
+3	48	48	48	48	3	220	material.1:-3300	3|0|1	4|6|1	4|5|2	1|5023|1	4|6|1	4|5|2	material.1:5000,user.soul:117000	16.857142857	20.902857143	33.714285714
+4	80	80	80	80	4	240	material.1:-3700	3|0|2	2|9|1	4|6|1	1|5021|2	2|9|1	4|6|1	material.1:8300,user.soul:198000	17.535714286	21.744285714	35.071428571
+5	112	112	112	112	5	260	material.1:-5300	3|0|1	2|9|1	0	1|5021|1	2|9|1	0	material.1:12000,user.soul:522000	18.214285714	22.585714286	36.428571429

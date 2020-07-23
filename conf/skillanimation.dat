@@ -1,0 +1,27 @@
+索引ID	特效描述	特效类型(1一个特效2多个随机位置特效)	伴随音效	特效资源	特效渲染层级类型(1单位之下，2单位之上, 3单位同级)	特效资源2	特效渲染层级类型(1单位之下，2单位之上, 3单位同级)1	特效缩放	偏移X	偏移Y	特效个数	每个特效间隔	特效范围x1	特效范围x2	特效范围y1	特效范围y2	是否随机播放特效	随机范围
+id	desc	type	soundEffect	res	zorderType	res2	zorderType2	scale	px	py	num	interval	rangeX1	rangeX2	rangeY1	rangeY2	randomPlay	randomRange
+Int	String	Int	String	String	Int	String	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+1011	箭雨	1	0	playerskill_1b	1	0	0	30	0	0	0	1000	-1	1	-1	1	0	0
+1012	箭雨	1	0	playerskill_1t	2	0	0	30	80	-70	0	1000	-1	1	-1	1	0	0
+1021	群体加血	1	0	skill_cure	1	0	0	70	0	0	0	0	0	0	0	0	0	0
+2001	群体治疗下	1	0	playerskill_zulong_effect1b	1	0	0	150	0	0	0	0	0	0	0	0	0	0
+2002	群体治疗上	1	0	playerskill_zulong_effect1t	2	0	0	150	0	0	0	0	0	0	0	0	0	0
+7001	范围无敌下	1	0	playerskill_lanlong_1b	1	0	0	100	0	0	0	0	0	0	0	0	0	0
+7002	范围无敌上	1	0	playerskill_lanlong_1t	2	0	0	100	0	0	0	0	0	0	0	0	0	0
+888	军团BOSS - 龙炎火雨	2	0	skill_hlboss_02	3	0	0	80	0	0	40	50	-700	400	-200	500	0	0
+999	开场大章鱼 - 地泉狂涛	2	0	hit_dazhangyu02_P	2	hit_dazhangyu02_T	1	80	0	0	8	400	-250	250	-200	200	0	0
+100000201	主公-圣光斩	1	0	skill_nan_02	3	0	0	90	0	0	1	0	0	0	0	0	0	0
+40020101	萝莉法师-陨石轰击	2	0	skill_luolifashi01	3	0	0	35	0	0	30	30	-120	120	-55	95	0	0
+50030101	巨锤矮人-怒雷击	1	0	skill_juchuiairen02_01	3	skill_juchuiairen01_P	1	70	0	0	1	0	0	0	0	0	0	0
+50030201	巨锤矮人-雷神之锤	1	0	skill_juchuiairen02_02_T	3	skill_juchuiairen02_02_P	1	100	0	0	1	0	0	0	0	0	0	0
+50040201	火炮大师-终极狙击(瞄准）	1	0	skill_huopaodashi02	2	0	0	100	0	40	0	0	0	0	0	0	0	0
+50040202	火炮大师-终极狙击(攻击)	1	0	skill_huopaodashi02_T	2	0	0	100	0	0	0	0	0	0	0	0	0	0
+50070201	圣光骑士-神圣审判	1	0	skill_shengguangqishi02_P	1	skill_shengguangqishi02_T	2	140	0	110	1	0	0	0	0	0	0	0
+50090201	战斗法师- 烈焰冲击	1	0	skill_anyingqishi01	3	0	0	90	0	70	1	0	0	0	0	0	0	0
+50130201	法老- 混乱风暴	1	0	skill_falao02_P	1	skill_falao02_T	2	100	0	70	1	0	-220	220	-150	150	0	0
+50160101	大法师-炎爆术	2	0	skill_dafashi01_T	3	skill_dafashi01_P	1	50	0	0	20	10	-120	120	-55	95	0	0
+50200201	守墓人- 亡者剧变	1	0	skill_shoumuren02	1	0	0	100	0	0	1	0	0	0	0	0	0	0
+60010101	正义之子-神芒轰杀	1	0	skill_zhengyizhizi01	3	0	0	100	0	0	0	0	0	0	0	0	0	0
+60020201	古怪法师-地狱火	1	0	skill_guguaiwushi02	3	0	0	100	0	0	1	0	0	0	0	0	0	0
+60070201	死亡大帝- 死神镰刀	1	0	skill1_siwangdadi	2	0	0	100	-88	177	1	0	0	0	0	0	0	0
+60080101	驯龙女巫-神龙怒吼	1	0	skill_xunlongnvwu01	3	0	0	100	0	0	1	0	0	0	0	0	0	0

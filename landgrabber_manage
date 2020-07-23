@@ -1,0 +1,129 @@
+#!/bin/bash
+#
+# manage legionwar
+
+prog="node"
+server=""
+
+RETVAL=0
+_start() {
+    # gateway gateway.js gateway.log
+    # game game.js game.log
+
+    name=$1
+    args=$2
+    pidfile="$1.pid"
+
+    echo -n $"Starting $name .............."
+    if [ -f $pidfile ]; then
+        echo -e "\t\E[31;40m[FAIL]\033[0m"
+        echo "$name is Running"
+    else
+        $prog $args 1>/dev/null &
+        for i in {1..5}; do
+            if [ -f $pidfile ]; then
+                echo -e "\t\E[32;40m[OK]\033[0m"
+                break
+            else
+                if [ $i -eq 5 ]; then
+                    echo -e "\t\E[31;40m[FAIL]\033[0m"
+                fi
+            fi
+            sleep 1
+        done
+    fi
+    RETVAL=$?
+}
+
+_stop() {
+    name=$1
+    pidfile="$1.pid"
+
+    echo -n $"Stopping $name .............."
+    if [ -f ${pidfile} ]; then
+        pid=`cat ${pidfile}`
+        if [ -d "/proc/${pid}" ]; then
+            while [ -d "/proc/${pid}" ]; do
+                kill  ${pid}
+                sleep 1
+            done
+        fi
+        rm -f ${pidfile}
+    fi
+    echo -e "\t\E[32;40m[OK]\033[0m"
+    RETVAL=$?
+}
+
+_reload() {
+    echo $"Reloading nothing ............"
+    RETVAL=$?
+}
+
+_status() {
+    name=$1
+    pidfile="$1.pid"
+
+    echo -n -e "$name\t\t"
+    if [ -f ${pidfile} ]; then
+        pid=`cat ${pidfile}`
+        echo -n -e "$pid\t\t"
+        if [ -d "/proc/${pid}" ]; then
+            echo -n -e "\E[32;40m[Running]\033[0m\t"
+        else
+            echo -n -e "\E[31;40m[Lost]\033[0m\t"
+        fi
+
+        echo `ps -p $pid -o rss | tail -n 1 | awk '{printf("%.2fM", $1/1024)}'`
+    else
+        echo -e "-\t\t\E[31;40m[Stoped]\033[0m\t-"
+    fi
+
+    RETVAL=$?
+}
+
+start() {
+    clean
+    _start landgrabber landgrabber.js log/landgrabber.log
+}
+
+stop() {
+    _stop landgrabber
+}
+
+status() {
+    _status landgrabber
+}
+
+clean() {
+    # 清理7日前日志
+    find log -mtime +7 -name "*.*" -exec rm -rf {} \;
+}
+
+# See how we were called.
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  status)
+        status
+        ;;
+  restart)
+        stop
+        sleep 3
+        start
+        ;;
+  reload)
+        reload
+        ;;
+  clean)
+        clean
+        ;;
+  *)
+        echo $"Usage: landgrabber_manage {start|stop|restart|status|reload}"
+        exit 1
+esac
+
+exit $RETVAL

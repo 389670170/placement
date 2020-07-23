@@ -1,0 +1,9 @@
+类型	编号	描述	开始时间(D)	开始时间(H)1	开始时间(M)1	结束时间(D)	结束时间(H)1	结束时间(M)1
+type	id	desc	startDay	startHour	startMinite	endDay	endHour	endMinite
+Int	Int	String	Int	Int	Int	Int	Int	Int
+1	1	text_legionWar_timedesc1	1	18	30	2	20	30
+2	1	text_legionWar_timedesc2	2	20	30	3	20	30
+3	1	text_legionWar_timedesc3	3	20	30	4	18	30
+1	2	text_legionWar_timedesc1	4	18	30	5	20	30
+2	2	text_legionWar_timedesc2	5	20	30	6	20	30
+3	2	text_legionWar_timedesc3	6	20	30	1	18	30

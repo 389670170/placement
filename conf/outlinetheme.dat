@@ -1,0 +1,4 @@
+序号	引导栏图片	引导栏美术字	界面内美术字	展示模型系数	模型X偏移	模型Y偏移	达成条件	奖励	功能开启
+id	icon	text1	text2	scale	xPos	yPos	condition	award	open
+Int	String	String	String	Int	Int	Int	Ints	Award	String
+1	104.png	outlinetheme_4.png	outlinetheme_title_4.png	2	10	70	2|6|15|16	material.300006:6	boss

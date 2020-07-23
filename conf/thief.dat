@@ -1,0 +1,15 @@
+编号	名称	受击次数	一次掉落奖励	死亡掉落id	缩放	消失时间（分钟）	受击后消失时间（秒）	出现权重	资源路径	物品飞出个数
+id	name	maxClickCount	award	dieDropId	scale	liveTime	clickLiveTime	weight	url	num
+Int	String	Int	Award	Int	Int	Int	Int	Int	String	Int
+1	品质1元宝山贼	20	user.cash:1	1001	1.2	60	25	2	YY_sunquan	1
+2	品质2元宝山贼	25	user.cash:1	1002	1.2	60	20	1	YY_sunquan	1
+3	品质3元宝山贼	30	user.cash:1	1003	1.2	60	15	1	YY_sunquan	1
+4	品质4元宝山贼	20	user.cash:2	1004	1.5	60	10	1	YY_sunquan	2
+5	品质1粮草山贼	10	user.food:1	1011	1.2	60	25	100	YY_caocao	1
+6	品质2粮草山贼	10	user.food:1	1012	1.2	60	20	20	YY_caocao	1
+7	品质3粮草山贼	15	user.food:1	1013	1.2	60	15	5	YY_caocao	1
+8	品质4粮草山贼	10	user.food:2	1014	1.5	60	10	1	YY_caocao	2
+9	品质1经验山贼	20	user.xp:40	1021	1.2	60	25	100	YY_liubei	1
+10	品质2经验山贼	20	user.xp:40	1022	1.2	60	20	20	YY_liubei	1
+11	品质3经验山贼	30	user.xp:40	1023	1.2	60	15	5	YY_liubei	1
+12	品质4经验山贼	20	user.xp:80	1024	1.5	60	10	1	YY_liubei	2

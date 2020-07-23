@@ -1,0 +1,14 @@
+区域ID	区域解锁需求关卡	区域名称	区域遮罩坐标X	区域遮罩坐标Y
+id	Limit	name	posX	posY
+Int	Int	String	Int	Int
+1	0	text_customAreaName_1	777	447.5
+2	18	text_customAreaName_2	1362.5	302
+3	33	text_customAreaName_3	2200	512.5
+4	45	text_customAreaName_4	2424.5	182
+5	60	text_customAreaName_5	3096	547.5
+6	72	text_customAreaName_6	3466	200.5
+7	87	text_customAreaName_7	3938.5	520.5
+8	99	text_customAreaName_8	4419	287
+9	117	text_customAreaName_9	4988.5	529.5
+10	126	text_customAreaName_10	5214.5	227
+11	132	text_customAreaName_11	6264	416

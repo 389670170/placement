@@ -1,0 +1,11 @@
+货架ID	货架名称	开启基准	页签1商店ID	页签2商店ID	页签3商店ID	页签4商店ID	页签5商店ID	页签6商店ID	货架配图
+id	name	openLimit	tab1	tab2	tab3	tab4	tab5	tab6	icon
+Int	String	Int	Int	Int	Int	Int	Int	Int	String
+1	text_shopUniversalTabName_1	101	101	102	103	0	0	0	store_icon_1.png
+2	text_shopUniversalTabName_2	201	201	0	0	0	0	0	store_icon_2.png
+3	text_shopUniversalTabName_4	401	401	0	0	0	0	0	store_icon_4.png
+4	text_shopUniversalTabName_3	302	301	302	303	304	305	306	store_icon_3.png
+5	text_shopUniversalTabName_5	501	501	0	0	0	0	0	store_icon_5.png
+6	text_shopUniversalTabName_7	701	701	0	0	0	0	0	store_icon_7.png
+7	text_shopUniversalTabName_8	801	801	0	0	0	0	0	store_icon_8.png
+8	text_shopUniversalTabName_9	901	901	0	0	0	0	0	store_icon_9.png

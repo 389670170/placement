@@ -1,0 +1,7 @@
+传送ID	目的地	目的地名称	目的地ICON	传送次数消耗
+id	target	name	icon	cost
+Int	String	String	String	Int
+1	initialPos	text_territorialwars_gateName1	city_1.png	0
+2	jianmenguanPos	text_territorialwars_gateName2	city_2.png	1
+3	jiayuguanPos	text_territorialwars_gateName3	city_3.png	1
+4	hulaoguanPos	text_territorialwars_gateName4	city_4.png	1

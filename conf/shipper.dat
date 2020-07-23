@@ -1,0 +1,8 @@
+镖车类型	描述	资源路径	权重
+shipper	desc	resource	weight
+Int	String	String	Int
+1	绿色物资		55
+2	蓝色物资		20
+3	紫色物资		12
+4	橙色物资		8
+5	红色物资		5

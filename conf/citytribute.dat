@@ -1,0 +1,13 @@
+势力编号	城池id	奖励
+id	cityId	award
+Int	Int	Award
+1	6	user.gold:2000,user.soul:10
+2	14	user.gold:5000,user.soul:20
+3	24	user.cash:20,material.1:40,user.soul:30
+4	33	user.cash:40,material.1:80,user.gold:8000
+5	39	user.cash:60,material.200027:40
+6	48	user.gold:12000,material.1:120
+7	61	user.cash:80,material.300001:80,user.soul:60
+8	76	user.gold:15000,user.soul:70,material.300001:120
+9	96	material.1:160,material.300001:180,user.soul:80
+10	122	user.gold:18000,material.200027:50,user.soul:90

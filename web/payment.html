@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="global.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <meta charset="UTF-8">
+    <title>GM管理工具</title>
+    <script type="text/javascript" charset="utf-8">
+        var user = parent.user;
+        var request = parent.request;
+        var payParam = {
+            id: 0,
+            cash: 0,
+			gift_code : '',
+        };
+
+        function beforeSubmit(param) {
+            param.act = request.act;
+            param.method = request.method;
+            param.openid = request.openid;
+            param.uid = request.uid;
+        }
+
+        function pay() {
+            request.method = 'pay';
+            $('#pay-form').submit();
+        }
+
+        function clearWeekCard() {
+            $.messager.confirm('确认','确定清除周卡?',function(r){
+                if (r){
+                    request.method = 'clear_week_card';
+                    var param = [];
+                    for (var key in request) {
+                        param.push(key + '=' +request[key]);
+                    }
+
+                    var url =  '.?' + param.join('&');
+                    $.get(url, function(data) {
+                        try {
+                            var resp = JSON.parse(data);
+                            if (resp.code != 0) {
+                                $.messager.alert("错误", res.desc, 'error');
+                                return;
+                            }
+                        } catch (e) {
+                            $.messager.alert("信息", data, 'info');
+                        }
+                    });
+                }else {
+                    return;
+                }
+            });
+        }
+
+        function clearMonthCard() {
+            $.messager.confirm('确认','确定清除月卡?',function(r){
+                if (r){
+                    request.method = 'clear_month_card';
+                    var param = [];
+                    for (var key in request) {
+                        param.push(key + '=' +request[key]);
+                    }
+
+                    var url =  '.?' + param.join('&');
+                    $.get(url, function(data) {
+                        try {
+                            var resp = JSON.parse(data);
+                            if (resp.code != 0) {
+                                $.messager.alert("错误", res.desc, 'error');
+                                return;
+                            }
+                        } catch (e) {
+                            $.messager.alert("信息", data, 'info');
+                        }
+                    });
+                }else {
+                    return;
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            $('#pay-cash').combobox({
+                valueField: "id",
+				textField: "cash",
+                textField: "money",
+                editable: false,
+                onSelect: function(param) {
+                    payParam.id = param.id;
+                    payParam.cash = param.cash;
+                },
+            });
+
+            $('#pay-form').form({
+                url: '.',
+                onSubmit: function(param) {
+                    param.charge_id = payParam.id;
+                    param.cash = payParam.cash;
+					param.gift_code = document.getElementById("gift_code").value;
+                    beforeSubmit(param);
+                    return true;
+                },
+                success: function(data) {
+                    var resp = JSON.parse(data);
+                    if(resp.code == 0) {
+                        $.messager.alert('信息', '充值成功', 'info');
+                    }else {
+                        $.messager.alert('错误', '充值失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+
+            var payment = user.payment;
+            $('#money').html(payment.money);
+            $('#day_money').html(payment.day_money);
+            $('#paid').html(payment.paid);
+            $('#gift_cash').html(payment.gift_cash);
+            $('#cost').html(payment.cost);
+
+            $('#week_card').append('<tr><td>周卡剩余天数</td><td>' + payment.week_card  + '</td></tr>');
+            $('#month_card').append('<tr><td>月卡剩余天数</td><td>' + payment.month_card  + '</td></tr>');
+            $('#long_card').append('<tr><td>是否购买终身卡</td><td>' + (payment.long_card ? '是' : '否') + '</td></tr>');
+
+            loadConf(['recharge'], function() {
+                var data = [];
+                var payRecords = payment.pay_records;
+                for (var id in gConf.recharge) {
+                    var conf = gConf.recharge[id];
+					var money = conf.amount;
+                    var cash = conf.award && conf.award[0][2];
+                    $('#pay_records').append('<tr><td>' + id + '</td><td>'+ cash +'</td><td>' + conf.amount + '</td><td>' + (payRecords[id] ? payRecords[id] : 0) + '</td></tr>');
+                    data.push({id: conf.id, cash: cash, money: money});
+                }
+
+                var payList = payment.pay_list;
+                for (var id in gConf.recharge) {
+                    var conf = gConf.recharge[id];
+                    var cash = conf.award && conf.award[0][2];
+					var money = conf.amount;
+                    $('#pay_list').append('<tr><td>' + id + '</td><td>' + cash + '</td><td>' + conf.amount + '</td><td>' + (payList[id] ? payList[id] : 0) + '</td></tr>');
+                    //data.push({id: conf.id, cash: cash, money: money});
+                }
+
+                $('#pay-cash').combobox('loadData', data);
+                $('#pay-cash').combobox('select', data[0].id);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="equip-panel" class="easyui-panel" style="width:100%; height: 100%;" data-options="maximized:true">
+        <div class="easyui-layout" style="width:100%;height:100%;padding:5px;">
+            <div region="center" title="总况" style="width: 70%; padding:10px;" data-options="">
+                <form id="payment">
+                    <table style="width: 900px;">
+                        <tr>
+                            <td width="300">名称</td>
+                            <td>值</td>
+                        </tr>
+                        <tr>
+                            <td>总充值金额(包含购买)</td>
+                            <td id="money"></td>
+                        </tr>
+                        <tr>
+                            <td>今日总充值金额(不包含购买)</td>
+                            <td id="day_money"></td>
+                        </tr>
+                        <tr>
+                            <td>购买的总元宝</td>
+                            <td id="paid"></td>
+                        </tr>
+                        <tr>
+                            <td>购买赠送或月卡领取的元宝</td>
+                            <td id="gift_cash"></td>
+                        </tr>
+                        <tr>
+                            <td>总消耗元宝</td>
+                            <td id="cost"></td>
+                        </tr>
+                        <tr>
+                            <td>当前充值列表</td>
+                            <td>
+                                <table id="pay_list" style="width: 100%">
+                                    <thead><td>充值类型</td><td>元宝</td><td>金额</td><td>次数</td></thead>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周卡信息</td>
+                            <td>
+                                <table id="week_card" style="width: 100%">
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>月卡信息</td>
+                            <td>
+                                <table id="month_card" style="width: 100%">
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>充值总记录</td>
+                            <td>
+                                <table id="pay_records" style="width: 100%">
+                                    <thead><td>充值类型</td><td>元宝</td><td>金额</td><td>次数</td></thead>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+
+            <div region="east" title="充值" style="width: 30%; padding:10px;" data-options="">
+                <form id="pay-form">
+                    <label for="pay-cash">充值元宝数: </label>
+                    <input name="pay-cash" id="pay-cash" /><br /><br />
+					<td><label for="gift_code">礼包参数（可选）: </label><input id="gift_code" type="text"></input></td><br /><br />
+                    <a id="pay-btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="pay()">充值</a>
+                    <a id="clean-week-card-btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="clearWeekCard()">清空周卡</a>
+                    <a id="clean-month-card-btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:100" onclick="clearMonthCard()">清空月卡</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

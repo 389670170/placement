@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="global.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <meta charset="UTF-8">
+    <title>GM管理工具</title>
+    <script type="text/javascript" charset="utf-8">
+        var user = parent.user;
+        var request = parent.request;
+
+        function beforeSubmit(param) {
+            param.act = request.act;
+            param.method = request.method;
+            param.openid = request.openid;
+            param.uid = request.uid;
+        }
+
+        function beforeResCopySubmit(param) {
+            beforeSubmit(param);
+            param.gold_count = +$('#gold_count')[0].value;
+            param.gold_difficulty = +$('#gold_difficulty')[0].value;
+            param.gold_damage =  +$('#gold_damage')[0].value;
+
+            param.xp_count = +$('#xp_count')[0].value;
+            param.xp_difficulty = +$('#xp_difficulty')[0].value;
+            param.xp_kill = +$('#xp_kill')[0].value;
+
+            param.reborn_count = +$('#reborn_count')[0].value;
+            param.reborn_difficulty = +$('#reborn_difficulty')[0].value;
+            param.reborn_time = +timeToSecond($('#reborn_time')[0].value);
+
+            param.destiny_count = +$('#destiny_count')[0].value;
+            param.destiny_difficulty = +$('#destiny_difficulty')[0].value;
+            param.destiny_round = +$('#destiny_round')[0].value;
+
+            user.rescopy = {
+                'gold': {
+                    count: +param.gold_count,
+                    damage: +param.gold_damage,
+                },
+                'xp': {
+                    count: +param.xp_count,
+                    kill: +param.xp_kill,
+                },
+                'reborn': {
+                    count: +param.reborn_count,
+                    time: +param.reborn_time,
+                },
+                'destiny': {
+                    count: +param.destiny_count,
+                    round: +param.destiny_round,
+                },
+            };
+        }
+
+        function beforeShipperSubmit(param) {
+            beforeSubmit(param);
+            param.delivery = +$('#delivery')[0].value;
+            param.rob = +$('#rob')[0].value;
+            param.rob_time = +$('#rob_time')[0].value;
+            param.type = +$('#type')[0].value;
+            param.free = +$('#free')[0].value;
+
+            user.shipper = {
+                'delivery' : param.delivery,
+                'rob'      : param.rob,
+                'rob'      : param.rob,
+                'type'     : param.type,
+                'free'     : param.free,
+            };
+        }
+
+        function changeResCopy() {
+            request.method = 'change_rescopy';
+            $('#rescopy').submit();
+        }
+
+        function changeShipper() {
+            request.method = 'change_shipper';
+            $('#shipper').submit();
+        }
+
+        $(document).ready(function() {
+            for (var type in user.rescopy) {
+                var copy = user.rescopy[type];
+
+                if (type == 'gold') {
+                    $('#gold_count').textbox({value: copy.count});
+                    $('#gold_difficulty').textbox({value: copy.difficulty});
+                    $('#gold_damage').textbox({value: copy.damage});
+                } else if (type == 'xp') {
+                    $('#xp_count').textbox({value: copy.count});
+                    $('#xp_difficulty').textbox({value: copy.difficulty});
+                    $('#xp_kill').textbox({value: copy.kill});
+                } else if (type == 'reborn') {
+                    $('#reborn_count').textbox({value: copy.count});
+                    $('#reborn_difficulty').textbox({value: copy.difficulty});
+                    $('#reborn_time').textbox({value: secondToTime(copy.time)});
+                } else if (type == 'destiny') {
+                    $('#destiny_count').textbox({value: copy.count});
+                    $('#destiny_difficulty').textbox({value: copy.difficulty});
+                    $('#destiny_round').textbox({value: copy.round});
+                }
+            }
+
+            var shipper = user.shipper;
+            $('#delivery').textbox({value: shipper.delivery});
+            $('#rob').textbox({value: shipper.rob});
+            $('#rob_time').textbox({value: shipper.rob_time});
+            $('#type').textbox({value: shipper.type});
+            $('#free').textbox({value: shipper.free});
+
+            $('#rescopy').form({
+                url: '.',
+                onSubmit: function(param) {
+                    beforeResCopySubmit(param);
+                    return true;
+                },
+                success: function(data) {
+                    resp = JSON.parse(data);
+                    if (resp.code == 0) {
+                        $.messager.alert('信息', '成功', 'info');
+                    } else {
+                        $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+
+            $('#shipper').form({
+                url: '.',
+                onSubmit: function(param) {
+                    beforeShipperSubmit(param);
+                    return true;
+                },
+                success: function(data) {
+                    resp = JSON.parse(data);
+                    if (resp.code == 0) {
+                        $.messager.alert('信息', '成功', 'info');
+                    } else {
+                        $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form id="rescopy">
+        <table style="width: 950px">
+            <tr>
+                <td>副本类型</td>
+                <td>今日已攻打次数</td>
+                <td>解锁难度</td>
+                <td>历史最高纪录</td>
+            </tr>
+            <tr>
+                <td>金币副本</td>
+                <td><input id="gold_count" type="text" style="width: 150px"></input></td>
+                <td><input id="gold_difficulty" type="text" style="width: 150px"></input></td>
+                <td><span>最高伤害: </span><input id="gold_damage" type="text"></input></td>
+            </tr>
+            <tr>
+                <td>经验丹副本</td>
+                <td><input id="xp_count" type="text" style="width: 150px"></input></td>
+                <td><input id="xp_difficulty" type="text" style="width: 150px"></input></td>
+                <td><span>最大击杀: </span><input id="xp_kill" type="text"></input></td>
+            </tr>
+            <tr>
+                <td>突破石副本</td>
+                <td><input id="reborn_count" type="text" style="width: 150px"></input></td>
+                <td><input id="reborn_difficulty" type="text" style="width: 150px"></input></td>
+                <td><span>最长时间: </span><input id="reborn_time" type="text"></input></td>
+            </tr>
+            <tr>
+                <td>天命石副本</td>
+                <td><input id="destiny_count" type="text" style="width: 150px"></input></td>
+                <td><input id="destiny_difficulty" type="text" style="width: 150px"></input></td>
+                <td><span>最大轮数: </span><input id="destiny_round" type="text"></input></td>
+            </tr>
+            <tr>
+                <td colspan="3"><a id="change_rescopy" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="changeResCopy()">更改副本</a></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <form id="shipper">
+        <table>
+            <thead><tr>
+                    <td>押镖数据修改</td>
+                    <td>修改值</td>
+            </tr></thead>
+            <tr>
+                <td>已运送次数</td>
+                <td>
+                    <input id="delivery" type="text"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>已抢夺次数</td>
+                <td>
+                    <input id="rob" type="text"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>上次抢夺时间戳</td>
+                <td>
+                    <input id="rob_time" type="text"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>镖车类型</td>
+                <td>
+                    <input id="type" type="text"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>免费刷新</td>
+                <td>
+                    <input id="free" type="text"></input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><a id="change_shipper" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="changeShipper()">更改押镖</a></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+</body>
+</html>

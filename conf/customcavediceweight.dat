@@ -1,0 +1,9 @@
+骰子点数	初始权重	区间增权
+point	weight	addweight
+Int	Int	Int
+1	1	97
+2	1	97
+3	1	97
+4	1	97
+5	1	97
+6	1	97

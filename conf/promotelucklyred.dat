@@ -1,0 +1,9 @@
+转盘索引	随机权重	奖励
+id	weight	award
+Int	Int	Award
+1	205976	material.16:120
+2	149760	material.16:240
+3	250000	material.17:5
+4	132664	material.17:10
+5	249600	material.18:3
+6	12000	material.19:1

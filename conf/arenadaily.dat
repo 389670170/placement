@@ -1,0 +1,14 @@
+索引	名次	奖励
+id	rank	award
+Int	Int	Award
+1	1	user.arena_xp:800,user.cash:150
+2	2	user.arena_xp:700,user.cash:110
+3	3	user.arena_xp:600,user.cash:90
+4	10	user.arena_xp:500,user.cash:75
+5	50	user.arena_xp:400,user.cash:60
+6	200	user.arena_xp:350,user.cash:50
+7	500	user.arena_xp:300,user.cash:40
+8	1000	user.arena_xp:250,user.cash:30
+9	2000	user.arena_xp:200,user.cash:25
+10	5000	user.arena_xp:150,user.cash:20
+11	50000	user.arena_xp:100,user.cash:15

@@ -1,0 +1,18 @@
+特权ID	特权图标	特权描述	重复开启	重复描述	特权重复奖励	操作	解锁或累加
+id	icon	name	open	desc	award	key	lock
+Int	String	String	Strings	String	Award	String	Int
+1	icon_2.png	text_nil			0	godShopRefresh	2
+2	icon_6.png	text_nil			0	equipShopRefresh	2
+3	icon_4.png	text_nil	train	text_nil	user.cash:300	train4	2
+4	icon_5.png	text_taskNobiltyTitleDesc_4			0	lunch	2
+5	icon_3.png	text_taskNobiltyTitleDesc_5			0	dinner	2
+6	icon_1.png	text_taskNobiltyTitleDesc_6			0	heroNumLimit	2
+7	icon_10.png	text_taskNobiltyTitleDesc_7			0	vipExp	2
+8	icon_7.png	text_nil	vip|3	text_nil	material.200106:1	tavernLimit	1
+9	icon_4.png	text_nil	vip|5	text_nil	user.cash:666	train5	2
+10	icon_4.png	text_nil	vip|7	text_nil	user.cash:888	train6	2
+11	icon_8.png	text_nil	vip|5	text_nil	gem.107:6,gem.207:6,gem.307:6,gem.407:6	orangeDial	1
+12	icon_9.png	text_nil	vip|9	text_nil	material.19:6	redDial	1
+13	icon_11.png	text_nil	lifecard	text_nil	user.cash:2888	lifeCard	1
+14	icon_10.png	text_taskNobiltyTitleDesc_14			0	vipExp	2
+15	icon_2.png	text_taskNobiltyTitleDesc_15			0	godShopRefresh	2

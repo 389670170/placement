@@ -1,0 +1,7 @@
+副本ID	副本名称	副本类型	副本作用	副本次数	背景图片	副本描述	描述	机器人配置	特色	消耗	全服排行个数
+id	name	type	intro	limit	icon	desc	desc2	robotConf	desc3	cost	rankCount
+Int	Chinese	String	Chinese	Int	String	Chinese	String	String	String	Award	Int
+1	突破副本	reborn	获得大量突破石	3	uires/ui/common/frame_bg.png	小提示：时间坚持越久，获得突破石越多。	坚持尽可能久的时间	rescprebornrobot.dat	历史最长时间：	user.food:0	100
+2	经验副本	xp	获得大量经验丹	3	uires/ui/common/frame_bg.png	小提示：击退怪物越多，获得经验丹越多。	击退尽可能多的怪物	rescpxprobot.dat	历史最高击退：	user.food:0	100
+3	金币副本	gold	获得大量金币	3	uires/ui/common/frame_bg.png	小提示：对武将造成伤害越多，获得金币越多。	对目标造成尽可能高的伤害		历史最高伤害：	user.food:0	100
+4	天命副本	destiny	获得大量天命石	3	uires/ui/common/frame_bg.png	小提示：坚持波数越多，获得天命石越多。	守住尽可能多的波数	rescpdestinyrobot.dat	历史最多波数：	user.food:0	100

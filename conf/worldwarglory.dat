@@ -1,0 +1,13 @@
+编号	排名	每日奖励
+id	rank	awards
+Int	Int	Award
+1	1	user.rotate_hcoin:1,user.bindcash:300,user.wand:5
+2	2	user.rotate_ncoin:9,user.bindcash:250,user.wand:4
+3	3	user.rotate_ncoin:8,user.bindcash:200,user.wand:3
+4	4	user.rotate_ncoin:7,user.bindcash:150,user.wand:2
+5	11	user.rotate_ncoin:6,user.bindcash:120,user.wand:1
+6	21	user.rotate_ncoin:5,user.bindcash:90,user.wand:1
+7	51	user.rotate_ncoin:4,user.bindcash:80,user.wand:1
+8	101	user.rotate_ncoin:3,user.bindcash:70,user.wand:1
+9	201	user.rotate_ncoin:2,user.bindcash:60,user.wand:1
+10	501	user.rotate_ncoin:1,user.bindcash:50,user.wand:1

@@ -1,0 +1,12 @@
+符文类型	符文名称	描述	符文ICON	包含符文	解锁后类型权重	解锁掉落需求勇者之塔层数
+type	name	desc	icon	quality	weight	limit
+Int	String	String	String	Ints	Int	Int
+0	text_rune_name0	text_rune_desc0	rune_type_0.png	1|2|3|4|5	0	0
+1	text_rune_name1	text_rune_desc1	rune_type_1.png	1001|1002|1003|1004|1005	100	1
+2	text_rune_name2	text_rune_desc2	rune_type_2.png	2001|2002|2003|2004|2005	100	1
+3	text_rune_name3	text_rune_desc3	rune_type_3.png	3001|3002|3003|3004|3005	100	1
+4	text_rune_name4	text_rune_desc4	rune_type_4.png	4001|4002|4003|4004|4005	100	1
+5	text_rune_name5	text_rune_desc5	rune_type_5.png	5001|5002|5003|5004|5005	100	11
+6	text_rune_name6	text_rune_desc6	rune_type_6.png	6001|6002|6003|6004|6005	100	11
+7	text_rune_name7	text_rune_desc7	rune_type_7.png	7001|7002|7003|7004|7005	100	11
+8	text_rune_name8	text_rune_desc8	rune_type_8.png	8001|8002|8003|8004|8005	100	11

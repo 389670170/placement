@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curIndex = -1;
+
+    var allPoss = [];
+    var oldFightForce = 0;
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p+'='+request[p]);
+        }
+        return '.?'+gridParams.join('&');
+    }
+
+    $(document).ready(function() {
+        $('#fight-force').textbox({value:user.fight_force});
+        $('#poss').edatagrid({
+            remoteSort: false,
+            updateUrl: getGridUrl('update_pos'),
+            onBeforeEdit : function(index, row) {
+                curIndex = index;
+            },
+            onAfterEdit: function(index, row) {
+                if(row) {
+                    user.pos[row.id].hid = row.hid;
+                    user.pos[row.id].level = row.level;
+                    user.pos[row.id].slot = row.slot;
+                    user.pos[row.id].xp = row.xp;
+                    user.pos[row.id].quality = row.quality;
+                    user.pos[row.id].destiny.level = row.dlevel;
+                    user.pos[row.id].destiny.energy = row.energy;
+                    user.pos[row.id].talent = row.talent;
+                    user.pos[row.id].soldier.level = row.slevel;
+                    user.pos[row.id].soldier.level = row.sstar;
+                    user.pos[row.id].fight_force = row.fight_force;
+                    oldFightForce = row.fight_force;
+                    row.hero = gConf.generaltext[gConf.hero[row.hid].heroName].text;
+                }
+            }
+        });
+
+        loadConf(['hero', 'generaltext'], function() {
+            for(var pos in user.pos) {
+                var posObj = user.pos[pos];
+                var heroName = '';
+                if(posObj.hid > 0) {
+                    heroName = gConf.generaltext[gConf.hero[posObj.hid].heroName].text;
+                }
+
+                allPoss.push({
+                    'id' : pos,
+                    'hid' : posObj.hid,
+                    'hero' : heroName,
+                    'slot' : posObj.slot,
+                    'level' : posObj.level,
+                    'xp' : posObj.xp,
+                    'quality' : posObj.quality,
+                    'dlevel' : posObj.destiny.level,
+                    'energy' : posObj.destiny.energy,
+                    'talent' : posObj.talent,
+                    'slevel' : posObj.soldier.level,
+                    'sstar' : posObj.soldier.star,
+                    'fight_force' : posObj.fight_force,
+                });
+            }
+
+            $('#poss').edatagrid('loadData', allPoss);
+        });
+
+        setKeyboardEvent(function() {
+            if(curIndex != -1) {
+                $('#poss').edatagrid('cancelRow');
+                curIndex = -1;
+            }
+        },
+        function() {
+            if(curIndex != -1) {
+                $('#poss').edatagrid('endEdit', curIndex);
+                curIndex = -1;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <table id="poss" title="" style="width:70%;height:750px"
+        toolbar="#toolbar" pagination="true" idField="id"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <th field="id" width="30" sortable=true>位置ID</th>
+                <th field="hid" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">卡牌ID</th>
+                <th field="hero" width="30" sortable=true>武将</th>
+                <th field="slot" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">站位</th>
+                <th field="level" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">等级</th>
+                <th field="xp" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">经验</th>
+                <th field="quality" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">升星</th>
+                <th field="dlevel" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">天命</th>
+                <th field="energy" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">能量</th>
+                <th field="talent" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">突破</th>
+                <th field="slevel" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">小兵等级</th>
+                <th field="sstar" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">小兵星级</th>
+                <th field="fight_force" width="30" sortable=true>战斗力</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#poss').edatagrid('cancelRow')">取消</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        总战斗力 : <input id="fight-force" class="easyui-textbox" style="width:150px" disabled=true></input>
+    </div>
+</body>
+</html>

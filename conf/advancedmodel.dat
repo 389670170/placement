@@ -1,0 +1,11 @@
+模型名称	初始隐藏骨骼	品质1显示	品质2显示	品质3显示	品质4显示	品质5显示	品质6显示	品质7显示
+name	hide	qualityShow1	qualityShow2	qualityShow3	qualityShow4	qualityShow5	qualityShow6	qualityShow7
+String	Strings	Ints	Ints	Ints	Ints	Ints	Ints	Ints
+dafashi	dafashi_huoqiu|Effect_huo|Effect_wuqitexiao	1	1	1	1	1	2	2|3
+haidaotufu	haidaotufu_eyeglow|haidaotufu-youshou-eff	0	0	0	0	0	1	1|2
+huopaodashi	Effect_guang|Effect_huo	0	0	0	0	0	1	1|2
+guguaiwushi	toutexiao|wuqitexiao	0	0	0	0	0	1	1|2
+juchuiairen	juchuiairen_wuqi_2|juchuiairen_wuqi|wuqi02|wuqi01	1	1	1	1	1	2|4	2|3|4
+senyuguowang	senyuguowang_youshou_eff|senyuguowang_zuoshou_eff|senyuguowang_l_tou_eff|senyuguowang_r_tou_eff	0	0	0	0	0	3|4	1|2|3|4
+shengqishi	Effect_wuqitexiao1|Effect_wuqitexiao2	0	0	0	0	0	1	1|2
+zhengyizhizi	effec_tou|effect_wuqi	0	0	0	0	0	1	1|2

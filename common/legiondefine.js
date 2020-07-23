@@ -1,0 +1,49 @@
+// 错误码
+var ErrorCode = {
+    ERROR_NAME_INVALID: 100,            // 军团名字不合法
+    ERROR_COST_NOT_ENOUGH: 101,         // 消耗不足
+    ERROR_INVALID_ARGS: 102,            // 参数有误
+    ERROR_FLAG_SET_CONDITION: 103,      // 使用旗面条件不满足
+    ERROR_TEXTURE_SET_CONDITION: 104,   // 使用花纹条件不满足
+    ERROR_LEGION_NOT_EXIST: 105,        // 军团不存在
+    ERROR_LEGION_ALREADY_EXIST: 106,    // 军团已经存在
+    ERROR_NO_PRIORITY: 107,             // 没有权限
+    ERROR_NOTICE_INVALID: 108,          // 公告不合法
+    ERROR_CAN_NOT_JOIN: 109,            // 玩家等级不足，无法加入
+    ERROR_APPLY_COUNT_MAX: 110,         // 申请数已经最大
+    ERROR_ALREADY_HAS_LEGION: 111,      // 已经加入了军团
+    ERROR_ALREADY_APPLY: 112,           // 已经申请
+    ERROR_DUTY_COUNT_MAX: 113,          // 该职位成员数量达到上限
+    ERROR_JOB_NOT_LEGAL: 114,           // 职位不合法
+    ERROR_CAN_NOT_IMPEACH: 115,         // 不满足弹劾条件
+    ERROR_ALREADY_IMPEACH: 116,         // 已经发起弹劾
+    ERROR_CAN_NOT_GET_AWARD: 117,       // 不满足领取奖励的条件
+    ERROR_BUILD_AWARD_HAS_GOT: 118,     // 军团建设宝箱已领取
+    ERROR_NOT_JOIN_BONFIRE: 119,        // 没有加入篝火
+    ERROR_MEMBER_NOT_EXIST: 120,        // 成员不存在
+    ERROR_LEGION_NAME_EXIST: 121,       // 军团名已被占用
+    ERROR_LEGION_JOIN_CD: 122,          // 加入军团时间冷却中
+    ERROR_GRAB_RED_GIT_MAX: 123,        // 此类型红包数已经达到上限
+    ERROR_RED_GIFT_IS_GONE: 124,        // 红包已经被别人抢走
+    ERROR_BUILD_COUNT_MAX: 125,         // 今日建设次数已达上限
+    ERROR_ADD_WOOD_COUNT_MAX: 126,      // 添柴次数已达上限
+    ERROR_ADD_FIRE_COUNT_MAX: 127,      // 加火次数已达上限
+    ERROR_ADD_WOOD_CD_TIME: 128,        // 添柴冷却中
+    ERROR_ADD_FIRE_CD_TIME: 129,        // 加火冷却中
+    ERROR_MEMBER_COUNT_MAX: 130,        // 军团成员数量达到上限
+    ERROR_ALREADY_JOIN_BONFIRE: 131,    // 已经加入篝火了
+    ERROR_BONFIRE_NOT_OPEN: 132,        // 篝火尚未开启
+    ERROR_BONFIRE_HAS_FINISH: 133,      // 篝火已经结束
+    ERROR_CAN_NOT_KICK_SELF: 134,       // 不能踢出自己
+    ERROR_CAN_NOT_KICK_MEMBER: 135,     // 不能踢出成员，军团经验不够扣
+    ERROR_NOT_INSPIRE_TIME: 136,        // 不在鼓舞时间内
+    ERROR_INSPIRE_COUNT_MAX: 137,       // 今日鼓舞次数已达上限
+    ERROR_BOSS_ID_NOT_MATCH: 138,       // bossId不正确
+    ERROR_BOSS_FIGHT_COUNT_MAX: 139,    // 今日boss挑战次数已达上限
+    ERROR_BOSS_NOT_FIGHT_TIME: 140,     // 不在boss挑战时间内
+    ERROR_LEAVE_TIME_LIMIT: 141,        // 退出保护时间内
+    ERROR_CAN_NOT_DISSOLVE: 142,        // 军团战期间不能解散
+    ERROR_OTHER_ALREADY_HAS_LEGION: 143,     // 其它玩家已加入军团
+};
+
+exports.ErrorCode = ErrorCode;

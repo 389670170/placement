@@ -1,0 +1,17 @@
+编号	操作	描述	前往	参数	类型图标	玩家等级1	上限值1	玩家等级2	上限值2	玩家等级3	上限值3	玩家等级4	上限值4	玩家等级5	上限值5	玩家等级6	上限值6	玩家等级7	上限值7	玩家等级8	上限值8	玩家等级9	上限值9	玩家等级10	上限值10
+id	event	name	key	args	icon	level1	target1	level2	target2	level3	target3	level4	target4	level5	target5	level6	target6	level7	target7	level8	target8	level9	target9	level10	target10
+Int	String	String	String	Int	String	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+1	role_lv	武将等级	heroLv	9	daily_task39.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2	equip_lv	装备等级	hero	7	daily_task42.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+3	equip_quality	装备品质	hero	7	daily_task45.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+4	destiny	武将天命	destiny	5	daily_task40.png	1	105	10	105	20	105	30	105	40	105	50	105	60	105	70	105	80	105	100	105
+5	reborn	武将突破	reborn	2	daily_task41.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+6	hero_list	武将上阵	heroList	1	daily_task4.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+7	dress_skill	武将小兵技能	hero	4	daily_task43.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+8	dress_upgrade	武将小兵升阶	hero	4	daily_task44.png	1	10	10	20	20	30	30	40	40	50	50	60	60	70	70	80	80	90	100	105
+9	treasure	技能强化	dragongem	1	daily_task37.png	1	5	10	10	20	15	30	15	40	20	50	20	60	20	70	25	80	25	100	25
+10	equip_inherit	神器星级	suit	2	daily_task38.png	1	10	10	20	20	30	30	40	40	50	50	60	60	70	70	80	80	90	100	420
+11	gem	宝石镶嵌	suit	3	daily_task36.png	1	10	10	20	20	30	30	40	40	50	50	60	60	70	70	80	80	90	100	1680
+12	role_fate	缘分激活	heroList	4	daily_task46.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+13	refine	部位精炼	refine	4	daily_task56.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+14	promote	武将封将	promote	5	daily_task55.png	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

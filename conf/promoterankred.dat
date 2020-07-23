@@ -1,0 +1,9 @@
+排名	奖励
+rank	award
+Int	Award
+1	material.19:6,material.18:300,material.17:1000,material.16:12000
+2	material.19:3,material.18:180,material.17:600,material.16:7500
+3	material.19:2,material.18:120,material.17:400,material.16:5000
+10	material.18:120,material.17:400,material.16:5000
+30	material.18:100,material.17:320,material.16:4000
+50	material.18:80,material.17:240,material.16:3000

@@ -1,0 +1,6 @@
+鼓舞类型	名称	军团全体对BOSS伤害加成	消耗	奖励
+type	name	damage	cost	award
+Int	String	Int	Award	Award
+1	text_legion_boss_AakbName_1	50	user.mixcash:-10	user.legion:100
+2	text_legion_boss_AakbName_2	100	user.mixcash:-25	user.legion:250
+3	text_legion_boss_AakbName_3	200	user.mixcash:-50	user.legion:500

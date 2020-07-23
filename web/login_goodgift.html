@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+
+    function beforeSubmit(param) {
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+
+        param.login_day = $('#login_day')[0].value;
+    }
+
+    function changeLoginDay() {
+        request.method = 'change_login_day';
+        $('#info').submit();
+    }
+
+    $(document).ready(function() {
+        $('#login_day').textbox({'value': user.activity.login_goodgift.login});
+
+        $('#info').form({
+            url: '.',
+            onSubmit: function(param) {beforeSubmit(param); return true; },
+            success: function(data) {
+                resp = JSON.parse(data);
+                if(resp.code == 0) {
+                    $.messager.alert('信息', '成功', 'info');
+                }else {
+                    $.messager.alert('错误', '失败 desc:' + resp.desc, 'error');
+                }
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <form id="info">
+        <table>
+            <tr>
+                <td>累计登录天数</td>
+                <td><input id="login_day" type="text"></input></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a id="login_goodgift" href="javascripy:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="changeLoginDay()">更改</a></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

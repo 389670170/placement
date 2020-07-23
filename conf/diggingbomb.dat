@@ -1,0 +1,5 @@
+炸弹类型	对应的物品id	影响效果
+id	itemId	effect
+Int	Int	String
+1	300001	row
+2	300002	col

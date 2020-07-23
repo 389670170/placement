@@ -1,0 +1,6 @@
+索引ID	英雄品质	许愿最低碎片限制	单次许愿可获得极限	单次赠送数量限制	单次赠送获得军团币
+id	heroQuality	wishLimit	wishFragmentMax	giveLimit	award
+Int	Int	Int	Int	Int	Award
+1	4	20	90	9	user.legion:200
+2	5	40	60	6	user.legion:300
+3	6	75	30	3	user.legion:600

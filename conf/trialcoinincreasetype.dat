@@ -1,0 +1,7 @@
+类型ID	奖励增幅	图标	描述
+id	awardIncrease	icon	desc
+Int	Int	String	String
+1	0.5	coin_type1.png	text_trial_1
+2	0.5	coin_type2.png	text_trial_2
+3	0.5	coin_type3.png	text_trial_3
+4	2	coin_type4.png	text_trial_4

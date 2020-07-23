@@ -1,0 +1,9 @@
+宝物缘分	缘分名称	缘分宝物1	缘分宝物2	缘分宝物3	缘分宝物4	属性ID1	属性类型（1固定值，2百分比）	属性加成	属性ID2	属性类型2（1固定值，2百分比）	属性加成2
+id	name	treasure1	treasure2	treasure3	treasure4	att1	attType1	value1	att2	attType2	value2
+Int	String	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+2001	text_playerTreasureSuitName1	1	2	0	0	1	2	6	4	2	6
+2002	text_playerTreasureSuitName2	3	4	0	0	1	2	8	4	2	8
+2003	text_playerTreasureSuitName3	5	6	0	0	2	2	8	3	2	8
+2004	text_playerTreasureSuitName4	7	8	9	0	1	2	12	4	2	12
+2005	text_playerTreasureSuitName5	10	11	12	0	2	2	12	3	2	12
+2006	text_playerTreasureSuitName6	13	14	15	16	1	2	14	4	2	14

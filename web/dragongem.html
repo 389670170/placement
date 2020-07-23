@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curIndex = -1;
+
+    var allGems = [];
+
+    var giveParam = {
+        'level': 5,
+        'type': 1,
+        'num': 1,
+    };
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p + '=' + request[p]);
+        }
+        return '.?'+gridParams.join('&');
+    }
+
+    function beforeSubmit(param) {
+        for (var key in request) {
+            param[key] = request[key];
+        }
+    }
+
+    function giveDragongem() {
+        request.method = 'give_dragongem';
+        $('#give-dragongem-form').submit();
+    }
+
+    $(document).ready(function() {
+        $('#dragongem-type').combobox({
+            data: [
+                {id: 1, text: '物攻', selected: true},
+                {id: 2, text: '魔攻'},
+                {id: 3, text: '防御'},
+                {id: 4, text: '血量'},
+            ],
+            valueField: 'id',
+            textField: 'text',
+            editable: false,
+            onSelect: function(param) {
+                giveParam.type = param.id;
+            },
+        });
+
+        $('#dragongem-level').combobox({
+            data: [
+                {id: 1, text: '1级'},
+                {id: 2, text: '2级'},
+                {id: 3, text: '3级'},
+                {id: 4, text: '4级'},
+                {id: 5, text: '5级', selected: true},
+            ],
+            valueField: 'id',
+            textField: 'text',
+            editable: false,
+            onSelect: function(param) {
+                giveParam.level = param.id;
+            },
+        });
+
+        $('#dragongem-num').textbox({
+            value : 1,
+            onChange: function(newValue, oldValue) {
+                giveParam.num = newValue;
+            }
+        });
+
+        $('#give-dragongem-form').form({
+            url: '.',
+            onSubmit: function(param) {
+                param.num = giveParam.num;
+                param.type = giveParam.type;
+                param.level = giveParam.level;
+                beforeSubmit(param);
+                return true;
+            },
+            success: function(data) {
+                var resp = JSON.parse(data);
+                if (resp.code == 0) {
+                    $.messager.alert('信息', '发放成功', 'info');
+                    console.log(resp);
+                    var gems = resp.data.dragon;
+                    allGems = [];
+                    for (var id in gems) {
+                        var dragongem = gems[id];
+                        var gid = dragongem.id;
+                        var conf = gConf.dragongem[gid];
+                        allGems.push({
+                            'id': id,
+                            'name': conf.name,
+                            'level': conf.level,
+                            'quality': gQuality[conf.quality],
+                            'type': conf.type,
+                        });
+                    }
+
+                    $('#dragongems').edatagrid('loadData', allGems);
+                } else {
+                    $.messager.alert('错误', '发放失败 desc:' + resp.desc, 'error');
+                }
+            }
+        });
+
+        $('#dragongems').edatagrid({
+            remoteSort: false,
+            destroyUrl: getGridUrl('delete_dragongem'),
+            onBeforeEdit: function(index, row) {
+                curIndex = index;
+            },
+            onAfterEdit: function(index, row) {
+                if (row) {
+                    user.bag.gem[row.id] = row.num;
+                }
+            }
+        });
+
+        loadConf(['dragongem', 'generaltext'], function() {
+            for (var id in user.bag.dragon) {
+                var dragongem = user.bag.dragon[id];
+                var gid = dragongem.id;
+                var conf = gConf.dragongem[gid];
+                allGems.push({
+                    'id': id,
+                    'name': gConf.generaltext[conf.name].text,
+                    'level': conf.level,
+                    'quality': gQuality[conf.quality],
+                    'type': conf.type,
+                });
+            }
+
+            $('#dragongems').edatagrid('loadData', allGems);
+        });
+
+        setKeyboardEvent(
+            function() {
+                if (curIndex != -1) {
+                    $('#dragongems').edatagrid('cancelRow');
+                    curIndex = -1;
+                }
+            },
+            function() {
+                if (curIndex != -1) {
+                    $('#dragongems').edatagrid('endEdit', curIndex);
+                    curIndex = -1;
+                }
+            },
+            function() {
+                $('#equips').edatagrid('destroyRow');
+            }
+        );
+    });
+</script>
+</head>
+<body>
+<div id="dragongem-panel" class="easyui-panel" style="width:100%; height: 100%;" data-options="maximized:true">
+    <div class="easyui-layout" style="width:100%;height:100%;padding:5px;">
+        <div region="west" title="龙晶显示" style="width: 70%; padding:10px;" data-options="">
+            <table id="dragongems" title="" style="width:50%;height:750px"
+                toolbar="#toolbar" pagination="true" idField="id"
+                rownumbers="true" fitColumns="true" singleSelect="true">
+                <thead>
+                    <tr>
+                        <th field="id" width="30" sortable=true>龙晶ID</th>
+                        <th field="name" width="30" sortable=true>名称</th>
+                        <th field="level" width="30" sortable=true>等级</th>
+                        <th field="quality" width="30" sortable=true>品质</th>
+                        <th field="type" width="30" sortable=true>类型</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="toolbar">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:$('#dragongems').edatagrid('destroyRow')">删除</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#dragongems').edatagrid('cancelRow')">取消</a>
+            </div>
+        </div>
+
+        <div region="center" title="龙晶发放" style="padding:10px;" data-options="">
+            <form id="give-dragongem-form">
+                <label for="dragongem-type">龙晶类型: </label>
+                <input name="dragongem-type" id="dragongem-type" /><br /><br />
+
+                <label for="dragongem-level">龙晶等级: </label>
+                <input name="dragongem-level" id="dragongem-level" /><br /><br />
+
+                <label for="dragongem-num">发放数量: </label>
+                <input name="dragongem-num" id="dragongem-num" /><br /><br />
+
+                <a id="give-dragongem-btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="giveDragongem()">发放</a>
+            </form>
+        </div>
+    </body>
+</html>

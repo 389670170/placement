@@ -1,0 +1,7 @@
+征战ID	征战名称	描述	征战类型	征战次数	子界面lua名称
+id	name	desc	type	limit	panelName
+Int	Chinese	Chinese	String	Int	String
+1	副   本	获得大量金币	duplicate	3	campaignrescopypanel
+2	运送镖车	获得天命石	shippers	3	campaignshipperpanel
+3	巡   逻	获得武将碎片	patrol	3	campaignpatrolpanel
+4	战   役	获得大量将魂	infinite	0	campaigninfinitebattlepanel

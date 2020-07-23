@@ -1,0 +1,14 @@
+排行级别	排名	奖励
+level	rank	award
+Int	Int	Award
+1	1	user.arena:1000,user.bindcash:100
+2	2	user.arena:900,user.bindcash:80
+3	3	user.arena:800,user.bindcash:60
+4	4	user.arena:700,user.bindcash:50
+5	11	user.arena:650,user.bindcash:46
+6	21	user.arena:600,user.bindcash:42
+7	51	user.arena:550,user.bindcash:36
+8	101	user.arena:500,user.bindcash:32
+9	201	user.arena:450,user.bindcash:28
+10	501	user.arena:400,user.bindcash:24
+11	1001	user.arena:350,user.bindcash:20

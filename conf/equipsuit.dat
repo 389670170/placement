@@ -1,0 +1,10 @@
+套装ID	套装名称	装备位置1	装备位置2	装备位置3	装备位置4	装备位置5	装备位置6	增加属性
+id	name	equip1	equip2	equip3	equip4	equip5	equip6	attribute6
+Int	String	Int	Int	Int	Int	Int	Int	Strings
+101	text_heroEquipSuitName_201	10101	20101	30101	40101	50101	60101	0
+201	text_heroEquipSuitName_501	10201	20201	30201	40201	50201	60201	0
+301	text_heroEquipSuitName_401	10301	20301	30301	40301	50301	60301	18:1000
+401	text_heroEquipSuitName_502	10401	20401	30401	40401	50401	60401	18:2000
+501	text_heroEquipSuitName_503	10501	20501	30501	40501	50501	60501	18:2000|7:1000
+601	text_heroEquipSuitName_601	10601	20601	30601	40601	50601	60601	18:2000|7:2000|29:2000
+701	text_heroEquipSuitName_702	10701	20701	30701	40701	50701	60701	18:2000|7:3000|29:4000

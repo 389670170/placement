@@ -1,0 +1,8 @@
+计划	计划描述	计划达成需求通关关卡类型	计划达成需求通关关卡	战力预览	城池偏移	城池偏移1	急速营救时限（小时）	计划达成奖励	急速奖励
+plan	desc	limitType	limitCustom	power	posX	posY	timeLimit	award	extraAward
+Int	String	Int	Int	Int	Int	Int	Int	Award	Award
+1	text_customPrincessDesc1	1	12	5000	80	-110	12	equip.10101.0:1,equip.20101.0:1,equip.30101.0:1,equip.40101.0:1	equip.50101.0:1,equip.60101.0:1
+2	text_customPrincessDesc2	1	26	10000	88	-50	12	user.htoken:1,equip.20201.0:1,equip.40201.0:1	dragon.1001:1,equip.10201.0:1
+3	text_customPrincessDesc3	1	38	15000	55	64	24	fragment.4013:10,equip.60201.0:1,equip.30201.0:1	dragon.1001:1,equip.50201.0:1
+4	text_customPrincessDesc4	1	57	20000	73	30	24	fragment.4013:10,equip.40301.0:1	dragon.1001:1,equip.10301.0:1
+5	text_customPrincessDesc5	1	75	25000	-55	-105	24	fragment.4013:20,equip.30301.0:1,skyweapon.6.1:7	dragon.1001:1,equip.50301.0:1

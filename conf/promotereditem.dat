@@ -1,0 +1,6 @@
+道具id	道具名	索引id
+id	name	arrayId 
+Int	String	Int
+16	高级封将珠	0
+18	金将令	1
+19	金将魂	2

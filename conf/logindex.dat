@@ -1,0 +1,11 @@
+请求索引	选用标识方式（1：拼接、2：选用）	拼接标识1	拼接标识2	拼接标识3	选用标识	多次购买标识
+modAct	way	index1	index2	index3	onlyIndex	numIndex
+String	Int	String	String	String	String	String
+shop_buy	1	tab	goods_index		no	buy_count
+activity_buy_gift_bag	2				id	no
+activity_buy_seven_day_gift	2				id	no
+new_legion_boss_inspire	2				type	no
+new_legion_build	2				type	no
+altar_one_key	2				type	no
+altar_pray	2				type	no
+user_get_vip_reward	2				vip	no

@@ -1,0 +1,17 @@
+编号	奖励	描述
+id	reward	desc
+String	Award	Ignore
+first_pay	material.200065:1	首次充值奖励
+random_country	user.cash:298	随机国家奖励
+guide_guanyu	card.3002:1	新手引导送紫将
+guide_treasure	material.100001:1	新手引导送锤子
+guide_award1	material.200001:2	新手引导送经验丹
+first_patrol	equip.110011.0:10	第一次巡逻获取
+normal_tavern_first	card.4020:1	普通首次招将
+high_tavern_first	card.4003:1	高级首次招将
+roulette_full	user.cash:998	转轮满星奖励
+new_user_mail	user.cash:100,user.gold:10000	新用户邮件奖励
+pay_back	material.200062:1	封测V8返还
+first_open_treasure	user.soul:200	首次开启山洞宝箱
+first_explore_speed	user.xp:1000,user.gold:10000,user.hero_exp:10000	首次挂机领奖额外奖励
+first_play_award	equip.20101.0:1,equip.10101.0:1,equip.30101.0:1,equip.40101.0:1,equip.50101.0:1,equip.60101.0:1	首次奖励

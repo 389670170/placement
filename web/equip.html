@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+
+    var curIndex = -1;
+
+    var giveParam = {
+        'type' : 1,
+        'level': 60,
+        'quality': 5,
+        'god': 1,
+        'god_id': 3,
+        'num' : 1,
+    };
+    var curRow = null;
+    var allEquips = [];
+    var selectedEid = 0;
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p + '=' + request[p]);
+        }
+        return '.?' + gridParams.join('&');
+    }
+
+    function beforeSubmit(param) {
+        for (var key in request) {
+            param[key] = request[key];
+        }
+    }
+
+    function giveEquip() {
+        request.method = 'give_equip';
+        $('#give-equip-form').submit();
+    }
+
+    function getSelectedEquips() {
+        var selectedEquips = [];
+        var equips = gConf.equip;
+        for (var eid in equips) {
+            if (equips[eid].type == giveParam.type &&
+                    equips[eid].level == giveParam.level &&
+                    equips[eid].quality == giveParam.quality) {
+                selectedEquips.push({id: eid, text:equips[eid].name});
+            }
+        }
+        if (selectedEquips.length > 0) {
+            selectedEquips[0].selected = true;
+            selectedEid = selectedEquips[0].id;
+        } else {
+            selectedEid = 0;
+        }
+        return selectedEquips;
+    }
+
+    $(document).ready(function() {
+        loadConf(['equipconf', 'hero', 'generaltext'], function() {
+            $('#all-equips').combobox({
+                data: getSelectedEquips(),
+                valueField: 'id',
+                textField: 'text',
+                editable: false,
+                onSelect: function(param) { selectedEid = param.id; },
+            });
+
+            $('#equip-type').combobox({
+                data: [
+                    {id: 1, text: '头盔', selected: true},
+                    {id: 2, text: '武器'},
+                    {id: 3, text: '腰带'},
+                    {id: 4, text: '铠甲'},
+                    {id: 5, text: '靴子'},
+                    {id: 6, text: '挂饰'},
+                ],
+                valueField: 'id',
+                textField: 'text',
+                editable: false,
+                onSelect: function(param) {
+                    giveParam.type = param.id;
+                    $('#all-equips').combobox('loadData', getSelectedEquips());
+                },
+            });
+
+            $('#equip-level').combobox({
+                data: [
+                    {id: 1, text: '1级'},
+                    {id: 10, text: '10级'},
+                    {id: 20, text: '20级'},
+                    {id: 30, text: '30级'},
+                    {id: 40, text: '40级'},
+                    {id: 50, text: '50级'},
+                    {id: 60, text: '60级', selected: true},
+                    {id: 70, text: '70级'},
+                    {id: 80, text: '80级'},
+                    {id: 90, text: '90级'},
+                    {id: 100, text: '100级'},
+                ],
+                valueField: 'id',
+                textField: 'text',
+                editable: false,
+                onSelect: function(param) {
+                    giveParam.level = param.id;
+                    $('#all-equips').combobox('loadData', getSelectedEquips());
+                },
+            });
+
+            $('#equip-quality').combobox({
+                data: [
+                    {id: 1, text: '白'},
+                    {id: 2, text: '绿'},
+                    {id: 3, text: '蓝'},
+                    {id: 4, text: '紫'},
+                    {id: 5, text: '橙', selected: true},
+                ],
+                valueField: 'id',
+                textField: 'text',
+                editable: false,
+                onSelect: function(param) {
+                    giveParam.quality = param.id;
+                    $('#all-equips').combobox('loadData', getSelectedEquips());
+                }
+            });
+
+            $('#equip-isgod').combobox({
+                data: [{id: 1, text: '是', selected:true}, {id: 0, text: '否'}],
+                valueField: 'id',
+                textField: 'text',
+                editable: false,
+                onSelect: function(param) { giveParam.god = param.id; },
+            });
+
+            $('#equip-god').combobox({
+                data: [{id: 1, text: '属性1'}, {id: 3, text: '混合属性', selected:true}],
+                valueField: 'id',
+                textField: 'text',
+                editable: false,
+                onSelect: function(param) { giveParam.god_id = param.id; },
+            });
+
+            $('#equip-num').textbox({
+                value : 1,
+                onChange: function(newValue, oldValue) {
+                    giveParam.num = newValue;
+                }
+            });
+
+            $('#give-equip-form').form({
+                url: '.',
+                onSubmit: function(param) {
+                    if(!selectedEid) {
+                        $.messager.alert('错误', '发放失败 desc: no such equip', 'error');
+                        return false;
+                    }
+                    param.eid = selectedEid;
+                    if (giveParam.god) {
+                        if (!giveParam.god_id) {
+                            giveParam.god_id = 1;
+                        }
+                    } else {
+                        giveParam.god_id = 0;
+                    }
+                    param.god_id = giveParam.god_id;
+                    param.num = giveParam.num;
+                    beforeSubmit(param);
+                    return true;
+                },
+                success: function(data) {
+                    var resp = JSON.parse(data);
+                    if (resp.code == 0) {
+                        $.messager.alert('信息', '发放成功', 'info');
+                        var equips = resp.data.equips;
+                        for(var i = 0; i < equips.length; i++) {
+                            var equipArr = equips[i];
+                            var eid = equipArr[1];
+                            var equip = equipArr[2];
+                            allEquips.push({
+                                'eid' : eid,
+                                'name' : gConf.equip[equip.id].name,
+                                'level' : gConf.equip[equip.id].level,
+                                'quality' : gQuality[gConf.equip[equip.id].quality],
+                                'xp' : equip.xp,
+                                'god' : equip.god,
+                                'god_id' : equip.god_id,
+                                'hero' : '',
+                                //'subattr' : subattr.join(','),
+                            });
+                            $('#equips').edatagrid('loadData', allEquips);
+                            user.bag.equip[eid] = equip;
+                        }
+                    }else {
+                        $.messager.alert('错误', '发放失败 desc:' + resp.desc, 'error');
+                    }
+                }
+            });
+
+            $('#equips').edatagrid({
+                remoteSort: false,
+                updateUrl: getGridUrl('update_equip'),
+                destroyUrl: getGridUrl('delete_equip'),
+                onBeforeEdit : function(index, row) {
+                    curIndex = index;
+                },
+                onAfterEdit: function(index, row) {
+                    if(row) {
+                        user.bag.equip[row.eid].xp = row.xp;
+                        user.bag.equip[row.eid].god = row.god;
+                        user.bag.equip[row.eid].god_id = row.god_id;
+                    }
+                }
+            });
+
+            for(var eid in user.bag.equip) {
+                var equip = user.bag.equip[eid];
+                var hero = '';
+                if (equip.pos) {
+                    var heroId = user.pos[equip.pos].hid;
+                    hero = gConf.generaltext[gConf.hero[heroId].heroName].text;
+                }
+                allEquips.push({
+                    'eid' : eid,
+                    'name' : gConf.generaltext[gConf.equip[equip.id].name].text,
+                    'level' : gConf.equip[equip.id].level,
+                    'quality' : gQuality[gConf.equip[equip.id].quality],
+                    'xp' : equip.xp,
+                    'god' : equip.god,
+                    'god_id' : equip.god_id,
+                    'hero' : hero,
+                    //'subattr' : subattr.join(','),
+                });
+            }
+
+            $('#equips').edatagrid('loadData', allEquips);
+
+            setKeyboardEvent(
+                function() {
+                    if(curIndex != -1) {
+                        $('#equips').edatagrid('cancelRow');
+                        curIndex = -1;
+                    }
+                },
+                function() {
+                    if(curIndex != -1) {
+                        $('#equips').edatagrid('endEdit', curIndex);
+                        curIndex = -1;
+                    }
+                },
+                function() {
+                    $('#equips').edatagrid('destroyRow');
+                }
+            );
+        });
+    });
+</script>
+</head>
+<body>
+<div id="equip-panel" class="easyui-panel" style="width:100%; height: 100%;" data-options="maximized:true">
+    <div class="easyui-layout" style="width:100%;height:100%;padding:5px;">
+        <div region="west" title="装备显示" style="width: 70%; padding:10px;" data-options="">
+            <table id="equips" title="" style="width:100%;height:750px"
+              toolbar="#toolbar" pagination="true" idField="eid"
+                    rownumbers="true" fitColumns="true" singleSelect="true">
+                <thead>
+                    <tr>
+                        <th field="eid" width="30" sortable=true>装备ID</th>
+                        <th field="name" width="30" sortable=true>名称</th>
+                        <th field="level" width="30" sortable=true>等级</th>
+                        <th field="quality" width="30" sortable=true>品质</th>
+                        <th field="xp" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">吞噬经验</th>
+                        <th field="god" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">神器等级</th>
+                        <th field="god_id" width="30" sortable=true editor="text">神器属性</th>
+                        <th field="hero" width="30" sortable=true>所属武将</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="toolbar">
+                <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="javascript:$('#equips').edatagrid('destroyRow')">删除</a>
+                <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#equips').edatagrid('cancelRow')">取消</a>
+            </div>
+        </div>
+
+        <div region="center" title="装备发放" style="padding:10px;" data-options="">
+            <form id="give-equip-form">
+                <label for="equip-type">装备类型: </label>
+                <input name="equip-type" id="equip-type" /><br /><br />
+
+                <label for="equip-level">装备等级: </label>
+                <input name="equip-level" id="equip-level" /><br /><br />
+
+                <label for="equip-quality">装备品质: </label>
+                <input name="equip-quality" id="equip-quality" /><br /><br />
+
+                <label for="all-equips">待选装备: </label>
+                <input name="all-equip" id="all-equips" /><br /><br />
+
+                <label for="equip-isgod">是否神器: </label>
+                <input name="equip-isgod" id="equip-isgod" /><br /><br />
+
+                <label for="equip-god">神器属性: </label>
+                <input name="equip-god" id="equip-god" /><br /><br />
+
+                <label for="equip-num">发放数量: </label>
+                <input name="equip-num" id="equip-num" /><br /><br />
+
+                <a id="give-equip-btn" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:50" onclick="giveEquip()">发放</a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

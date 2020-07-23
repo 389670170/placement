@@ -1,0 +1,9 @@
+护甲类型ID	属性ID（显示用）	属性类型（1固定值，2百分比）（显示用）	属性值	护甲名称
+id	attId	attType	attValue	name
+Int	Int	Int	Int	String
+1	12	1	0	text_soldierArmorName1
+2	12	1	500	text_soldierArmorName2
+3	12	1	1000	text_soldierArmorName3
+4	12	1	1500	text_soldierArmorName4
+5	12	1	2000	text_soldierArmorName5
+6	12	1	2500	text_soldierArmorName6

@@ -1,0 +1,11 @@
+关键字	版本号	说明
+key	version	desc
+String	String	Ignore
+tarvenNormalCycle	20191206-0001	用于控制酒馆普通招募周期读取配置重置
+tarvenAdvancedCycle	20200108-0001	用于控制酒馆高级招募周期读取配置重置
+tarvenRefreshCycle	20191206-0001	用于控制酒馆限时招募周期读取配置重置
+runeBoxCycle	20191206-0001	用于符文宝箱周期读取配置重置
+signInReset	20191206-0001	用于特殊情况下需要立即重置签到奖励内容，正常情况下，签到奖励仅在下一个周期发生变化
+dragonBeadCycle	20191206-0001	用于提纲龙珠周期读取配置重置
+convoyTypeCycle	20200212-0001	用于护送类型周期读取配置重置
+vipReset	20200402-0001	用于VIP一次性礼包修改后重置以重复购买

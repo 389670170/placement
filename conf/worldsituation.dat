@@ -1,0 +1,13 @@
+进度编号	势力名称图片	势力名称	品质	关卡数量	势力	武将头像	奖励
+id	nameUrl	name	quality	target	camp	url	award
+Int	String	String	Int	Int	Int	String	Award
+1	uires/ui/task/gongsunzan.png	公 孙 瓒	5	6	10	uires/icon/hero/sunquan_icon.png	user.cash:40,user.gold:5000
+2	uires/ui/task/yuanshao.png	袁 绍	5	14	8	uires/icon/hero/yuanshao_icon.png	user.gold:10000,material.200027:40
+3	uires/ui/task/dongzhuo.png	董 卓	5	24	6	uires/icon/hero/dongzhuo_icon.png	user.cash:80,material.1:120
+4	uires/ui/task/liuzhang.png	刘 璋	5	33	11	uires/icon/hero/xushu_icon.png	material.1:240,user.soul:60
+5	uires/ui/task/mateng.png	马 腾	5	39	5	uires/icon/hero/machao_icon.png	user.cash:120,material.200002:20,material.200027:80
+6	uires/ui/task/zhangjiao.png	张 角	5	48	7	uires/icon/hero/zhangjiao_icon.png	user.cash:180,user.gold:96000,material.200002:40
+7	uires/ui/task/liubiao.png	刘 表	5	61	9	uires/icon/hero/lusu_icon.png	user.cash:240,material.300001:480,user.cash:240
+8	uires/ui/task/sunquan.png	孙 权	5	76	4	uires/icon/hero/sunquan_icon.png	user.cash:300,material.300001:720,user.soul:150
+9	uires/ui/task/liubei.png	刘 备	5	96	3	uires/icon/hero/liubei_icon.png	user.cash:400,material.1:640,material.200003:20
+10	uires/ui/task/caocao.png	曹 操	6	122	2	uires/icon/hero/caocao_icon.png	user.cash:500,user.soul:240,material.200027:200

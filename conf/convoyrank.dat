@@ -1,0 +1,10 @@
+排序	排名	奖励内容
+sort	rank	award
+Int	Int	Award
+1	1	user.htoken:10,user.rotate_ncoin:5,user.rune_crystal:10000
+2	2	user.htoken:8,user.rotate_ncoin:5,user.rune_crystal:7500
+3	3	user.htoken:6,user.rotate_ncoin:5,user.rune_crystal:5000
+4	4	user.htoken:5,user.rotate_ncoin:4,user.rune_crystal:4000
+5	21	user.htoken:4,user.rotate_ncoin:3,user.rune_crystal:3000
+6	51	user.htoken:3,user.rotate_ncoin:2,user.rune_crystal:2000
+7	101	user.htoken:2,user.rotate_ncoin:1,user.rune_crystal:1000

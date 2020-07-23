@@ -1,0 +1,10 @@
+序号	BOSS阵型	解锁条件	引导栏图片	引导栏美术字	展示模型系数	模型X偏移	模型Y偏移	奖励展示	奖励	奖励2	奖励2循环模式
+id	formation	condition	icon	text1	scale	xPos	yPos	awardShow	award	specialAward	specialAwardCycle
+Int	Int	Ints	String	String	Int	Int	Int	Award	Award	Award	Ints
+1	2005001	6|9|15|16	104.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:20000,user.hero_exp:8600,user.ntoken:1,group.2001.0:6	material.300006:1,user.gold:20000,user.hero_exp:8600,user.ntoken:1	group.2001.0:6	1
+2	2005002	17|18|19|20	105.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:23300,user.hero_exp:16600,user.ntoken:2,group.2002.0:3	material.300006:1,user.gold:23300,user.hero_exp:16600,user.ntoken:2	group.2002.0:3	1
+3	2005003	21|22|23|24	106.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:33300,user.hero_exp:41100,user.ntoken:3,group.2003.0:1	material.300006:1,user.gold:33300,user.hero_exp:41100,user.ntoken:3	group.2003.0:1	1
+4	2005004	25|26|27|28	107.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:51800,user.hero_exp:86800,user.ntoken:4,group.2004.0:1	material.300006:1,user.gold:51800,user.hero_exp:86800,user.ntoken:4	group.2004.0:1	4
+5	2005005	29|30|31|32	108.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:74700,user.hero_exp:140000,user.ntoken:6,group.2005.0:1	material.300006:1,user.gold:74700,user.hero_exp:140000,user.ntoken:6	group.2005.0:1	10
+6	2005006	33|34|35|36	109.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:92100,user.hero_exp:173000,user.ntoken:8,group.2006.0:1	material.300006:1,user.gold:92100,user.hero_exp:173000,user.ntoken:8	group.2006.0:1	15
+7	2005007	37|38|39|40	110.png	outlinetheme_5.png	0.9	0	-60	material.300006:1,user.gold:104000,user.hero_exp:194000,user.ntoken:10,group.2007.0:1	material.300006:1,user.gold:104000,user.hero_exp:194000,user.ntoken:10	group.2007.0:1	25

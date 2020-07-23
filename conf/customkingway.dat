@@ -1,0 +1,7 @@
+宝箱序号	需求星数	宝箱ICON	奖励
+id	star	icon	award
+Int	Int	String	Award
+1	1	box1.png	material.300201:1
+2	3	box2.png	material.300202:1
+3	5	box3.png	material.300203:1
+4	7	guide_hero.png	material.300204:1

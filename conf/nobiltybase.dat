@@ -1,0 +1,15 @@
+爵位ID	爵位名称	操作	图标	1星特权	特权值1	2星特权	特权值2	3星特权	特权值3	全体攻击加成	全体物防加成	全体法防加成	全体生命加成
+id	name	key	icon	pg1	pgnum1	pg2	pgnum2	pg3	pgnum3	attr1	attr2	attr3	attr4
+Int	String	String	String	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int
+1	text_taskNobiltyBaseName_1	guangZhong	feats_1_1.png	15	1	6	5	14	60	0	0	0	0
+2	text_taskNobiltyBaseName_2	minHao	feats_1_2.png	15	1	6	5	7	60	100	62	62	1210
+3	text_taskNobiltyBaseName_3	guanNei	feats_1_3.png	15	1	6	5	7	60	330	200	200	3930
+4	text_taskNobiltyBaseName_4	duTin	feats_2_1.png	15	1	6	5	7	60	640	400	400	7690
+5	text_taskNobiltyBaseName_5	duXiang	feats_2_2.png	15	1	6	5	7	60	1030	640	640	12300
+6	text_taskNobiltyBaseName_6	shouTin	feats_2_3.png	15	1	6	5	7	60	1490	930	930	17900
+7	text_taskNobiltyBaseName_7	tin	feats_3_1.png	15	1	6	5	7	60	2030	1270	1270	24400
+8	text_taskNobiltyBaseName_8	xiang	feats_3_2.png	15	1	6	5	7	60	2630	1650	1650	31600
+9	text_taskNobiltyBaseName_9	xian	feats_3_3.png	15	1	6	5	7	60	3280	2050	2050	39400
+10	text_taskNobiltyBaseName_10	nei	feats_4_1.png	15	1	6	5	7	60	4000	2500	2500	48000
+11	text_taskNobiltyBaseName_11	lie	feats_4_2.png	15	1	6	5	7	60	4820	3010	3010	57800
+12	text_taskNobiltyBaseName_12	wang	feats_4_3.png	15	1	6	5	7	60	5720	3570	3570	68600

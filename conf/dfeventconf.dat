@@ -1,0 +1,14 @@
+事件ID	备注_触发条件	备注_参数1	备注_参数2	备注_参数3	提示文字	提示文字1
+id	remark_condition	remark_val1	remark_val2	remark_val3	desc	text
+Int	String	String	String	String	String	String
+1	在我方领地激活了石碑	激活石碑玩家名称			text_territoryLogStr_1	text_territoryLogHtmStr_1
+2	在敌方领地激活了石碑	激活石碑玩家名称	激活石碑所在领地名称		text_territoryLogStr_2	text_territoryLogHtmStr_2
+3	我方矿点被掠夺	矿点名称	掠夺者领地名称	掠夺者名称	text_territoryLogStr_3	text_territoryLogHtmStr_3
+4	传送门开启时				text_territoryLogStr_4	text_territoryLogHtmStr_4
+5	传送点匹配到对手时				text_territoryLogStr_5	text_territoryLogHtmStr_5
+6	我方领地激活了哨塔	激活哨塔玩家的名称	哨塔的名称		text_territoryLogStr_6	text_territoryLogHtmStr_6
+7	我方领地激活了矿点	占领矿点玩家名称	矿点名称		text_territoryLogStr_7	text_territoryLogHtmStr_7
+8	我方玩家在我方领地击退敌人	击退敌人玩家名称	入侵玩家领地名称	入侵玩家名称	text_territoryLogStr_8	text_territoryLogHtmStr_8
+9	我方玩家在敌方领地被敌人击退	己方玩家名称	敌方玩家领地名称	敌方玩家名称	text_territoryLogStr_9	text_territoryLogHtmStr_9
+10	我方玩家在我方领地被击败	敌方玩家领地名称	敌方玩家名称		text_territoryLogStr_10	text_territoryLogHtmStr_10
+11	我方玩家对地方矿点进行掠夺	玩家名称	敌方领地名称	矿点名称	text_territoryLogStr_11	text_territoryLogHtmStr_11

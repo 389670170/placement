@@ -1,0 +1,15 @@
+类型	技能ID	名称	图片	属性类型	解锁阶数	每阶提升上限
+type	id	name	icon	att	unlock	levelLimit
+Int	Int2	String	String	Int	Int	Int
+1	1	text_skySkillName1_1	skill_lvyijianshi_02.png	1	1	10
+1	2	text_skySkillName1_2	skill_zhujue_01.png	3	2	10
+1	3	text_skySkillName1_3	skill_zhujue_02.png	2	3	10
+1	4	text_skySkillName1_4	skill_zhengyizhizi_01.png	4	4	10
+2	1	text_skySkillName1_1	skill_huopaodashi_01.png	4	1	10
+2	2	text_skySkillName1_2	skill_lvyijianshi_01.png	2	2	10
+2	3	text_skySkillName1_3	skill_juchuiairen_02.png	1	3	10
+2	4	text_skySkillName1_4	skill_juchuiairen_01.png	3	4	10
+3	1	text_skySkillName1_1	skill_shengqishi_01.png	3	1	10
+3	2	text_skySkillName1_2	skill_shengqishi_02.png	4	2	10
+3	3	text_skySkillName1_3	skill_yezhuqishi_01.png	2	3	10
+3	4	text_skySkillName1_4	skill_yezhuqishi_02.png	1	4	10

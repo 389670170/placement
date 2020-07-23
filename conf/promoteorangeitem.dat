@@ -1,0 +1,6 @@
+道具id	道具名	索引id	操作(程序用)
+id	name	arrayId 	key
+Int	String	Int	String
+15	封将珠	0	0
+17	红将令	1	0
+0	将魂	2	soul

@@ -1,0 +1,17 @@
+等级礼包	等级条件	礼包奖励
+id	level	awards
+Int	Int	Award
+1	10	user.bindcash:10,fragment.5016:2,user.gold:5000
+2	20	user.bindcash:20,fragment.5016:2,user.gold:10000
+3	30	user.bindcash:30,fragment.5016:3,user.gold:15000
+4	40	user.bindcash:40,fragment.5016:3,user.gold:20000
+5	50	user.bindcash:50,fragment.5016:5,user.gold:25000
+6	60	user.bindcash:60,fragment.5016:5,user.gold:30000
+7	70	user.bindcash:70,fragment.5016:10,user.gold:35000
+8	80	user.bindcash:80,fragment.5016:10,user.gold:40000
+9	90	user.bindcash:90,fragment.5016:10,user.gold:45000
+10	100	user.bindcash:100,fragment.5016:10,user.gold:50000
+11	120	user.bindcash:200,material.950:10,user.gold:100000
+12	140	user.bindcash:200,material.950:10,user.gold:200000
+13	160	user.bindcash:200,material.950:20,user.gold:300000
+14	180	user.bindcash:200,material.950:20,user.gold:500000

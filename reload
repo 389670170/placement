@@ -1,0 +1,79 @@
+#!/bin/env node
+var http   = require('http');
+var colors = require('colors');
+var server = require('./server.js');
+var config = require(require('fs').existsSync('../config.js') ? '../config.js' : './config.js');
+
+var requestGate = function(query, resp, callback) {
+    var options = {
+        host: config.GatewayHost,
+        port: config.GatewayListen,
+        path: '/',
+    };
+    for (var arg in query) {
+        if (options.path.length == 1) {
+            options.path += '?';
+        } else {
+            options.path += '&';
+        }
+        options.path += arg + '=' + escape(query[arg]);
+    }
+
+    var req = http.request(options, function(res) {
+        var chunks = [];
+        res.on('data', function(chunk) {
+            chunks.push(chunk);
+        });
+
+        res.on('end', function() {
+            var data = Buffer.concat(chunks).toString();
+            var gateResp = null;
+            try {
+                gateResp = JSON.parse(data);
+            } catch (error) {
+                console.error('gate resp ' + data);
+                gateResp = null;
+            }
+
+            if (!gateResp) {
+                resp.code = 1;
+                resp.desc = 'request gate error';
+            } else {
+                resp.code = gateResp.code;
+                resp.desc = gateResp.desc;
+                resp.data = gateResp.data;
+            }
+
+            callback && callback(gateResp);
+        });
+    });
+
+    req.on('error', function(e) {
+        console.error('problem with request: ' + e.message);
+        resp.code = 1;
+        resp.desc = 'request gate error';
+        callback && callback(null);
+    });
+
+    req.end();
+};
+
+var query = {
+    uid: 10000,
+    act: 'gm',
+    method: 'reload',
+};
+
+var resp = {
+    code: 0,
+    desc: "",
+    data: {}
+};
+
+requestGate(query, resp, function(gateResp) {
+    if (resp.code == 0) {
+        console.log("Reloading Game ..............\t" + "[OK]".green);
+    } else {
+        console.log("Reloading Game ..............\t" + "[FAIL]".red);
+    }
+});

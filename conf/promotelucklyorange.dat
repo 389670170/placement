@@ -1,0 +1,9 @@
+转盘索引	随机权重	奖励
+id	weight	award
+Int	Int	Award
+1	201	material.15:200
+2	100	material.15:400
+3	262	material.17:3
+4	120	material.17:6
+5	247	user.soul:80
+6	70	user.soul:200

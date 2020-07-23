@@ -1,0 +1,5 @@
+转盘id	转盘自动重置时间	基础奖池	单次抽取奖池增量	奖池周期	奖池ICON展示道具	奖池比例	出现次数	单次抽取玩家必得	单次抽取消耗	刷新消耗	单次转增加能量	格子对应产物组	必出能量
+id	resetTime	basePond	pondIncrease	pondCycle	pondItem	pondPer	pondTimes	awardOnce	cost	refreshCost	rotatePower	gridSet	pPower
+Int	Ints	Award	Int	Int	Award	Ints	Ints	Award	Award	Award	Int	Ints	Ints
+1	4|10|16|22	user.rotate_score:10000	5	750	material.300401:1,material.300402:1,material.300403:1	1|5|10	10|2|1	user.rotate_score:0	user.rotate_ncoin:-1	user.mixcash:-20	45	1|2|3|4|5|6|7|8	2|2000
+2	4|10|16|22	user.rotate_score:100000	400	750	material.300401:1,material.300402:1,material.300403:1	1|5|10	20|4|2	user.rotate_score:0	user.rotate_hcoin:-1	user.mixcash:-50	400	11|12|13|14|15|16|17|18	2|5000

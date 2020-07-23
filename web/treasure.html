@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<link rel="stylesheet" type="text/css" href="table.css">
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+
+    function beforeSubmit(param) {
+        param.act = request.act;
+        param.method = request.method;
+        param.openid = request.openid;
+        param.uid = request.uid;
+    }
+
+    function changeTreasure() {
+        request.method = 'change_treasure';
+        $('#treasure-form').submit();
+    }
+
+    function changeDragon() {
+        request.method = 'change_dragon';
+        $('#dragon-form').submit();
+    }
+
+    $(document).ready(function() {
+        $('#treasure_id').combobox({
+            data: [],
+            valueField: 'id',
+            textField: 'text',
+            editable: false,
+            onSelect: function(param) {
+                var treasureActiveData = [];
+                for (var active in gConf.treasure[param.id]) {
+                    var item = {
+                        'id': +active,
+                        'text': active,
+                    };
+                    if (user.treasure.active == active) {
+                        item.selected= true;
+                    }
+
+                    treasureActiveData.push(item);
+                }
+                $('#treasure_active').combobox('loadData', treasureActiveData);
+            },
+        });
+
+        $('#treasure_active').combobox({
+            data: [],
+            valueField: 'id',
+            textField: 'text',
+            editable: false,
+        });
+
+        $('#dragon_id').combobox({
+            data: [],
+            valueField: 'id',
+            textField: 'text',
+            editable: false,
+        });
+
+        $('#dragon_level').combobox({
+            data: [],
+            valueField: 'id',
+            textField: 'text',
+            editable: false,
+        });
+
+        $('#treasure-form').form({
+            url: '.',
+            onSubmit: function(param) {
+                beforeSubmit(param);
+                return true;
+            },
+        });
+
+        $('#dragon-form').form({
+            url: '.',
+            onSubmit: function(param) {
+                beforeSubmit(param);
+                return true;
+            },
+        });
+
+        loadConf(['treasure', 'dragonlevel', 'playerskill'], function() {
+            var treasureIdData = [];
+            for (var id in gConf.treasure) {
+                var item = {
+                    'id': +id,
+                    'text': id,
+                };
+                if (user.treasure.id == id) {
+                    item.selected = true;
+                }
+
+                treasureIdData.push(item);
+            }
+            $('#treasure_id').combobox('loadData', treasureIdData);
+
+            var treasureActiveData = [];
+            for (var active in gConf.treasure[user.treasure.id]) {
+                var item = {
+                    'id': +active,
+                    'text': active,
+                };
+                if (user.treasure.active == active) {
+                    item.selected= true;
+                }
+
+                treasureActiveData.push(item);
+            }
+            $('#treasure_active').combobox('loadData', treasureActiveData);
+
+            var dragonData = [];
+            for (var id in user.dragon) {
+                var item = {
+                    'id': +id,
+                    'text': gConf.playerskill[id].skillImg,
+                };
+                if (item.id == 2) {
+                    item.selected = true;
+                }
+
+                dragonData.push(item);
+            }
+            $('#dragon_id').combobox('loadData', dragonData);
+
+            var dragonLevelData = [];
+            for (var i = 1; i <= 5; i++) {
+                var item = {
+                    'id': i,
+                    'text': i,
+                };
+                if (i == user.dragon[2].level) {
+                    item.selected = true;
+                }
+
+                dragonLevelData.push(item);
+            }
+            $('#dragon_level').combobox('loadData', dragonLevelData);
+        });
+    });
+</script>
+</head>
+<body>
+    <form id="treasure-form">
+        <table>
+            <tr>
+                <td>当前激活</td>
+                <td>
+                    <input id="treasure_id" name="treasure_id"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>激活进度</td>
+                <td>
+                    <input id="treasure_active" name="treasure_active"></input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><a id="change_treasure" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="changeTreasure()">更改宝物</a></td>
+            </tr>
+        </table>
+    </form>
+    <hr>
+    <form id="dragon-form">
+        <table>
+            <tr>
+                <td>龙ID</td>
+                <td>
+                    <input id="dragon_id" name="dragon_id"></input>
+                </td>
+            </tr>
+            <tr>
+                <td>龙等级</td>
+                <td>
+                    <input id="dragon_level" name="dragon_level"></input>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><a id="change_dragon" href="javascript:void(0);" class="easyui-linkbutton" data-options="width:80" onclick="changeDragon()">更改技能槽</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

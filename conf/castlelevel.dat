@@ -1,0 +1,8 @@
+等级	城池名称	消耗	城池收益	图标	缩放	位置
+level	name	cost	effect	icon	scale	pos
+Int	String	Award	Int	String	Int	Ints
+1	一级城池	user.wood:-100	100	city_1.png	1	102|63
+2	二级城池	user.wood:-200	200	city_2.png	1	102|63
+3	三级城池	user.wood:-300	300	city_3.png	1	102|63
+4	四级城池	user.wood:-400	400	city_4.png	1	102|63
+5	五级城池	user.wood:-500	500	city_5.png	1	102|63

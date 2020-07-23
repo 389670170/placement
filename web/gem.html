@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GM管理工具</title>
+<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="themes/icon.css">
+<link rel="stylesheet" type="text/css" href="jquery.easyui.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easyui.min.js"></script>
+<script type="text/javascript" src="jquery.edatagrid.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var user = parent.user;
+    var request = parent.request;
+    var curIndex = -1;
+
+    var allGems = [];
+
+    function getGridUrl(method) {
+        request.method = method;
+        var gridParams = [];
+        for (var p in request) {
+            gridParams.push(p + '=' + request[p]);
+        }
+        return '.?'+gridParams.join('&');
+    }
+
+    $(document).ready(function() {
+        $('#gems').edatagrid({
+            remoteSort: false,
+            updateUrl: getGridUrl('update_gem'),
+            onBeforeEdit : function(index, row) {
+                curIndex = index
+            },
+            onAfterEdit: function(index, row) {
+                if(row) {
+                    user.bag.gem[row.id] = row.num;
+                }
+            }
+        });
+
+        loadConf(['gem','generaltext'], function() {
+            for(var id in gConf.gem) {
+                var gem = gConf.gem[id];
+
+                var quality = '';
+                if(gem.quality) {
+                    quality = gQuality[gem.quality];
+                }
+                var num = 0;
+                if(user.bag.gem[id]) {
+                    num = user.bag.gem[id];
+                }
+
+                allGems.push({
+                    'id' : id,
+                    'name' : gConf.generaltext[gem.name].text,
+                    'level' : gem.level,
+                    'quality' : quality,
+                    'type' : gem.type,
+                    'num' : num,
+                });
+            }
+
+            $('#gems').edatagrid('loadData', allGems);
+        });
+
+        setKeyboardEvent(function() {
+            if(curIndex != -1) {
+                $('#gems').edatagrid('cancelRow');
+                curIndex = -1;
+            }
+        },
+        function() {
+            if(curIndex != -1) {
+                $('#gems').edatagrid('endEdit', curIndex);
+                curIndex = -1;
+            }
+        });
+    });
+</script>
+</head>
+<body>
+    <table id="gems" title="" style="width:50%;height:750px"
+            toolbar="#toolbar" pagination="true" idField="id"
+            rownumbers="true" fitColumns="true" singleSelect="true">
+        <thead>
+            <tr>
+                <th field="id" width="30" sortable=true>材料ID</th>
+                <th field="name" width="30" sortable=true>名称</th>
+                <th field="level" width="30" sortable=true>等级</th>
+                <th field="quality" width="30" sortable=true>品质</th>
+                <th field="type" width="30" sortable=true>类型</th>
+                <th field="num" width="30" sortable=true editor="{type:'validatebox',options:{required:true}}">数量</th>
+            </tr>
+        </thead>
+    </table>
+    <div id="toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-undo" plain="true" onclick="javascript:$('#gems').edatagrid('cancelRow')">取消</a>
+    </div>
+</body>
+</html>

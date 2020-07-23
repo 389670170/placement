@@ -1,0 +1,18 @@
+找回类型	参数	免费系数	元宝系数	单次元宝消耗数量	找回种类：0只有免费，1只有元宝，2两种	描述	资源
+type	para	freeRadio	cashRadio	perCash	backType	desc	url
+String	Ints	Int	Int	Int	Int	String	String
+tower		0.8	1	20	2	千层塔	uires/icon/dailytask/daily_task2.png
+xp		0.5	1	10	2	经验副本	uires/icon/dailytask/daily_task18.png
+gold		0.5	1	10	2	金币副本	uires/icon/dailytask/daily_task16.png
+reborn		0.5	1	10	2	突破石副本	uires/icon/dailytask/daily_task19.png
+destiny		0.5	1	10	2	天命副本	uires/icon/dailytask/daily_task20.png
+shipper	2|2|2|2|2|2|2|2|2|2|2	0.6	1	15	2	镖车护送	uires/icon/dailytask/daily_task4.png
+arena		0.6	1	5	2	擂台	uires/icon/dailytask/daily_task3.png
+task		0.5	1	50	2	每日任务	uires/icon/dailytask/daily_task10.png
+explore		0.5	1	20	2	秘境探险	uires/icon/dailytask/daily_task52.png
+dragon	300004|80|200119|1	0	1	30	1	采集龙晶	uires/icon/dailytask/daily_task33.png
+mine	3|3|3|3|3|3|4|4|4|4|4	0.5	1	20	2	金矿占领	uires/icon/dailytask/daily_task5.png
+copy		0.6	1	10	2	军团远征	uires/icon/dailytask/daily_task26.png
+trial		0	1	30	1	试炼之地	uires/icon/dailytask/daily_task22.png
+food	35|2	0.5	1	10	2	粮草领取	uires/icon/dailytask/daily_task27.png
+jade	2|2|2|2|2|2|2|2|2|2|2	0.5	1	10	2	合璧	uires/icon/dailytask/daily_task47.png

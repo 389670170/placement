@@ -1,0 +1,10 @@
+排序	排名（等级）	奖励内容
+sort	rank	award
+Int	Int	Award
+1	1	user.htoken:15,material.100401:1,material.101201:10
+2	2	user.htoken:12,material.100401:1,material.101201:8
+3	3	user.htoken:10,material.100401:1,material.101201:6
+4	4	user.htoken:8,material.100402:1,material.101201:5
+5	11	user.htoken:6,material.100402:1,material.101201:4
+6	21	user.htoken:4,material.100402:1,material.101201:3
+7	51	user.htoken:2,material.100402:1,material.101201:2

@@ -1,0 +1,10 @@
+编号	排名	排名奖励
+id	rank	awards
+Int	Int	Award
+1	1	group.20000005.0:1,material.100003:1,skymount.9.1:7
+2	2	group.20000004.0:2,material.100003:1,skymount.9.1:5
+3	3	group.20000004.0:1,material.100003:1,skymount.9.1:4
+4	4	group.20000003.0:3,material.100002:3,skymount.9.1:3
+5	9	group.20000003.0:2,material.100002:2,skymount.9.1:2
+6	17	group.20000003.0:1,material.100002:1,skymount.9.1:1
+7	33	group.20000002.0:4,material.100002:1

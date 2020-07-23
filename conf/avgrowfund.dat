@@ -1,0 +1,16 @@
+奖励	类型（0:基金奖励,1:全民奖励）	达成条件（0:开启等级,1:需要购买人数）	VIP条件	奖励一
+id	type	condition	vip	awards1
+Int	Int	Int	Int	Award
+1	0	20	0	user.bindcash:100,material.940:40
+2	0	30	0	user.bindcash:100,equip.20301.0:1,equip.60301.0:1
+3	0	40	0	user.bindcash:200,user.htoken:3
+4	0	50	0	user.bindcash:200,material.940:40
+5	0	60	0	user.bindcash:200,material.950:30
+6	0	70	0	user.bindcash:200,equip.10401.0:1,equip.20401.0:1
+7	0	80	0	user.bindcash:500,equip.30401.0:1,equip.40401.0:1
+8	0	90	0	user.bindcash:500,equip.50401.0:1,equip.60401.0:1
+9	0	100	0	user.bindcash:500,user.rotate_ncoin:10
+10	0	110	0	user.bindcash:500,equip.10501.0:1,equip.20501.0:1
+11	0	120	0	user.bindcash:500,equip.30501.0:1,equip.40501.0:1
+12	0	130	0	user.bindcash:1000,equip.50501.0:1,equip.60501.0:1
+13	0	140	0	user.bindcash:1500,user.rotate_hcoin:10

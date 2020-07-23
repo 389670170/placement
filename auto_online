@@ -1,0 +1,83 @@
+#!/bin/sh
+
+MANAGE=         # manage脚本
+INIT_DB=        # 数据库初始化脚本
+SERVER=         # 服务器类型
+
+# 切换目录
+OLD_DIR="$( pwd )"
+DIR="$( cd "$( dirname "$0"  )" && pwd  )"
+cd $DIR
+
+config='../config.js'
+if [ -f 'config.js' ]; then
+    config='config.js'
+fi
+
+server=`grep exports.ServerId $config | awk '{print $3}' | awk -F';' '{print $1}'`
+global=`grep exports.GlobalServerPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+worldwar=`grep exports.WorldWarPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+legionwar=`grep exports.LegionWarServerPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+territorywar=`grep exports.TerritoryWarPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+countrywar=`grep exports.CountryWarPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+arena=`grep exports.ArenaServerPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+landgrabber=`grep exports.LandGrabberPort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+teamzone=`grep exports.TeamZonePort $config | awk '{print $3}' | awk -F';' '{print $1}'`
+
+if [ "$server" != "" ]; then
+    SERVER='game'
+    INIT_DB='initdb.js'
+    MANAGE='manage'
+elif [ "$global" != "" ]; then
+    SERVER='global'
+    INIT_DB='init_global_server_db'
+    MANAGE='global_server_manage'
+elif [ "$worldwar" != "" ]; then
+    SERVER='worldwar'
+    INIT_DB='init_worldwar_db.js'
+    MANAGE='worldwar_manage'
+elif [ "$legionwar" != "" ]; then
+    SERVER='legionwar'
+    INIT_DB='init_legionwar_db.js'
+    MANAGE='legionwar_manage'
+elif [ "$territorywar" != "" ]; then
+    SERVER='territorywar'
+    INIT_DB='init_territorywar_db.js'
+    MANAGE='territorywar_manage'
+elif [ "$countrywar" != "" ]; then
+    SERVER='countrywar'
+    INIT_DB='init_countrywar_db.js'
+    MANAGE='countrywar_manage'
+elif [ "$arena" != "" ]; then
+    SERVER='arena'
+    INIT_DB='init_arena_db.js'
+    MANAGE='arena_manage'
+elif [ "$landgrabber" != "" ]; then
+    SERVER='landgrabber'
+    INIT_DB='init_landgrabber_db.js'
+    MANAGE='landgrabber_manage'
+elif [ "$teamzone" != "" ]; then
+    SERVER='teamzone'
+    INIT_DB='init_teamzone_db.js'
+    MANAGE='teamzone_manage'
+fi
+
+sh $MANAGE stop
+git reset --hard HEAD >/dev/null 2>&1
+git clean -fd >/dev/null 2>&1
+git pull >/dev/null 2>&1
+
+# 更新servers配置
+if [ -d "servers/s$server" ]; then
+    cp servers/s$server/*.dat conf/
+fi
+
+node $INIT_DB >/dev/null
+if [ $? -eq 0 ]; then
+    sh $MANAGE start
+else
+    echo "init $SERVER db error"
+fi
+
+# 还原目录
+cd $OLD_DIR

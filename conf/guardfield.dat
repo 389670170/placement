@@ -1,0 +1,9 @@
+城市ID	城池名字	开启等级	镇压暴乱成功后获取的奖励	每日赠送的免费时间	说明	城民1	语言1	语言2	语言3	城民2	语言4	语言5	语言6	城民3	语言7	语言8	语言9	背景图
+city	name	level	repressAward	free	desc	npc1	sentence1	sentence2	sentence3	npc2	sentence4	sentence5	sentence6	npc3	sentence7	sentence8	sentence9	bgimg
+Int	String	Int	Award	Int	String	String	String	String	String	String	String	String	String	String	String	String	String	String
+1	长坂坡	1	user.cash:20	8	长坂坡又称当阳桥。因在当阳市北郊并西连长板坡而名，乃赵子龙宣威之地	hero/xuhuang_big.png	少年！来比划比划？	来吧~跟我一决高下	0	hero/caiwenji_big.png	悲歌可以当泣，远望可以当归。	人生几何时，怀忧终年岁。 	0	hero/yuji_big.png	卜前程，问凶吉。	少年！来算上一卦？	0	guard_1.png
+2	虎牢关	50	user.cash:20	0	虎牢关南连嵩岳，北濒黄河，山岭交错，自成天险。大有一夫当关，万夫莫开之势，为历代兵家必争之地	hero/yanliang_big.png	这红脸长须大将是~~	关将军是我的偶像	0	hero/huangyueying_big.png	这位少年，一起玩吗？	要不要妾身舞一曲？	0	hero/xushu_big.png	少年！我看你骨骼惊奇。	一看你就是体面人！	0	guard_2.png
+3	逍遥津	60	user.cash:20	0	逍遥津又名“窦池”，张辽在此率八百勇士击破吴国的十万大军，被世人皆知！	hero/lvmeng_big.png	客官您要住店吗？	我们这是嘿店！不是黑店	0	hero/xiaoqiao_big.png	只想嫁公瑾这样的男人！	公瑾，您要替妾身做主啊！	0	hero/jiaxu_big.png	少年！我看你有血光之灾	生死有命，富贵在天！	0	guard_3.png
+4	荆州	70	user.cash:20	0	荆州古称江陵，群雄逐鹿之地。此地文化底蕴深厚、民风淳朴	hero/wenpin_big.png	愿赌就要服输！	再不还钱打断你的腿	0	hero/sunshangxiang_big.png	看什么看！没见过美女玩刀吗？	小心姐姐我砍了你！	0	hero/xunyou_big.png	今天天气真心不错	狂风暴雨，电闪雷鸣的！	0	guard_4.png
+5	宛城	80	user.cash:20	0	宛城乃商贾云集、富冠天下之地，重要军事、交通要点	hero/sunce_big.png	新到的美酒，来尝尝吗？	张飞牛肉，本店一绝！	0	hero/daqiao_big.png	每天只想让周郎多看我两眼!	公瑾！你要替妾身做主啊~	0	hero/tongyong_fa_big.png	苍生万物，幻化随心	那都是骗你们的！	0	guard_5.png
+6	洛神谷	90	user.cash:20	0	传说是洛神女神降临人间之地。此地气候宜人、植被繁茂、景色优美。	hero/lejin_big.png	有钱的捧个钱场！	没钱的回去取钱！	0	hero/xinxianying_big.png	你看的人家都不还意思了！	人家只卖艺不卖身~	0	hero/zhangliang_big.png	少年！我这里有三本书	一本只收5元钱	0	guard_6.png

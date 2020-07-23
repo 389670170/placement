@@ -1,0 +1,5 @@
+进阶类型	进度	品质	名称前缀	星星显示	进阶名称	进阶攻击成长提升	进阶生命成长提升	进阶物防成长提升	进阶法防成长提升	进阶消耗	按钮资源	圈资源
+type	progress	quality	surname	heroStars	promoteName	promoteAddAtk	promoteAddHp	promoteAddDef	promoteAddMagDef	cost	btnIcon	qIcon
+Int	Int2	Int	String	Int	String	Int	Int	Int	Int	Award	String	String
+3	100	7	金·	0	金·阶	0	0	0	0	material.19:-10,user.soul:-79	role_promoted_gold.png	role_q_gold.png
+3	200	7	金·	0	金·阶	0	0	0	0	material.19:-10,user.soul:-80	role_promoted_gold.png	role_q_gold.png

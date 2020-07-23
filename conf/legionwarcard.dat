@@ -1,0 +1,10 @@
+编号	名称	颜色	每轮使用限制次数_0:没有上限	购买价格_0：无法通过此货币购买	钻石价格_0：无法通过此货币购买	使用限制_1：修筑界面_2：战场界面_3：挑战界面_4：城池界面_5：点击城池	使用时间_3：休息阶段_1：准备阶段_2：开始阶段	使用对象_1:城池_2:玩家	使用对象_1:城池_2:玩家1	提升数值	展示数值	参数	描述	图标
+id	name	color	useNumLimit	legionUserCost	mixCashCost	useLimit	useTime	useTarget	usedToOwn	parameter	showParameter	key	desc	icon
+Int	String	String	Int	Award	Award	Int	Int	Int	Int	Int	Int	String	String	String
+1	text_legion_magicName1	blue	5	user.legionwarscore:-4800	0	1	1	1	1	1200	1200	build	text_legion_magicDesc1	skill_juchuiairen_01.png
+2	text_legion_magicName2	purple	1	user.legionwarscore:-4800	0	1	1	2	1	60	60	expedite	text_legion_magicDesc2	dragon_skill_7.png
+3	text_legion_magicName3	blue	2	user.legionwarscore:-9600	0	5	2	1	0	0	0	through	text_legion_magicDesc3	skill_zhengyizhizi_01.png
+4	text_legion_magicName4	purple	1	user.legionwarscore:-4800	0	2	2	2	1	1	1	attack	text_legion_magicDesc4	skill_zhengyizhizi_02.png
+5	text_legion_magicName5	purple	2	user.legionwarscore:-4800	0	4	2	2	0	0	0	fact	text_legion_magicDesc5	skill_huopaodashi_01.png
+6	text_legion_magicName6	orange	0	user.legionwarscore:-480	0	3	2	2	1	3000	30	defense	text_legion_magicDesc6	soldier1_1.png
+7	text_legion_magicName7	orange	0	user.legionwarscore:-480	0	3	2	2	1	3000	30	damage	text_legion_magicDesc7	soldier2_2.png

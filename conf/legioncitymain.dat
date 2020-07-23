@@ -1,0 +1,13 @@
+城池等级	城池图片	升级建设度需求	缩放	位置
+level	url	condition	scale	pos
+Int	String	String	Int	Ints
+1	city_big_9.png	16	1	102|63
+2	city_big_8.png	32	1	102|63
+3	city_big_7.png	48	1	102|63
+4	city_big_6.png	64	1	102|63
+5	city_big_5.png	80	1	102|63
+6	city_big_4.png	96	1	102|63
+7	city_big_3.png	112	1	102|63
+8	city_big_2.png	128	1	102|63
+9	city_big_1.png	144	1	102|63
+10	city_big_0.png	160	1	102|63

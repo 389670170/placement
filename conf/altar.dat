@@ -1,0 +1,7 @@
+祈求类型	开启需求等级	免费次数	1轮祈求花费	2轮祈求花费	3轮祈求花费	4轮祈求花费	5轮祈求花费	6轮祈求花费	7轮祈求花费	8轮祈求花费	9轮祈求花费	10轮祈求花费	11轮祈求花费	12轮祈求花费	13轮祈求花费	14轮祈求花费	15轮祈求花费	16轮祈求花费	类型
+id	limit	free	cost1	cost2	cost3	cost4	cost5	cost6	cost7	cost8	cost9	cost10	cost11	cost12	cost13	cost14	cost15	cost16	type
+Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	Int	String
+1	5	1	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	simple
+2	30	1	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	simple
+3	60	1	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	simple
+4	10	1	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	40	simple

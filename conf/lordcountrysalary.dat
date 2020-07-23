@@ -1,0 +1,6 @@
+名次	奖励
+rank	awards
+Int	Award
+1	user.cash:20,user.soul:40,user.food:40
+2	user.cash:15,user.soul:30,user.food:30
+3	user.cash:10,user.soul:20,user.food:20

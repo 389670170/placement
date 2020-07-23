@@ -1,0 +1,7 @@
+宝箱ID	领取完成任务数限制	宝箱关联道具	奖励道具尺寸
+id	limit	award	size
+Int	Int	Award	Int
+1	10	user.wand:1	1
+2	20	material.101601:1	1
+3	30	material.101602:1	1
+4	40	material.101603:1	1

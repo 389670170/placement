@@ -1,0 +1,9 @@
+编号	课程名称	奖励	我方阵容	敌方阵容	课程	开启条件	君主技能id	君主技能等级	课程描述
+id	name	award	formation1	formation2	lessonId	condition	skillIds	levels	desc
+Int	String	Award	Int	Int	Int	Int	Ints	Ints	String
+1	text_warCollegeCourseName1	user.bindcash:20	80110	80120	1	10	0	0	text_warCollegeCourseDescribe1
+2	text_warCollegeCourseName2	user.bindcash:20	80210	80220	2	10	0	0	text_warCollegeCourseDescribe2
+3	text_warCollegeCourseName3	user.bindcash:20	80310	80320	3	10	0	0	text_warCollegeCourseDescribe3
+4	text_warCollegeCourseName4	user.bindcash:30	80410	80420	4	20	0	0	text_warCollegeCourseDescribe4
+5	text_warCollegeCourseName5	user.bindcash:30	80510	80520	5	20	0	0	text_warCollegeCourseDescribe5
+6	text_warCollegeCourseName6	user.bindcash:30	80610	80620	6	20	0	0	text_warCollegeCourseDescribe6

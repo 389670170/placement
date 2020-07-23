@@ -1,0 +1,15 @@
+编号	ID	排名	充值金额上榜数1	奖励
+confId	id	rank	num	award
+Int	Int2	Int	Int	Award
+1	1	1	200	material.950:120,user.htoken:15,material.100006:3
+1	2	2	100	material.950:80,user.htoken:12,material.100006:2
+1	3	3	50	material.950:60,user.htoken:10,material.100006:1
+1	4	4	50	material.950:40,user.htoken:6,material.100005:2
+1	5	11	30	material.950:20,user.htoken:4,material.100005:1
+1	6	21	5	material.950:10,user.htoken:2
+2	1	1	200	material.950:120,user.htoken:15,material.100006:3
+2	2	2	100	material.950:80,user.htoken:12,material.100006:2
+2	3	3	50	material.950:60,user.htoken:10,material.100006:1
+2	4	4	50	material.950:40,user.htoken:6,material.100005:2
+2	5	11	30	material.950:20,user.htoken:4,material.100005:1
+2	6	21	5	material.950:10,user.htoken:2

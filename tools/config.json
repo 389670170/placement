@@ -1,0 +1,22 @@
+{
+	"planConfigDir": "../../ms_document/config_base/develop/",
+	"serverConfigDir": "../conf",
+	"commonDirName": "common",
+	"serverOnlyDirName": "serveronly",
+	"activitiesDirName": "activities",
+	"serverNotCopy": 
+	[
+		"serveronly/explaintextcontentnotice.dat",
+		"serveronly/explaintexttypenotice.dat",
+		"common/language/english/explaintextcontentfaq.dat",
+		"common/language/english/explaintextcontenthelp.dat",
+		"common/language/english/explaintexttypefaq.dat",
+		"common/language/english/explaintexttypehelp.dat",
+		"common/language/english/helptext.dat",
+		"common/language/simplifiedchinese/explaintextcontentfaq.dat",
+		"common/language/simplifiedchinese/explaintextcontenthelp.dat",
+		"common/language/simplifiedchinese/explaintexttypefaq.dat",
+		"common/language/simplifiedchinese/explaintexttypehelp.dat",
+		"common/language/simplifiedchinese/helptext.dat"
+	]
+}

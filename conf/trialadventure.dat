@@ -1,0 +1,6 @@
+奇遇ID	触发次数范围	持续时间（h）	描述
+id	times	duration	desc
+Int	Ints	Int	String
+1	3|3	6	text_trial_5
+2	0|0	6	text_trial_6
+3	4|4	6	text_trial_7

@@ -1,0 +1,9 @@
+编号	奖励是否可重复领取(0:不可以，1:可以)	解锁描述	关卡数	本服累计道具数量	随机权重	抽奖奖励	城池id
+id	condition	desc	target	count	weight	awards	cityid
+Int	Int	Srting	Int	Int	Int	Award	Int
+1	1		0	0	15	material.1:1	0
+2	1	通关涿郡	4	0	15	material.1:2	4
+3	1	通关界桥	12	0	10	material.1:3	12
+4	1		0	0	10	material.1:4	0
+5	1	通关太原	18	0	8	material.1:5	18
+6	1	通关成都	24	0	5	material.1:6	24

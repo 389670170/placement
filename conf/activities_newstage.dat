@@ -1,0 +1,3 @@
+活动编号	活动轮数	活动开始距离开服天数	活动结束距离开服天数	配置文件编号Id
+key	round	startDay	endDay	confId
+String	Int	Int	Int	Int

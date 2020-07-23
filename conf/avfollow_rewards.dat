@@ -1,0 +1,7 @@
+编号	显示图标	标题文本	奖励展示
+id	showicon	titletext	awards
+Int	String	String	Award
+1	avfollow_rewards_1.png	text_av_follow_rewards_title_1	user.bindcash:50,material.100402:1,user.gold:100000
+2	avfollow_rewards_2.png	text_av_follow_rewards_title_2	user.bindcash:100,user.htoken:1,material.101201:1
+3	avfollow_rewards_3.png	text_av_follow_rewards_title_3	user.bindcash:50,material.940:20,material.1:20
+4	avfollow_rewards_4.png	text_av_follow_rewards_title_4	user.bindcash:50,user.ntoken:3,user.hero_exp:200000

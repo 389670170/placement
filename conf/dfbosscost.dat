@@ -1,0 +1,13 @@
+挑战次数	挑战消耗
+times	cost
+Int	Award
+1	user.mixcash:0
+2	user.mixcash:-50
+3	user.mixcash:-100
+4	user.mixcash:-150
+5	user.mixcash:-200
+6	user.mixcash:-300
+7	user.mixcash:-400
+8	user.mixcash:-600
+9	user.mixcash:-800
+10	user.mixcash:-1000

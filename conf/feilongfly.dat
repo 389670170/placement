@@ -1,0 +1,16 @@
+城池ID	城池偏移	城池偏移1	新手引导	是否播放龙飞	动作组	动作组1	显示滴滴打龙界面	背景移动	剧情序号	奖励
+id	posX	posY	guideIndex	play	action	action1	showDragonDiDi	move	index	awards
+Int	Int	Int	Int	Int	String	String	Int	Int	Int	Award
+0	-120	0	0	1	liubei		0	0	0	0
+4	-60	-20	30	1	liubei	suipian	1	0	1	fragment.4208:20,equip.450101.1:1
+6	0	0	0	0			0	0	1	0
+12	120	50	31	1	liubei	suipian	1	240	2	fragment.4208:20,equip.350101.1:1
+18	-150	-100	37	1	liubei	suipian	1	240	2	fragment.4208:20,equip.550201.1:1
+24	150	-50	32	1	liubei	liubei	1	240	3	fragment.4208:20
+33	-100	50	33	1	baoxiangdui	dabaoxiang	0	480	4	material.1:200,user.cash:200
+39	0	0	0	0			0	480	5	0
+48	-120	-10	34	1	xiaobaoxiang	xiaobaoxiang	0	480	6	user.gold:500000
+61	0	0	0	0			0	480	7	0
+76	100	50	35	1	longdan	longdan	0	480	8	0
+96	0	0	36	0			0	480	9	0
+122	180	-20	0	1	long		0	480	10	0

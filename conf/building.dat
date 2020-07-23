@@ -1,0 +1,17 @@
+城池ID	NPC名称	资源路径	NPC位置	缩放	层级
+id	name	url	pos	scale	zorder
+Int	String	String	Int	Int	Int
+1	擂台	arena	1	1	1
+2	铁匠铺	blacksmith	3	1	3
+3	船	boat	2	0.9	4
+4	邮箱	email	5	1	3
+5	金矿	goldmine	7	1	5
+6	酒馆	pub	4	1	3
+7	塔	tower	6	1	3
+8	祭坛	altar	8	1.1	2
+9	铜雀台	tongquetai	9	1	2
+10	排行榜	statue	10	0.9	6
+11	马厩	stable	11	1	3
+12	NPC1	npc_jingjichang	12	1	7
+13	神秘商人	npc_shenmishangren	13	0.9	7
+14	训练馆	npc_jingjichang	14	1	7
